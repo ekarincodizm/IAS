@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IASFinanceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="IASFinanceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="APPR_GL_HEADER" EntityType="IASFinanceModel.APPR_GL_HEADER" />
+    <EntitySet Name="APPR_DO_ADDRESS" EntityType="IASFinanceModel.APPR_DO_ADDRESS" />
+    <EntitySet Name="APPR_DO_HEADER" EntityType="IASFinanceModel.APPR_DO_HEADER" />
+    <EntitySet Name="APPR_DO_REMARK" EntityType="IASFinanceModel.APPR_DO_REMARK" />
+    <EntitySet Name="APPR_DO_DETAIL" EntityType="IASFinanceModel.APPR_DO_DETAIL" />
+    <EntitySet Name="APPR_GL_DETAIL" EntityType="IASFinanceModel.APPR_GL_DETAIL" />
+    <EntitySet Name="APPR_RECEIVE_DETAIL_D" EntityType="IASFinanceModel.APPR_RECEIVE_DETAIL_D" />
+    <EntitySet Name="APPR_RECEIVE_H" EntityType="IASFinanceModel.APPR_RECEIVE_H" />
+    <EntitySet Name="APPS_TABLE_YM_DOCNO" EntityType="IASFinanceModel.APPS_TABLE_YM_DOCNO" />
+    <EntitySet Name="APPS_CONFIG_INPUT" EntityType="IASFinanceModel.APPS_CONFIG_INPUT" />
+    <EntitySet Name="APPS_SLC_USERS" EntityType="IASFinanceModel.APPS_SLC_USERS" />
+    <EntitySet Name="APPM_ACCOUNT_CODE" EntityType="IASFinanceModel.APPM_ACCOUNT_CODE" />
+    <EntitySet Name="APPM_PRODUCT" EntityType="IASFinanceModel.APPM_PRODUCT" />
+    <EntitySet Name="APPS_TABLE_DOCUMENT" EntityType="IASFinanceModel.APPS_TABLE_DOCUMENT" />
+    <EntitySet Name="APPR_BD_HEADER" EntityType="IASFinanceModel.APPR_BD_HEADER" />
+    <EntitySet Name="APPM_BUDGET_CODE" EntityType="IASFinanceModel.APPM_BUDGET_CODE" />
+    <EntitySet Name="APPM_RECEIVE_GROUP" EntityType="IASFinanceModel.APPM_RECEIVE_GROUP" />
+  </EntityContainer>
+  <EntityType Name="APPR_GL_HEADER">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="DESCRIPTION1" />
+      <PropertyRef Name="DESCRIPTION2" />
+      <PropertyRef Name="JOB_NO" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="STATUS_" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="PERIOD" />
+    </Key>
+    <Property Name="BRANCH_NO" Type="Int16" Nullable="false" />
+    <Property Name="DOC_TYPE" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="DOC_NO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DOC_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="DESCRIPTION1" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPTION2" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="JOB_NO" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="LEDGER_TYPE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="STATUS_" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="PERIOD" Type="Int16" Nullable="false" />
+    <Property Name="SECTION" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CONTRACT_CODE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="PAYMENT_AMOUNT" Type="Decimal" Precision="17" Scale="2" />
+    <Property Name="STATUS_PAYMENT" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="EMP_CODE" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REFER_TYPE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="REFER_NO" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REFER_DATE" Type="DateTime" />
+    <Property Name="PAYMENT_TERM" Type="Int16" />
+    <Property Name="DUEDATE" Type="DateTime" />
+    <Property Name="REMARK" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="REF_BUDGET" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REF_PROJECT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REF_ACTIVITY" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="REF_BUD_ACCOUNT" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="BUD_YEAR" Type="DateTime" />
+    <Property Name="APPROVE_STATUS" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DATE_APPROVED" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="APPR_DO_ADDRESS">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="ADDRESS1" />
+      <PropertyRef Name="ADDRESS2" />
+      <PropertyRef Name="ADDRESS3" />
+      <PropertyRef Name="ADDRESS4" />
+      <PropertyRef Name="ADDRESS_SHIPTO1" />
+      <PropertyRef Name="ADDRESS_SHIPTO2" />
+      <PropertyRef Name="ADDRESS_SHIPTO3" />
+      <PropertyRef Name="ADDRESS_SHIPTO4" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS2" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS3" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS4" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS_SHIPTO1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS_SHIPTO2" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS_SHIPTO3" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADDRESS_SHIPTO4" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_NAME" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SHOW_DOC_DATE" />
+  </EntityType>
+  <EntityType Name="APPR_DO_HEADER">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="SECTION" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="DESCRIPTION" />
+      <PropertyRef Name="AMOUNT_BEFORE_DISCOUNT" />
+      <PropertyRef Name="DISCOUNT_CREDIT_PATTERN" />
+      <PropertyRef Name="DISCOUNT_CASH_PATTERN" />
+      <PropertyRef Name="DISCOUNT_CREDIT" />
+      <PropertyRef Name="DISCOUNT_CASH" />
+      <PropertyRef Name="AMOUNT_BEFORE_VAT" />
+      <PropertyRef Name="VAT_RATE" />
+      <PropertyRef Name="VAT_AMOUNT" />
+      <PropertyRef Name="TOTAL_AMOUNT" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="CUSTOMER_CODE" />
+      <PropertyRef Name="CUSTOMER_CODE_SHIPTO" />
+      <PropertyRef Name="REFER_TYPE" />
+      <PropertyRef Name="REFER_NO" />
+      <PropertyRef Name="REFER_DATE" />
+      <PropertyRef Name="LAST_LINE" />
+      <PropertyRef Name="REMARK" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="TIME" />
+      <PropertyRef Name="REF_BUDGET" />
+      <PropertyRef Name="REF_PROJECT" />
+      <PropertyRef Name="BUD_ACCOUNT_CODE" />
+      <PropertyRef Name="REF_ACTIVITY" />
+      <PropertyRef Name="STATUS_APPROVE" />
+      <PropertyRef Name="REMARK_APPROVE" />
+      <PropertyRef Name="DATE_APPROVED" />
+      <PropertyRef Name="BUD_YEAR" />
+      <PropertyRef Name="PAYMENT_TERM" />
+      <PropertyRef Name="DELIVERY_DATE" />
+      <PropertyRef Name="DUEDATE" />
+      <PropertyRef Name="TYPE_TAX" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_DISCOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="DISCOUNT_CREDIT_PATTERN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DISCOUNT_CASH_PATTERN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DISCOUNT_CREDIT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="DISCOUNT_CASH" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_VAT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="VAT_RATE" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="VAT_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="TOTAL_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMP_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_CODE_SHIPTO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="REFER_DATE" Nullable="false" />
+    <Property Type="Int32" Name="LAST_LINE" Nullable="false" />
+    <Property Type="String" Name="REMARK" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIME" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="REF_BUDGET" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_PROJECT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BUD_ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_ACTIVITY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_APPROVE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REMARK_APPROVE" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DATE_APPROVED" Nullable="false" />
+    <Property Type="DateTime" Name="BUD_YEAR" Nullable="false" />
+    <Property Type="Int16" Name="PAYMENT_TERM" Nullable="false" />
+    <Property Type="Int32" Name="DELIVERY_DATE" Nullable="false" />
+    <Property Type="Int32" Name="DUEDATE" Nullable="false" />
+    <Property Type="String" Name="TYPE_TAX" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAY_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INVOICE_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MEMBER_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SALE_TYPE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PAY_CASH" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="PAY_OTHER" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="PAY_DEPOSIT" Precision="17" Scale="2" />
+    <Property Type="Int16" Name="TIME_PRINT" />
+    <Property Type="DateTime" Name="DATE_UPDATE" />
+    <Property Type="String" Name="AR_ACCOUNT" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SHOW_DOC_DATE" />
+    <Property Type="String" Name="TYPE_DISPOSE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PREMIUM_AMOUNT" Precision="14" Scale="2" />
+    <Property Type="String" Name="PLAN_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FUND_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPR_DO_REMARK">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="SECTION" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="SEQUENCE" />
+      <PropertyRef Name="REF_REMARK" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="Int32" Name="SEQUENCE" Nullable="false" />
+    <Property Type="String" Name="REF_REMARK" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SHOW_DOC_DATE" />
+  </EntityType>
+  <EntityType Name="APPR_DO_DETAIL">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="SECTION" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="SEQUENCE" />
+      <PropertyRef Name="DESCRIPTION_HEADER" />
+      <PropertyRef Name="DESCRIPTION_DETAIL" />
+      <PropertyRef Name="PRODUCT_CODE" />
+      <PropertyRef Name="WAREHOUSE" />
+      <PropertyRef Name="UNIT_CODE" />
+      <PropertyRef Name="QUANTITY_UNIT" />
+      <PropertyRef Name="PRICE" />
+      <PropertyRef Name="AMOUNT_BEFORE_DISCOUNT" />
+      <PropertyRef Name="DISCOUNT_PATTERN" />
+      <PropertyRef Name="DISCOUNT_AMOUNT" />
+      <PropertyRef Name="AMOUNT_BEFORE_VAT" />
+      <PropertyRef Name="VAT_AMOUNT" />
+      <PropertyRef Name="AMOUNT_AFTER_VAT" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="CURRENCY_CODE" />
+      <PropertyRef Name="CUSTOMER_CODE" />
+      <PropertyRef Name="REF_ACTIVITY" />
+      <PropertyRef Name="REF_PRODUCT_CODE" />
+      <PropertyRef Name="REF_ASSET_NO" />
+      <PropertyRef Name="REF_SERIAL_NO" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="STATUS_APPROVED" />
+      <PropertyRef Name="REMARK_APPROVED" />
+      <PropertyRef Name="DATE_APPROVED" />
+      <PropertyRef Name="QTY_OUT" />
+      <PropertyRef Name="REF_SO_DOCTYPE" />
+      <PropertyRef Name="REF_SO_DOCNO" />
+      <PropertyRef Name="REF_SO_DOCDATE" />
+      <PropertyRef Name="REF_SO_DOCSEQ" />
+      <PropertyRef Name="ASSET_START" />
+      <PropertyRef Name="ASSET_END" />
+      <PropertyRef Name="DISCOUNT_BILL_AMOUNT" />
+      <PropertyRef Name="VAT_DISCOUNT_BILL" />
+      <PropertyRef Name="TYPE_TAX" />
+      <PropertyRef Name="CHECK_PM" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="Int32" Name="SEQUENCE" Nullable="false" />
+    <Property Type="String" Name="DESCRIPTION_HEADER" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION_DETAIL" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRODUCT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WAREHOUSE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOT_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNIT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="QUANTITY_UNIT" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="PRICE" Nullable="false" Precision="17" Scale="5" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_DISCOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="DISCOUNT_PATTERN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DISCOUNT_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_VAT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="VAT_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="AMOUNT_AFTER_VAT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CURRENCY_CODE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_ACTIVITY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_PRODUCT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_ASSET_NO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_SERIAL_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_APPROVED" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REMARK_APPROVED" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DATE_APPROVED" Nullable="false" />
+    <Property Type="Decimal" Name="QTY_OUT" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="String" Name="REF_SO_DOCTYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_SO_DOCNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="REF_SO_DOCDATE" Nullable="false" />
+    <Property Type="Int32" Name="REF_SO_DOCSEQ" Nullable="false" />
+    <Property Type="String" Name="ASSET_START" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ASSET_END" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DISCOUNT_BILL_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="VAT_DISCOUNT_BILL" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="TYPE_TAX" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CHECK_PM" Nullable="false" />
+    <Property Type="String" Name="REF_PROJECT" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SHOW_DOC_DATE" />
+    <Property Type="Decimal" Name="PREMIUM_AMOUNT" Precision="14" Scale="2" />
+    <Property Type="String" Name="PLAN_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FUND_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPR_GL_DETAIL">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="SEQUENCE" />
+      <PropertyRef Name="DEPARTMENT" />
+      <PropertyRef Name="ACCOUNT_CODE" />
+      <PropertyRef Name="SUBSIDAIRY" />
+      <PropertyRef Name="ACTIVITY" />
+      <PropertyRef Name="GL_ACCOUNT" />
+      <PropertyRef Name="SECRET_ACCOUNT" />
+      <PropertyRef Name="DESCRIPTION1" />
+      <PropertyRef Name="DESCRIPTION2" />
+      <PropertyRef Name="DEBIT" />
+      <PropertyRef Name="CREDIT" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="CURRENCY_TYPE" />
+      <PropertyRef Name="UNIT_TYPE" />
+      <PropertyRef Name="UNIT_AMOUNT" />
+      <PropertyRef Name="REF_AP" />
+      <PropertyRef Name="REF_AR" />
+      <PropertyRef Name="REF_FIXASSET" />
+      <PropertyRef Name="REF_CHECK_NO" />
+      <PropertyRef Name="REF_TAX_NO" />
+      <PropertyRef Name="STATUS_" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="DATE_UPDATE" />
+      <PropertyRef Name="DATE_POSTED" />
+      <PropertyRef Name="TIME_POSTED" />
+      <PropertyRef Name="REF_BUDGET_CODE" />
+      <PropertyRef Name="REF_PROJECT" />
+      <PropertyRef Name="BUD_ACCOUNT_CODE" />
+      <PropertyRef Name="REF_BUD_YEAR" />
+      <PropertyRef Name="UNIT_START" />
+      <PropertyRef Name="UNIT_END" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DOC_DATE" Nullable="false" />
+    <Property Type="Int32" Name="SEQUENCE" Nullable="false" />
+    <Property Type="String" Name="DEPARTMENT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBSIDAIRY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACTIVITY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GL_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="String" Name="DESCRIPTION1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION2" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DEBIT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="CREDIT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CURRENCY_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNIT_TYPE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UNIT_AMOUNT" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="String" Name="REF_AP" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_AR" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_FIXASSET" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_CHECK_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_TAX_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATE_UPDATE" Nullable="false" />
+    <Property Type="Int32" Name="DATE_POSTED" Nullable="false" />
+    <Property Type="String" Name="TIME_POSTED" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="REF_BUDGET_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_PROJECT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BUD_ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="REF_BUD_YEAR" Nullable="false" />
+    <Property Type="Decimal" Name="UNIT_START" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="UNIT_END" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="String" Name="PLAN_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FUND_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEBIT_CREDIT" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JOB_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CREATE_FROM_CANCEL" />
+    <Property Type="Int16" Name="FLAG_CURRENCY" />
+    <Property Type="String" Name="R_ACTIVITY" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="R_PROJECT" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="R_SECTION" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION3" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPR_RECEIVE_DETAIL_D">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="SEQUENCE" />
+      <PropertyRef Name="PAYMENT_GROUP" />
+      <PropertyRef Name="PAYMENT_CODE" />
+      <PropertyRef Name="REFER_NO" />
+      <PropertyRef Name="AMOUNT" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="TIME_UPDATE" />
+      <PropertyRef Name="DESCRIPTION" />
+      <PropertyRef Name="STATUS" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="Int32" Name="SEQUENCE" Nullable="false" />
+    <Property Type="String" Name="PAYMENT_GROUP" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAYMENT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="REFER_DATE" />
+    <Property Type="Decimal" Name="AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATE_UPDATE" />
+    <Property Type="String" Name="TIME_UPDATE" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_RECEIVE" />
+    <Property Type="DateTime" Name="RECEIVE_DATE" />
+    <Property Type="String" Name="SLIP_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SLIP_DATE" />
+    <Property Type="String" Name="ACCOUNT_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RETURN_FLAG" />
+    <Property Type="String" Name="RETURN_TYPE" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RETURN_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RETURN_DATE" />
+    <Property Type="Int16" Name="SENDING_FLAG" />
+    <Property Type="String" Name="SENDING_TYPE" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SENDING_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SENDING_DATE" />
+    <Property Type="Int32" Name="REF_SEQUENCE_NO" />
+    <Property Type="DateTime" Name="SHOW_DOC_DATE" />
+  </EntityType>
+  <EntityType Name="APPR_RECEIVE_H">
+    <Key>
+      <PropertyRef Name="BRACH_NO" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="SECTION" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="CUSTOMER_CODE" />
+      <PropertyRef Name="DESCRIPTION1" />
+      <PropertyRef Name="DESCRIPTION2" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="BANK_CODE" />
+      <PropertyRef Name="CHEQUE_NO" />
+      <PropertyRef Name="CHEQUE_DATE" />
+      <PropertyRef Name="CREDIT_BANK_ACCOUNT" />
+      <PropertyRef Name="CREDIT_BANK_SECRET_ACCOUNT" />
+      <PropertyRef Name="DEBIT_AR_ACCOUNT" />
+      <PropertyRef Name="DEBIT_AR_SECRET_ACCOUNT" />
+      <PropertyRef Name="CREDIT_WHOLDING_ACCOUNT" />
+      <PropertyRef Name="CREDIT_WHOLDING_SECRET_ACCOUNT" />
+      <PropertyRef Name="DEBIT_CHARGE_ACCOUNT" />
+      <PropertyRef Name="DEBIT_CHARGE_SECRET_ACCOUNT" />
+      <PropertyRef Name="INVOICE_AMOUNT" />
+      <PropertyRef Name="INVOICE_RECEIVE_AMOUNT" />
+      <PropertyRef Name="WITHOLDINGTAX_AMOUNT" />
+      <PropertyRef Name="CHARGE_AMOUNT" />
+      <PropertyRef Name="PAYMENT_AMOUNT" />
+      <PropertyRef Name="REFER_TYPE" />
+      <PropertyRef Name="REFER_NO" />
+      <PropertyRef Name="REFER_DATE" />
+      <PropertyRef Name="REMARK" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="REF_BUDGET" />
+      <PropertyRef Name="REF_PROJECT" />
+      <PropertyRef Name="BUD_ACCOUNT_CODE" />
+      <PropertyRef Name="ACTIVITY" />
+      <PropertyRef Name="BUD_YEAR" />
+      <PropertyRef Name="AMOUNT_DEPOSIT" />
+    </Key>
+    <Property Type="Int16" Name="BRACH_NO" Nullable="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DOC_DATE" Nullable="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMP_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUSTOMER_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION1" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION2" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BANK_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CHEQUE_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CHEQUE_DATE" Nullable="false" />
+    <Property Type="String" Name="CREDIT_BANK_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CREDIT_BANK_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="String" Name="DEBIT_AR_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DEBIT_AR_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="String" Name="CREDIT_WHOLDING_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CREDIT_WHOLDING_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="String" Name="DEBIT_CHARGE_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DEBIT_CHARGE_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="Decimal" Name="INVOICE_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="INVOICE_RECEIVE_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="WITHOLDINGTAX_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="CHARGE_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="PAYMENT_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="REFER_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="REFER_DATE" Nullable="false" />
+    <Property Type="String" Name="REMARK" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_BUDGET" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REF_PROJECT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BUD_ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACTIVITY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="BUD_YEAR" Nullable="false" />
+    <Property Type="Decimal" Name="AMOUNT_DEPOSIT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="PAY_CASH" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="PAY_OTHER" Precision="17" Scale="2" />
+    <Property Type="String" Name="RECEIVE_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INVOICE_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="INVOICE_RECEIVE_BEFORE_VAT" Precision="17" Scale="2" />
+    <Property Type="Decimal" Name="INVOICE_RECEIVE_VAT" Precision="17" Scale="2" />
+    <Property Type="Int16" Name="SENDING_FLAG" />
+    <Property Type="String" Name="SENDING_TYPE" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SENDING_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SENDING_DATE" />
+    <Property Type="Int16" Name="DONATE_FLAG" />
+    <Property Type="String" Name="DONATE_NO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PREMIUM_AMOUNT" Precision="14" Scale="2" />
+    <Property Type="String" Name="PLAN_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FUND_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPS_TABLE_YM_DOCNO">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="INTERNALCODE" />
+      <PropertyRef Name="TYPE" />
+      <PropertyRef Name="YEAR_MONTH_BREAK" />
+      <PropertyRef Name="DOC_RUNNING" />
+      <PropertyRef Name="DOCNO" />
+      <PropertyRef Name="TYPE_CAL_COST" />
+      <PropertyRef Name="SECTION" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="INTERNALCODE" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="YEAR_MONTH_BREAK" Nullable="false" />
+    <Property Type="Int64" Name="DOC_RUNNING" Nullable="false" />
+    <Property Type="String" Name="DOCNO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_CAL_COST" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPS_CONFIG_INPUT">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="MENU_CODE" />
+    </Key>
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MENU_CODE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_DOC_TYPE" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RANGE_DOC_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RANGE_DOC_TYPE_REF" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_BUDGET" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_PROJECT" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_ACTIVITY" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_BUD_ACCOUNT" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_RECEIVE_GROUP" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_PAYMENT_GROUP" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEFAULT_CUSTOMER_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPS_SLC_USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="USER_NAME" />
+      <PropertyRef Name="USER_PASSWORD" />
+      <PropertyRef Name="USER_GMUCODE" />
+      <PropertyRef Name="USER_EXPDATE" />
+      <PropertyRef Name="FLAG_ALL_SECTION" />
+      <PropertyRef Name="USERS_DIVISION" />
+      <PropertyRef Name="USERS_INSTITUTE" />
+      <PropertyRef Name="USER_LOGINTIMES" />
+      <PropertyRef Name="USER_BUDGET_YEAR" />
+      <PropertyRef Name="EMP_CODE" />
+    </Key>
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_NAME" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_PASSWORD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_GMUCODE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="USER_EXPDATE" Nullable="false" />
+    <Property Type="Int16" Name="FLAG_ALL_SECTION" Nullable="false" />
+    <Property Type="String" Name="USERS_SECTION" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_DIVISION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="USERS_INSTITUTE" Nullable="false" />
+    <Property Type="Int16" Name="USER_LOGINTIMES" Nullable="false" />
+    <Property Type="DateTime" Name="USER_BUDGET_YEAR" Nullable="false" />
+    <Property Type="String" Name="EMP_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NICK_NAME" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMAIL" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="UPDATE_DATE" />
+    <Property Type="String" Name="UPDATE_TIME" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UPDATE_USER" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_LANGUAGE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_SHOW_SALARY" />
+    <Property Type="Int16" Name="FLAG_CHANGE_SALARY" />
+    <Property Type="String" Name="USERS_PC" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_EMP_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_CHANGE_KPI" />
+    <Property Type="String" Name="USERS_SECTION_LIKE" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_SECTION_IN" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_BUDGET" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_BOOK_TYPE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERS_DOC_TYPE" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CLASSIFIED" />
+    <Property Type="String" Name="USERS_OT_LIKE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OT_SECTION_LIKE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USERNAME_AD" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ID_CODE" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_SECTION_LIKE2" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPM_ACCOUNT_CODE">
+    <Key>
+      <PropertyRef Name="SECTION_CODE" />
+      <PropertyRef Name="ACCOUNT_CODE" />
+      <PropertyRef Name="SUBSIDIARY_" />
+      <PropertyRef Name="SECRET_ACCOUNT_" />
+      <PropertyRef Name="LEVEL_" />
+      <PropertyRef Name="GROUP1" />
+      <PropertyRef Name="GROUP2" />
+      <PropertyRef Name="GROUP3" />
+      <PropertyRef Name="TYPE_POST_" />
+      <PropertyRef Name="DESCRIPTION_" />
+      <PropertyRef Name="GL_ACCOUNT_" />
+      <PropertyRef Name="PARENT_ACCOUNT_CODE" />
+      <PropertyRef Name="DESCRIPTION_ENG" />
+      <PropertyRef Name="TYPE_ACCOUNT" />
+      <PropertyRef Name="NATURE_ACCOUNT" />
+      <PropertyRef Name="ACCOUNT_DETAIL" />
+      <PropertyRef Name="AMOUNT_TYPE" />
+      <PropertyRef Name="PATH_APP" />
+      <PropertyRef Name="PATH_APP_CR" />
+      <PropertyRef Name="PARAMETER_VALUE" />
+      <PropertyRef Name="PARAMETER_VALUE_CR" />
+      <PropertyRef Name="INCOME_TYPE" />
+      <PropertyRef Name="ACCOUNT_DETAIL_CR" />
+    </Key>
+    <Property Type="String" Name="SECTION_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SUBSIDIARY_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SECRET_ACCOUNT_" Nullable="false" />
+    <Property Type="Int16" Name="LEVEL_" Nullable="false" />
+    <Property Type="String" Name="GROUP1" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GROUP2" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GROUP3" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_POST_" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION_" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GL_ACCOUNT_" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACCOUNT_CODE_NOPAD" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PARENT_ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GFMIS_ACCOUNT_CODE" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION_ENG" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_ACCOUNT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NATURE_ACCOUNT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACCOUNT_DETAIL" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AMOUNT_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PATH_APP" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PATH_APP_CR" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PARAMETER_VALUE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PARAMETER_VALUE_CR" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INCOME_TYPE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACCOUNT_DETAIL_CR" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_SPECIAL_ACCOUNT" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPM_PRODUCT">
+    <Key>
+      <PropertyRef Name="PROD_CODE" />
+      <PropertyRef Name="PRO_TNAME" />
+      <PropertyRef Name="PRO_ENAME" />
+      <PropertyRef Name="PRO_TYPE" />
+      <PropertyRef Name="PROGROUP_CODE" />
+      <PropertyRef Name="TYPE_TAX" />
+      <PropertyRef Name="PRO_BRAND" />
+      <PropertyRef Name="PRO_MODEL" />
+      <PropertyRef Name="VEN_CODE" />
+      <PropertyRef Name="STORE_UNIT" />
+      <PropertyRef Name="BUY_UNIT" />
+      <PropertyRef Name="SALE_UNIT" />
+      <PropertyRef Name="MAX_QTY" />
+      <PropertyRef Name="ORD_QTY" />
+      <PropertyRef Name="MIN_QTY" />
+      <PropertyRef Name="STANDARD_COST" />
+      <PropertyRef Name="PRO_AMTFIFO" />
+      <PropertyRef Name="AVERAGE_COST" />
+      <PropertyRef Name="PRO_PRICE" />
+      <PropertyRef Name="PRO_BUY" />
+      <PropertyRef Name="WAREHOUSE" />
+      <PropertyRef Name="QTY_ONHAND" />
+      <PropertyRef Name="QTY_ONPURCHASE" />
+      <PropertyRef Name="QTY_ONREQUEST" />
+      <PropertyRef Name="PRO_SALE_DISC" />
+      <PropertyRef Name="PRO_BUY_DISC" />
+      <PropertyRef Name="CANCEL_DATE" />
+      <PropertyRef Name="PRO_CANTYPE" />
+      <PropertyRef Name="STOCK_STATUS" />
+      <PropertyRef Name="REC_DATE" />
+      <PropertyRef Name="LAST_PRICE" />
+      <PropertyRef Name="PREFIX_ASSET_CODE" />
+      <PropertyRef Name="DEBIT_GL_ACCOUNT" />
+      <PropertyRef Name="DEBIT_SECRET_ACCOUNT" />
+      <PropertyRef Name="CREDIT_GL_ACCOUNT" />
+      <PropertyRef Name="CREDIT_SECRET_ACCOUNT" />
+      <PropertyRef Name="WARANTEE_DAY" />
+      <PropertyRef Name="FLAG_HAVE_SERIAL" />
+      <PropertyRef Name="STOCK_MOVEMENT" />
+      <PropertyRef Name="CHECK_STOCK" />
+      <PropertyRef Name="TYPE_ITEM" />
+      <PropertyRef Name="WIDE_SIZE" />
+      <PropertyRef Name="LONG_SIZE" />
+      <PropertyRef Name="HIGH_SIZE" />
+      <PropertyRef Name="COLOUR_CODE" />
+      <PropertyRef Name="REFER_PROD_CODE" />
+      <PropertyRef Name="USER_UPDATE" />
+    </Key>
+    <Property Type="String" Name="PROD_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_TNAME" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_ENAME" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_TYPE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PROGROUP_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_TAX" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_BRAND" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_MODEL" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VEN_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STORE_UNIT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BUY_UNIT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SALE_UNIT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="MAX_QTY" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="ORD_QTY" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="MIN_QTY" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="STANDARD_COST" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="PRO_AMTFIFO" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="AVERAGE_COST" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="PRO_PRICE" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="PRO_BUY" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="WAREHOUSE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="QTY_ONHAND" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="QTY_ONPURCHASE" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="Decimal" Name="QTY_ONREQUEST" Nullable="false" Precision="17" Scale="8" />
+    <Property Type="String" Name="PRO_SALE_DISC" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_BUY_DISC" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CANCEL_DATE" Nullable="false" />
+    <Property Type="String" Name="PRO_CANTYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STOCK_STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="REC_DATE" Nullable="false" />
+    <Property Type="Decimal" Name="LAST_PRICE" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="PREFIX_ASSET_CODE" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DEBIT_GL_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DEBIT_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="String" Name="CREDIT_GL_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CREDIT_SECRET_ACCOUNT" Nullable="false" />
+    <Property Type="Int16" Name="WARANTEE_DAY" Nullable="false" />
+    <Property Type="Int16" Name="FLAG_HAVE_SERIAL" Nullable="false" />
+    <Property Type="Int16" Name="STOCK_MOVEMENT" Nullable="false" />
+    <Property Type="Int16" Name="CHECK_STOCK" Nullable="false" />
+    <Property Type="String" Name="TYPE_ITEM" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="WIDE_SIZE" Nullable="false" Precision="6" Scale="2" />
+    <Property Type="Decimal" Name="LONG_SIZE" Nullable="false" Precision="6" Scale="2" />
+    <Property Type="Decimal" Name="HIGH_SIZE" Nullable="false" Precision="6" Scale="2" />
+    <Property Type="String" Name="COLOUR_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_HAVE_LOT" />
+    <Property Type="String" Name="REFER_PROD_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ISBN" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PRO_PRICE_MEMBER" Precision="14" Scale="2" />
+    <Property Type="Int16" Name="FLAG_DEFAULT" />
+    <Property Type="String" Name="REF_GFMIS_PRODUCT_CODE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PO_DEBIT_ACCOUNT" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PO_CREDIT_ACCOUNT" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_UPDATE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATE_UPDATE" />
+    <Property Type="String" Name="TIME_UPDATE" MaxLength="6" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPS_TABLE_DOCUMENT">
+    <Key>
+      <PropertyRef Name="DOC_CODE" />
+      <PropertyRef Name="DOC_DESC" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_USEBRANCH" />
+      <PropertyRef Name="DOC_USETYPE" />
+      <PropertyRef Name="DOC_RUNBY" />
+      <PropertyRef Name="DOC_RUNDIGIT" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="TYPE_COST_CALCULATE" />
+      <PropertyRef Name="SEQ_DOCNO" />
+      <PropertyRef Name="SECTION_DIGITS" />
+    </Key>
+    <Property Type="String" Name="DOC_CODE" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_DESC" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="DOC_USEBRANCH" Nullable="false" />
+    <Property Type="Int16" Name="DOC_USETYPE" Nullable="false" />
+    <Property Type="String" Name="DOC_RUNBY" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="DOC_RUNDIGIT" Nullable="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_COST_CALCULATE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_ITEM" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PICTURE_DOCNO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SEQ_DOCNO" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="DOC_USESECTION" />
+    <Property Type="String" Name="YEAR_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="SECTION_DIGITS" Nullable="false" />
+    <Property Type="DateTime" Name="UPDATE_DATE" />
+    <Property Type="String" Name="UPDATE_TIME" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UPDATE_USER" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="INVOICE_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MENU_CODE" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_GL_ADJUST" />
+  </EntityType>
+  <EntityType Name="APPR_BD_HEADER">
+    <Key>
+      <PropertyRef Name="BRANCH_NO" />
+      <PropertyRef Name="SECTION" />
+      <PropertyRef Name="DOC_TYPE" />
+      <PropertyRef Name="DOC_NO" />
+      <PropertyRef Name="DOC_DATE" />
+      <PropertyRef Name="DESCRIPTION" />
+      <PropertyRef Name="AMOUNT_BEFORE_DISCOUNT" />
+      <PropertyRef Name="DISCOUNT_CREDIT_PATTERN" />
+      <PropertyRef Name="DISCOUNT_CASH_PATTERN" />
+      <PropertyRef Name="DISCOUNT_CREDIT" />
+      <PropertyRef Name="DISCOUNT_CASH" />
+      <PropertyRef Name="AMOUNT_BEFORE_VAT" />
+      <PropertyRef Name="VAT_RATE" />
+      <PropertyRef Name="VAT_AMOUNT" />
+      <PropertyRef Name="TOTAL_AMOUNT" />
+      <PropertyRef Name="LEDGER_TYPE" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="VENDOR_CODE" />
+      <PropertyRef Name="REFER_TYPE" />
+      <PropertyRef Name="REFER_NO" />
+      <PropertyRef Name="REFER_DATE" />
+      <PropertyRef Name="LAST_LINE" />
+      <PropertyRef Name="REMARK" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="TIME" />
+      <PropertyRef Name="BUDGET_CODE" />
+      <PropertyRef Name="PROJECT_CODE" />
+      <PropertyRef Name="BUD_ACCOUNT_CODE" />
+      <PropertyRef Name="ACTIVITY" />
+      <PropertyRef Name="STATUS_APPROVE" />
+      <PropertyRef Name="REMARK_APPROVE" />
+      <PropertyRef Name="DATE_APPROVE" />
+      <PropertyRef Name="BUD_YEAR" />
+      <PropertyRef Name="PAYMENT_TERM" />
+      <PropertyRef Name="DELIVERY_DATE" />
+      <PropertyRef Name="DUEDATE" />
+      <PropertyRef Name="TYPE_TAX" />
+      <PropertyRef Name="BUDGET_AMOUNT" />
+      <PropertyRef Name="BUDGET_BALANCE" />
+      <PropertyRef Name="BUDGET_USED" />
+      <PropertyRef Name="BUDGET_REMAIN" />
+    </Key>
+    <Property Type="Int16" Name="BRANCH_NO" Nullable="false" />
+    <Property Type="String" Name="SECTION" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOC_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOC_DATE" Nullable="false" />
+    <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_DISCOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="DISCOUNT_CREDIT_PATTERN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DISCOUNT_CASH_PATTERN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DISCOUNT_CREDIT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="DISCOUNT_CASH" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="AMOUNT_BEFORE_VAT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="VAT_RATE" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="VAT_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="TOTAL_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="LEDGER_TYPE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMP_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VENDOR_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_TYPE" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REFER_NO" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="REFER_DATE" Nullable="false" />
+    <Property Type="Int32" Name="LAST_LINE" Nullable="false" />
+    <Property Type="String" Name="REMARK" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIME" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="BUDGET_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PROJECT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BUD_ACCOUNT_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACTIVITY" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="STATUS_APPROVE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REMARK_APPROVE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DATE_APPROVE" Nullable="false" />
+    <Property Type="DateTime" Name="BUD_YEAR" Nullable="false" />
+    <Property Type="Int16" Name="PAYMENT_TERM" Nullable="false" />
+    <Property Type="Int32" Name="DELIVERY_DATE" Nullable="false" />
+    <Property Type="Int32" Name="DUEDATE" Nullable="false" />
+    <Property Type="String" Name="TYPE_TAX" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PURCHASE_TYPE" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="BUDGET_AMOUNT" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="BUDGET_BALANCE" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="BUDGET_USED" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="BUDGET_REMAIN" Nullable="false" Precision="14" Scale="2" />
+  </EntityType>
+  <EntityType Name="APPM_BUDGET_CODE">
+    <Key>
+      <PropertyRef Name="BUDGET_CODE" />
+      <PropertyRef Name="DESCRIPTION" />
+      <PropertyRef Name="TYPE_BUDGET" />
+      <PropertyRef Name="TYPE_CALENDAR" />
+      <PropertyRef Name="DATE_UPDATE" />
+      <PropertyRef Name="TIME_UPDATE" />
+      <PropertyRef Name="USER_UPDATE" />
+    </Key>
+    <Property Type="String" Name="BUDGET_CODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_BUDGET" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TYPE_CALENDAR" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DATE_UPDATE" Nullable="false" />
+    <Property Type="String" Name="TIME_UPDATE" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_BUDGET" />
+    <Property Type="String" Name="USER_UPDATE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="APPM_RECEIVE_GROUP">
+    <Key>
+      <PropertyRef Name="RECEIVE_GROUP" />
+      <PropertyRef Name="DESCRIPTION" />
+      <PropertyRef Name="PERCENT_CHARGE" />
+      <PropertyRef Name="TYPE_CHARGE" />
+      <PropertyRef Name="GL_ACCOUNT" />
+      <PropertyRef Name="FLAG_MORE_DETAIL" />
+      <PropertyRef Name="FLAG_POST_GL" />
+      <PropertyRef Name="GL_ACCOUNT_DR_CONFIRM" />
+    </Key>
+    <Property Type="String" Name="RECEIVE_GROUP" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PERCENT_CHARGE" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="String" Name="TYPE_CHARGE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GL_ACCOUNT" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="FLAG_MORE_DETAIL" Nullable="false" />
+    <Property Type="Int16" Name="FLAG_POST_GL" Nullable="false" />
+    <Property Type="String" Name="GL_ACCOUNT_DR_CONFIRM" Nullable="false" MaxLength="42" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="BRANCH_NO" />
+  </EntityType>
+</Schema>

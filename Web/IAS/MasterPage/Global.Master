@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.master.cs" Inherits="IAS.MasterPage.Global" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../style/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%--<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>--%>
+    <form id="form1" runat="server" class="form">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="templatemo_container">
+        <div id="templatemo_header">
+            <div id="logosection">
+                <%--<div class="sitelogo">
+                </div>--%>
+                <%--<div class="sitename">
+                    OIC<span></span>
+                </div>--%>
+            </div>
+            <%--<div id="header">
+              <!--  <div class="title">
+                    We Offer<br />
+                    <span class="bigtext">The Best Strategy</span><br />
+                    For your business.</div>-->
+            </div>--%>
+        </div>
+        <div id="templatemo_menu">
+            <div id="menu">
+                <ul>
+                    <li><a href="#" class="current">หน้าหลัก</a></li>
+                    <li><a href="../Register/regGuest.aspx">บุคคล</a></li>
+                    <li><a href="../Register/Reg_Co.aspx">บริษัท</a></li>
+                    <li><a href="../Register/Reg_Assoc.aspx">สมาคม</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- start of content -->
+        <div id="templatemo_content">
+            <!-- start of left column -->
+            <%--  <div id="templatemo_left_column">
+            </div>--%>
+            <!-- end of left column -->
+            <!-- start of middle column -->
+            <div id="templatemo_middle">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- end of middle column -->
+            <!-- start of right column -->
+            <!-- end of right column -->
+        </div>
+        <!-- end of content -->
+    </div>
+    </form>
+</body>
+</html>

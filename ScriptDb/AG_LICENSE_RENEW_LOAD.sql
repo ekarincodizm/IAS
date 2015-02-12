@@ -1,0 +1,100 @@
+/*
+Navicat Oracle Data Transfer
+Oracle Client Version : 11.2.0.3.0
+
+Source Server         : AGDOI
+Source Server Version : 90200
+Source Host           : :1521
+Source Schema         : AGDOI
+
+Target Server Type    : ORACLE
+Target Server Version : 90200
+File Encoding         : 65001
+
+Date: 2014-04-09 14:42:33
+*/
+
+
+-- ----------------------------
+-- Table structure for AG_LICENSE_RENEW_LOAD
+-- ----------------------------
+
+CREATE TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" (
+"REQUEST_NO" VARCHAR2(8 BYTE) NOT NULL ,
+"PAYMENT_NO" VARCHAR2(12 BYTE) NOT NULL ,
+"COMP_CODE" VARCHAR2(4 BYTE) NULL ,
+"LICENSE_NO" VARCHAR2(15 BYTE) NULL ,
+"LICENSE_TYPE_CODE" VARCHAR2(2 BYTE) NULL ,
+"PETITION_TYPE_CODE" VARCHAR2(2 BYTE) NULL ,
+"RENEW_TIME" NUMBER(2) NULL ,
+"RENEW_DATE" DATE NULL ,
+"EXPIRE_DATE" DATE NULL ,
+"ID_CARD_NO" VARCHAR2(13 BYTE) NULL ,
+"ADDRESS1" VARCHAR2(60 BYTE) NULL ,
+"ADDRESS2" VARCHAR2(60 BYTE) NULL ,
+"AREA_CODE" VARCHAR2(8 BYTE) NULL ,
+"ID_FLAG" CHAR(1 BYTE) DEFAULT 'N'  NULL ,
+"INS_FLAG" CHAR(1 BYTE) DEFAULT 'N'  NULL ,
+"USER_ID" VARCHAR2(15 BYTE) NULL ,
+"USER_DATE" DATE NULL ,
+"COMP_FLAG" CHAR(1 BYTE) DEFAULT 'N'  NULL ,
+"PRE_NAME_CODE" VARCHAR2(3 BYTE) NULL ,
+"NAMES" VARCHAR2(50 BYTE) NULL ,
+"LASTNAME" VARCHAR2(40 BYTE) NULL ,
+"INS_CASE" VARCHAR2(1 BYTE) NULL ,
+"APPROVE_DOC_TYPE" VARCHAR2(2 BYTE) NULL ,
+"LICENSE_FEE" NUMBER NULL ,
+"ID_ATTACH_FILE" VARCHAR2(15 BYTE) NULL 
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+
+;
+COMMENT ON TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" IS '???????????????? ??????????? (?????????????????????????)AGX00040 and AGX00041';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."REQUEST_NO" IS '????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."PAYMENT_NO" IS '????????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."COMP_CODE" IS '??????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."LICENSE_NO" IS '??????????????(??????)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."LICENSE_TYPE_CODE" IS '????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."PETITION_TYPE_CODE" IS '????????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."RENEW_TIME" IS '???????????????(????????)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."RENEW_DATE" IS '?????????????(????????)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."EXPIRE_DATE" IS '?????????????(????????)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."ID_CARD_NO" IS '??????????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."ADDRESS1" IS '???????(????????)1 ??????????60';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."ADDRESS2" IS '???????(????????)2 ??????????60';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."AREA_CODE" IS '???????????(???8????)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."ID_FLAG" IS '?????????????insert????update??ag_personal_t (Y???insert?????????id_card_no=license_no N???update)';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."INS_FLAG" IS '?????insert??ag_license_Renew_t ,?????update ??ag_personal_t,ag_license_t ???? ???Y ??? X ?????????N';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."USER_ID" IS '?????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."USER_DATE" IS '????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."COMP_FLAG" IS '??????update ag_agent_license_t ??????insurance_comp_code ''Y''=update ''N''???????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."PRE_NAME_CODE" IS '????????????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."NAMES" IS '????';
+COMMENT ON COLUMN "AGDOI"."AG_LICENSE_RENEW_LOAD"."LASTNAME" IS '???????';
+
+-- ----------------------------
+-- Indexes structure for table AG_LICENSE_RENEW_LOAD
+-- ----------------------------
+
+-- ----------------------------
+-- Triggers structure for table AG_LICENSE_RENEW_LOAD
+-- ----------------------------
+CREATE OR REPLACE TRIGGER "AGDOI"."AG_LICENSE_RENEW__LOAD_TRIG" BEFORE INSERT OR UPDATE ON "AGDOI"."AG_LICENSE_RENEW_LOAD" REFERENCING OLD AS "OLD" NEW AS "NEW" FOR EACH ROW
+BEGIN
+     :NEW.USER_ID    := GET_SYS_USER;
+     :NEW.USER_DATE  := SYSDATE;
+  END;
+
+-- ----------------------------
+-- Checks structure for table AG_LICENSE_RENEW_LOAD
+-- ----------------------------
+ALTER TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" ADD CHECK (UPPER(COMP_FLAG) in ('Y','N'));
+ALTER TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" ADD CHECK (UPPER(ID_FLAG) in ('Y','N'));
+ALTER TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" ADD CHECK (UPPER(INS_FLAG) IN ('Y','N','X'));
+
+-- ----------------------------
+-- Primary Key structure for table AG_LICENSE_RENEW_LOAD
+-- ----------------------------
+ALTER TABLE "AGDOI"."AG_LICENSE_RENEW_LOAD" ADD PRIMARY KEY ("REQUEST_NO", "PAYMENT_NO");

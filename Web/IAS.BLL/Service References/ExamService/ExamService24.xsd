@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IAS.DTO.Exams" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IAS.DTO.Exams" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3333/Exam/ExamService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+  <xs:import schemaLocation="http://localhost:3333/Exam/ExamService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="GetExamScheduleByCriteriaRequest">
+    <xs:sequence>
+      <xs:element name="_x003C_ExamCriteria_x003E_k__BackingField" nillable="true" type="tns:ExamCriteriaDTO" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IAS.DTO" name="_x003C_PageInfo_x003E_k__BackingField" nillable="true" type="q1:PagingInfo" />
+      <xs:element name="_x003C_UserId_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetExamScheduleByCriteriaRequest" nillable="true" type="tns:GetExamScheduleByCriteriaRequest" />
+  <xs:complexType name="ExamCriteriaDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_AgentType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Day_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ExamPlaceCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ExamPlaceGroupCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LicenseTypeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Month_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_OwnerCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TimeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Year_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamCriteriaDTO" nillable="true" type="tns:ExamCriteriaDTO" />
+  <xs:complexType name="GetExamScheduleByCriteriaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExamInfos" nillable="true" type="tns:ArrayOfExamInfoDTO" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="PageInfo" nillable="true" type="q2:PagingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetExamScheduleByCriteriaResponse" nillable="true" type="tns:GetExamScheduleByCriteriaResponse" />
+  <xs:complexType name="ArrayOfExamInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExamInfoDTO" nillable="true" type="tns:ExamInfoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExamInfoDTO" nillable="true" type="tns:ArrayOfExamInfoDTO" />
+  <xs:complexType name="ExamInfoDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_AgentType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_PLACE_Code_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_PLACE_GROUP_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_PLACE_NAME_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ExamFee_x003E_k__BackingField" type="xs:decimal" />
+      <xs:element name="_x003C_ExamOwner_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ExamPlaceGroup_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ExamPlace_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LICENSE_TYPE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LicenseType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PROVINCE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Province_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RunNo_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SeatAmount_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TEST_TIME_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TestingDate_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_TestingNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TestingTime_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamInfoDTO" nillable="true" type="tns:ExamInfoDTO" />
+  <xs:complexType name="CarlendarExamInitRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstItemExamPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstItemExamPlaceGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstItemExamTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstItemLicenseType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarlendarExamInitRequest" nillable="true" type="tns:CarlendarExamInitRequest" />
+  <xs:complexType name="CarlendarExamInitResponse">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ExamPlaceGroups" nillable="true" type="q3:ArrayOfDataItem" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ExamPlaces" nillable="true" type="q4:ArrayOfDataItem" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ExamTimes" nillable="true" type="q5:ArrayOfDataItem" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="LicenseTypes" nillable="true" type="q6:ArrayOfDataItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarlendarExamInitResponse" nillable="true" type="tns:CarlendarExamInitResponse" />
+  <xs:complexType name="GetExamByCriteriaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExamPlaceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamPlaceGroupCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestingDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetExamByCriteriaRequest" nillable="true" type="tns:GetExamByCriteriaRequest" />
+  <xs:complexType name="GetExamByCriteriaResponse">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExamShedules" nillable="true" type="q7:ArrayOfdateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetExamByCriteriaResponse" nillable="true" type="tns:GetExamByCriteriaResponse" />
+</xs:schema>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegistationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9999/Registration/RegistrationService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9999/Registration/RegistrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9999/Registration/RegistrationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:9999/Registration/RegistrationService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:9999/Registration/RegistrationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRegistrationService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_InsertWithAttatchFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWithAttatchFile" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_InsertWithAttatchFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWithAttatchFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_UpdateWithAttachFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWithAttachFiles" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_UpdateWithAttachFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWithAttachFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_UpdateAttachFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAttachFile" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_UpdateAttachFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAttachFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_DeleteAttatchFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttatchFile" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_DeleteAttatchFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAttatchFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAttatchFileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileById" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAttatchFileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAttatchFilesByRegisterationNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFilesByRegisterationNo" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAttatchFilesByRegisterationNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFilesByRegisterationNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetRegistrationsByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationsByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetRegistrationsByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationsByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetByFirstLastName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByFirstLastName" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetByFirstLastName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByFirstLastNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_RegistrationApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationApprove" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_RegistrationApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_RegistrationNotApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationNotApprove" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_RegistrationNotApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationNotApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_IsGeneralUserRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsGeneralUserRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_IsGeneralUserRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsGeneralUserRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_IsCompAssoUserRegistered_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsCompAssoUserRegistered" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_IsCompAssoUserRegistered_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsCompAssoUserRegisteredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_VerifyIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyIdCard" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_VerifyIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_ValidateBeforeSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateBeforeSubmit" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_ValidateBeforeSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateBeforeSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_InsertAttachFileToRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttachFileToRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_InsertAttachFileToRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttachFileToRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetRegistrationsByCriteriaAtPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationsByCriteriaAtPage" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetRegistrationsByCriteriaAtPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegistrationsByCriteriaAtPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_EntityValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EntityValidation" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_EntityValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EntityValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAgentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentType" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetAgentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetPersonalDetailByIDCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetailByIDCard" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetPersonalDetailByIDCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetailByIDCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_ReportRegisterLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportRegisterLicense" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_ReportRegisterLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportRegisterLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetLicenseReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseReport" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationService_GetLicenseReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRegistrationService">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/Insert" message="tns:IRegistrationService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/InsertResponse" message="tns:IRegistrationService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWithAttatchFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/InsertWithAttatchFile" message="tns:IRegistrationService_InsertWithAttatchFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/InsertWithAttatchFileResponse" message="tns:IRegistrationService_InsertWithAttatchFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/Update" message="tns:IRegistrationService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/UpdateResponse" message="tns:IRegistrationService_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWithAttachFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/UpdateWithAttachFiles" message="tns:IRegistrationService_UpdateWithAttachFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/UpdateWithAttachFilesResponse" message="tns:IRegistrationService_UpdateWithAttachFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/Delete" message="tns:IRegistrationService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/DeleteResponse" message="tns:IRegistrationService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetById" message="tns:IRegistrationService_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetByIdResponse" message="tns:IRegistrationService_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAttachFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/UpdateAttachFile" message="tns:IRegistrationService_UpdateAttachFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/UpdateAttachFileResponse" message="tns:IRegistrationService_UpdateAttachFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttatchFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/DeleteAttatchFile" message="tns:IRegistrationService_DeleteAttatchFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/DeleteAttatchFileResponse" message="tns:IRegistrationService_DeleteAttatchFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetAttatchFileById" message="tns:IRegistrationService_GetAttatchFileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetAttatchFileByIdResponse" message="tns:IRegistrationService_GetAttatchFileById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFilesByRegisterationNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetAttatchFilesByRegisterationNo" message="tns:IRegistrationService_GetAttatchFilesByRegisterationNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetAttatchFilesByRegisterationNoResponse" message="tns:IRegistrationService_GetAttatchFilesByRegisterationNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationsByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteria" message="tns:IRegistrationService_GetRegistrationsByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteriaResponse" message="tns:IRegistrationService_GetRegistrationsByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetByIdCard" message="tns:IRegistrationService_GetByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetByIdCardResponse" message="tns:IRegistrationService_GetByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByFirstLastName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetByFirstLastName" message="tns:IRegistrationService_GetByFirstLastName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetByFirstLastNameResponse" message="tns:IRegistrationService_GetByFirstLastName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/RegistrationApprove" message="tns:IRegistrationService_RegistrationApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/RegistrationApproveResponse" message="tns:IRegistrationService_RegistrationApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationNotApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/RegistrationNotApprove" message="tns:IRegistrationService_RegistrationNotApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/RegistrationNotApproveResponse" message="tns:IRegistrationService_RegistrationNotApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsGeneralUserRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/IsGeneralUserRegistered" message="tns:IRegistrationService_IsGeneralUserRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/IsGeneralUserRegisteredResponse" message="tns:IRegistrationService_IsGeneralUserRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCompAssoUserRegistered">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/IsCompAssoUserRegistered" message="tns:IRegistrationService_IsCompAssoUserRegistered_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/IsCompAssoUserRegisteredResponse" message="tns:IRegistrationService_IsCompAssoUserRegistered_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/VerifyIdCard" message="tns:IRegistrationService_VerifyIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/VerifyIdCardResponse" message="tns:IRegistrationService_VerifyIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateBeforeSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/ValidateBeforeSubmit" message="tns:IRegistrationService_ValidateBeforeSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/ValidateBeforeSubmitResponse" message="tns:IRegistrationService_ValidateBeforeSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttachFileToRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/InsertAttachFileToRegistration" message="tns:IRegistrationService_InsertAttachFileToRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/InsertAttachFileToRegistrationResponse" message="tns:IRegistrationService_InsertAttachFileToRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationsByCriteriaAtPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteriaAtPage" message="tns:IRegistrationService_GetRegistrationsByCriteriaAtPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteriaAtPageResponse" message="tns:IRegistrationService_GetRegistrationsByCriteriaAtPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EntityValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/EntityValidation" message="tns:IRegistrationService_EntityValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/EntityValidationResponse" message="tns:IRegistrationService_EntityValidation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetAgentType" message="tns:IRegistrationService_GetAgentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetAgentTypeResponse" message="tns:IRegistrationService_GetAgentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetailByIDCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetPersonalDetailByIDCard" message="tns:IRegistrationService_GetPersonalDetailByIDCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetPersonalDetailByIDCardResponse" message="tns:IRegistrationService_GetPersonalDetailByIDCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportRegisterLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/ReportRegisterLicense" message="tns:IRegistrationService_ReportRegisterLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/ReportRegisterLicenseResponse" message="tns:IRegistrationService_ReportRegisterLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationService/GetLicenseReport" message="tns:IRegistrationService_GetLicenseReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationService/GetLicenseReportResponse" message="tns:IRegistrationService_GetLicenseReport_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRegistrationService" type="tns:IRegistrationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWithAttatchFile">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/InsertWithAttatchFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWithAttachFiles">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/UpdateWithAttachFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAttachFile">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/UpdateAttachFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttatchFile">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/DeleteAttatchFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileById">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetAttatchFileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFilesByRegisterationNo">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetAttatchFilesByRegisterationNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationsByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByIdCard">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByFirstLastName">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetByFirstLastName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationApprove">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/RegistrationApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationNotApprove">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/RegistrationNotApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsGeneralUserRegistered">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/IsGeneralUserRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCompAssoUserRegistered">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/IsCompAssoUserRegistered" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyIdCard">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/VerifyIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateBeforeSubmit">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/ValidateBeforeSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttachFileToRegistration">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/InsertAttachFileToRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistrationsByCriteriaAtPage">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetRegistrationsByCriteriaAtPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EntityValidation">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/EntityValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetAgentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetailByIDCard">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetPersonalDetailByIDCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportRegisterLicense">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/ReportRegisterLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseReport">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationService/GetLicenseReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistationService">
+    <wsdl:port name="BasicHttpBinding_IRegistrationService" binding="tns:BasicHttpBinding_IRegistrationService">
+      <soap:address location="http://localhost:9999/Registration/RegistrationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

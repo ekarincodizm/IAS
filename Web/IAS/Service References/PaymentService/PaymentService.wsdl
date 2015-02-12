@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPaymentService_CancelGroupRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelGroupRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CancelGroupRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelGroupRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdatePrintGroupRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintGroupRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdatePrintGroupRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrintGroupRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CheckHolidayDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHolidayDate" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CheckHolidayDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHolidayDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentByGenPaymentForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentByGenPaymentForm" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentByGenPaymentForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentByGenPaymentFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubGroupDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubGroupDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubGroupDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubGroupDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SavePaymentNoFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePaymentNoFile" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SavePaymentNoFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePaymentNoFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetEndOfPay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndOfPay" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetEndOfPay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndOfPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroupSingleApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroupSingleApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroupSingleApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroupSingleApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Auto_CancelAppNoPay_InputMessage">
+    <wsdl:part name="parameters" element="tns:Auto_CancelAppNoPay" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Auto_CancelAppNoPay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Auto_CancelAppNoPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Auto_GetApplicantNoPaymentHeadder_InputMessage">
+    <wsdl:part name="parameters" element="tns:Auto_GetApplicantNoPaymentHeadder" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Auto_GetApplicantNoPaymentHeadder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Auto_GetApplicantNoPaymentHeadderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetLastEndDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastEndDate" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetLastEndDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastEndDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetReceiptSomePay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiptSomePay" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetReceiptSomePay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiptSomePayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PaymentNotComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:PaymentNotComplete" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PaymentNotComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PaymentNotCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_ScheduleEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleEvent" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_ScheduleEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_ReSubmitBankTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReSubmitBankTrans" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_ReSubmitBankTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReSubmitBankTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetCheckFileSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckFileSize" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetCheckFileSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckFileSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDownloadReceiptHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownloadReceiptHistory" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDownloadReceiptHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDownloadReceiptHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getGroupDetailLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupDetailLicense" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getGroupDetailLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupDetailLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetRecriptByHeadRequestNoAndPaymentNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecriptByHeadRequestNoAndPaymentNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetRecriptByHeadRequestNoAndPaymentNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecriptByHeadRequestNoAndPaymentNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetExamCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamCode" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetExamCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_InsertAndCheckPaymentUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckPaymentUpload" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_InsertAndCheckPaymentUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckPaymentUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetTempBankTransDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempBankTransDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetTempBankTransDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempBankTransDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentHeadByHeadRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentHeadByHeadRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentHeadByHeadRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentHeadByHeadRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetCountPaymentDetailByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountPaymentDetailByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetCountPaymentDetailByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountPaymentDetailByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetailByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetailByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PlusPrintDownloadCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlusPrintDownloadCount" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PlusPrintDownloadCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlusPrintDownloadCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PrintDownloadCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintDownloadCount" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_PrintDownloadCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintDownloadCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Zip_PrintDownloadCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zip_PrintDownloadCount" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Zip_PrintDownloadCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zip_PrintDownloadCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDetailSubPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailSubPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDetailSubPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailSubPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SubmitBankTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBankTrans" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SubmitBankTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitBankTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getGroupDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getGroupDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGroupDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getNamePaymentBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNamePaymentBy" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getNamePaymentBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNamePaymentByResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getBindbillPaymentExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBindbillPaymentExam" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_getBindbillPaymentExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBindbillPaymentExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreateReferanceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReferanceNumber" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreateReferanceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReferanceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Insert12T_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert12T" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Insert12T_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insert12TResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetLicenseGroupRequestPaid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseGroupRequestPaid" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetLicenseGroupRequestPaid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseGroupRequestPaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetRcvHisDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRcvHisDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetRcvHisDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRcvHisDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentExpireDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentExpireDay" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentExpireDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentExpireDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdatePaymentExpireDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentExpireDay" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdatePaymentExpireDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePaymentExpireDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdateCountDownload_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountDownload" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_UpdateCountDownload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentLicenseAppove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentLicenseAppove" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentLicenseAppove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentLicenseAppoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentExamDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentExamDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentExamDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentExamDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetConfigViewFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigViewFile" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetConfigViewFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigViewFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetNonPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetNonPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetConfigViewBillPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigViewBillPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetConfigViewBillPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigViewBillPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentByRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentByRange" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentByRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentByRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreatePdf_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePdf" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreatePdf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreateZip_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateZip" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreateZip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetBillNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetBillNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroupSingleLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroupSingleLicense" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_SetSubGroupSingleLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubGroupSingleLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreatePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CreatePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_NewCreatePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewCreatePayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_NewCreatePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewCreatePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetAllGroupPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetAllGroupPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupPaymentByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupPaymentByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupPaymentByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupPaymentByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSinglePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSinglePayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSinglePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSinglePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentByHeaderRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentByHeaderRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetSubPaymentByHeaderRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubPaymentByHeaderRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPaymentHeadder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPaymentHeadder" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPaymentHeadder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPaymentHeadderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPayById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPayById" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetApplicantNoPayById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantNoPayByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CancelApplicantsHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelApplicantsHeader" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_CancelApplicantsHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelApplicantsHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetReportNumberPrintBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportNumberPrintBill" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetReportNumberPrintBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportNumberPrintBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenPaymentNumberTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenPaymentNumberTable" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenPaymentNumberTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenPaymentNumberTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenPaymentNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenPaymentNumber" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenPaymentNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenPaymentNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenReceiptAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenReceiptAll" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GenReceiptAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenReceiptAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_AddStatusReceiveCompletetoDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStatusReceiveCompletetoDB" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_AddStatusReceiveCompletetoDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStatusReceiveCompletetoDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDataFromSub_D_T_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFromSub_D_T" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDataFromSub_D_T_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataFromSub_D_TResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Signature_Img_InputMessage">
+    <wsdl:part name="parameters" element="tns:Signature_Img" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_Signature_Img_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Signature_ImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDataPayment_BeforeSentToReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataPayment_BeforeSentToReport" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetDataPayment_BeforeSentToReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataPayment_BeforeSentToReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetailByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetPaymentDetailByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupExam" />
+  </wsdl:message>
+  <wsdl:message name="IPaymentService_GetGroupExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupExamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPaymentService">
+    <wsdl:operation name="CancelGroupRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CancelGroupRequestNo" message="tns:IPaymentService_CancelGroupRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CancelGroupRequestNoResponse" message="tns:IPaymentService_CancelGroupRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintGroupRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/UpdatePrintGroupRequestNo" message="tns:IPaymentService_UpdatePrintGroupRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/UpdatePrintGroupRequestNoResponse" message="tns:IPaymentService_UpdatePrintGroupRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHolidayDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CheckHolidayDate" message="tns:IPaymentService_CheckHolidayDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CheckHolidayDateResponse" message="tns:IPaymentService_CheckHolidayDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentByGenPaymentForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentByGenPaymentForm" message="tns:IPaymentService_GetSubPaymentByGenPaymentForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentByGenPaymentFormResponse" message="tns:IPaymentService_GetSubPaymentByGenPaymentForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubGroupDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSubGroupDetail" message="tns:IPaymentService_GetSubGroupDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSubGroupDetailResponse" message="tns:IPaymentService_GetSubGroupDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePaymentNoFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SavePaymentNoFile" message="tns:IPaymentService_SavePaymentNoFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SavePaymentNoFileResponse" message="tns:IPaymentService_SavePaymentNoFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndOfPay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetEndOfPay" message="tns:IPaymentService_GetEndOfPay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetEndOfPayResponse" message="tns:IPaymentService_GetEndOfPay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroupSingleApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroupSingleApplicant" message="tns:IPaymentService_SetSubGroupSingleApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroupSingleApplicantResponse" message="tns:IPaymentService_SetSubGroupSingleApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Auto_CancelAppNoPay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/Auto_CancelAppNoPay" message="tns:IPaymentService_Auto_CancelAppNoPay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/Auto_CancelAppNoPayResponse" message="tns:IPaymentService_Auto_CancelAppNoPay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Auto_GetApplicantNoPaymentHeadder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/Auto_GetApplicantNoPaymentHeadder" message="tns:IPaymentService_Auto_GetApplicantNoPaymentHeadder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/Auto_GetApplicantNoPaymentHeadderResponse" message="tns:IPaymentService_Auto_GetApplicantNoPaymentHeadder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastEndDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetLastEndDate" message="tns:IPaymentService_GetLastEndDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetLastEndDateResponse" message="tns:IPaymentService_GetLastEndDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptSomePay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetReceiptSomePay" message="tns:IPaymentService_GetReceiptSomePay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetReceiptSomePayResponse" message="tns:IPaymentService_GetReceiptSomePay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentNotComplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/PaymentNotComplete" message="tns:IPaymentService_PaymentNotComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/PaymentNotCompleteResponse" message="tns:IPaymentService_PaymentNotComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScheduleEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/ScheduleEvent" message="tns:IPaymentService_ScheduleEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/ScheduleEventResponse" message="tns:IPaymentService_ScheduleEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReSubmitBankTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/ReSubmitBankTrans" message="tns:IPaymentService_ReSubmitBankTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/ReSubmitBankTransResponse" message="tns:IPaymentService_ReSubmitBankTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckFileSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetCheckFileSize" message="tns:IPaymentService_GetCheckFileSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetCheckFileSizeResponse" message="tns:IPaymentService_GetCheckFileSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadReceiptHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetDownloadReceiptHistory" message="tns:IPaymentService_GetDownloadReceiptHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetDownloadReceiptHistoryResponse" message="tns:IPaymentService_GetDownloadReceiptHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGroupDetailLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/getGroupDetailLicense" message="tns:IPaymentService_getGroupDetailLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/getGroupDetailLicenseResponse" message="tns:IPaymentService_getGroupDetailLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecriptByHeadRequestNoAndPaymentNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetRecriptByHeadRequestNoAndPaymentNo" message="tns:IPaymentService_GetRecriptByHeadRequestNoAndPaymentNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetRecriptByHeadRequestNoAndPaymentNoResponse" message="tns:IPaymentService_GetRecriptByHeadRequestNoAndPaymentNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetExamCode" message="tns:IPaymentService_GetExamCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetExamCodeResponse" message="tns:IPaymentService_GetExamCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetail" message="tns:IPaymentService_GetPaymentDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetailResponse" message="tns:IPaymentService_GetPaymentDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckPaymentUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/InsertAndCheckPaymentUpload" message="tns:IPaymentService_InsertAndCheckPaymentUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/InsertAndCheckPaymentUploadResponse" message="tns:IPaymentService_InsertAndCheckPaymentUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempBankTransDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetTempBankTransDetail" message="tns:IPaymentService_GetTempBankTransDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetTempBankTransDetailResponse" message="tns:IPaymentService_GetTempBankTransDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentHeadByHeadRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentHeadByHeadRequestNo" message="tns:IPaymentService_GetSubPaymentHeadByHeadRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentHeadByHeadRequestNoResponse" message="tns:IPaymentService_GetSubPaymentHeadByHeadRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountPaymentDetailByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetCountPaymentDetailByCriteria" message="tns:IPaymentService_GetCountPaymentDetailByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetCountPaymentDetailByCriteriaResponse" message="tns:IPaymentService_GetCountPaymentDetailByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetailByCriteria" message="tns:IPaymentService_GetPaymentDetailByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetailByCriteriaResponse" message="tns:IPaymentService_GetPaymentDetailByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlusPrintDownloadCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/PlusPrintDownloadCount" message="tns:IPaymentService_PlusPrintDownloadCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/PlusPrintDownloadCountResponse" message="tns:IPaymentService_PlusPrintDownloadCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintDownloadCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/PrintDownloadCount" message="tns:IPaymentService_PrintDownloadCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/PrintDownloadCountResponse" message="tns:IPaymentService_PrintDownloadCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zip_PrintDownloadCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/Zip_PrintDownloadCount" message="tns:IPaymentService_Zip_PrintDownloadCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/Zip_PrintDownloadCountResponse" message="tns:IPaymentService_Zip_PrintDownloadCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailSubPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetDetailSubPayment" message="tns:IPaymentService_GetDetailSubPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetDetailSubPaymentResponse" message="tns:IPaymentService_GetDetailSubPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBankTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SubmitBankTrans" message="tns:IPaymentService_SubmitBankTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SubmitBankTransResponse" message="tns:IPaymentService_SubmitBankTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGroupDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/getGroupDetail" message="tns:IPaymentService_getGroupDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/getGroupDetailResponse" message="tns:IPaymentService_getGroupDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNamePaymentBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/getNamePaymentBy" message="tns:IPaymentService_getNamePaymentBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/getNamePaymentByResponse" message="tns:IPaymentService_getNamePaymentBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBindbillPaymentExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/getBindbillPaymentExam" message="tns:IPaymentService_getBindbillPaymentExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/getBindbillPaymentExamResponse" message="tns:IPaymentService_getBindbillPaymentExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReferanceNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CreateReferanceNumber" message="tns:IPaymentService_CreateReferanceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CreateReferanceNumberResponse" message="tns:IPaymentService_CreateReferanceNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert12T">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/Insert12T" message="tns:IPaymentService_Insert12T_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/Insert12TResponse" message="tns:IPaymentService_Insert12T_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseGroupRequestPaid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetLicenseGroupRequestPaid" message="tns:IPaymentService_GetLicenseGroupRequestPaid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetLicenseGroupRequestPaidResponse" message="tns:IPaymentService_GetLicenseGroupRequestPaid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRcvHisDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetRcvHisDetail" message="tns:IPaymentService_GetRcvHisDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetRcvHisDetailResponse" message="tns:IPaymentService_GetRcvHisDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentExpireDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentExpireDay" message="tns:IPaymentService_GetPaymentExpireDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentExpireDayResponse" message="tns:IPaymentService_GetPaymentExpireDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentExpireDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/UpdatePaymentExpireDay" message="tns:IPaymentService_UpdatePaymentExpireDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/UpdatePaymentExpireDayResponse" message="tns:IPaymentService_UpdatePaymentExpireDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountDownload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/UpdateCountDownload" message="tns:IPaymentService_UpdateCountDownload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/UpdateCountDownloadResponse" message="tns:IPaymentService_UpdateCountDownload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentLicenseAppove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentLicenseAppove" message="tns:IPaymentService_GetPaymentLicenseAppove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentLicenseAppoveResponse" message="tns:IPaymentService_GetPaymentLicenseAppove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentExamDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentExamDetail" message="tns:IPaymentService_GetPaymentExamDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentExamDetailResponse" message="tns:IPaymentService_GetPaymentExamDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigViewFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetConfigViewFile" message="tns:IPaymentService_GetConfigViewFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetConfigViewFileResponse" message="tns:IPaymentService_GetConfigViewFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetNonPayment" message="tns:IPaymentService_GetNonPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetNonPaymentResponse" message="tns:IPaymentService_GetNonPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigViewBillPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetConfigViewBillPayment" message="tns:IPaymentService_GetConfigViewBillPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetConfigViewBillPaymentResponse" message="tns:IPaymentService_GetConfigViewBillPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentByRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentByRange" message="tns:IPaymentService_GetPaymentByRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentByRangeResponse" message="tns:IPaymentService_GetPaymentByRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePdf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CreatePdf" message="tns:IPaymentService_CreatePdf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CreatePdfResponse" message="tns:IPaymentService_CreatePdf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateZip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CreateZip" message="tns:IPaymentService_CreateZip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CreateZipResponse" message="tns:IPaymentService_CreateZip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetBillNo" message="tns:IPaymentService_GetBillNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetBillNoResponse" message="tns:IPaymentService_GetBillNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSubGroup" message="tns:IPaymentService_GetSubGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSubGroupResponse" message="tns:IPaymentService_GetSubGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroup" message="tns:IPaymentService_SetSubGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroupResponse" message="tns:IPaymentService_SetSubGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroupSingleLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroupSingleLicense" message="tns:IPaymentService_SetSubGroupSingleLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/SetSubGroupSingleLicenseResponse" message="tns:IPaymentService_SetSubGroupSingleLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetGroupPayment" message="tns:IPaymentService_GetGroupPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetGroupPaymentResponse" message="tns:IPaymentService_GetGroupPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CreatePayment" message="tns:IPaymentService_CreatePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CreatePaymentResponse" message="tns:IPaymentService_CreatePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCreatePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/NewCreatePayment" message="tns:IPaymentService_NewCreatePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/NewCreatePaymentResponse" message="tns:IPaymentService_NewCreatePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetAllGroupPayment" message="tns:IPaymentService_GetAllGroupPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetAllGroupPaymentResponse" message="tns:IPaymentService_GetAllGroupPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupPaymentByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetGroupPaymentByCriteria" message="tns:IPaymentService_GetGroupPaymentByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetGroupPaymentByCriteriaResponse" message="tns:IPaymentService_GetGroupPaymentByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinglePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSinglePayment" message="tns:IPaymentService_GetSinglePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSinglePaymentResponse" message="tns:IPaymentService_GetSinglePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentByHeaderRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentByHeaderRequestNo" message="tns:IPaymentService_GetSubPaymentByHeaderRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetSubPaymentByHeaderRequestNoResponse" message="tns:IPaymentService_GetSubPaymentByHeaderRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPayment" message="tns:IPaymentService_GetApplicantNoPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPaymentResponse" message="tns:IPaymentService_GetApplicantNoPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPaymentHeadder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPaymentHeadder" message="tns:IPaymentService_GetApplicantNoPaymentHeadder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPaymentHeadderResponse" message="tns:IPaymentService_GetApplicantNoPaymentHeadder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPayById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPayById" message="tns:IPaymentService_GetApplicantNoPayById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetApplicantNoPayByIdResponse" message="tns:IPaymentService_GetApplicantNoPayById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelApplicantsHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/CancelApplicantsHeader" message="tns:IPaymentService_CancelApplicantsHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/CancelApplicantsHeaderResponse" message="tns:IPaymentService_CancelApplicantsHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportNumberPrintBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetReportNumberPrintBill" message="tns:IPaymentService_GetReportNumberPrintBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetReportNumberPrintBillResponse" message="tns:IPaymentService_GetReportNumberPrintBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenPaymentNumberTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GenPaymentNumberTable" message="tns:IPaymentService_GenPaymentNumberTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GenPaymentNumberTableResponse" message="tns:IPaymentService_GenPaymentNumberTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenPaymentNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GenPaymentNumber" message="tns:IPaymentService_GenPaymentNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GenPaymentNumberResponse" message="tns:IPaymentService_GenPaymentNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenReceiptAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GenReceiptAll" message="tns:IPaymentService_GenReceiptAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GenReceiptAllResponse" message="tns:IPaymentService_GenReceiptAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStatusReceiveCompletetoDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/AddStatusReceiveCompletetoDB" message="tns:IPaymentService_AddStatusReceiveCompletetoDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/AddStatusReceiveCompletetoDBResponse" message="tns:IPaymentService_AddStatusReceiveCompletetoDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFromSub_D_T">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetDataFromSub_D_T" message="tns:IPaymentService_GetDataFromSub_D_T_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetDataFromSub_D_TResponse" message="tns:IPaymentService_GetDataFromSub_D_T_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Signature_Img">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/Signature_Img" message="tns:IPaymentService_Signature_Img_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/Signature_ImgResponse" message="tns:IPaymentService_Signature_Img_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPayment_BeforeSentToReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetDataPayment_BeforeSentToReport" message="tns:IPaymentService_GetDataPayment_BeforeSentToReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetDataPayment_BeforeSentToReportResponse" message="tns:IPaymentService_GetDataPayment_BeforeSentToReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentByCriteria" message="tns:IPaymentService_GetPaymentByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentByCriteriaResponse" message="tns:IPaymentService_GetPaymentByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetailByGroup" message="tns:IPaymentService_GetPaymentDetailByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetPaymentDetailByGroupResponse" message="tns:IPaymentService_GetPaymentDetailByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPaymentService/GetGroupExam" message="tns:IPaymentService_GetGroupExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPaymentService/GetGroupExamResponse" message="tns:IPaymentService_GetGroupExam_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPaymentService" type="tns:IPaymentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelGroupRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CancelGroupRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrintGroupRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/UpdatePrintGroupRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHolidayDate">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CheckHolidayDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentByGenPaymentForm">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSubPaymentByGenPaymentForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubGroupDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSubGroupDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePaymentNoFile">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SavePaymentNoFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndOfPay">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetEndOfPay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroupSingleApplicant">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SetSubGroupSingleApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Auto_CancelAppNoPay">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/Auto_CancelAppNoPay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Auto_GetApplicantNoPaymentHeadder">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/Auto_GetApplicantNoPaymentHeadder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastEndDate">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetLastEndDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptSomePay">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetReceiptSomePay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentNotComplete">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/PaymentNotComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScheduleEvent">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/ScheduleEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReSubmitBankTrans">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/ReSubmitBankTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckFileSize">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetCheckFileSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadReceiptHistory">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetDownloadReceiptHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupDetailLicense">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/getGroupDetailLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecriptByHeadRequestNoAndPaymentNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetRecriptByHeadRequestNoAndPaymentNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamCode">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetExamCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckPaymentUpload">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/InsertAndCheckPaymentUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTempBankTransDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetTempBankTransDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentHeadByHeadRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSubPaymentHeadByHeadRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountPaymentDetailByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetCountPaymentDetailByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentDetailByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlusPrintDownloadCount">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/PlusPrintDownloadCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintDownloadCount">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/PrintDownloadCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zip_PrintDownloadCount">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/Zip_PrintDownloadCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailSubPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetDetailSubPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitBankTrans">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SubmitBankTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/getGroupDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNamePaymentBy">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/getNamePaymentBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBindbillPaymentExam">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/getBindbillPaymentExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReferanceNumber">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CreateReferanceNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert12T">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/Insert12T" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseGroupRequestPaid">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetLicenseGroupRequestPaid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRcvHisDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetRcvHisDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentExpireDay">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentExpireDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePaymentExpireDay">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/UpdatePaymentExpireDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountDownload">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/UpdateCountDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentLicenseAppove">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentLicenseAppove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentExamDetail">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentExamDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigViewFile">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetConfigViewFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetNonPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigViewBillPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetConfigViewBillPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentByRange">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentByRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePdf">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CreatePdf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateZip">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CreateZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetBillNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubGroup">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSubGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroup">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SetSubGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSubGroupSingleLicense">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/SetSubGroupSingleLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetGroupPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CreatePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCreatePayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/NewCreatePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetAllGroupPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupPaymentByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetGroupPaymentByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinglePayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSinglePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubPaymentByHeaderRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetSubPaymentByHeaderRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPayment">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetApplicantNoPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPaymentHeadder">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetApplicantNoPaymentHeadder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantNoPayById">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetApplicantNoPayById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelApplicantsHeader">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/CancelApplicantsHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportNumberPrintBill">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetReportNumberPrintBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenPaymentNumberTable">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GenPaymentNumberTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenPaymentNumber">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GenPaymentNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenReceiptAll">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GenReceiptAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStatusReceiveCompletetoDB">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/AddStatusReceiveCompletetoDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataFromSub_D_T">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetDataFromSub_D_T" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Signature_Img">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/Signature_Img" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPayment_BeforeSentToReport">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetDataPayment_BeforeSentToReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByGroup">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetPaymentDetailByGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupExam">
+      <soap:operation soapAction="http://tempuri.org/IPaymentService/GetGroupExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentService">
+    <wsdl:port name="BasicHttpBinding_IPaymentService" binding="tns:BasicHttpBinding_IPaymentService">
+      <soap:address location="http://localhost:9999/Payment/PaymentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

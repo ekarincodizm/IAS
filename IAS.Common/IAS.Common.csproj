@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAS.Common</RootNamespace>
+    <AssemblyName>IAS.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\ActiveDirectoryAuthentication.cs" />
+    <Compile Include="Authentication\ActiveDirectoryUtil.cs" />
+    <Compile Include="Authentication\AspFormsAuthentication.cs" />
+    <Compile Include="Authentication\AspMembershipAuthentication.cs" />
+    <Compile Include="Authentication\Groups\AdminGroup.cs" />
+    <Compile Include="Authentication\Groups\GeneralGroup.cs" />
+    <Compile Include="Authentication\Groups\IMemberGroup.cs" />
+    <Compile Include="Authentication\Groups\MemberGroup.cs" />
+    <Compile Include="Authentication\Groups\MemberGroups.cs" />
+    <Compile Include="Authentication\Groups\MemberLevel.cs" />
+    <Compile Include="Authentication\Groups\RootMember.cs" />
+    <Compile Include="Authentication\IExternalAuthenticationService .cs" />
+    <Compile Include="Authentication\IFormsAuthentication.cs" />
+    <Compile Include="Authentication\ILocalAuthenticationService.cs" />
+    <Compile Include="Authentication\JanrainAuthenticationService.cs" />
+    <Compile Include="Authentication\MemberProfiles\AdminProfile.cs" />
+    <Compile Include="Authentication\MemberProfiles\GeneralProfile.cs" />
+    <Compile Include="Authentication\MemberProfiles\IMemberProfile.cs" />
+    <Compile Include="Authentication\MemberProfiles\MemberProfile.cs" />
+    <Compile Include="Authentication\MemberProfiles\ProfileProperties.cs" />
+    <Compile Include="Authentication\MemberProfiles\RootProfile.cs" />
+    <Compile Include="Authentication\User.cs" />
+    <Compile Include="Configuration\ApplicationSettingsFactory.cs" />
+    <Compile Include="Configuration\IApplicationSettings.cs" />
+    <Compile Include="Configuration\ApplicationSettings.cs" />
+    <Compile Include="Domain\ApplicationValidationErrorsException.cs" />
+    <Compile Include="Domain\BusinessRule.cs" />
+    <Compile Include="Domain\EntityBase.cs" />
+    <Compile Include="Domain\GenAutoIdentify.cs" />
+    <Compile Include="Domain\IAggregateRoot.cs" />
+    <Compile Include="Domain\PrimaryKey.cs" />
+    <Compile Include="Domain\ValueObjectBase.cs" />
+    <Compile Include="Domain\ValueObjectIsInvalidException.cs" />
+    <Compile Include="Email\AttachmentFactory.cs" />
+    <Compile Include="Email\AttachmentFileIsNotFoundException.cs" />
+    <Compile Include="Email\AttachStream.cs" />
+    <Compile Include="Email\MockSMTPService.cs" />
+    <Compile Include="Email\Events\WebClientSentListMailEvent.cs" />
+    <Compile Include="Email\MailListMessageServiceContent.cs" />
+    <Compile Include="Email\MailMessageException.cs" />
+    <Compile Include="Email\EmailServiceFactory.cs" />
+    <Compile Include="Email\Events\WebClientSentMailEvent.cs" />
+    <Compile Include="Email\IEmailService.cs" />
+    <Compile Include="Email\MailMessageServiceContent.cs" />
+    <Compile Include="Email\MessageContract.cs" />
+    <Compile Include="Email\SMTPService.cs" />
+    <Compile Include="Email\TextLoggingEmailService.cs" />
+    <Compile Include="Email\WebServiceSMTPService.cs" />
+    <Compile Include="Domain\Events\DomainEvents.cs" />
+    <Compile Include="Domain\Events\IDomainEvent.cs" />
+    <Compile Include="Domain\Events\IDomainEventHandler.cs" />
+    <Compile Include="Domain\Events\IDomainEventHandlerFactory.cs" />
+    <Compile Include="Domain\Events\IEnumerableExtensions.cs" />
+    <Compile Include="Domain\Events\StructureMapDomainEventHandlerFactory.cs" />
+    <Compile Include="Helpers\ContentTypeHelper.cs" />
+    <Compile Include="Logging\Log4NetOICLogFactory.cs" />
+    <Compile Include="Logging\Log4NetOICAdapter.cs" />
+    <Compile Include="Logging\Log4NetServiceLogFactory.cs" />
+    <Compile Include="Logging\Log4NetServiceAdapter.cs" />
+    <Compile Include="Logging\Services\IServiceLogger.cs" />
+    <Compile Include="Logging\Log4NetAdapter.cs" />
+    <Compile Include="Logging\Log4NetLogFactory.cs" />
+    <Compile Include="Logging\Services\LogHeaders.cs" />
+    <Compile Include="Logging\Services\LogServiceMessage.cs" />
+    <Compile Include="Logging\Services\WcfAppender.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\ILoggerFactory.cs" />
+    <Compile Include="Logging\LoggerFactory.cs" />
+    <Compile Include="Logging\TraceSourceLog.cs" />
+    <Compile Include="Logging\TraceSourceLogFactory.cs" />
+    <Compile Include="Validator\DataAnnotationsEntityValidator.cs" />
+    <Compile Include="Validator\DataAnnotationsEntityValidatorFactory.cs" />
+    <Compile Include="Validator\EntityValidatorFactory.cs" />
+    <Compile Include="Validator\IEntityValidator.cs" />
+    <Compile Include="Validator\IEntityValidatorFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Authentication\Filters\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

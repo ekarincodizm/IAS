@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\IAS.DataServices.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C4501664-118D-4F45-8897-3152D2F465B9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAS.DataServices</RootNamespace>
+    <AssemblyName>IAS.DataServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EPPlus">
+      <HintPath>..\..\Web\IAS\Library\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\Lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Web\IAS\Library\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\AccountService.svc" />
+    <Content Include="Applicant\ApplicantService.svc" />
+    <Content Include="DataCenter\DataCenterService.svc" />
+    <Content Include="Email\EmailSmtpService.svc" />
+    <Content Include="Exam\ExamService.svc" />
+    <Content Include="FileManagement\FileService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="License\LicenseService.svc" />
+    <Content Include="Logging\ServiceLogger.svc" />
+    <Content Include="Payment\PaymentService.svc" />
+    <Content Include="Person\PersonService.svc" />
+    <Content Include="Registration\RegistrationService.svc" />
+    <None Include="Service References\ADService\AD_Service.disco" />
+    <None Include="Service References\ADService\configuration91.svcinfo" />
+    <None Include="Service References\ADService\configuration.svcinfo" />
+    <None Include="Service References\ADService\IAS.DataServices.ADService.LoginResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ADService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFinanceService.cs" />
+    <Compile Include="AbstractGBService.cs" />
+    <Compile Include="AbstractService.cs" />
+    <Compile Include="Account\AccountService.svc.cs">
+      <DependentUpon>AccountService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Account\IAccountService.cs" />
+    <Compile Include="Applicant\ApplicantHelper\ApplicantFileHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\EducationCodeHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\MailApplicantHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\StringNameHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\PhaseAppliantCodeHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\PhaseApplyAmountHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\PhaseCurrencyAmount.cs" />
+    <Compile Include="Applicant\ApplicantHelper\PhaseDateHelper.cs" />
+    <Compile Include="Applicant\ApplicantHelper\PreNameHelper.cs" />
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileDetailBusinessRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileDetailFieldNames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileHeaderBusinessRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantFileHeaderFieldNames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Applicant\ApplicantRequestUploads\ApplicantHeaderRequest.cs" />
+    <Compile Include="Applicant\ApplicantService.svc.cs">
+      <DependentUpon>ApplicantService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant\IApplicantService.cs" />
+    <Compile Include="Applicant\Mapper\ApplicantFileHeaderMapper.cs" />
+    <Compile Include="BootStrapper.cs" />
+    <Compile Include="Class\RptReciveClassService.cs" />
+    <Compile Include="Class\SendMailExel.cs" />
+    <Compile Include="DataCenter\DataCenterService.svc.cs">
+      <DependentUpon>DataCenterService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataCenter\IDataCenterService.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Email\EmailSmtpService.svc.cs">
+      <DependentUpon>EmailSmtpService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Email\IEmailSmtpService.cs" />
+    <Compile Include="EnumService.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileDetail.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileDetailBusinessRules.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileDetailFieldNames.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileFactory.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileHeader.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileHeaderBusinessRules.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileHeaderFieldNames.cs" />
+    <Compile Include="Exam\ExamRequestUploads\ExamFileHeaderRequest.cs" />
+    <Compile Include="Exam\ExamService.svc.cs">
+      <DependentUpon>ExamService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Helpers\DataItemLicenseTypeFactory.cs" />
+    <Compile Include="Exam\Mapper\ExamFileHeaderMapper.cs" />
+    <Compile Include="Exam\Helpers\ExamTypeValue.cs" />
+    <Compile Include="Exam\Helpers\ExamSubStringHelper.cs" />
+    <Compile Include="Exam\IExamService.cs" />
+    <Compile Include="FileManagement\FileService.svc.cs">
+      <DependentUpon>FileService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagement\IFileService.cs" />
+    <Compile Include="FileManager\AmendFile.cs" />
+    <Compile Include="FileManager\BaseFileController.cs" />
+    <Compile Include="FileManager\ContainDetail.cs" />
+    <Compile Include="FileManager\DeleteContainer.cs" />
+    <Compile Include="FileManager\DeleteFile.cs" />
+    <Compile Include="FileManager\DownloadFile.cs" />
+    <Compile Include="FileManager\FileActions.cs" />
+    <Compile Include="FileManager\FileManagerService.cs" />
+    <Compile Include="FileManager\IFileController.cs" />
+    <Compile Include="FileManager\MoveFile.cs" />
+    <Compile Include="FileManager\UploadFile.cs" />
+    <Compile Include="FTP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\EmailSender.cs" />
+    <Compile Include="Helpers\GetIASConfigHelper.cs" />
+    <Compile Include="Helpers\PhaseStringToDateHelper.cs" />
+    <Compile Include="License\AttachFileLicenseMapper.cs" />
+    <Compile Include="License\ILicenseService.cs" />
+    <Compile Include="License\LicenseHelpers\ClearQuoteInCSVHelper.cs" />
+    <Compile Include="License\LicenseHelpers\DataLicenseRequestReaderHelper.cs" />
+    <Compile Include="License\LicenseHelpers\ExtractFileLicenseRequestHelper.cs" />
+    <Compile Include="License\LicenseHelpers\GenZipLicenseRequest.cs" />
+    <Compile Include="License\LicenseHelpers\LicenseFileHelper.cs" />
+    <Compile Include="License\LicenseHelpers\MailApproveDocLicenseHelper.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileDetail.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileDetailBusinessRules.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileDetailFieldNames.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileFactory.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileHeader.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileHeaderBusinessRules.cs" />
+    <Compile Include="License\LicenseRequestUploads\LicenseFileHeaderFieldNames.cs" />
+    <Compile Include="License\LicenseService.svc.cs">
+      <DependentUpon>LicenseService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="License\Mapper\LicenseFileHeaderMapper.cs" />
+    <Compile Include="Logging\ServiceLogger.svc.cs">
+      <DependentUpon>ServiceLogger.svc</DependentUpon>
+    </Compile>
+    <Compile Include="NASDrive.cs" />
+    <Compile Include="Payment\APPR_BD_MOVEMENT.cs" />
+    <Compile Include="Payment\Helpers\FtpHelpers.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_PAYMENT_DETAIL_Mapper.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_TEMP_PAYMENT_DETAIL_HIS_Mapper.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_TEMP_PAYMENT_DETAIL_Mapper.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_TEMP_PAYMENT_HEADER_Mapper.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_TEMP_PAYMENT_TOTAL_Mapper.cs" />
+    <Compile Include="Payment\Mapper\OwnerRecive.cs" />
+    <Compile Include="Payment\Messages\BankTransactionTempData.cs" />
+    <Compile Include="Payment\Messages\BankTransactionDataFactory.cs" />
+    <Compile Include="Payment\Messages\BankReTransactionData.cs" />
+    <Compile Include="Payment\Receipts\GenBillCodeFactory.cs" />
+    <Compile Include="Payment\Receipts\PaymentCollection.cs" />
+    <Compile Include="Payment\States\PaymentAccountingStatus.cs" />
+    <Compile Include="Payment\States\PaymentHeadStatus.cs" />
+    <Compile Include="Payment\States\PaymentRecordStatus.cs" />
+    <Compile Include="Payment\States\PaymentStatus.cs" />
+    <Compile Include="Payment\States\ReceiptAccountingStatus.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileDetailBusinessRules.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileDetailFieldNames.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileFactory.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileHeaderBusinessRules.cs" />
+    <Compile Include="Payment\TransactionBanking\BankType.cs" />
+    <Compile Include="Payment\TransactionBanking\BusinessRule.cs" />
+    <Compile Include="Payment\TransactionBanking\KTB\BankFileDetail.cs" />
+    <Compile Include="Payment\TransactionBanking\KTB\BankFileHeader.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileHeaderFieldNames.cs" />
+    <Compile Include="Payment\TransactionBanking\KTB\BankFileTotal.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileTotalBusinessRules.cs" />
+    <Compile Include="Payment\TransactionBanking\BankFileTotalFieldNames.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileBatchHeader.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileBatchTotal.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileBoxHeader.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileOverFlow.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileHeader.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileTotal.cs" />
+    <Compile Include="Payment\TransactionBanking\Citi\CityFileDetail.cs" />
+    <Compile Include="Payment\TransactionBanking\PhaseAmountHelper.cs" />
+    <Compile Include="Payment\BillBiz.cs" />
+    <Compile Include="Payment\CalExpireDate.cs" />
+    <Compile Include="Payment\GenReferanceNumber.cs" />
+    <Compile Include="Payment\Helpers\GenQRcode.cs" />
+    <Compile Include="Payment\Helpers\GenLicenseNumber.cs" />
+    <Compile Include="Payment\Helpers\MailReceiptSuccessHelper.cs" />
+    <Compile Include="Payment\Helpers\MailUpdatePaymentHelper.cs" />
+    <Compile Include="Payment\Helpers\OICUserIdHelper.cs" />
+    <Compile Include="Payment\Helpers\ParseDateFromString.cs" />
+    <Compile Include="Payment\Helpers\ParsePaymentAmountImport.cs" />
+    <Compile Include="Payment\Helpers\PhaseEntityToSqlCommand.cs" />
+    <Compile Include="Payment\Helpers\PhaseStringToAmountImportFileTemp.cs" />
+    <Compile Include="Payment\Helpers\PhaseStringToDecimal.cs" />
+    <Compile Include="Payment\Helpers\RptReceiveClassServiceHelper.cs" />
+    <Compile Include="Payment\Helpers\UpdateAfterUploadPayment.cs" />
+    <Compile Include="Payment\Helpers\UpdateAfterUploadPaymentRequestFactory.cs" />
+    <Compile Include="Payment\Mapper\AG_IAS_PAYMENT_G_T_Mapper.cs" />
+    <Compile Include="Payment\Mapper\CityFileTotalMapper.cs" />
+    <Compile Include="Payment\Mapper\CreateReceiptMapper.cs" />
+    <Compile Include="Payment\Mapper\KTBFileDetailMapper.cs" />
+    <Compile Include="Payment\Mapper\LicensePaymentRequestMapper.cs" />
+    <Compile Include="Payment\Messages\CreateReceiptReqeust.cs" />
+    <Compile Include="Payment\Messages\LicensePetitionType18Request.cs" />
+    <Compile Include="Payment\Messages\LicensePetitionType17Request.cs" />
+    <Compile Include="Payment\Messages\LicensePetitionType15Request.cs" />
+    <Compile Include="Payment\Messages\LicensePetitionType11Request.cs" />
+    <Compile Include="Payment\Messages\LicensePetitionType1314Request.cs" />
+    <Compile Include="Payment\IPaymentService.cs" />
+    <Compile Include="Payment\PaymentService.svc.cs">
+      <DependentUpon>PaymentService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Payment\Helpers\GenReceiptNumber.cs" />
+    <Compile Include="Payment\ReceiveNumber.cs" />
+    <Compile Include="Payment\ReferanceNumber.cs" />
+    <Compile Include="Person\Helpers\MailApprovePersonHelper.cs" />
+    <Compile Include="Person\Helpers\MailChangePasswordHelper.cs" />
+    <Compile Include="Person\Helpers\MailNotApprovePersonHelper.cs" />
+    <Compile Include="Person\IPersonService.cs" />
+    <Compile Include="Person\PersonService.svc.cs">
+      <DependentUpon>PersonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\Helpers\MailApproveRegisterHelper.cs" />
+    <Compile Include="Registration\Helpers\MailConfirmHelper.cs" />
+    <Compile Include="Registration\IRegistrationService.cs" />
+    <Compile Include="Registration\RegistrationService.svc.cs">
+      <DependentUpon>RegistrationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RptReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\RptRecive.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptRecive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ADService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceAuthen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Payment\DomainEventHandlers\" />
+    <Folder Include="Payment\ProductCodes\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Reports\UploadFiles\" />
+    <Folder Include="UploadFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Applicant\ApplicantRequestUploads\dcApplicantUpload.cd" />
+    <None Include="Applicant\cdApplacantService.cd" />
+    <Content Include="packages.config" />
+    <None Include="Payment\TransactionBanking\UploadBankFile.cd" />
+    <None Include="Person\cdPersonService.cd" />
+    <None Include="Registration\cdRegistrationWS.cd" />
+    <Content Include="Reports\Web.config" />
+    <None Include="Service References\ADService\AD_Service.wsdl" />
+    <None Include="Service References\ADService\AD_Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\AD_Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\AD_Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Development.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IAS.Common\IAS.Common.csproj">
+      <Project>{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}</Project>
+      <Name>IAS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web\IAS.DAL.Repository\IAS.DTO.csproj">
+      <Project>{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}</Project>
+      <Name>IAS.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web\IAS.Utils\IAS.Utils.csproj">
+      <Project>{b126a37a-a12f-4c9d-b92b-37aba90e72b0}</Project>
+      <Name>IAS.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAS.DAL\IAS.DAL.csproj">
+      <Project>{d1d1a269-d964-4462-ae45-535e67a5a8f2}</Project>
+      <Name>IAS.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\RptReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptReceipt.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\RptRecive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptRecive.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ADService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>3333</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/iasws</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

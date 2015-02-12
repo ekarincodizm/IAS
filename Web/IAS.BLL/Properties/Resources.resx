@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="errorAttachFileStatus_001" xml:space="preserve">
+    <value>สถานะเอกสารไม่ถูกต้อง.</value>
+  </data>
+  <data name="errorDeleteAttachFileState_001" xml:space="preserve">
+    <value>ไม่สามารถบันทึกข้อมูลได้เนื่องไฟล์นี้ได้ถูกสั่งลบไปแล้ว.</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_ID" xml:space="preserve">
+    <value>รหัสรายการ</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Registration_ID" xml:space="preserve">
+    <value>รหัสรายการเลขลงทะเบียน</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Attach_File_Type" xml:space="preserve">
+    <value>รหัสประเภทไฟล์แนบ</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Attach_File_Path" xml:space="preserve">
+    <value>ไฟล์แนบ</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Remark" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Created_By" xml:space="preserve">
+    <value>สร้างโดย</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Created_Date" xml:space="preserve">
+    <value>สร้างวันที่</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Updated_By" xml:space="preserve">
+    <value>แก้ไขโดย</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_Updated_Date" xml:space="preserve">
+    <value>แก้ไขเมื่อวันที่</value>
+  </data>
+  <data name="propAttachFileFieldTHNames_File_Status" xml:space="preserve">
+    <value>สถานะเอกสาร</value>
+  </data>
+  <data name="errorBasePersonal_001" xml:space="preserve">
+    <value>เพิ่มไฟล์ได้ประเภทละ 1 ไฟล์เท่านั้น!!!</value>
+  </data>
+  <data name="errorApproveEditRegistrationState_001" xml:space="preserve">
+    <value>ไม่สามารถอนุมัติแก้ไขซ้ำได้เนื่องจากข้อมูลการลงทะเบียนได้รับการอนุมัติแก้ไขแล้ว.</value>
+  </data>
+  <data name="errorApproveRegistrationState_001" xml:space="preserve">
+    <value>ไม่สามารถอนุมัติซ้ำได้เนื่องจากข้อมูลการลงทะเบียนได้รับการอนุมัติแล้ว.</value>
+  </data>
+  <data name="CancelRegistrationState" xml:space="preserve">
+    <value>ข้อมูลการลงทะเบียนนี้ถูกยกเลิกการใช้งานแล้ว.</value>
+  </data>
+  <data name="errorDisapproveEditRegistrationState_001" xml:space="preserve">
+    <value>ไม่สามารถอนุมัติซ้ำได้เนื่องจากข้อมูลการลงทะเบียนได้รับการปฏิเสธแล้ว.</value>
+  </data>
+  <data name="errorDisapproveRegistrationState_001" xml:space="preserve">
+    <value>ไม่สามารถอนุมัติแก้ไขซ้ำได้เนื่องจากข้อมูลการลงทะเบียนได้รับการปฏิเสธแล้ว.</value>
+  </data>
+  <data name="errorNewRegistrationState_001" xml:space="preserve">
+    <value>ข้อมูลการลงทะเบียนไม่อยู่ในสถานะรออนุมัติ ไม่สามารถอนุมัติข้อมูลการลงทะเบียนได้.</value>
+  </data>
+  <data name="errorNewRegistrationState_002" xml:space="preserve">
+    <value>พบปัญหาในการบันทึกข้อมูลการลงทะเบียน :</value>
+  </data>
+  <data name="infoDisapproveRegistrationState_002" xml:space="preserve">
+    <value>There were problems saving the Basket:</value>
+  </data>
+  <data name="errorBaseRegistration_002" xml:space="preserve">
+    <value>สิทธิ์การอนุมัติเฉพาะเจ้าหน้าผู้ดูแลระบบเท่านั้น.</value>
+  </data>
+  <data name="errorBaseRegistration_003" xml:space="preserve">
+    <value>ไม่พบไฟล์ที่ระบุ!!!</value>
+  </data>
+  <data name="errorBaseRegistration_004" xml:space="preserve">
+    <value>ไม่พบเอกสารแนบตามประเภทที่ต้องการ !!!</value>
+  </data>
+  <data name="errorRegistrationFactory_001" xml:space="preserve">
+    <value>ไม่พบข้อมูล เลขบัตรประชาชน.</value>
+  </data>
+  <data name="propTHRegFieldNames_Member_Type" xml:space="preserve">
+    <value>รหัสประเภท</value>
+  </data>
+  <data name="propTHRegFieldNames_ID_CARD_NO" xml:space="preserve">
+    <value>เลขประจำตัวประชาชน</value>
+  </data>
+  <data name="propTHRegFieldNames_EMPLOYEE_NO" xml:space="preserve">
+    <value>รหัสพนักงาน / รหัสเจ้าหน้าที่</value>
+  </data>
+  <data name="propTHRegFieldNames_PRE_NAME_CODE" xml:space="preserve">
+    <value>รหัสคำนำหน้า</value>
+  </data>
+  <data name="propTHRegFieldNames_NAMES" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="propTHRegFieldNames_LASTNAME" xml:space="preserve">
+    <value>นามสกุล</value>
+  </data>
+  <data name="propTHRegFieldNames_NATIONNALITY" xml:space="preserve">
+    <value>สัญชาติ</value>
+  </data>
+  <data name="propTHRegFieldNames_BIRTH_DATE" xml:space="preserve">
+    <value>วันเดือนปีเกิด</value>
+  </data>
+  <data name="propTHRegFieldNames_SEX" xml:space="preserve">
+    <value>เพศ ช = เพศชาย, ญ = เพศหญิง</value>
+  </data>
+  <data name="propTHRegFieldNames_EDUCATION_CODE" xml:space="preserve">
+    <value>รหัสวุฒิการศึกษา</value>
+  </data>
+  <data name="propTHRegFieldNames_ADDRESS_1" xml:space="preserve">
+    <value>ที่อยู่ 1</value>
+  </data>
+  <data name="propTHRegFieldNames_ADDRESS_2" xml:space="preserve">
+    <value>ที่อยู่ 2</value>
+  </data>
+  <data name="propTHRegFieldNames_AREA_CODE" xml:space="preserve">
+    <value>รหัสพื้นที่</value>
+  </data>
+  <data name="propTHRegFieldNames_PROVINCE_CODE" xml:space="preserve">
+    <value>รหัสจังหวัด</value>
+  </data>
+  <data name="propTHRegFieldNames_ZIP_CODE" xml:space="preserve">
+    <value>รหัสไปรษณีย์</value>
+  </data>
+  <data name="propTHRegFieldNames_TELEPHONE" xml:space="preserve">
+    <value>โทรศัพท์</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_ADDRESS1" xml:space="preserve">
+    <value>ที่อยู่ตามภูมิลำเนา1</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_ADDRESS2" xml:space="preserve">
+    <value>ที่อยู่ตามภูมิลำเนา2</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_PROVINCE_CODE" xml:space="preserve">
+    <value>รหัสจังหวัดตามภูมิลำเนา</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_AREA_CODE" xml:space="preserve">
+    <value>รหัสพื้นที่ตามภูมิลำเนา</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_ZIPCODE" xml:space="preserve">
+    <value>รหัสไปรษณีย์ตามภูมิลำเนา</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_TELEPHONE" xml:space="preserve">
+    <value>โทรศัพท์ตามภูมิลำเนา</value>
+  </data>
+  <data name="propTHRegFieldNames_EMAIL" xml:space="preserve">
+    <value>อีเมล</value>
+  </data>
+  <data name="propTHRegFieldNames_STATUS" xml:space="preserve">
+    <value>รหัสตำบล</value>
+  </data>
+  <data name="propTHRegFieldNames_TUMBON_CODE" xml:space="preserve">
+    <value>รหัสตำบลตามภูมิลำเนา</value>
+  </data>
+  <data name="propTHRegFieldNames_LOCAL_TUMBON_CODE" xml:space="preserve">
+    <value>รหัสผ่านที่ลงทะเบียน</value>
+  </data>
+  <data name="propTHRegFieldNames_COMP_CODE" xml:space="preserve">
+    <value>สถานะใช้งาน</value>
+  </data>
+  <data name="errorApplicantBiz_001" xml:space="preserve">
+    <value>ไม่มีข้อมูล</value>
+  </data>
+  <data name="errorApplicantBiz_002" xml:space="preserve">
+    <value>บรรทัดแรก ตำแหน่งแรก ต้องเป็น Header เท่านั้น!</value>
+  </data>
+  <data name="errorApplicantBiz_003" xml:space="preserve">
+    <value>ไม่พบข้อมูลภายในไฟล์นำเข้า</value>
+  </data>
+  <data name="errorExamResultBiz_001" xml:space="preserve">
+    <value>บรรทัดแรกต้องเป็น Header เท่านั้น!</value>
+  </data>
+  <data name="errorExamResultBiz_002" xml:space="preserve">
+    <value>ไฟล์นำเข้าไม่มีข้อมูล</value>
+  </data>
+  <data name="errorLicenseBiz_001" xml:space="preserve">
+    <value>ไฟล์ข้อมูลไม่ถูกต้อง.</value>
+  </data>
+  <data name="errorPaymentBiz_001" xml:space="preserve">
+    <value>ไฟล์ข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="errorPaymentBiz_002" xml:space="preserve">
+    <value>ระบุธนาคารไม่ถูกต้อง.</value>
+  </data>
+  <data name="errorPersonBiz_001" xml:space="preserve">
+    <value>ข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="errorRegistrationBiz_001" xml:space="preserve">
+    <value>กรุณาระบุ รหัสผ่านให้เรียบรอ้ย</value>
+  </data>
+  <data name="errorSysMessage_ServerError" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดจาก Server</value>
+  </data>
+  <data name="errorSysMessage_DataEmpty" xml:space="preserve">
+    <value>!Data Empty : </value>
+  </data>
+  <data name="infoSysMessage_SaveSucess" xml:space="preserve">
+    <value>ทำการบันทึกข้อมูลเรียบร้อย</value>
+  </data>
+  <data name="errorSysMessage_Fail" xml:space="preserve">
+    <value>ผิดพลาด</value>
+  </data>
+  <data name="infoSysMessage_SaveAssociationSuccess" xml:space="preserve">
+    <value>สมัครสมาชิกเรียบร้อยแล้วขอบคุณค่ะ</value>
+  </data>
+  <data name="infoSysMessage_DefaultSelecting" xml:space="preserve">
+    <value>เลือก</value>
+  </data>
+  <data name="errorSysMessage_CannotUploadFile" xml:space="preserve">
+    <value>ไม่สามารถโหลดไฟล์ได้ เนื่องจากกรอกรายการไม่ครบ</value>
+  </data>
+  <data name="infoSysMessage_SuccessInsertTypeOIC" xml:space="preserve">
+    <value>เพิ่มการลงทะเบียนเจ้าหน้าที่ คปภ.</value>
+  </data>
+  <data name="infoSysMessage_SuccessInsertApplicant" xml:space="preserve">
+    <value>เพิ่มการสมัครเรียบร้อย</value>
+  </data>
+  <data name="infoSysMessage_SuccessImportData" xml:space="preserve">
+    <value>นำเข้าระบบเรียบร้อย</value>
+  </data>
+  <data name="infoSysMessage_Approval" xml:space="preserve">
+    <value>อนุมัติเรียบร้อย</value>
+  </data>
+  <data name="infoSysMessage_DialogLoginFail" xml:space="preserve">
+    <value>ท่านได้เคยทำการลงทะเบียนสมาชิกไว้แล้วกรุณากลับไปหน้าแรกเพื่อทำการ Login</value>
+  </data>
+  <data name="infoSysMessage_DialogLoginTitle" xml:space="preserve">
+    <value>ลงทะเบียน</value>
+  </data>
+  <data name="errorSysMessage_EmailErrorFormat" xml:space="preserve">
+    <value>รูปแบบอีเมลไม่ถูกต้อง กรุณากรอกใหม่</value>
+  </data>
+  <data name="infoSysMessage_SuccessInsertTypeGroupPlace" xml:space="preserve">
+    <value>เพิ่มการลงทะเบียนเจ้าหน้าที่กลุ่มสนามสอบ</value>
+  </data>
+  <data name="infoSysMessage_SuccessInsertLicenseSingle" xml:space="preserve">
+    <value>เพิ่มการขอใบอนุญาตเรียบร้อย</value>
+  </data>
+  <data name="errorSysMessage_NotSame" xml:space="preserve">
+    <value>รหัสผ่านไม่ตรงกัน</value>
+  </data>
+  <data name="infoSysMessage_TitleTypeMemberOIC" xml:space="preserve">
+    <value>เพิ่มสมาชิก</value>
+  </data>
+  <data name="errorSysMessage_NoData" xml:space="preserve">
+    <value>ไม่มีข้อมูลในระบบ</value>
+  </data>
+  <data name="errorSysMessage_PleaseInputCompany" xml:space="preserve">
+    <value>กรุณากรอกข้อมูลบริษัทให้ถูกต้อง</value>
+  </data>
+  <data name="infoSysMessage_SelectFile" xml:space="preserve">
+    <value>Select File</value>
+  </data>
+  <data name="errorSysMessage_PleaseChooseMemberType" xml:space="preserve">
+    <value>ท่านยังไม่ได้เลือกประเภทการลงทะเบียน</value>
+  </data>
+  <data name="errorSysMessage_TryAgain" xml:space="preserve">
+    <value>กรุณาตรวจสอบข้อมูลใหม่</value>
+  </data>
+  <data name="errorSysMessage_PleaseDeleteFile" xml:space="preserve">
+    <value>กรุณาลบไฟล์เก่าก่อน ที่จะ Upload ใหม่</value>
+  </data>
+  <data name="errorSysMessage_PleaseChooseFile" xml:space="preserve">
+    <value>กรุณาเลือกประเภทไฟล์ให้ถูกต้อง</value>
+  </data>
+  <data name="errorSysMessage_PleaseSelectFile" xml:space="preserve">
+    <value>กรุณาเลือกไฟล์นามสกุลให้ถูกต้อง</value>
+  </data>
+  <data name="infoSysMessage_PleaseInputIDNumber" xml:space="preserve">
+    <value>กรุณากรอกข้อมูลบัตรประชาชน</value>
+  </data>
+  <data name="errorSysMessage_CannotDeleteExamTestingNo" xml:space="preserve">
+    <value>ไม่สามารถลบได้ เนื่องจากรายการสอบได้ผ่านมาแล้ว</value>
+  </data>
+  <data name="errorSysMessage_CannotEditExamTestingNo" xml:space="preserve">
+    <value>ไม่สามารถแก้ไขได้ เนื่องจากรายการสอบได้ผ่านมาแล้ว</value>
+  </data>
+  <data name="errorSysMessage_PleaseInputTestingNo" xml:space="preserve">
+    <value>กรุณากรอกรหัสสอบให้ถูกต้อง</value>
+  </data>
+  <data name="errorSysMessage_PleaseSelectFileTxt" xml:space="preserve">
+    <value>กรุณาเลือกไฟล์นามสกุล .txt ให้ถูกต้อง</value>
+  </data>
+  <data name="infoSysMessage_PleaseSelectFileData" xml:space="preserve">
+    <value>กรุณาเลือกไฟล์</value>
+  </data>
+  <data name="infoSysMessage_DeleteFile" xml:space="preserve">
+    <value>Delete File</value>
+  </data>
+  <data name="errorSysMessage_PleaseChooesTypeMemberOIC" xml:space="preserve">
+    <value>กรุณาเลือกประเภทสมาชิก OIC</value>
+  </data>
+  <data name="errorSysMessage_PleaseInputFill" xml:space="preserve">
+    <value>กรุณากรอกข้อมูลให้ครบ</value>
+  </data>
+  <data name="infoSysMessage_ChooseData" xml:space="preserve">
+    <value>กรุณาเลือกข้อมูล</value>
+  </data>
+  <data name="infoSysMessage_CheckCondition" xml:space="preserve">
+    <value>กรุณาติ๊กข้อมูลการยอมรับ</value>
+  </data>
+  <data name="infoSysMessage_PleaseInputCompCode" xml:space="preserve">
+    <value>กรุณากรอกหมายเลขบริษัท</value>
+  </data>
+  <data name="infoSysMessage_PleaseSelectDate" xml:space="preserve">
+    <value>กรุณาเลือกวัน</value>
+  </data>
+  <data name="errorSysMessage_PleaseSamePassword" xml:space="preserve">
+    <value>กรุณากรอกรหัสผ่านใหม่ให้ตรงกับยืนยันรหัสผ่าน</value>
+  </data>
+  <data name="errorSysMessage_PleaseChangeDefault" xml:space="preserve">
+    <value>รหัสผ่านใหม่ห้ามตรงกับรหัสผ่านเก่า</value>
+  </data>
+  <data name="errorUploadDataBiz_001" xml:space="preserve">
+    <value>กรุณาระบุตำแหน่งเอกสารให้ถูกต้อง.</value>
+  </data>
+  <data name="errorUploadDataBiz_002" xml:space="preserve">
+    <value>ข้อมูล ไฟล์แนบไม่ถูกต้อง:</value>
+  </data>
+  <data name="errorExamResultBiz_003" xml:space="preserve">
+    <value>กรุณาแนบไฟล์</value>
+  </data>
+  <data name="errorPersonBiz_003" xml:space="preserve">
+    <value> ในระบบ.</value>
+  </data>
+  <data name="errorPersonBiz_002" xml:space="preserve">
+    <value>ไม่พบข้อมูล </value>
+  </data>
+  <data name="errorExportBiz_001" xml:space="preserve">
+    <value>ไม่อนุมัติ</value>
+  </data>
+  <data name="errorExportBiz_002" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="errorExportBiz_003" xml:space="preserve">
+    <value>รออนุมัติ</value>
+  </data>
+</root>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="basicHttpStream_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd1" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IAS.DataServices.FileManagement" />
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:9999/FileManagement/FileService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FileUploadMessage">
+    <wsdl:part name="parameters" element="tns:FileUploadMessage" />
+  </wsdl:message>
+  <wsdl:message name="FileUploadMessage_Headers">
+    <wsdl:part name="Metadata" element="tns:Metadata" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadMessage">
+    <wsdl:part name="parameters" element="tns:FileDownloadMessage" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadMessage_Headers">
+    <wsdl:part name="FileMetaData" element="tns:FileMetaData" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadReturnMessage">
+    <wsdl:part name="parameters" element="tns:FileDownloadReturnMessage" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadReturnMessage_Headers">
+    <wsdl:part name="DownloadedFileMetadata" element="tns:DownloadedFileMetadata" />
+  </wsdl:message>
+  <wsdl:message name="DownloadRequest">
+    <wsdl:part name="parameters" element="tns:DownloadRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo">
+    <wsdl:part name="parameters" element="tns:RemoteFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo_Headers">
+    <wsdl:part name="firstName" element="tns:firstName" />
+    <wsdl:part name="lastName" element="tns:lastName" />
+    <wsdl:part name="memberType" element="tns:memberType" />
+    <wsdl:part name="oicUserName" element="tns:oicUserName" />
+    <wsdl:part name="preNameCode" element="tns:preNameCode" />
+    <wsdl:part name="sex" element="tns:sex" />
+    <wsdl:part name="userId" element="tns:userId" />
+  </wsdl:message>
+  <wsdl:message name="IFileService_UpdateOIC_OutputMessage" />
+  <wsdl:message name="RemoteFileInfoAddOic">
+    <wsdl:part name="parameters" element="tns:RemoteFileInfoAddOic" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfoAddOic_Headers">
+    <wsdl:part name="firstName" element="tns:firstName" />
+    <wsdl:part name="lastName" element="tns:lastName" />
+    <wsdl:part name="oicEmpNo" element="tns:oicEmpNo" />
+    <wsdl:part name="oicTypeCode" element="tns:oicTypeCode" />
+    <wsdl:part name="oicUserName" element="tns:oicUserName" />
+    <wsdl:part name="preNameCode" element="tns:preNameCode" />
+    <wsdl:part name="sex" element="tns:sex" />
+  </wsdl:message>
+  <wsdl:message name="IFileService_InsertOIC_OutputMessage" />
+  <wsdl:message name="IFileService_ValidateApplicantSingleBeforeSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantSingleBeforeSubmit" />
+  </wsdl:message>
+  <wsdl:message name="IFileService_ValidateApplicantSingleBeforeSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantSingleBeforeSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileService_InsertAndCheckApplicantGroupUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckApplicantGroupUpload" />
+  </wsdl:message>
+  <wsdl:message name="IFileService_InsertAndCheckApplicantGroupUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckApplicantGroupUploadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFileService">
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/UploadFile" name="FileUploadMessage" message="tns:FileUploadMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/UploadFileResponse" name="FileUploadMessage" message="tns:FileUploadMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/DownloadFile" name="FileDownloadMessage" message="tns:FileDownloadMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/DownloadFileResponse" name="FileDownloadReturnMessage" message="tns:FileDownloadReturnMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileSign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/DownloadFileSign" name="DownloadRequest" message="tns:DownloadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/DownloadFileSignResponse" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/UpdateOIC" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/UpdateOICResponse" message="tns:IFileService_UpdateOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/InsertOIC" name="RemoteFileInfoAddOic" message="tns:RemoteFileInfoAddOic" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/InsertOICResponse" message="tns:IFileService_InsertOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantSingleBeforeSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/ValidateApplicantSingleBeforeSubmit" message="tns:IFileService_ValidateApplicantSingleBeforeSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/ValidateApplicantSingleBeforeSubmitResponse" message="tns:IFileService_ValidateApplicantSingleBeforeSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckApplicantGroupUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileService/InsertAndCheckApplicantGroupUpload" message="tns:IFileService_InsertAndCheckApplicantGroupUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileService/InsertAndCheckApplicantGroupUploadResponse" message="tns:IFileService_InsertAndCheckApplicantGroupUpload_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpStream" type="tns:IFileService">
+    <wsp:PolicyReference URI="#basicHttpStream_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/UploadFile" style="document" />
+      <wsdl:input name="FileUploadMessage">
+        <soap12:header message="tns:FileUploadMessage_Headers" part="Metadata" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="FileUploadMessage">
+        <soap12:header message="tns:FileUploadMessage_Headers" part="Metadata" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/DownloadFile" style="document" />
+      <wsdl:input name="FileDownloadMessage">
+        <soap12:header message="tns:FileDownloadMessage_Headers" part="FileMetaData" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="FileDownloadReturnMessage">
+        <soap12:header message="tns:FileDownloadReturnMessage_Headers" part="DownloadedFileMetadata" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileSign">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/DownloadFileSign" style="document" />
+      <wsdl:input name="DownloadRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoteFileInfo">
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="firstName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="lastName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="memberType" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="oicUserName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="preNameCode" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="sex" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="userId" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOIC">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/UpdateOIC" style="document" />
+      <wsdl:input name="RemoteFileInfo">
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="firstName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="lastName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="memberType" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="oicUserName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="preNameCode" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="sex" use="literal" />
+        <soap12:header message="tns:RemoteFileInfo_Headers" part="userId" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOIC">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/InsertOIC" style="document" />
+      <wsdl:input name="RemoteFileInfoAddOic">
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="firstName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="lastName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="oicEmpNo" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="oicTypeCode" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="oicUserName" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="preNameCode" use="literal" />
+        <soap12:header message="tns:RemoteFileInfoAddOic_Headers" part="sex" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantSingleBeforeSubmit">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/ValidateApplicantSingleBeforeSubmit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckApplicantGroupUpload">
+      <soap12:operation soapAction="http://tempuri.org/IFileService/InsertAndCheckApplicantGroupUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileService">
+    <wsdl:port name="basicHttpStream" binding="tns:basicHttpStream">
+      <soap12:address location="http://localhost:9999/FileManagement/FileService.svc/FileService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:9999/FileManagement/FileService.svc/FileService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

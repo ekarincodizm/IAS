@@ -1,0 +1,3210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AG_ACCEPT_OFF_R" EntityType="Model.Store.AG_ACCEPT_OFF_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_LICENSE_JURISTIC_T" EntityType="Model.Store.AG_AGENT_LICENSE_JURISTIC_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_LICENSE_PERSON_T" EntityType="Model.Store.AG_AGENT_LICENSE_PERSON_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_LICENSE_REINSURE_T" EntityType="Model.Store.AG_AGENT_LICENSE_REINSURE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_LICENSE_T" EntityType="Model.Store.AG_AGENT_LICENSE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_T" EntityType="Model.Store.AG_AGENT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_AGENT_TYPE_R" EntityType="Model.Store.AG_AGENT_TYPE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_APP_RUNNING_NO_T" EntityType="Model.Store.AG_APP_RUNNING_NO_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_APPLICANT_SCORE_T" EntityType="Model.Store.AG_APPLICANT_SCORE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_APPLICANT_T" EntityType="Model.Store.AG_APPLICANT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EDUCATION_R" EntityType="Model.Store.AG_EDUCATION_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EXAM_CONDITION_R" EntityType="Model.Store.AG_EXAM_CONDITION_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EXAM_LICENSE_R" EntityType="Model.Store.AG_EXAM_LICENSE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EXAM_PLACE_GROUP_R" EntityType="Model.Store.AG_EXAM_PLACE_GROUP_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EXAM_PLACE_R" EntityType="Model.Store.AG_EXAM_PLACE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_EXAM_TIME_R" EntityType="Model.Store.AG_EXAM_TIME_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_HIS_MOVE_COMP_AGENT_T" EntityType="Model.Store.AG_HIS_MOVE_COMP_AGENT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_CHANGE" EntityType="Model.Store.AG_IAS_APPLICANT_CHANGE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_DETAIL_TEMP" EntityType="Model.Store.AG_IAS_APPLICANT_DETAIL_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_HEADER_T" EntityType="Model.Store.AG_IAS_APPLICANT_HEADER_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_HEADER_TEMP" EntityType="Model.Store.AG_IAS_APPLICANT_HEADER_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_ROOM" EntityType="Model.Store.AG_IAS_APPLICANT_ROOM" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_SCORE_D_TEMP" EntityType="Model.Store.AG_IAS_APPLICANT_SCORE_D_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_SCORE_H_TEMP" EntityType="Model.Store.AG_IAS_APPLICANT_SCORE_H_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPLICANT_T_LOG" EntityType="Model.Store.AG_IAS_APPLICANT_T_LOG" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPROVE_CONFIG" EntityType="Model.Store.AG_IAS_APPROVE_CONFIG" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPROVE_DOC_TYPE" EntityType="Model.Store.AG_IAS_APPROVE_DOC_TYPE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_APPROVE_FIELD" EntityType="Model.Store.AG_IAS_APPROVE_FIELD" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ASSOCIATION" EntityType="Model.Store.AG_IAS_ASSOCIATION" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ASSOCIATION_APPROVE" EntityType="Model.Store.AG_IAS_ASSOCIATION_APPROVE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ASSOCIATION_LICENSE" EntityType="Model.Store.AG_IAS_ASSOCIATION_LICENSE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ATTACH_FILE" EntityType="Model.Store.AG_IAS_ATTACH_FILE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ATTACH_FILE_APPLICANT" EntityType="Model.Store.AG_IAS_ATTACH_FILE_APPLICANT" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ATTACH_FILE_LICENSE" EntityType="Model.Store.AG_IAS_ATTACH_FILE_LICENSE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_ATTACH_FILE_LICENSE2" EntityType="Model.Store.AG_IAS_ATTACH_FILE_LICENSE2" store:Type="Tables" store:Schema="AGDOI" store:Name="AG_IAS_ATTACH_FILE_LICENSE2">
+      <DefiningQuery>SELECT 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."ID_ATTACH_FILE" AS "ID_ATTACH_FILE", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."ID_CARD_NO" AS "ID_CARD_NO", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."ATTACH_FILE_TYPE" AS "ATTACH_FILE_TYPE", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."ATTACH_FILE_PATH" AS "ATTACH_FILE_PATH", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."REMARK" AS "REMARK", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."CREATED_BY" AS "CREATED_BY", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."CREATED_DATE" AS "CREATED_DATE", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."UPDATED_BY" AS "UPDATED_BY", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."UPDATED_DATE" AS "UPDATED_DATE", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."FILE_STATUS" AS "FILE_STATUS", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."LICENSE_NO" AS "LICENSE_NO", 
+      "AG_IAS_ATTACH_FILE_LICENSE2"."RENEW_TIME" AS "RENEW_TIME"
+      FROM "AGDOI"."AG_IAS_ATTACH_FILE_LICENSE2" "AG_IAS_ATTACH_FILE_LICENSE2"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AG_IAS_BILL_CODE" EntityType="Model.Store.AG_IAS_BILL_CODE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_CONFIG" EntityType="Model.Store.AG_IAS_CONFIG" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_DOCUMENT_TYPE" EntityType="Model.Store.AG_IAS_DOCUMENT_TYPE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_DOCUMENT_TYPE_T" EntityType="Model.Store.AG_IAS_DOCUMENT_TYPE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_APPLICANT" EntityType="Model.Store.AG_IAS_EXAM_APPLICANT" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_CONDITION_GROUP" EntityType="Model.Store.AG_IAS_EXAM_CONDITION_GROUP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_CONDITION_GROUP_D" EntityType="Model.Store.AG_IAS_EXAM_CONDITION_GROUP_D" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_PLACE_ROOM" EntityType="Model.Store.AG_IAS_EXAM_PLACE_ROOM" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_ROOM_LICENSE_R" EntityType="Model.Store.AG_IAS_EXAM_ROOM_LICENSE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_SPECIAL_R" EntityType="Model.Store.AG_IAS_EXAM_SPECIAL_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_SPECIAL_T" EntityType="Model.Store.AG_IAS_EXAM_SPECIAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_EXAM_SUBJECT_GROUP" EntityType="Model.Store.AG_IAS_EXAM_SUBJECT_GROUP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_FUNCTION_R" EntityType="Model.Store.AG_IAS_FUNCTION_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_HIST_PERSONAL_T" EntityType="Model.Store.AG_IAS_HIST_PERSONAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_IMPORT_DETAIL_TEMP" EntityType="Model.Store.AG_IAS_IMPORT_DETAIL_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_IMPORT_HEADER_TEMP" EntityType="Model.Store.AG_IAS_IMPORT_HEADER_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_INVOICE_T" EntityType="Model.Store.AG_IAS_INVOICE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_LICENSE_D" EntityType="Model.Store.AG_IAS_LICENSE_D" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_LICENSE_D_TEMP" EntityType="Model.Store.AG_IAS_LICENSE_D_TEMP" store:Type="Tables" store:Schema="AGDOI" store:Name="AG_IAS_LICENSE_D_TEMP">
+      <DefiningQuery>SELECT 
+      "AG_IAS_LICENSE_D_TEMP"."UPLOAD_GROUP_NO" AS "UPLOAD_GROUP_NO", 
+      "AG_IAS_LICENSE_D_TEMP"."SEQ_NO" AS "SEQ_NO", 
+      "AG_IAS_LICENSE_D_TEMP"."ORDERS" AS "ORDERS", 
+      "AG_IAS_LICENSE_D_TEMP"."LICENSE_NO" AS "LICENSE_NO", 
+      "AG_IAS_LICENSE_D_TEMP"."LICENSE_DATE" AS "LICENSE_DATE", 
+      "AG_IAS_LICENSE_D_TEMP"."LICENSE_EXPIRE_DATE" AS "LICENSE_EXPIRE_DATE", 
+      "AG_IAS_LICENSE_D_TEMP"."FEES" AS "FEES", 
+      "AG_IAS_LICENSE_D_TEMP"."ID_CARD_NO" AS "ID_CARD_NO", 
+      "AG_IAS_LICENSE_D_TEMP"."RENEW_TIMES" AS "RENEW_TIMES", 
+      "AG_IAS_LICENSE_D_TEMP"."PRE_NAME_CODE" AS "PRE_NAME_CODE", 
+      "AG_IAS_LICENSE_D_TEMP"."TITLE_NAME" AS "TITLE_NAME", 
+      "AG_IAS_LICENSE_D_TEMP"."NAMES" AS "NAMES", 
+      "AG_IAS_LICENSE_D_TEMP"."LASTNAME" AS "LASTNAME", 
+      "AG_IAS_LICENSE_D_TEMP"."ADDRESS_1" AS "ADDRESS_1", 
+      "AG_IAS_LICENSE_D_TEMP"."ADDRESS_2" AS "ADDRESS_2", 
+      "AG_IAS_LICENSE_D_TEMP"."AREA_CODE" AS "AREA_CODE", 
+      "AG_IAS_LICENSE_D_TEMP"."CURRENT_ADDRESS_1" AS "CURRENT_ADDRESS_1", 
+      "AG_IAS_LICENSE_D_TEMP"."CURRENT_ADDRESS_2" AS "CURRENT_ADDRESS_2", 
+      "AG_IAS_LICENSE_D_TEMP"."CURRENT_AREA_CODE" AS "CURRENT_AREA_CODE", 
+      "AG_IAS_LICENSE_D_TEMP"."EMAIL" AS "EMAIL", 
+      "AG_IAS_LICENSE_D_TEMP"."AR_DATE" AS "AR_DATE", 
+      "AG_IAS_LICENSE_D_TEMP"."OLD_COMP_CODE" AS "OLD_COMP_CODE", 
+      "AG_IAS_LICENSE_D_TEMP"."ERR_DESC" AS "ERR_DESC"
+      FROM "AGDOI"."AG_IAS_LICENSE_D_TEMP" "AG_IAS_LICENSE_D_TEMP"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AG_IAS_LICENSE_H" EntityType="Model.Store.AG_IAS_LICENSE_H" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_LICENSE_H_TEMP" EntityType="Model.Store.AG_IAS_LICENSE_H_TEMP" store:Type="Tables" store:Schema="AGDOI" store:Name="AG_IAS_LICENSE_H_TEMP">
+      <DefiningQuery>SELECT 
+      "AG_IAS_LICENSE_H_TEMP"."UPLOAD_GROUP_NO" AS "UPLOAD_GROUP_NO", 
+      "AG_IAS_LICENSE_H_TEMP"."COMP_CODE" AS "COMP_CODE", 
+      "AG_IAS_LICENSE_H_TEMP"."COMP_NAME" AS "COMP_NAME", 
+      "AG_IAS_LICENSE_H_TEMP"."TRAN_DATE" AS "TRAN_DATE", 
+      "AG_IAS_LICENSE_H_TEMP"."LOTS" AS "LOTS", 
+      "AG_IAS_LICENSE_H_TEMP"."MONEY" AS "MONEY", 
+      "AG_IAS_LICENSE_H_TEMP"."REQUEST_NO" AS "REQUEST_NO", 
+      "AG_IAS_LICENSE_H_TEMP"."PAYMENT_NO" AS "PAYMENT_NO", 
+      "AG_IAS_LICENSE_H_TEMP"."FLAG_REQ" AS "FLAG_REQ", 
+      "AG_IAS_LICENSE_H_TEMP"."LICENSE_TYPE_CODE" AS "LICENSE_TYPE_CODE", 
+      "AG_IAS_LICENSE_H_TEMP"."FILENAME" AS "FILENAME", 
+      "AG_IAS_LICENSE_H_TEMP"."PETITION_TYPE_CODE" AS "PETITION_TYPE_CODE"
+      FROM "AGDOI"."AG_IAS_LICENSE_H_TEMP" "AG_IAS_LICENSE_H_TEMP"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AG_IAS_LOG_ACTIVITY" EntityType="Model.Store.AG_IAS_LOG_ACTIVITY" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_MEMBER_TYPE" EntityType="Model.Store.AG_IAS_MEMBER_TYPE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_NATIONALITY" EntityType="Model.Store.AG_IAS_NATIONALITY" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_OIC_TYPE" EntityType="Model.Store.AG_IAS_OIC_TYPE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_DETAIL" EntityType="Model.Store.AG_IAS_PAYMENT_DETAIL" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_DETAIL_HIS" EntityType="Model.Store.AG_IAS_PAYMENT_DETAIL_HIS" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_EXPIRE_DAY" EntityType="Model.Store.AG_IAS_PAYMENT_EXPIRE_DAY" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_FILE" EntityType="Model.Store.AG_IAS_PAYMENT_FILE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_G_T" EntityType="Model.Store.AG_IAS_PAYMENT_G_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_HEADER" EntityType="Model.Store.AG_IAS_PAYMENT_HEADER" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_HEADER_T" EntityType="Model.Store.AG_IAS_PAYMENT_HEADER_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_RUNNINGNO" EntityType="Model.Store.AG_IAS_PAYMENT_RUNNINGNO" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_T" EntityType="Model.Store.AG_IAS_PAYMENT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PAYMENT_TOTAL" EntityType="Model.Store.AG_IAS_PAYMENT_TOTAL" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PERSONAL_T" EntityType="Model.Store.AG_IAS_PERSONAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_PETITION_TYPE_R" EntityType="Model.Store.AG_IAS_PETITION_TYPE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_RECEIPT_HISTORY" EntityType="Model.Store.AG_IAS_RECEIPT_HISTORY" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_REGISTRATION_T" EntityType="Model.Store.AG_IAS_REGISTRATION_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_RESET_HISTORY" EntityType="Model.Store.AG_IAS_RESET_HISTORY" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SCHEDULE" EntityType="Model.Store.AG_IAS_SCHEDULE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SPECIAL_T_TEMP" EntityType="Model.Store.AG_IAS_SPECIAL_T_TEMP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_STATUS" EntityType="Model.Store.AG_IAS_STATUS" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SUBJECT_GROUP" EntityType="Model.Store.AG_IAS_SUBJECT_GROUP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SUBPAYMENT_D_T" EntityType="Model.Store.AG_IAS_SUBPAYMENT_D_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SUBPAYMENT_H_T" EntityType="Model.Store.AG_IAS_SUBPAYMENT_H_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_SUBPAYMENT_RECEIPT" EntityType="Model.Store.AG_IAS_SUBPAYMENT_RECEIPT" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_ATTACH_FILE" EntityType="Model.Store.AG_IAS_TEMP_ATTACH_FILE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_PAYMENT_DETAIL" EntityType="Model.Store.AG_IAS_TEMP_PAYMENT_DETAIL" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_PAYMENT_DETAIL_HIS" EntityType="Model.Store.AG_IAS_TEMP_PAYMENT_DETAIL_HIS" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_PAYMENT_HEADER" EntityType="Model.Store.AG_IAS_TEMP_PAYMENT_HEADER" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_PAYMENT_TOTAL" EntityType="Model.Store.AG_IAS_TEMP_PAYMENT_TOTAL" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TEMP_PERSONAL_T" EntityType="Model.Store.AG_IAS_TEMP_PERSONAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_TRAIN_HOUR_T" EntityType="Model.Store.AG_IAS_TRAIN_HOUR_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_USERS" EntityType="Model.Store.AG_IAS_USERS" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_USERS_RIGHT" EntityType="Model.Store.AG_IAS_USERS_RIGHT" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_VALIDATE_LICENSE" EntityType="Model.Store.AG_IAS_VALIDATE_LICENSE" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_VALIDATE_LICENSE_CON" EntityType="Model.Store.AG_IAS_VALIDATE_LICENSE_CON" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_VALIDATE_LICENSE_GROUP" EntityType="Model.Store.AG_IAS_VALIDATE_LICENSE_GROUP" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_LICENSE_RENEW_LOAD" EntityType="Model.Store.AG_LICENSE_RENEW_LOAD" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_LICENSE_RENEW_T" EntityType="Model.Store.AG_LICENSE_RENEW_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_LICENSE_RUNNING_NO_T" EntityType="Model.Store.AG_LICENSE_RUNNING_NO_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_LICENSE_T" EntityType="Model.Store.AG_LICENSE_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_LICENSE_TYPE_R" EntityType="Model.Store.AG_LICENSE_TYPE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_PERSON_INCOMP_AGENT_T" EntityType="Model.Store.AG_PERSON_INCOMP_AGENT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_PERSONAL_T" EntityType="Model.Store.AG_PERSONAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_PETITION_TYPE_R" EntityType="Model.Store.AG_PETITION_TYPE_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_SUBJECT_R" EntityType="Model.Store.AG_SUBJECT_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_PERIOD_R" EntityType="Model.Store.AG_TRAIN_PERIOD_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_PERSON_T" EntityType="Model.Store.AG_TRAIN_PERSON_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_PLAN_T" EntityType="Model.Store.AG_TRAIN_PLAN_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_SPECIAL_DISCOUNT_T" EntityType="Model.Store.AG_TRAIN_SPECIAL_DISCOUNT_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_SPECIAL_R" EntityType="Model.Store.AG_TRAIN_SPECIAL_R" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_SPECIAL_T" EntityType="Model.Store.AG_TRAIN_SPECIAL_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_TRAIN_SPECIAL_USED_T" EntityType="Model.Store.AG_TRAIN_SPECIAL_USED_T" store:Type="Tables" store:Schema="AGDOI" store:Name="AG_TRAIN_SPECIAL_USED_T">
+      <DefiningQuery>SELECT 
+      "AG_TRAIN_SPECIAL_USED_T"."ID_CARD_NO" AS "ID_CARD_NO", 
+      "AG_TRAIN_SPECIAL_USED_T"."LICENSE_NO" AS "LICENSE_NO", 
+      "AG_TRAIN_SPECIAL_USED_T"."SPECIAL_TYPE_CODE" AS "SPECIAL_TYPE_CODE", 
+      "AG_TRAIN_SPECIAL_USED_T"."START_DATE" AS "START_DATE", 
+      "AG_TRAIN_SPECIAL_USED_T"."END_DATE" AS "END_DATE", 
+      "AG_TRAIN_SPECIAL_USED_T"."USED_DATE" AS "USED_DATE", 
+      "AG_TRAIN_SPECIAL_USED_T"."USER_ID" AS "USER_ID", 
+      "AG_TRAIN_SPECIAL_USED_T"."USER_DATE" AS "USER_DATE"
+      FROM "AGDOI"."AG_TRAIN_SPECIAL_USED_T" "AG_TRAIN_SPECIAL_USED_T"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AG_TRAIN_T" EntityType="Model.Store.AG_TRAIN_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_U_TRAIN_T" EntityType="Model.Store.AG_U_TRAIN_T" store:Type="Tables" Schema="AGDOI" />
+    <EntitySet Name="AG_IAS_LICENSE_TYPE_R" EntityType="Model.Store.AG_IAS_LICENSE_TYPE_R" store:Type="Views" store:Schema="AGDOI" store:Name="AG_IAS_LICENSE_TYPE_R">
+      <DefiningQuery>SELECT 
+      "AG_IAS_LICENSE_TYPE_R"."LICENSE_TYPE_CODE" AS "LICENSE_TYPE_CODE", 
+      "AG_IAS_LICENSE_TYPE_R"."LICENSE_TYPE_NAME" AS "LICENSE_TYPE_NAME", 
+      "AG_IAS_LICENSE_TYPE_R"."USER_ID" AS "USER_ID", 
+      "AG_IAS_LICENSE_TYPE_R"."USER_DATE" AS "USER_DATE", 
+      "AG_IAS_LICENSE_TYPE_R"."INSURANCE_TYPE" AS "INSURANCE_TYPE", 
+      "AG_IAS_LICENSE_TYPE_R"."AGENT_TYPE" AS "AGENT_TYPE", 
+      "AG_IAS_LICENSE_TYPE_R"."IAS_FLAG" AS "IAS_FLAG", 
+      "AG_IAS_LICENSE_TYPE_R"."STATUS" AS "STATUS", 
+      "AG_IAS_LICENSE_TYPE_R"."ACTIVE_FLAG" AS "ACTIVE_FLAG"
+      FROM "AGDOI"."AG_IAS_LICENSE_TYPE_R" "AG_IAS_LICENSE_TYPE_R"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_AS_BUSI_TYPE_R" EntityType="Model.Store.VW_AS_BUSI_TYPE_R" store:Type="Views" store:Schema="AGDOI" store:Name="VW_AS_BUSI_TYPE_R">
+      <DefiningQuery>SELECT 
+      "VW_AS_BUSI_TYPE_R"."BUSINESS_CODE" AS "BUSINESS_CODE", 
+      "VW_AS_BUSI_TYPE_R"."BUSINESS_DESC" AS "BUSINESS_DESC", 
+      "VW_AS_BUSI_TYPE_R"."USER_ID" AS "USER_ID", 
+      "VW_AS_BUSI_TYPE_R"."USER_DATE" AS "USER_DATE"
+      FROM "AGDOI"."VW_AS_BUSI_TYPE_R" "VW_AS_BUSI_TYPE_R"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_AS_COMPANY_T" EntityType="Model.Store.VW_AS_COMPANY_T" store:Type="Views" store:Schema="AGDOI" store:Name="VW_AS_COMPANY_T">
+      <DefiningQuery>SELECT 
+      "VW_AS_COMPANY_T"."COMP_CODE" AS "COMP_CODE", 
+      "VW_AS_COMPANY_T"."COMP_NAMET" AS "COMP_NAMET", 
+      "VW_AS_COMPANY_T"."COMP_ABBR_NAMET" AS "COMP_ABBR_NAMET", 
+      "VW_AS_COMPANY_T"."COMP_NAMEE" AS "COMP_NAMEE", 
+      "VW_AS_COMPANY_T"."COMP_ABBR_NAMEE" AS "COMP_ABBR_NAMEE", 
+      "VW_AS_COMPANY_T"."COMP_TYPE_CODE" AS "COMP_TYPE_CODE", 
+      "VW_AS_COMPANY_T"."BUSINESS_CODE" AS "BUSINESS_CODE", 
+      "VW_AS_COMPANY_T"."ESTA_COND" AS "ESTA_COND", 
+      "VW_AS_COMPANY_T"."TRADE_NO" AS "TRADE_NO", 
+      "VW_AS_COMPANY_T"."COMP_FLAG" AS "COMP_FLAG", 
+      "VW_AS_COMPANY_T"."RECV_CODE" AS "RECV_CODE", 
+      "VW_AS_COMPANY_T"."ZONE_ID" AS "ZONE_ID", 
+      "VW_AS_COMPANY_T"."CT_CODE" AS "CT_CODE", 
+      "VW_AS_COMPANY_T"."COMM_LTD" AS "COMM_LTD", 
+      "VW_AS_COMPANY_T"."REGIS_FUND" AS "REGIS_FUND", 
+      "VW_AS_COMPANY_T"."CURR_FUND" AS "CURR_FUND", 
+      "VW_AS_COMPANY_T"."SHAREHOLDER_E_PCT" AS "SHAREHOLDER_E_PCT", 
+      "VW_AS_COMPANY_T"."ADDR_NO" AS "ADDR_NO", 
+      "VW_AS_COMPANY_T"."ADDR_NO_E" AS "ADDR_NO_E", 
+      "VW_AS_COMPANY_T"."MOO" AS "MOO", 
+      "VW_AS_COMPANY_T"."MOO_E" AS "MOO_E", 
+      "VW_AS_COMPANY_T"."SOI_T" AS "SOI_T", 
+      "VW_AS_COMPANY_T"."SOI_E" AS "SOI_E", 
+      "VW_AS_COMPANY_T"."ROAD_T" AS "ROAD_T", 
+      "VW_AS_COMPANY_T"."ROAD_E" AS "ROAD_E", 
+      "VW_AS_COMPANY_T"."PV_TUMBON" AS "PV_TUMBON", 
+      "VW_AS_COMPANY_T"."PV_AMPUR" AS "PV_AMPUR", 
+      "VW_AS_COMPANY_T"."PV_CODE" AS "PV_CODE", 
+      "VW_AS_COMPANY_T"."TELEPHONE_NO" AS "TELEPHONE_NO", 
+      "VW_AS_COMPANY_T"."FAX_NO" AS "FAX_NO", 
+      "VW_AS_COMPANY_T"."E_MAIL" AS "E_MAIL", 
+      "VW_AS_COMPANY_T"."WEBSITE" AS "WEBSITE", 
+      "VW_AS_COMPANY_T"."PROP_CODE" AS "PROP_CODE", 
+      "VW_AS_COMPANY_T"."INFORM_PERMIT_NO" AS "INFORM_PERMIT_NO", 
+      "VW_AS_COMPANY_T"."INFORM_PERMIT_DATE" AS "INFORM_PERMIT_DATE", 
+      "VW_AS_COMPANY_T"."INFORM_LICENSE_NO" AS "INFORM_LICENSE_NO", 
+      "VW_AS_COMPANY_T"."INFORM_LICENSE_DATE" AS "INFORM_LICENSE_DATE", 
+      "VW_AS_COMPANY_T"."FUND_PAID_AMT" AS "FUND_PAID_AMT", 
+      "VW_AS_COMPANY_T"."CURR_STOCK_PRICE" AS "CURR_STOCK_PRICE", 
+      "VW_AS_COMPANY_T"."CURR_STOCK_AMT" AS "CURR_STOCK_AMT", 
+      "VW_AS_COMPANY_T"."APPROVE_FLAG" AS "APPROVE_FLAG", 
+      "VW_AS_COMPANY_T"."PAY_REQ_NO" AS "PAY_REQ_NO", 
+      "VW_AS_COMPANY_T"."PAY_REQ_DATE" AS "PAY_REQ_DATE", 
+      "VW_AS_COMPANY_T"."RECEIPT_REQ_NO" AS "RECEIPT_REQ_NO", 
+      "VW_AS_COMPANY_T"."RECEIPT_REQ_DATE" AS "RECEIPT_REQ_DATE", 
+      "VW_AS_COMPANY_T"."PAY_LICENSE_NO" AS "PAY_LICENSE_NO", 
+      "VW_AS_COMPANY_T"."PAY_LICENSE_DATE" AS "PAY_LICENSE_DATE", 
+      "VW_AS_COMPANY_T"."RECEIPT_LICENSE_NO" AS "RECEIPT_LICENSE_NO", 
+      "VW_AS_COMPANY_T"."RECEIPT_LICENSE_DATE" AS "RECEIPT_LICENSE_DATE", 
+      "VW_AS_COMPANY_T"."LICENSE_NO" AS "LICENSE_NO", 
+      "VW_AS_COMPANY_T"."LICENSE_DATE" AS "LICENSE_DATE", 
+      "VW_AS_COMPANY_T"."FEE_AMT" AS "FEE_AMT", 
+      "VW_AS_COMPANY_T"."SHAREHOLDER_T_PCT" AS "SHAREHOLDER_T_PCT", 
+      "VW_AS_COMPANY_T"."TRADE_DATE" AS "TRADE_DATE", 
+      "VW_AS_COMPANY_T"."DOC_NO" AS "DOC_NO", 
+      "VW_AS_COMPANY_T"."DOC_DATE" AS "DOC_DATE", 
+      "VW_AS_COMPANY_T"."STATUS" AS "STATUS", 
+      "VW_AS_COMPANY_T"."USER_ID" AS "USER_ID", 
+      "VW_AS_COMPANY_T"."USER_DATE" AS "USER_DATE", 
+      "VW_AS_COMPANY_T"."FLAG_MOTOR" AS "FLAG_MOTOR", 
+      "VW_AS_COMPANY_T"."CURR_PAID_AMT" AS "CURR_PAID_AMT", 
+      "VW_AS_COMPANY_T"."FEE_LICENSE" AS "FEE_LICENSE", 
+      "VW_AS_COMPANY_T"."OLD_COMP_CODE" AS "OLD_COMP_CODE", 
+      "VW_AS_COMPANY_T"."UCOM_CODE" AS "UCOM_CODE", 
+      "VW_AS_COMPANY_T"."MIS_SEQ" AS "MIS_SEQ", 
+      "VW_AS_COMPANY_T"."MINISTER_APPROVE" AS "MINISTER_APPROVE", 
+      "VW_AS_COMPANY_T"."COMP_NAMEE_MS" AS "COMP_NAMEE_MS", 
+      "VW_AS_COMPANY_T"."COMP_START_DATE" AS "COMP_START_DATE", 
+      "VW_AS_COMPANY_T"."ESTA_TYPE" AS "ESTA_TYPE", 
+      "VW_AS_COMPANY_T"."MOBILE_NO" AS "MOBILE_NO"
+      FROM "AGDOI"."VW_AS_COMPANY_T" "VW_AS_COMPANY_T"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_AS_COMPANY_T_BC1" EntityType="Model.Store.VW_AS_COMPANY_T_BC1" store:Type="Views" store:Schema="AGDOI" store:Name="VW_AS_COMPANY_T_BC1">
+      <DefiningQuery>SELECT 
+      "VW_AS_COMPANY_T_BC1"."COMP_CODE" AS "COMP_CODE", 
+      "VW_AS_COMPANY_T_BC1"."COMP_NAMET" AS "COMP_NAMET", 
+      "VW_AS_COMPANY_T_BC1"."COMP_ABBR_NAMET" AS "COMP_ABBR_NAMET", 
+      "VW_AS_COMPANY_T_BC1"."COMP_NAMEE" AS "COMP_NAMEE", 
+      "VW_AS_COMPANY_T_BC1"."COMP_ABBR_NAMEE" AS "COMP_ABBR_NAMEE", 
+      "VW_AS_COMPANY_T_BC1"."COMP_TYPE_CODE" AS "COMP_TYPE_CODE", 
+      "VW_AS_COMPANY_T_BC1"."BUSINESS_CODE" AS "BUSINESS_CODE", 
+      "VW_AS_COMPANY_T_BC1"."ESTA_COND" AS "ESTA_COND", 
+      "VW_AS_COMPANY_T_BC1"."TRADE_NO" AS "TRADE_NO", 
+      "VW_AS_COMPANY_T_BC1"."COMP_FLAG" AS "COMP_FLAG", 
+      "VW_AS_COMPANY_T_BC1"."RECV_CODE" AS "RECV_CODE", 
+      "VW_AS_COMPANY_T_BC1"."ZONE_ID" AS "ZONE_ID", 
+      "VW_AS_COMPANY_T_BC1"."CT_CODE" AS "CT_CODE", 
+      "VW_AS_COMPANY_T_BC1"."COMM_LTD" AS "COMM_LTD", 
+      "VW_AS_COMPANY_T_BC1"."REGIS_FUND" AS "REGIS_FUND", 
+      "VW_AS_COMPANY_T_BC1"."CURR_FUND" AS "CURR_FUND", 
+      "VW_AS_COMPANY_T_BC1"."SHAREHOLDER_E_PCT" AS "SHAREHOLDER_E_PCT", 
+      "VW_AS_COMPANY_T_BC1"."ADDR_NO" AS "ADDR_NO", 
+      "VW_AS_COMPANY_T_BC1"."ADDR_NO_E" AS "ADDR_NO_E", 
+      "VW_AS_COMPANY_T_BC1"."MOO" AS "MOO", 
+      "VW_AS_COMPANY_T_BC1"."MOO_E" AS "MOO_E", 
+      "VW_AS_COMPANY_T_BC1"."SOI_T" AS "SOI_T", 
+      "VW_AS_COMPANY_T_BC1"."SOI_E" AS "SOI_E", 
+      "VW_AS_COMPANY_T_BC1"."ROAD_T" AS "ROAD_T", 
+      "VW_AS_COMPANY_T_BC1"."ROAD_E" AS "ROAD_E", 
+      "VW_AS_COMPANY_T_BC1"."PV_TUMBON" AS "PV_TUMBON", 
+      "VW_AS_COMPANY_T_BC1"."PV_AMPUR" AS "PV_AMPUR", 
+      "VW_AS_COMPANY_T_BC1"."PV_CODE" AS "PV_CODE", 
+      "VW_AS_COMPANY_T_BC1"."TELEPHONE_NO" AS "TELEPHONE_NO", 
+      "VW_AS_COMPANY_T_BC1"."FAX_NO" AS "FAX_NO", 
+      "VW_AS_COMPANY_T_BC1"."E_MAIL" AS "E_MAIL", 
+      "VW_AS_COMPANY_T_BC1"."WEBSITE" AS "WEBSITE", 
+      "VW_AS_COMPANY_T_BC1"."PROP_CODE" AS "PROP_CODE", 
+      "VW_AS_COMPANY_T_BC1"."INFORM_PERMIT_NO" AS "INFORM_PERMIT_NO", 
+      "VW_AS_COMPANY_T_BC1"."INFORM_PERMIT_DATE" AS "INFORM_PERMIT_DATE", 
+      "VW_AS_COMPANY_T_BC1"."INFORM_LICENSE_NO" AS "INFORM_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC1"."INFORM_LICENSE_DATE" AS "INFORM_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC1"."FUND_PAID_AMT" AS "FUND_PAID_AMT", 
+      "VW_AS_COMPANY_T_BC1"."CURR_STOCK_PRICE" AS "CURR_STOCK_PRICE", 
+      "VW_AS_COMPANY_T_BC1"."CURR_STOCK_AMT" AS "CURR_STOCK_AMT", 
+      "VW_AS_COMPANY_T_BC1"."APPROVE_FLAG" AS "APPROVE_FLAG", 
+      "VW_AS_COMPANY_T_BC1"."PAY_REQ_NO" AS "PAY_REQ_NO", 
+      "VW_AS_COMPANY_T_BC1"."PAY_REQ_DATE" AS "PAY_REQ_DATE", 
+      "VW_AS_COMPANY_T_BC1"."RECEIPT_REQ_NO" AS "RECEIPT_REQ_NO", 
+      "VW_AS_COMPANY_T_BC1"."RECEIPT_REQ_DATE" AS "RECEIPT_REQ_DATE", 
+      "VW_AS_COMPANY_T_BC1"."PAY_LICENSE_NO" AS "PAY_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC1"."PAY_LICENSE_DATE" AS "PAY_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC1"."RECEIPT_LICENSE_NO" AS "RECEIPT_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC1"."RECEIPT_LICENSE_DATE" AS "RECEIPT_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC1"."LICENSE_NO" AS "LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC1"."LICENSE_DATE" AS "LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC1"."FEE_AMT" AS "FEE_AMT", 
+      "VW_AS_COMPANY_T_BC1"."SHAREHOLDER_T_PCT" AS "SHAREHOLDER_T_PCT", 
+      "VW_AS_COMPANY_T_BC1"."TRADE_DATE" AS "TRADE_DATE", 
+      "VW_AS_COMPANY_T_BC1"."DOC_NO" AS "DOC_NO", 
+      "VW_AS_COMPANY_T_BC1"."DOC_DATE" AS "DOC_DATE", 
+      "VW_AS_COMPANY_T_BC1"."STATUS" AS "STATUS", 
+      "VW_AS_COMPANY_T_BC1"."USER_ID" AS "USER_ID", 
+      "VW_AS_COMPANY_T_BC1"."USER_DATE" AS "USER_DATE", 
+      "VW_AS_COMPANY_T_BC1"."FLAG_MOTOR" AS "FLAG_MOTOR", 
+      "VW_AS_COMPANY_T_BC1"."CURR_PAID_AMT" AS "CURR_PAID_AMT", 
+      "VW_AS_COMPANY_T_BC1"."FEE_LICENSE" AS "FEE_LICENSE", 
+      "VW_AS_COMPANY_T_BC1"."OLD_COMP_CODE" AS "OLD_COMP_CODE", 
+      "VW_AS_COMPANY_T_BC1"."UCOM_CODE" AS "UCOM_CODE", 
+      "VW_AS_COMPANY_T_BC1"."MIS_SEQ" AS "MIS_SEQ", 
+      "VW_AS_COMPANY_T_BC1"."MINISTER_APPROVE" AS "MINISTER_APPROVE", 
+      "VW_AS_COMPANY_T_BC1"."COMP_NAMEE_MS" AS "COMP_NAMEE_MS", 
+      "VW_AS_COMPANY_T_BC1"."COMP_START_DATE" AS "COMP_START_DATE", 
+      "VW_AS_COMPANY_T_BC1"."ESTA_TYPE" AS "ESTA_TYPE", 
+      "VW_AS_COMPANY_T_BC1"."MOBILE_NO" AS "MOBILE_NO"
+      FROM "AGDOI"."VW_AS_COMPANY_T_BC1" "VW_AS_COMPANY_T_BC1"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_AS_COMPANY_T_BC2" EntityType="Model.Store.VW_AS_COMPANY_T_BC2" store:Type="Views" store:Schema="AGDOI" store:Name="VW_AS_COMPANY_T_BC2">
+      <DefiningQuery>SELECT 
+      "VW_AS_COMPANY_T_BC2"."COMP_CODE" AS "COMP_CODE", 
+      "VW_AS_COMPANY_T_BC2"."COMP_NAMET" AS "COMP_NAMET", 
+      "VW_AS_COMPANY_T_BC2"."COMP_ABBR_NAMET" AS "COMP_ABBR_NAMET", 
+      "VW_AS_COMPANY_T_BC2"."COMP_NAMEE" AS "COMP_NAMEE", 
+      "VW_AS_COMPANY_T_BC2"."COMP_ABBR_NAMEE" AS "COMP_ABBR_NAMEE", 
+      "VW_AS_COMPANY_T_BC2"."COMP_TYPE_CODE" AS "COMP_TYPE_CODE", 
+      "VW_AS_COMPANY_T_BC2"."BUSINESS_CODE" AS "BUSINESS_CODE", 
+      "VW_AS_COMPANY_T_BC2"."ESTA_COND" AS "ESTA_COND", 
+      "VW_AS_COMPANY_T_BC2"."TRADE_NO" AS "TRADE_NO", 
+      "VW_AS_COMPANY_T_BC2"."COMP_FLAG" AS "COMP_FLAG", 
+      "VW_AS_COMPANY_T_BC2"."RECV_CODE" AS "RECV_CODE", 
+      "VW_AS_COMPANY_T_BC2"."ZONE_ID" AS "ZONE_ID", 
+      "VW_AS_COMPANY_T_BC2"."CT_CODE" AS "CT_CODE", 
+      "VW_AS_COMPANY_T_BC2"."COMM_LTD" AS "COMM_LTD", 
+      "VW_AS_COMPANY_T_BC2"."REGIS_FUND" AS "REGIS_FUND", 
+      "VW_AS_COMPANY_T_BC2"."CURR_FUND" AS "CURR_FUND", 
+      "VW_AS_COMPANY_T_BC2"."SHAREHOLDER_E_PCT" AS "SHAREHOLDER_E_PCT", 
+      "VW_AS_COMPANY_T_BC2"."ADDR_NO" AS "ADDR_NO", 
+      "VW_AS_COMPANY_T_BC2"."ADDR_NO_E" AS "ADDR_NO_E", 
+      "VW_AS_COMPANY_T_BC2"."MOO" AS "MOO", 
+      "VW_AS_COMPANY_T_BC2"."MOO_E" AS "MOO_E", 
+      "VW_AS_COMPANY_T_BC2"."SOI_T" AS "SOI_T", 
+      "VW_AS_COMPANY_T_BC2"."SOI_E" AS "SOI_E", 
+      "VW_AS_COMPANY_T_BC2"."ROAD_T" AS "ROAD_T", 
+      "VW_AS_COMPANY_T_BC2"."ROAD_E" AS "ROAD_E", 
+      "VW_AS_COMPANY_T_BC2"."PV_TUMBON" AS "PV_TUMBON", 
+      "VW_AS_COMPANY_T_BC2"."PV_AMPUR" AS "PV_AMPUR", 
+      "VW_AS_COMPANY_T_BC2"."PV_CODE" AS "PV_CODE", 
+      "VW_AS_COMPANY_T_BC2"."TELEPHONE_NO" AS "TELEPHONE_NO", 
+      "VW_AS_COMPANY_T_BC2"."FAX_NO" AS "FAX_NO", 
+      "VW_AS_COMPANY_T_BC2"."E_MAIL" AS "E_MAIL", 
+      "VW_AS_COMPANY_T_BC2"."WEBSITE" AS "WEBSITE", 
+      "VW_AS_COMPANY_T_BC2"."PROP_CODE" AS "PROP_CODE", 
+      "VW_AS_COMPANY_T_BC2"."INFORM_PERMIT_NO" AS "INFORM_PERMIT_NO", 
+      "VW_AS_COMPANY_T_BC2"."INFORM_PERMIT_DATE" AS "INFORM_PERMIT_DATE", 
+      "VW_AS_COMPANY_T_BC2"."INFORM_LICENSE_NO" AS "INFORM_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC2"."INFORM_LICENSE_DATE" AS "INFORM_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC2"."FUND_PAID_AMT" AS "FUND_PAID_AMT", 
+      "VW_AS_COMPANY_T_BC2"."CURR_STOCK_PRICE" AS "CURR_STOCK_PRICE", 
+      "VW_AS_COMPANY_T_BC2"."CURR_STOCK_AMT" AS "CURR_STOCK_AMT", 
+      "VW_AS_COMPANY_T_BC2"."APPROVE_FLAG" AS "APPROVE_FLAG", 
+      "VW_AS_COMPANY_T_BC2"."PAY_REQ_NO" AS "PAY_REQ_NO", 
+      "VW_AS_COMPANY_T_BC2"."PAY_REQ_DATE" AS "PAY_REQ_DATE", 
+      "VW_AS_COMPANY_T_BC2"."RECEIPT_REQ_NO" AS "RECEIPT_REQ_NO", 
+      "VW_AS_COMPANY_T_BC2"."RECEIPT_REQ_DATE" AS "RECEIPT_REQ_DATE", 
+      "VW_AS_COMPANY_T_BC2"."PAY_LICENSE_NO" AS "PAY_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC2"."PAY_LICENSE_DATE" AS "PAY_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC2"."RECEIPT_LICENSE_NO" AS "RECEIPT_LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC2"."RECEIPT_LICENSE_DATE" AS "RECEIPT_LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC2"."LICENSE_NO" AS "LICENSE_NO", 
+      "VW_AS_COMPANY_T_BC2"."LICENSE_DATE" AS "LICENSE_DATE", 
+      "VW_AS_COMPANY_T_BC2"."FEE_AMT" AS "FEE_AMT", 
+      "VW_AS_COMPANY_T_BC2"."SHAREHOLDER_T_PCT" AS "SHAREHOLDER_T_PCT", 
+      "VW_AS_COMPANY_T_BC2"."TRADE_DATE" AS "TRADE_DATE", 
+      "VW_AS_COMPANY_T_BC2"."DOC_NO" AS "DOC_NO", 
+      "VW_AS_COMPANY_T_BC2"."DOC_DATE" AS "DOC_DATE", 
+      "VW_AS_COMPANY_T_BC2"."STATUS" AS "STATUS", 
+      "VW_AS_COMPANY_T_BC2"."USER_ID" AS "USER_ID", 
+      "VW_AS_COMPANY_T_BC2"."USER_DATE" AS "USER_DATE", 
+      "VW_AS_COMPANY_T_BC2"."FLAG_MOTOR" AS "FLAG_MOTOR", 
+      "VW_AS_COMPANY_T_BC2"."CURR_PAID_AMT" AS "CURR_PAID_AMT", 
+      "VW_AS_COMPANY_T_BC2"."FEE_LICENSE" AS "FEE_LICENSE", 
+      "VW_AS_COMPANY_T_BC2"."OLD_COMP_CODE" AS "OLD_COMP_CODE", 
+      "VW_AS_COMPANY_T_BC2"."UCOM_CODE" AS "UCOM_CODE", 
+      "VW_AS_COMPANY_T_BC2"."MIS_SEQ" AS "MIS_SEQ", 
+      "VW_AS_COMPANY_T_BC2"."MINISTER_APPROVE" AS "MINISTER_APPROVE", 
+      "VW_AS_COMPANY_T_BC2"."COMP_NAMEE_MS" AS "COMP_NAMEE_MS", 
+      "VW_AS_COMPANY_T_BC2"."COMP_START_DATE" AS "COMP_START_DATE", 
+      "VW_AS_COMPANY_T_BC2"."ESTA_TYPE" AS "ESTA_TYPE", 
+      "VW_AS_COMPANY_T_BC2"."MOBILE_NO" AS "MOBILE_NO"
+      FROM "AGDOI"."VW_AS_COMPANY_T_BC2" "VW_AS_COMPANY_T_BC2"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_AMPUR" EntityType="Model.Store.VW_IAS_AMPUR" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_AMPUR">
+      <DefiningQuery>SELECT 
+      "VW_IAS_AMPUR"."PROVINCECODE" AS "PROVINCECODE", 
+      "VW_IAS_AMPUR"."ID" AS "ID", 
+      "VW_IAS_AMPUR"."NAME" AS "NAME"
+      FROM "AGDOI"."VW_IAS_AMPUR" "VW_IAS_AMPUR"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_COM_CODE" EntityType="Model.Store.VW_IAS_COM_CODE" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_COM_CODE">
+      <DefiningQuery>SELECT 
+      "VW_IAS_COM_CODE"."ID" AS "ID", 
+      "VW_IAS_COM_CODE"."NAME" AS "NAME"
+      FROM "AGDOI"."VW_IAS_COM_CODE" "VW_IAS_COM_CODE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_PROVINCE" EntityType="Model.Store.VW_IAS_PROVINCE" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_PROVINCE">
+      <DefiningQuery>SELECT 
+      "VW_IAS_PROVINCE"."ID" AS "ID", 
+      "VW_IAS_PROVINCE"."NAME" AS "NAME"
+      FROM "AGDOI"."VW_IAS_PROVINCE" "VW_IAS_PROVINCE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_TITLE_NAME" EntityType="Model.Store.VW_IAS_TITLE_NAME" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_TITLE_NAME">
+      <DefiningQuery>SELECT 
+      "VW_IAS_TITLE_NAME"."ID" AS "ID", 
+      "VW_IAS_TITLE_NAME"."NAME" AS "NAME"
+      FROM "AGDOI"."VW_IAS_TITLE_NAME" "VW_IAS_TITLE_NAME"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_TITLE_NAME_PRIORITY" EntityType="Model.Store.VW_IAS_TITLE_NAME_PRIORITY" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_TITLE_NAME_PRIORITY">
+      <DefiningQuery>SELECT 
+      "VW_IAS_TITLE_NAME_PRIORITY"."ID" AS "ID", 
+      "VW_IAS_TITLE_NAME_PRIORITY"."NAME" AS "NAME", 
+      "VW_IAS_TITLE_NAME_PRIORITY"."PRIORITY" AS "PRIORITY"
+      FROM "AGDOI"."VW_IAS_TITLE_NAME_PRIORITY" "VW_IAS_TITLE_NAME_PRIORITY"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_IAS_TUMBON" EntityType="Model.Store.VW_IAS_TUMBON" store:Type="Views" store:Schema="AGDOI" store:Name="VW_IAS_TUMBON">
+      <DefiningQuery>SELECT 
+      "VW_IAS_TUMBON"."PROVINCECODE" AS "PROVINCECODE", 
+      "VW_IAS_TUMBON"."AMPURCODE" AS "AMPURCODE", 
+      "VW_IAS_TUMBON"."ID" AS "ID", 
+      "VW_IAS_TUMBON"."NAME" AS "NAME"
+      FROM "AGDOI"."VW_IAS_TUMBON" "VW_IAS_TUMBON"</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="AG_AGENT_LICENSE_ID_FK" Association="Model.Store.AG_AGENT_LICENSE_ID_FK">
+      <End Role="AG_PERSONAL_T" EntitySet="AG_PERSONAL_T" />
+      <End Role="AG_AGENT_LICENSE_T" EntitySet="AG_AGENT_LICENSE_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_AGENT_LICENSE_PERSONAL_FK" Association="Model.Store.AG_AGENT_LICENSE_PERSONAL_FK">
+      <End Role="AG_PERSONAL_T" EntitySet="AG_PERSONAL_T" />
+      <End Role="AG_AGENT_LICENSE_PERSON_T" EntitySet="AG_AGENT_LICENSE_PERSON_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_APP_ACCP_PLACECD_FK" Association="Model.Store.AG_APP_ACCP_PLACECD_FK">
+      <End Role="AG_ACCEPT_OFF_R" EntitySet="AG_ACCEPT_OFF_R" />
+      <End Role="AG_APPLICANT_T" EntitySet="AG_APPLICANT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_APP_EDUCD_FK" Association="Model.Store.AG_APP_EDUCD_FK">
+      <End Role="AG_EDUCATION_R" EntitySet="AG_EDUCATION_R" />
+      <End Role="AG_APPLICANT_T" EntitySet="AG_APPLICANT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_APP_TESTNO_FK" Association="Model.Store.AG_APP_TESTNO_FK">
+      <End Role="AG_EXAM_LICENSE_R" EntitySet="AG_EXAM_LICENSE_R" />
+      <End Role="AG_APPLICANT_T" EntitySet="AG_APPLICANT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_APPLICANT_SCORE_FK_NEW" Association="Model.Store.AG_APPLICANT_SCORE_FK_NEW">
+      <End Role="AG_SUBJECT_R" EntitySet="AG_SUBJECT_R" />
+      <End Role="AG_APPLICANT_SCORE_T" EntitySet="AG_APPLICANT_SCORE_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_APPLICANT_SCORE_TESTNO_FK" Association="Model.Store.AG_APPLICANT_SCORE_TESTNO_FK">
+      <End Role="AG_EXAM_LICENSE_R" EntitySet="AG_EXAM_LICENSE_R" />
+      <End Role="AG_APPLICANT_SCORE_T" EntitySet="AG_APPLICANT_SCORE_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_EXAM_COND_TYPECD_FK" Association="Model.Store.AG_EXAM_COND_TYPECD_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_EXAM_CONDITION_R" EntitySet="AG_EXAM_CONDITION_R" />
+    </AssociationSet>
+    <AssociationSet Name="AG_EXAM_LICEN_TIMECD_FK" Association="Model.Store.AG_EXAM_LICEN_TIMECD_FK">
+      <End Role="AG_EXAM_TIME_R" EntitySet="AG_EXAM_TIME_R" />
+      <End Role="AG_EXAM_LICENSE_R" EntitySet="AG_EXAM_LICENSE_R" />
+    </AssociationSet>
+    <AssociationSet Name="AG_EXAM_LICENSE_FK" Association="Model.Store.AG_EXAM_LICENSE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_EXAM_LICENSE_R" EntitySet="AG_EXAM_LICENSE_R" />
+    </AssociationSet>
+    <AssociationSet Name="AG_HIS_MOVE_COMP_AGENT_FK" Association="Model.Store.AG_HIS_MOVE_COMP_AGENT_FK">
+      <End Role="AG_AGENT_LICENSE_T" EntitySet="AG_AGENT_LICENSE_T" />
+      <End Role="AG_HIS_MOVE_COMP_AGENT_T" EntitySet="AG_HIS_MOVE_COMP_AGENT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_HIS_MOVE_COMP_IDCARDNO_FK" Association="Model.Store.AG_HIS_MOVE_COMP_IDCARDNO_FK">
+      <End Role="AG_PERSONAL_T" EntitySet="AG_PERSONAL_T" />
+      <End Role="AG_HIS_MOVE_COMP_AGENT_T" EntitySet="AG_HIS_MOVE_COMP_AGENT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_LICENSE_LICTYPE_FK" Association="Model.Store.AG_LICENSE_LICTYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_LICENSE_T" EntitySet="AG_LICENSE_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_PERSON_INCOMP_LICTYPE_FK" Association="Model.Store.AG_PERSON_INCOMP_LICTYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_PERSON_INCOMP_AGENT_T" EntitySet="AG_PERSON_INCOMP_AGENT_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_PERSONAL_EDU_FK" Association="Model.Store.AG_PERSONAL_EDU_FK">
+      <End Role="AG_EDUCATION_R" EntitySet="AG_EDUCATION_R" />
+      <End Role="AG_PERSONAL_T" EntitySet="AG_PERSONAL_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_SUBJECT_LICENTYPE_FK" Association="Model.Store.AG_SUBJECT_LICENTYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_SUBJECT_R" EntitySet="AG_SUBJECT_R" />
+    </AssociationSet>
+    <AssociationSet Name="AG_TRAIN_LICENSE_TYPE_FK" Association="Model.Store.AG_TRAIN_LICENSE_TYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_TRAIN_T" EntitySet="AG_TRAIN_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_TRAIN_PLAIN_LICENSE_TYPE_FK" Association="Model.Store.AG_TRAIN_PLAIN_LICENSE_TYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_TRAIN_PLAN_T" EntitySet="AG_TRAIN_PLAN_T" />
+    </AssociationSet>
+    <AssociationSet Name="AG_U_TRAIN_LICENSE_TYPE_FK" Association="Model.Store.AG_U_TRAIN_LICENSE_TYPE_FK">
+      <End Role="AG_LICENSE_TYPE_R" EntitySet="AG_LICENSE_TYPE_R" />
+      <End Role="AG_U_TRAIN_T" EntitySet="AG_U_TRAIN_T" />
+    </AssociationSet>
+    <AssociationSet Name="EXAM_PLACE_GROUP_FK" Association="Model.Store.EXAM_PLACE_GROUP_FK">
+      <End Role="AG_EXAM_PLACE_GROUP_R" EntitySet="AG_EXAM_PLACE_GROUP_R" />
+      <End Role="AG_EXAM_PLACE_R" EntitySet="AG_EXAM_PLACE_R" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AG_ACCEPT_OFF_R">
+    <Key>
+      <PropertyRef Name="ACCEPT_OFF_CODE" />
+    </Key>
+    <Property Name="ACCEPT_OFF_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="OFF_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_LICENSE_JURISTIC_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="COMPANY_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="REGISTER_COMP_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="INSURANCE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="JURIS_PERSON_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="BANK_FLAG" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_LICENSE_PERSON_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="COMP_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="COMP_LICENSE_TYPE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_LICENSE_REINSURE_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_LICENSE_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="INSURANCE_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="INSURANCE_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="COMP_LICENSE_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_AGENT_TYPE_R">
+    <Key>
+      <PropertyRef Name="AGENT_TYPE" />
+    </Key>
+    <Property Name="AGENT_TYPE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="AGENT_TYPE_DESC" Type="varchar2" MaxLength="50" />
+    <Property Name="AGENT_TYPE_REMARK" Type="varchar2" MaxLength="50" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_APP_RUNNING_NO_T">
+    <Key>
+      <PropertyRef Name="LEAD_TESTING" />
+    </Key>
+    <Property Name="LEAD_TESTING" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="LAST_APP_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_APPLICANT_SCORE_T">
+    <Key>
+      <PropertyRef Name="APPLICANT_CODE" />
+      <PropertyRef Name="TESTING_NO" />
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+      <PropertyRef Name="SUBJECT_CODE" />
+    </Key>
+    <Property Name="APPLICANT_CODE" Type="number" Nullable="false" Precision="6" />
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="SUBJECT_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="SCORE" Type="number" Precision="3" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_APPLICANT_T">
+    <Key>
+      <PropertyRef Name="APPLICANT_CODE" />
+      <PropertyRef Name="TESTING_NO" />
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+    </Key>
+    <Property Name="APPLICANT_CODE" Type="number" Nullable="false" Precision="6" />
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="ACCEPT_OFF_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="APPLY_DATE" Type="date" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="30" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="35" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="AMOUNT_TRAN_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="INSUR_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="ABSENT_EXAM" Type="varchar2" MaxLength="1" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="1" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="LICENSE" Type="varchar2" MaxLength="1" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="EXAM_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+    <Property Name="EXAM_ROOM" Type="varchar2" MaxLength="6" />
+    <Property Name="CANCEL_DATE" Type="date" />
+    <Property Name="CANCEL_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_EDUCATION_R">
+    <Key>
+      <PropertyRef Name="EDUCATION_CODE" />
+    </Key>
+    <Property Name="EDUCATION_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="EDUCATION_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_EXAM_CONDITION_R">
+    <Key>
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="GRP_SUBJECT_CODE" />
+      <PropertyRef Name="SUBJECT_CODE" />
+    </Key>
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="GRP_SUBJECT_CODE" Type="number" Nullable="false" Precision="2" />
+    <Property Name="SUBJECT_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="EXAM_PASS" Type="number" Precision="3" />
+    <Property Name="MAX_SCORE" Type="number" Precision="3" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_EXAM_LICENSE_R">
+    <Key>
+      <PropertyRef Name="TESTING_NO" />
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+    </Key>
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TESTING_DATE" Type="date" />
+    <Property Name="TEST_TIME_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="EXAM_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="EXAM_APPLY" Type="number" Precision="4" />
+    <Property Name="EXAM_ADMISSION" Type="number" Precision="4" />
+    <Property Name="EXAM_FEE" Type="number" Precision="7" Scale="2" />
+    <Property Name="EXAM_OWNER" Type="varchar2" MaxLength="4" />
+    <Property Name="SPECIAL" Type="varchar2" MaxLength="1" />
+    <Property Name="COURSE_NUMBER" Type="number" />
+    <Property Name="EXAM_STATE" Type="varchar2" MaxLength="1" />
+    <Property Name="REMARK" Type="varchar2" />
+    <Property Name="IMPORT_TYPE" Type="varchar2" MaxLength="15" />
+    <Property Name="PRIVILEGE_STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_EXAM_PLACE_GROUP_R">
+    <Key>
+      <PropertyRef Name="EXAM_PLACE_GROUP_CODE" />
+    </Key>
+    <Property Name="EXAM_PLACE_GROUP_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="EXAM_PLACE_GROUP_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_EXAM_PLACE_R">
+    <Key>
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+    </Key>
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="SEAT_AMOUNT" Type="number" Precision="5" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="EXAM_PLACE_GROUP_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="USER_ID_UPDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE_UPDATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+    <Property Name="FREE" Type="varchar2" MaxLength="1" />
+    <Property Name="ASSOCIATION_CODE" Type="varchar2" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="AG_EXAM_TIME_R">
+    <Key>
+      <PropertyRef Name="TEST_TIME_CODE" />
+    </Key>
+    <Property Name="TEST_TIME_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TEST_TIME" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="USER_DATE_UPDATE" Type="date" />
+    <Property Name="USER_ID_UPDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="START_TIME" Type="varchar2" MaxLength="5" />
+    <Property Name="END_TIME" Type="varchar2" MaxLength="5" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_HIS_MOVE_COMP_AGENT_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="MOVE_TIME" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="MOVE_TIME" Type="number" Nullable="false" Precision="2" />
+    <Property Name="MOVE_DATE" Type="date" />
+    <Property Name="COMP_MOVE_OUT_ID" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_MOVE_IN_ID" Type="varchar2" MaxLength="4" />
+    <Property Name="NEW_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="8" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="MOVE_FLAG" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_CHANGE">
+    <Key>
+      <PropertyRef Name="CHANGE_ID" />
+    </Key>
+    <Property Name="CHANGE_ID" Type="number" Nullable="false" />
+    <Property Name="COMP_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="TESTING_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="OLD_ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="OLD_PREFIX" Type="number" />
+    <Property Name="OLD_FNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="NEW_ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="NEW_PREFIX" Type="number" />
+    <Property Name="NEW_FNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="NEW_LNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="500" />
+    <Property Name="STATUS" Type="number" Nullable="false" Precision="1" />
+    <Property Name="CREATE_BY" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CREATE_DATE" Type="date" Nullable="false" />
+    <Property Name="ASSOCIATION_USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="ASSOCIATION_DATE" Type="date" />
+    <Property Name="ASSOCIATION_RESULT" Type="number" Precision="1" />
+    <Property Name="OIC_USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="OIC_DATE" Type="date" />
+    <Property Name="OIC_RESULT" Type="number" Precision="1" />
+    <Property Name="COLUMN4" Type="varchar2" MaxLength="20" />
+    <Property Name="OLD_LNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_DETAIL_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="APPLICANT_CODE" Type="number" Precision="6" />
+    <Property Name="TESTING_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="ACCEPT_OFF_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="APPLY_DATE" Type="date" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="30" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="35" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="AMOUNT_TRAN_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="INSUR_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="ABSENT_EXAM" Type="varchar2" MaxLength="1" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="1" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="LICENSE" Type="varchar2" MaxLength="1" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="EXAM_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="SEQ_NO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TITLE" Type="varchar2" MaxLength="20" />
+    <Property Name="ERROR_MSG" Type="varchar2" MaxLength="200" />
+    <Property Name="LOAD_STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_HEADER_T">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SOURCE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TESTING_DATE" Type="date" />
+    <Property Name="EXAM_APPLY" Type="number" Precision="5" />
+    <Property Name="EXAM_AMOUNT" Type="number" Precision="10" Scale="2" />
+    <Property Name="TEST_TIME_CODE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_HEADER_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SOURCE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TESTING_DATE" Type="date" />
+    <Property Name="EXAM_APPLY" Type="number" Precision="5" />
+    <Property Name="EXAM_AMOUNT" Type="number" Precision="10" Scale="2" />
+    <Property Name="TEST_TIME_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="FILENAME" Type="varchar2" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_ROOM">
+    <Key>
+      <PropertyRef Name="APPLICANT_CODE" />
+      <PropertyRef Name="TESTING_NO" />
+      <PropertyRef Name="EXAM_ROOM_CODE" />
+    </Key>
+    <Property Name="APPLICANT_CODE" Type="number" Nullable="false" Precision="6" />
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_ROOM_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_GROUP_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_SCORE_D_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="SEQ_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SEAT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="TITLE" Type="varchar2" MaxLength="20" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="20" />
+    <Property Name="LAST_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="100" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="100" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="APPROVE_DATE" Type="date" />
+    <Property Name="EXAM_RESULT" Type="varchar2" MaxLength="20" />
+    <Property Name="SCORE_1" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_2" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_3" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_4" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_5" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_6" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_7" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_8" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_9" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_10" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_11" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_12" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_13" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_14" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_15" Type="varchar2" MaxLength="3" />
+    <Property Name="SCORE_16" Type="varchar2" MaxLength="3" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="ERROR_MSG" Type="varchar2" MaxLength="200" />
+    <Property Name="ABSENT_EXAM" Type="varchar2" MaxLength="1" />
+    <Property Name="STATUS_SAVE_SCORE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_SCORE_H_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ASSOCIATE_NAME" Type="varchar2" MaxLength="80" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ASSOCIATE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="TESTING_DATE" Type="varchar2" MaxLength="10" />
+    <Property Name="EXAM_TIME_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="CNT_PER" Type="varchar2" MaxLength="10" />
+    <Property Name="FILENAME" Type="varchar2" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPLICANT_T_LOG">
+    <Key>
+      <PropertyRef Name="APPLICANT_CODE_LOG" />
+    </Key>
+    <Property Name="APPLICANT_CODE_LOG" Type="number" Nullable="false" Precision="6" />
+    <Property Name="APPLICANT_CODE" Type="number" Nullable="false" Precision="6" />
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="ACCEPT_OFF_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="APPLY_DATE" Type="date" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="30" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="35" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="AMOUNT_TRAN_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="INUSR_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="ABSENT_EXAM" Type="varchar2" MaxLength="1" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="1" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="LICENSE" Type="varchar2" MaxLength="1" />
+    <Property Name="CANCEL_RESON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECODE_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="EXAM_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+    <Property Name="CREATE_BY" Type="varchar2" MaxLength="30" />
+    <Property Name="CREATE_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPROVE_CONFIG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="ITEM" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEM_VALUE" Type="varchar2" MaxLength="2" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="200" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="KEYWORD" Type="varchar2" MaxLength="50" />
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPROVE_DOC_TYPE">
+    <Key>
+      <PropertyRef Name="APPROVE_DOC_TYPE" />
+    </Key>
+    <Property Name="APPROVE_DOC_TYPE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="APPROVE_DOC_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="APPROVER" Type="varchar2" MaxLength="4" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="200" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="ITEM_VALUE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_APPROVE_FIELD">
+    <Key>
+      <PropertyRef Name="APPEOVE_FIELD_ID" />
+    </Key>
+    <Property Name="APPEOVE_FIELD_ID" Type="number" Nullable="false" />
+    <Property Name="FIELD_NAME" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="STATUS" Type="number" Nullable="false" />
+    <Property Name="CREATE_BY" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CREATE_DATE" Type="date" Nullable="false" />
+    <Property Name="UPDATE_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATE_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ASSOCIATION">
+    <Key>
+      <PropertyRef Name="ASSOCIATION_CODE" />
+    </Key>
+    <Property Name="ASSOCIATION_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="ASSOCIATION_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+    <Property Name="COMP_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ASSOCIATION_APPROVE">
+    <Key>
+      <PropertyRef Name="ASSOCIATION_APPROVE_ID" />
+    </Key>
+    <Property Name="ASSOCIATION_APPROVE_ID" Type="number" Nullable="false" />
+    <Property Name="ASSOCIATION_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="APPROVE_DOC_TYPE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="STATUS" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="CREATE_BY" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="CREATE_DATE" Type="date" Nullable="false" />
+    <Property Name="UPDATE_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATE_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ASSOCIATION_LICENSE">
+    <Key>
+      <PropertyRef Name="ASSOCIATION_CODE" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+    </Key>
+    <Property Name="ASSOCIATION_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ATTACH_FILE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="REGISTRATION_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="ATTACH_FILE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="ATTACH_FILE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FILE_STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ATTACH_FILE_APPLICANT">
+    <Key>
+      <PropertyRef Name="ID_ATTACH_FILE" />
+    </Key>
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="ATTACH_FILE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="ATTACH_FILE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FILE_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="CHANGE_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_IAS_ATTACH_FILE_LICENSE">
+    <Key>
+      <PropertyRef Name="ID_ATTACH_FILE" />
+    </Key>
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="ATTACH_FILE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="ATTACH_FILE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FILE_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RENEW_TIME" Type="varchar2" MaxLength="2" />
+    <Property Name="GROUP_LICENSE_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.AG_IAS_ATTACH_FILE_LICENSE2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AG_IAS_ATTACH_FILE_LICENSE2">
+    <Key>
+      <PropertyRef Name="ID_ATTACH_FILE" />
+    </Key>
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="ATTACH_FILE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="ATTACH_FILE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FILE_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RENEW_TIME" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_BILL_CODE">
+    <Key>
+      <PropertyRef Name="PETITION_TYPE_CODE" />
+      <PropertyRef Name="BILL_CODE" />
+    </Key>
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="BILL_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_CONFIG">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="GROUP_CODE" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="ITEM" Type="varchar2" MaxLength="100" />
+    <Property Name="ITEM_VALUE" Type="varchar2" MaxLength="2" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="200" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="ITEM_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="GROUP_CODE" Type="varchar2" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AG_IAS_DOCUMENT_TYPE">
+    <Key>
+      <PropertyRef Name="DOCUMENT_CODE" />
+    </Key>
+    <Property Name="DOCUMENT_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DOCUMENT_NAME" Type="varchar2" MaxLength="500" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="MEMBER_TYPE_CODE" Type="varchar2" MaxLength="1" />
+    <Property Name="DOCUMENT_REQUIRE" Type="varchar2" MaxLength="1" />
+    <Property Name="IS_CARD_PIC" Type="varchar2" MaxLength="1" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TRAIN_DISCOUNT_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="EXAM_DISCOUNT_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="SPECIAL_TYPE_CODE_TRAIN" Type="varchar2" MaxLength="5" />
+    <Property Name="SPECIAL_TYPE_CODE_EXAM" Type="varchar2" MaxLength="5" />
+    <Property Name="ORDER_BY" Type="varchar2" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="AG_IAS_DOCUMENT_TYPE_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="FUNCTION_ID" Type="varchar2" MaxLength="2" />
+    <Property Name="MEMBER_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="DOCUMENT_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="DOCUMENT_REQUIRE" Type="varchar2" MaxLength="1" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="ID" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_APPLICANT">
+    <Key>
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+      <PropertyRef Name="EXAM_ROOM_CODE" />
+      <PropertyRef Name="EXAM_APPLICANT_CODE" />
+    </Key>
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_ROOM_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_APPLICANT_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="APPICANT_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="TESTINGNO" Type="varchar2" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_CONDITION_GROUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="COURSE_NUMBER" Type="number" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="100" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="NOTE" Type="varchar2" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_CONDITION_GROUP_D">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="COURSE_NUMBER" Type="number" />
+    <Property Name="SUBJECT_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="MAX_SCORE" Type="number" Precision="3" />
+    <Property Name="GROUP_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_PLACE_ROOM">
+    <Key>
+      <PropertyRef Name="EXAM_ROOM_CODE" />
+      <PropertyRef Name="EXAM_PLACE_CODE" />
+    </Key>
+    <Property Name="EXAM_ROOM_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_ROOM_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="SEAT_AMOUNT" Type="number" Precision="5" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="USER_ID_UPDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE_UPDATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_ROOM_LICENSE_R">
+    <Key>
+      <PropertyRef Name="TESTING_NO" />
+      <PropertyRef Name="EXAM_ROOM_CODE" />
+    </Key>
+    <Property Name="TESTING_NO" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="EXAM_ROOM_CODE" Type="varchar2" Nullable="false" MaxLength="6" />
+    <Property Name="NUMBER_SEAT_ROOM" Type="number" Precision="5" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="USER_ID_UPDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE_UPDATE" Type="date" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_SPECIAL_R">
+    <Key>
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+    </Key>
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="SPECIAL_TYPE_DESC" Type="varchar2" MaxLength="100" />
+    <Property Name="USED_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_SPECIAL_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+      <PropertyRef Name="SEND_YEAR" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+    <Property Name="SEND_DATE" Type="date" />
+    <Property Name="SEND_BY" Type="varchar2" MaxLength="13" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="SEND_YEAR" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="UNI_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UNI_NAME" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AG_IAS_EXAM_SUBJECT_GROUP">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="number" Nullable="false" />
+    <Property Name="ID" Type="number" />
+    <Property Name="GROUP_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="EXAMPASS" Type="number" />
+    <Property Name="COURSE_NUMBER" Type="number" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_FUNCTION_R">
+    <Key>
+      <PropertyRef Name="FUNCTION_ID" />
+    </Key>
+    <Property Name="FUNCTION_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="FUNCTION_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FUNCTION_URI" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="AG_IAS_HIST_PERSONAL_T">
+    <Key>
+      <PropertyRef Name="TRANS_ID" />
+    </Key>
+    <Property Name="TRANS_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID" Type="varchar2" MaxLength="15" />
+    <Property Name="MEMBER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="EMPLOYEE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="70" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="200" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="200" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIP_CODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="LOCAL_ADDRESS1" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_ADDRESS2" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="LOCAL_PROVINCE_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="LOCAL_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="LOCAL_TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LOCAL_TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="IMG_SIGN" Type="blob" />
+  </EntityType>
+  <EntityType Name="AG_IAS_IMPORT_DETAIL_TEMP">
+    <Key>
+      <PropertyRef Name="IMPORT_ID" />
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="IMPORT_ID" Type="number" Nullable="false" Precision="18" />
+    <Property Name="PETITION_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="SEQ" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_ACTIVE_DATE" Type="date" />
+    <Property Name="LICENSE_EXPIRE_DATE" Type="date" />
+    <Property Name="LICENSE_FEE" Type="number" Precision="12" Scale="2" />
+    <Property Name="CITIZEN_ID" Type="varchar2" MaxLength="13" />
+    <Property Name="TITLE_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="SURNAME" Type="varchar2" MaxLength="40" />
+    <Property Name="ADDR1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDR2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="CUR_ADDR" Type="varchar2" MaxLength="60" />
+    <Property Name="TEL_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="CUR_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="500" />
+    <Property Name="AR_ANSWER" Type="varchar2" MaxLength="50" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="10" />
+    <Property Name="ERR_MSG" Type="varchar2" />
+    <Property Name="LOAD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" MaxLength="5" />
+    <Property Name="START_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_IMPORT_HEADER_TEMP">
+    <Key>
+      <PropertyRef Name="IMPORT_ID" />
+      <PropertyRef Name="IMPORT_DATETIME" />
+    </Key>
+    <Property Name="IMPORT_ID" Type="number" Nullable="false" Precision="18" />
+    <Property Name="IMPORT_DATETIME" Type="timestamp" Nullable="false" />
+    <Property Name="FILE_NAME" Type="varchar2" MaxLength="300" />
+    <Property Name="PETTITION_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="LICENSE_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="SEND_DATE" Type="date" />
+    <Property Name="TOTAL_AGENT" Type="number" Precision="6" />
+    <Property Name="TOTAL_FEE" Type="number" Precision="12" Scale="2" />
+    <Property Name="ERR_MSG" Type="varchar2" />
+    <Property Name="APPROVE_COMPCODE" Type="varchar2" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="AG_IAS_INVOICE_T">
+    <Key>
+      <PropertyRef Name="REQUEST_NO" />
+    </Key>
+    <Property Name="REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="INVOICE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="PERSON_NO" Type="number" />
+    <Property Name="INV_AMOUNT" Type="number" />
+    <Property Name="TESTING_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="APPLY_DATE" Type="date" />
+    <Property Name="INVOICE_DATE" Type="date" />
+    <Property Name="PAYMENT_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_LICENSE_D">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="SEQ_NO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="ORDERS" Type="varchar2" MaxLength="4" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_EXPIRE_DATE" Type="date" />
+    <Property Name="FEES" Type="number" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RENEW_TIMES" Type="varchar2" MaxLength="3" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="TITLE_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="40" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="CURRENT_ADDRESS_1" Type="varchar2" MaxLength="60" />
+    <Property Name="CURRENT_ADDRESS_2" Type="varchar2" MaxLength="60" />
+    <Property Name="CURRENT_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="AR_DATE" Type="date" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="ERR_DESC" Type="varchar2" MaxLength="100" />
+    <Property Name="APPROVED" Type="varchar2" MaxLength="1" />
+    <Property Name="APPROVED_DATE" Type="date" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PAY_EXPIRE" Type="date" />
+    <Property Name="OIC_APPROVED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="OIC_APPROVED_DATE" Type="date" />
+    <Property Name="IS_DOWNLOAD" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.AG_IAS_LICENSE_D_TEMP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AG_IAS_LICENSE_D_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+      <PropertyRef Name="SEQ_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="SEQ_NO" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="ORDERS" Type="varchar2" MaxLength="4" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_EXPIRE_DATE" Type="date" />
+    <Property Name="FEES" Type="number" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RENEW_TIMES" Type="varchar2" MaxLength="3" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="TITLE_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="30" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="35" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="CURRENT_ADDRESS_1" Type="varchar2" MaxLength="60" />
+    <Property Name="CURRENT_ADDRESS_2" Type="varchar2" MaxLength="60" />
+    <Property Name="CURRENT_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="AR_DATE" Type="date" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="ERR_DESC" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AG_IAS_LICENSE_H">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="TRAN_DATE" Type="date" />
+    <Property Name="LOTS" Type="number" />
+    <Property Name="MONEY" Type="number" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="FLAG_REQ" Type="varchar2" MaxLength="1" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="FILENAME" Type="varchar2" MaxLength="300" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="FLAG_LIC" Type="varchar2" MaxLength="1" />
+    <Property Name="APPROVE_COMPCODE" Type="varchar2" MaxLength="4" />
+    <Property Name="APPROVED_DOC" Type="varchar2" MaxLength="1" />
+    <Property Name="APPROVED_DATE" Type="date" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.AG_IAS_LICENSE_H_TEMP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AG_IAS_LICENSE_H_TEMP">
+    <Key>
+      <PropertyRef Name="UPLOAD_GROUP_NO" />
+    </Key>
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="TRAN_DATE" Type="date" />
+    <Property Name="LOTS" Type="number" />
+    <Property Name="MONEY" Type="number" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="FLAG_REQ" Type="varchar2" MaxLength="1" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="FILENAME" Type="varchar2" MaxLength="50" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_LOG_ACTIVITY">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="FUNCTION_ID" />
+      <PropertyRef Name="ACTIVITY_DATETIME" />
+    </Key>
+    <Property Name="USER_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="FUNCTION_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ACTIVITY_DATETIME" Type="date" Nullable="false" />
+    <Property Name="ACTION" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_MEMBER_TYPE">
+    <Key>
+      <PropertyRef Name="MEMBER_CODE" />
+    </Key>
+    <Property Name="MEMBER_CODE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="MEMBER_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_NATIONALITY">
+    <Key>
+      <PropertyRef Name="NATIONALITY_CODE" />
+    </Key>
+    <Property Name="NATIONALITY_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="NATIONALITY_NAME" Type="varchar2" MaxLength="30" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_OIC_TYPE">
+    <Key>
+      <PropertyRef Name="OIC_CODE" />
+    </Key>
+    <Property Name="OIC_CODE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="OIC_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_DETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="PAYMENT_TIME" Type="varchar2" MaxLength="6" />
+    <Property Name="CUSTOMER_NAME" Type="varchar2" MaxLength="70" />
+    <Property Name="CUSTOMER_NO_REF1" Type="varchar2" MaxLength="20" />
+    <Property Name="REF2" Type="varchar2" MaxLength="20" />
+    <Property Name="REF3" Type="varchar2" MaxLength="20" />
+    <Property Name="BRANCH_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="TELLER_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="KIND_OF_TRANSACTION" Type="varchar2" MaxLength="1" />
+    <Property Name="TRANSACTION_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="CHEQUE_NO" Type="varchar2" MaxLength="7" />
+    <Property Name="AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="CHEQUE_BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="STATUS" Type="number" Precision="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_DETAIL_HIS">
+    <Key>
+      <PropertyRef Name="HIS_ID" />
+    </Key>
+    <Property Name="HIS_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="PAYMENT_TIME" Type="varchar2" MaxLength="6" />
+    <Property Name="CUSTOMER_NAME" Type="varchar2" MaxLength="70" />
+    <Property Name="CUSTOMER_NO_REF1" Type="varchar2" MaxLength="20" />
+    <Property Name="REF2" Type="varchar2" MaxLength="20" />
+    <Property Name="REF3" Type="varchar2" MaxLength="20" />
+    <Property Name="BRANCH_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="TELLER_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="KIND_OF_TRANSACTION" Type="varchar2" MaxLength="1" />
+    <Property Name="TRANSACTION_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="CHEQUE_NO" Type="varchar2" MaxLength="7" />
+    <Property Name="AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="CHEQUE_BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_EXPIRE_DAY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="200" />
+    <Property Name="PAYMENT_EXPIRE_DAY" Type="number" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_FILE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="FILE_DATE" Type="date" />
+    <Property Name="KTB" Type="varchar2" MaxLength="1" />
+    <Property Name="CITYBANK" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="UPDATE_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="COUNT" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_G_T">
+    <Key>
+      <PropertyRef Name="GROUP_REQUEST_NO" />
+    </Key>
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="SUBPAYMENT_QTY" Type="number" />
+    <Property Name="GROUP_AMOUNT" Type="number" />
+    <Property Name="GROUP_DATE" Type="date" />
+    <Property Name="PAYMENT_BY" Type="varchar2" MaxLength="50" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="200" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="EXPIRATION_DATE" Type="date" />
+    <Property Name="CHEQUE_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="REF2" Type="varchar2" MaxLength="20" />
+    <Property Name="LAST_PRINT" Type="date" />
+    <Property Name="CANCLE_SEAT_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_HEADER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEQUENCE_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="COMPANY_NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="EFFECTIVE_DATE" Type="varchar2" MaxLength="8" />
+    <Property Name="SERVICE_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="BANK" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_HEADER_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="COMPANY_NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="EFFECTIVE_DATE" Type="date" />
+    <Property Name="SERVICE_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PAY_AMOUNT" Type="number" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_RUNNINGNO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="LAST_RUNNO" Type="number" Nullable="false" />
+    <Property Name="LAST_UPDATE" Type="date" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="date" Nullable="false" />
+    <Property Name="DOCUMENTNAME" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_T">
+    <Key>
+      <PropertyRef Name="PAYMENT_NO" />
+    </Key>
+    <Property Name="PAYMENT_NO" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RECEIPT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="RECEIPT_DATE" Type="date" />
+    <Property Name="AMOUNT" Type="number" Precision="7" Scale="2" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="OLD_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TESTING_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="COMPANY_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="PAYMENT_REP" Type="varchar2" MaxLength="12" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ELICENSING_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="INSURE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="DEPT_CODE" Type="varchar2" MaxLength="12" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" MaxLength="7" />
+    <Property Name="INVOICE_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PAYMENT_TOTAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEQUENCE_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="TOTAL_DEBIT_AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="TOTAL_DEBIT_TRANSACTION" Type="varchar2" MaxLength="6" />
+    <Property Name="TOTAL_CREDIT_AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="TOTAL_CREDIT_TRANSACTION" Type="varchar2" MaxLength="6" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PERSONAL_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="MEMBER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="EMPLOYEE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="70" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="200" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="200" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIP_CODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="LOCAL_ADDRESS1" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_ADDRESS2" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="LOCAL_PROVINCE_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="LOCAL_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="LOCAL_TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LOCAL_TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="APPROVE_RESULT" Type="varchar2" MaxLength="100" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="SIGNATUER_IMG" Type="varchar2" MaxLength="100" />
+    <Property Name="IMG_SIGN" Type="blob" />
+  </EntityType>
+  <EntityType Name="AG_IAS_PETITION_TYPE_R">
+    <Key>
+      <PropertyRef Name="PETITION_TYPE_CODE" />
+    </Key>
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PETITION_TYPE_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="INSURANCE_TYPE" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_IAS_RECEIPT_HISTORY">
+    <Key>
+      <PropertyRef Name="RCV_HIS_ID" />
+    </Key>
+    <Property Name="RCV_HIS_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="RECEIPT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="RCV_EVENT" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_REGISTRATION_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="MEMBER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="EMPLOYEE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="70" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="200" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="200" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIP_CODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="LOCAL_ADDRESS1" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_ADDRESS2" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="LOCAL_PROVINCE_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="LOCAL_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="LOCAL_TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LOCAL_TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="NOT_APPROVE_DATE" Type="date" />
+    <Property Name="LINK_REDIRECT" Type="varchar2" MaxLength="50" />
+    <Property Name="REG_PASS" Type="varchar2" MaxLength="100" />
+    <Property Name="APPROVE_RESULT" Type="varchar2" MaxLength="100" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="IMPORT_STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_RESET_HISTORY">
+    <Key>
+      <PropertyRef Name="RESET_ID" />
+    </Key>
+    <Property Name="RESET_ID" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="RESET_TIMES" Type="number" Precision="5" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SCHEDULE">
+    <Key>
+      <PropertyRef Name="SCHEDULE_ACTION" />
+    </Key>
+    <Property Name="SCHEDULE_ACTION" Type="date" Nullable="false" />
+    <Property Name="SCHEDULE_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="SCHEDULE_START_DATE" Type="date" />
+    <Property Name="SCHEDULE_END_DATE" Type="date" />
+    <Property Name="SCHEDULE_REMARK" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SPECIAL_T_TEMP">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+      <PropertyRef Name="SEND_YEAR" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+    <Property Name="SEND_DATE" Type="date" />
+    <Property Name="SEND_BY" Type="varchar2" MaxLength="13" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="SEND_YEAR" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="UNI_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UNI_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TRAIN_DISCOUNT_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="EXAM_DISCOUNT_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_IAS_STATUS">
+    <Key>
+      <PropertyRef Name="STATUS_CODE" />
+    </Key>
+    <Property Name="STATUS_CODE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="STATUS_NAME" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SUBJECT_GROUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="GROUP_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="EXAM_PASS" Type="number" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SUBPAYMENT_D_T">
+    <Key>
+      <PropertyRef Name="PAYMENT_NO" />
+      <PropertyRef Name="HEAD_REQUEST_NO" />
+    </Key>
+    <Property Name="PAYMENT_NO" Type="varchar2" Nullable="false" MaxLength="14" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RECEIPT_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="RECEIPT_DATE" Type="date" />
+    <Property Name="AMOUNT" Type="number" Precision="7" Scale="2" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="200" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="OLD_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TESTING_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="COMPANY_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="PAYMENT_REP" Type="varchar2" MaxLength="12" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ELICENSING_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="INSURE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="DEPT_CODE" Type="varchar2" MaxLength="12" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" MaxLength="7" />
+    <Property Name="PRINT_TIMES" Type="number" />
+    <Property Name="APPLICANT_CODE" Type="number" Precision="6" />
+    <Property Name="EXAM_PLACE_CODE" Type="varchar2" MaxLength="6" />
+    <Property Name="RENEW_TIME" Type="number" Precision="2" />
+    <Property Name="ACCOUNTING" Type="varchar2" MaxLength="1" />
+    <Property Name="DOWNLOAD_TIMES" Type="number" Precision="5" />
+    <Property Name="RECEIPT_BY_ID" Type="varchar2" MaxLength="150" />
+    <Property Name="RECEIVE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="SEQ_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="GUID" Type="varchar2" MaxLength="100" />
+    <Property Name="HASHING_CODE" Type="varchar2" MaxLength="100" />
+    <Property Name="SIGNATUER_POSITION" Type="varchar2" MaxLength="50" />
+    <Property Name="COPY_RECEIVE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="SEQ_OF_SUBGROUP" Type="varchar2" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SUBPAYMENT_H_T">
+    <Key>
+      <PropertyRef Name="HEAD_REQUEST_NO" />
+    </Key>
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="PERSON_NO" Type="number" Precision="5" />
+    <Property Name="SUBPAYMENT_AMOUNT" Type="number" Precision="9" Scale="2" />
+    <Property Name="SUBPAYMENT_DATE" Type="date" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="APPROVED_DOC" Type="varchar2" MaxLength="1" />
+    <Property Name="UPLOAD_GROUP_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="DATE_EXP" Type="date" />
+    <Property Name="SEQ_OF_GROUP" Type="varchar2" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="AG_IAS_SUBPAYMENT_RECEIPT">
+    <Key>
+      <PropertyRef Name="RECEIPT_NO" />
+    </Key>
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="14" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PAYMENT_DATE" Type="date" />
+    <Property Name="RECEIPT_DATE" Type="date" />
+    <Property Name="AMOUNT" Type="number" Precision="7" Scale="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="ACCOUNTING" Type="varchar2" MaxLength="1" />
+    <Property Name="DOWNLOAD_TIMES" Type="number" Precision="5" />
+    <Property Name="RECEIPT_BY_ID" Type="varchar2" MaxLength="150" />
+    <Property Name="RECEIVE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="GUID" Type="varchar2" MaxLength="100" />
+    <Property Name="HASHING_CODE" Type="varchar2" MaxLength="100" />
+    <Property Name="SIGNATUER_POSITION" Type="varchar2" MaxLength="50" />
+    <Property Name="COPY_RECEIVE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="SEQ_OF_SUBGROUP" Type="varchar2" MaxLength="4" />
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="GEN_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="RECEIPT_NO" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="PRINT_TIMES" Type="number" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="FULL_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="PETITION_TYPE_NAME" Type="varchar2" MaxLength="70" />
+    <Property Name="FILE_SIZE" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_ATTACH_FILE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="REGISTRATION_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="ATTACH_FILE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="ATTACH_FILE_PATH" Type="varchar2" MaxLength="100" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="100" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="FILE_STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_PAYMENT_DETAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="PAYMENT_DATE" Type="varchar2" MaxLength="8" />
+    <Property Name="PAYMENT_TIME" Type="varchar2" MaxLength="6" />
+    <Property Name="CUSTOMER_NAME" Type="varchar2" MaxLength="70" />
+    <Property Name="CUSTOMER_NO_REF1" Type="varchar2" MaxLength="20" />
+    <Property Name="REF2" Type="varchar2" MaxLength="20" />
+    <Property Name="REF3" Type="varchar2" MaxLength="20" />
+    <Property Name="BRANCH_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="TELLER_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="KIND_OF_TRANSACTION" Type="varchar2" MaxLength="1" />
+    <Property Name="TRANSACTION_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="CHEQUE_NO" Type="varchar2" MaxLength="7" />
+    <Property Name="AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="CHEQUE_BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="STATUS" Type="number" Precision="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_PAYMENT_DETAIL_HIS">
+    <Key>
+      <PropertyRef Name="HIS_ID" />
+    </Key>
+    <Property Name="HIS_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="PAYMENT_DATE" Type="varchar2" MaxLength="8" />
+    <Property Name="PAYMENT_TIME" Type="varchar2" MaxLength="6" />
+    <Property Name="CUSTOMER_NAME" Type="varchar2" MaxLength="70" />
+    <Property Name="CUSTOMER_NO_REF1" Type="varchar2" MaxLength="20" />
+    <Property Name="REF2" Type="varchar2" MaxLength="20" />
+    <Property Name="REF3" Type="varchar2" MaxLength="20" />
+    <Property Name="BRANCH_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="TELLER_NO" Type="varchar2" MaxLength="4" />
+    <Property Name="KIND_OF_TRANSACTION" Type="varchar2" MaxLength="1" />
+    <Property Name="TRANSACTION_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="CHEQUE_NO" Type="varchar2" MaxLength="7" />
+    <Property Name="AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="CHEQUE_BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_PAYMENT_HEADER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEQUENCE_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="COMPANY_NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="EFFECTIVE_DATE" Type="varchar2" MaxLength="8" />
+    <Property Name="SERVICE_CODE" Type="varchar2" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_PAYMENT_TOTAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RECORD_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="SEQUENCE_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="BANK_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="COMPANY_ACCOUNT" Type="varchar2" MaxLength="10" />
+    <Property Name="TOTAL_DEBIT_AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="TOTAL_DEBIT_TRANSACTION" Type="varchar2" MaxLength="6" />
+    <Property Name="TOTAL_CREDIT_AMOUNT" Type="varchar2" MaxLength="13" />
+    <Property Name="TOTAL_CREDIT_TRANSACTION" Type="varchar2" MaxLength="6" />
+    <Property Name="HEADER_ID" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TEMP_PERSONAL_T">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="MEMBER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="EMPLOYEE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="70" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS_1" Type="varchar2" MaxLength="200" />
+    <Property Name="ADDRESS_2" Type="varchar2" MaxLength="200" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIP_CODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="LOCAL_ADDRESS1" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_ADDRESS2" Type="varchar2" MaxLength="100" />
+    <Property Name="LOCAL_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="LOCAL_PROVINCE_CODE" Type="varchar2" MaxLength="20" />
+    <Property Name="LOCAL_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="LOCAL_TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="255" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LOCAL_TUMBON_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="APPROVE_RESULT" Type="varchar2" MaxLength="100" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="IMG_SIGN" Type="blob" />
+  </EntityType>
+  <EntityType Name="AG_IAS_TRAIN_HOUR_T">
+    <Key>
+      <PropertyRef Name="YEAR_Y" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="RENEW_TIMES" />
+    </Key>
+    <Property Name="YEAR_Y" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRAIN_HOURS" Type="number" Precision="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="TRAIN_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="RENEW_TIMES" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="USER_NAME" Type="varchar2" MaxLength="255" />
+    <Property Name="USER_PASS" Type="varchar2" MaxLength="100" />
+    <Property Name="USER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="IS_ACTIVE" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_RIGHT" Type="varchar2" MaxLength="5" />
+    <Property Name="USER_TERM_ACCEPTED" Type="varchar2" MaxLength="1" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="RESET_TIMES" Type="number" />
+    <Property Name="OIC_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="MEMBER_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="OIC_EMP_NO" Type="varchar2" MaxLength="10" />
+    <Property Name="IS_APPROVE" Type="varchar2" MaxLength="1" />
+    <Property Name="APPROVED_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="APP_CLOSED" Type="varchar2" MaxLength="1" />
+    <Property Name="OTH_USER_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTPASSWORD_CHANGDATE" Type="date" />
+    <Property Name="DELETE_USER" Type="varchar2" MaxLength="255" />
+    <Property Name="OTH_DELETE_USER" Type="varchar2" MaxLength="255" />
+    <Property Name="TIME_LOGIN" Type="date" />
+    <Property Name="IP_LOGIN" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AG_IAS_USERS_RIGHT">
+    <Key>
+      <PropertyRef Name="USER_RIGHT" />
+      <PropertyRef Name="FUNCTION_ID" />
+    </Key>
+    <Property Name="USER_RIGHT" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="RIGHT_DESCRIPTION" Type="varchar2" MaxLength="100" />
+    <Property Name="FUNCTION_ID" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="VISIBLE" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+    <Property Name="UPDATED_DATE" Type="date" />
+    <Property Name="OIC_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_VALIDATE_LICENSE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="ITEM" Type="varchar2" MaxLength="1000" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_IAS_VALIDATE_LICENSE_CON">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ITEM_GROUP" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="PETITION_TYPE_CODE" />
+      <PropertyRef Name="RENEW_TIME" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="ITEM_GROUP" Type="number" Nullable="false" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="RENEW_TIME" Type="number" Nullable="false" Precision="2" />
+  </EntityType>
+  <EntityType Name="AG_IAS_VALIDATE_LICENSE_GROUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" />
+    <Property Name="GROUP_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_LICENSE_RENEW_LOAD">
+    <Key>
+      <PropertyRef Name="REQUEST_NO" />
+      <PropertyRef Name="PAYMENT_NO" />
+    </Key>
+    <Property Name="REQUEST_NO" Type="varchar2" Nullable="false" MaxLength="8" />
+    <Property Name="PAYMENT_NO" Type="varchar2" Nullable="false" MaxLength="12" />
+    <Property Name="COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="RENEW_TIME" Type="number" Precision="2" />
+    <Property Name="RENEW_DATE" Type="date" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="ID_FLAG" Type="char" MaxLength="1" />
+    <Property Name="INS_FLAG" Type="char" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="COMP_FLAG" Type="char" MaxLength="1" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="40" />
+    <Property Name="INS_CASE" Type="varchar2" MaxLength="1" />
+    <Property Name="APPROVE_DOC_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="LICENSE_FEE" Type="number" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_LICENSE_RENEW_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+      <PropertyRef Name="RENEW_TIME" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="RENEW_TIME" Type="number" Nullable="false" Precision="2" />
+    <Property Name="RENEW_DATE" Type="date" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="REQUEST_NO" Type="varchar2" MaxLength="8" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+    <Property Name="LICENSE_ACT_DATE" Type="date" />
+    <Property Name="LICENSE_ACTOR" Type="varchar2" MaxLength="60" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="RECEIPT_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_DATE" Type="date" />
+    <Property Name="ELICENSING_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="HEAD_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="GROUP_REQUEST_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="APPROVE_DOC_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="APPROVE_BY" Type="varchar2" MaxLength="15" />
+    <Property Name="APPROVE_DATE" Type="date" />
+    <Property Name="UPLOAD_BY_SESSION" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_FEE" Type="number" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+    <Property Name="APPROVE_FLAG" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="AG_LICENSE_RUNNING_NO_T">
+    <Key>
+      <PropertyRef Name="LEAD_STR" />
+    </Key>
+    <Property Name="LEAD_STR" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="LAST_LICENSE_NO" Type="varchar2" MaxLength="6" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_LICENSE_T">
+    <Key>
+      <PropertyRef Name="LICENSE_NO" />
+    </Key>
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="EXPIRE_DATE" Type="date" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="REVOKE_LICENSE_DATE" Type="date" />
+    <Property Name="REVOKE_TYPE_CODE" Type="varchar2" MaxLength="1" />
+    <Property Name="NEW_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_ACTOR" Type="varchar2" MaxLength="100" />
+    <Property Name="DATE_LICENSE_ACT" Type="date" />
+    <Property Name="CANCEL_REASON" Type="varchar2" MaxLength="300" />
+    <Property Name="RECORD_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="500" />
+    <Property Name="UNIT_LINK" Type="varchar2" MaxLength="15" />
+    <Property Name="UNIT_LINK_STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="START_UL_DATE" Type="date" />
+    <Property Name="EXPIRE_UL_DATE" Type="date" />
+    <Property Name="UCOM_AGENT_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="UCOM_REF_AGENT_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="UCOM_COMP_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="LICENSE_REP" Type="varchar2" MaxLength="15" />
+    <Property Name="U_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="UNIT_LINK_RENEW" Type="number" Precision="2" />
+    <Property Name="LICENSE_REINSURE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_LICENSE_TYPE_R">
+    <Key>
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+    </Key>
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="LICENSE_TYPE_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="INSURANCE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="JURIS_PERSON_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="RENEWAL_TIMES" Type="number" Precision="2" />
+    <Property Name="TIME_PERIOD" Type="number" Precision="4" Scale="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="IAS_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="ACTIVE_FLAG" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_PERSON_INCOMP_AGENT_T">
+    <Key>
+      <PropertyRef Name="COMPANY_CODE" />
+      <PropertyRef Name="LICENSE_NO" />
+      <PropertyRef Name="IN_DATE" />
+    </Key>
+    <Property Name="ORDER_NO" Type="number" Precision="7" />
+    <Property Name="COMPANY_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="BRANCH_SEQ" Type="number" Precision="4" />
+    <Property Name="REGISTER_COMP_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="COMP_LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="COMP_LICENSE_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="PERSON_TYPE_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ID_CARD_NO" Type="varchar2" MaxLength="13" />
+    <Property Name="PRE_NAME_CODE" Type="number" Precision="3" />
+    <Property Name="NAME_LASTNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="IN_DATE" Type="date" Nullable="false" />
+    <Property Name="OUT_DATE" Type="date" />
+    <Property Name="SHARE_NO" Type="number" Precision="12" Scale="2" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_PERSONAL_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="PRE_NAME_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="40" />
+    <Property Name="NATIONALITY" Type="varchar2" MaxLength="20" />
+    <Property Name="BIRTH_DATE" Type="date" />
+    <Property Name="SEX" Type="varchar2" MaxLength="1" />
+    <Property Name="EDUCATION_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="LOCAL_ADDRESS1" Type="varchar2" MaxLength="60" />
+    <Property Name="LOCAL_ADDRESS2" Type="varchar2" MaxLength="60" />
+    <Property Name="LOCAL_AREA_CODE" Type="varchar2" MaxLength="8" />
+    <Property Name="LOCAL_PROVINCE_CODE" Type="varchar2" MaxLength="3" />
+    <Property Name="LOCAL_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="LOCAL_TELEPHONE" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="500" />
+    <Property Name="UCOM_AGENT_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="UCOM_AGENT_TYPE" Type="varchar2" MaxLength="2" />
+    <Property Name="NAME_CHG_DATE" Type="date" />
+    <Property Name="E_MAIL" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AG_PETITION_TYPE_R">
+    <Key>
+      <PropertyRef Name="PETITION_TYPE_CODE" />
+    </Key>
+    <Property Name="PETITION_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PETITION_TYPE_NAME" Type="varchar2" MaxLength="60" />
+    <Property Name="FEE" Type="number" Precision="8" Scale="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="IAS_FLAG" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_SUBJECT_R">
+    <Key>
+      <PropertyRef Name="SUBJECT_CODE" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+    </Key>
+    <Property Name="SUBJECT_CODE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="SUBJECT_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="MAX_SCORE" Type="number" Precision="3" />
+    <Property Name="GROUP_ID" Type="number" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_PERIOD_R">
+    <Key>
+      <PropertyRef Name="YEAR_Y" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="TRAIN_TYPE" />
+    </Key>
+    <Property Name="YEAR_Y" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PERIOD_HH" Type="number" Precision="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="TRAIN_TYPE" Type="varchar2" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_PERSON_T">
+    <Key>
+      <PropertyRef Name="TRAIN_CODE" />
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="TRAIN_TIMES" />
+      <PropertyRef Name="TRAIN_DATE" />
+    </Key>
+    <Property Name="TRAIN_CODE" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="PRE_NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="NAMES" Type="varchar2" MaxLength="50" />
+    <Property Name="LASTNAME" Type="varchar2" MaxLength="40" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="15" />
+    <Property Name="RESULT" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="C_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="E_FLAG" Type="varchar2" MaxLength="3" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRAIN_TIMES" Type="number" Nullable="false" Precision="2" />
+    <Property Name="TRAIN_DATE" Type="date" Nullable="false" />
+    <Property Name="TRAIN_EXP_DATE" Type="date" />
+    <Property Name="TRAIN_PERIOD" Type="number" Precision="3" />
+    <Property Name="PILAR_1" Type="number" Precision="3" />
+    <Property Name="PILAR_2" Type="number" Precision="3" />
+    <Property Name="PILAR_3" Type="number" Precision="3" />
+    <Property Name="TRAIN_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_PLAN_T">
+    <Key>
+      <PropertyRef Name="TRAIN_COMP_CODE" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="TRAIN_TIMES" />
+      <PropertyRef Name="TRAIN_DATE" />
+      <PropertyRef Name="TRAIN_PLACE" />
+    </Key>
+    <Property Name="TRAIN_COMP_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRAIN_TIMES" Type="number" Nullable="false" Precision="2" />
+    <Property Name="ST_TRAIN_DATE" Type="date" Nullable="false" />
+    <Property Name="TRAIN_DATE" Type="date" Nullable="false" />
+    <Property Name="TRAIN_EXP_DATE" Type="date" />
+    <Property Name="TRAIN_PLACE" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="TRAIN_NUMBER" Type="number" Precision="4" />
+    <Property Name="TRAIN_PASS" Type="number" Precision="4" />
+    <Property Name="TRAIN_CODE" Type="varchar2" MaxLength="10" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="TRAIN_PERIOD" Type="number" Precision="2" />
+    <Property Name="G_TRAIN_CODE" Type="varchar2" MaxLength="10" />
+    <Property Name="TRAIN_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_SPECIAL_DISCOUNT_T">
+    <Key>
+      <PropertyRef Name="P_YEAR" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="HOUR_DISCOUNT" />
+    </Key>
+    <Property Name="P_YEAR" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="HOUR_DISCOUNT" Type="number" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_SPECIAL_R">
+    <Key>
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+    </Key>
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="SPECIAL_TYPE_DESC" Type="varchar2" MaxLength="100" />
+    <Property Name="USED_TYPE" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_SPECIAL_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+      <PropertyRef Name="SEND_YEAR" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+    <Property Name="SEND_DATE" Type="date" />
+    <Property Name="SEND_BY" Type="varchar2" MaxLength="13" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="SEND_YEAR" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="UNI_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UNI_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="ID_ATTACH_FILE" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.AG_TRAIN_SPECIAL_USED_T' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AG_TRAIN_SPECIAL_USED_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="LICENSE_NO" />
+      <PropertyRef Name="SPECIAL_TYPE_CODE" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="LICENSE_NO" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="SPECIAL_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+    <Property Name="USED_DATE" Type="date" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_TRAIN_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="TRAIN_TIMES" />
+      <PropertyRef Name="TRAIN_DATE" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRAIN_TIMES" Type="number" Nullable="false" Precision="2" />
+    <Property Name="TRAIN_DATE" Type="date" Nullable="false" />
+    <Property Name="TRAIN_DATE_EXP" Type="date" />
+    <Property Name="TRAIN_COMP_CODE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="AG_U_TRAIN_T">
+    <Key>
+      <PropertyRef Name="ID_CARD_NO" />
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+      <PropertyRef Name="TRAIN_DATE" />
+    </Key>
+    <Property Name="ID_CARD_NO" Type="varchar2" Nullable="false" MaxLength="13" />
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TRAIN_TIMES" Type="number" Nullable="false" Precision="2" />
+    <Property Name="TRAIN_DATE" Type="date" Nullable="false" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="F_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="PAYMENT_NO" Type="varchar2" MaxLength="12" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.AG_IAS_LICENSE_TYPE_R' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AG_IAS_LICENSE_TYPE_R">
+    <Key>
+      <PropertyRef Name="LICENSE_TYPE_CODE" />
+    </Key>
+    <Property Name="LICENSE_TYPE_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="LICENSE_TYPE_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="INSURANCE_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="AGENT_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="IAS_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="ACTIVE_FLAG" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_AS_BUSI_TYPE_R' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_AS_BUSI_TYPE_R">
+    <Key>
+      <PropertyRef Name="BUSINESS_CODE" />
+    </Key>
+    <Property Name="BUSINESS_CODE" Type="number" Nullable="false" Precision="2" />
+    <Property Name="BUSINESS_DESC" Type="varchar2" MaxLength="50" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_AS_COMPANY_T' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_AS_COMPANY_T">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+    </Key>
+    <Property Name="COMP_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COMP_NAMET" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMET" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_NAMEE" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMEE" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_TYPE_CODE" Type="number" Precision="1" />
+    <Property Name="BUSINESS_CODE" Type="number" Precision="2" />
+    <Property Name="ESTA_COND" Type="varchar2" MaxLength="500" />
+    <Property Name="TRADE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="COMP_FLAG" Type="number" Precision="1" />
+    <Property Name="RECV_CODE" Type="number" Precision="1" />
+    <Property Name="ZONE_ID" Type="number" Precision="2" />
+    <Property Name="CT_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMM_LTD" Type="varchar2" />
+    <Property Name="REGIS_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="SHAREHOLDER_E_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="ADDR_NO" Type="varchar2" MaxLength="500" />
+    <Property Name="ADDR_NO_E" Type="varchar2" MaxLength="500" />
+    <Property Name="MOO" Type="varchar2" MaxLength="50" />
+    <Property Name="MOO_E" Type="varchar2" MaxLength="50" />
+    <Property Name="SOI_T" Type="varchar2" MaxLength="30" />
+    <Property Name="SOI_E" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_T" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_E" Type="varchar2" MaxLength="30" />
+    <Property Name="PV_TUMBON" Type="varchar2" MaxLength="4" />
+    <Property Name="PV_AMPUR" Type="varchar2" MaxLength="2" />
+    <Property Name="PV_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TELEPHONE_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="FAX_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="E_MAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="WEBSITE" Type="varchar2" MaxLength="100" />
+    <Property Name="PROP_CODE" Type="number" Precision="8" />
+    <Property Name="INFORM_PERMIT_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_PERMIT_DATE" Type="date" />
+    <Property Name="INFORM_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_LICENSE_DATE" Type="date" />
+    <Property Name="FUND_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_PRICE" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="APPROVE_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="PAY_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_REQ_DATE" Type="date" />
+    <Property Name="RECEIPT_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_REQ_DATE" Type="date" />
+    <Property Name="PAY_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_LICENSE_DATE" Type="date" />
+    <Property Name="RECEIPT_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="FEE_AMT" Type="number" Precision="9" Scale="2" />
+    <Property Name="SHAREHOLDER_T_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="TRADE_DATE" Type="date" />
+    <Property Name="DOC_NO" Type="varchar2" MaxLength="9" />
+    <Property Name="DOC_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="FLAG_MOTOR" Type="varchar2" MaxLength="1" />
+    <Property Name="CURR_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="FEE_LICENSE" Type="number" Precision="9" Scale="2" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UCOM_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="MIS_SEQ" Type="number" />
+    <Property Name="MINISTER_APPROVE" Type="varchar2" MaxLength="1" />
+    <Property Name="COMP_NAMEE_MS" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_START_DATE" Type="date" />
+    <Property Name="ESTA_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="MOBILE_NO" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_AS_COMPANY_T_BC1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_AS_COMPANY_T_BC1">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+    </Key>
+    <Property Name="COMP_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COMP_NAMET" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMET" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_NAMEE" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMEE" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_TYPE_CODE" Type="number" Precision="1" />
+    <Property Name="BUSINESS_CODE" Type="number" Precision="2" />
+    <Property Name="ESTA_COND" Type="varchar2" MaxLength="500" />
+    <Property Name="TRADE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="COMP_FLAG" Type="number" Precision="1" />
+    <Property Name="RECV_CODE" Type="number" Precision="1" />
+    <Property Name="ZONE_ID" Type="number" Precision="2" />
+    <Property Name="CT_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMM_LTD" Type="varchar2" />
+    <Property Name="REGIS_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="SHAREHOLDER_E_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="ADDR_NO" Type="varchar2" MaxLength="500" />
+    <Property Name="ADDR_NO_E" Type="varchar2" MaxLength="500" />
+    <Property Name="MOO" Type="varchar2" MaxLength="50" />
+    <Property Name="MOO_E" Type="varchar2" MaxLength="50" />
+    <Property Name="SOI_T" Type="varchar2" MaxLength="30" />
+    <Property Name="SOI_E" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_T" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_E" Type="varchar2" MaxLength="30" />
+    <Property Name="PV_TUMBON" Type="varchar2" MaxLength="4" />
+    <Property Name="PV_AMPUR" Type="varchar2" MaxLength="2" />
+    <Property Name="PV_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TELEPHONE_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="FAX_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="E_MAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="WEBSITE" Type="varchar2" MaxLength="100" />
+    <Property Name="PROP_CODE" Type="number" Precision="8" />
+    <Property Name="INFORM_PERMIT_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_PERMIT_DATE" Type="date" />
+    <Property Name="INFORM_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_LICENSE_DATE" Type="date" />
+    <Property Name="FUND_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_PRICE" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="APPROVE_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="PAY_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_REQ_DATE" Type="date" />
+    <Property Name="RECEIPT_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_REQ_DATE" Type="date" />
+    <Property Name="PAY_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_LICENSE_DATE" Type="date" />
+    <Property Name="RECEIPT_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="FEE_AMT" Type="number" Precision="9" Scale="2" />
+    <Property Name="SHAREHOLDER_T_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="TRADE_DATE" Type="date" />
+    <Property Name="DOC_NO" Type="varchar2" MaxLength="9" />
+    <Property Name="DOC_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="FLAG_MOTOR" Type="varchar2" MaxLength="1" />
+    <Property Name="CURR_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="FEE_LICENSE" Type="number" Precision="9" Scale="2" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UCOM_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="MIS_SEQ" Type="number" />
+    <Property Name="MINISTER_APPROVE" Type="varchar2" MaxLength="1" />
+    <Property Name="COMP_NAMEE_MS" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_START_DATE" Type="date" />
+    <Property Name="ESTA_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="MOBILE_NO" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_AS_COMPANY_T_BC2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_AS_COMPANY_T_BC2">
+    <Key>
+      <PropertyRef Name="COMP_CODE" />
+    </Key>
+    <Property Name="COMP_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="COMP_NAMET" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMET" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_NAMEE" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_ABBR_NAMEE" Type="varchar2" MaxLength="50" />
+    <Property Name="COMP_TYPE_CODE" Type="number" Precision="1" />
+    <Property Name="BUSINESS_CODE" Type="number" Precision="2" />
+    <Property Name="ESTA_COND" Type="varchar2" MaxLength="500" />
+    <Property Name="TRADE_NO" Type="varchar2" MaxLength="20" />
+    <Property Name="COMP_FLAG" Type="number" Precision="1" />
+    <Property Name="RECV_CODE" Type="number" Precision="1" />
+    <Property Name="ZONE_ID" Type="number" Precision="2" />
+    <Property Name="CT_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="COMM_LTD" Type="varchar2" />
+    <Property Name="REGIS_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_FUND" Type="number" Precision="21" Scale="2" />
+    <Property Name="SHAREHOLDER_E_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="ADDR_NO" Type="varchar2" MaxLength="500" />
+    <Property Name="ADDR_NO_E" Type="varchar2" MaxLength="500" />
+    <Property Name="MOO" Type="varchar2" MaxLength="50" />
+    <Property Name="MOO_E" Type="varchar2" MaxLength="50" />
+    <Property Name="SOI_T" Type="varchar2" MaxLength="30" />
+    <Property Name="SOI_E" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_T" Type="varchar2" MaxLength="30" />
+    <Property Name="ROAD_E" Type="varchar2" MaxLength="30" />
+    <Property Name="PV_TUMBON" Type="varchar2" MaxLength="4" />
+    <Property Name="PV_AMPUR" Type="varchar2" MaxLength="2" />
+    <Property Name="PV_CODE" Type="varchar2" MaxLength="2" />
+    <Property Name="TELEPHONE_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="FAX_NO" Type="varchar2" MaxLength="30" />
+    <Property Name="E_MAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="WEBSITE" Type="varchar2" MaxLength="100" />
+    <Property Name="PROP_CODE" Type="number" Precision="8" />
+    <Property Name="INFORM_PERMIT_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_PERMIT_DATE" Type="date" />
+    <Property Name="INFORM_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="INFORM_LICENSE_DATE" Type="date" />
+    <Property Name="FUND_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_PRICE" Type="number" Precision="21" Scale="2" />
+    <Property Name="CURR_STOCK_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="APPROVE_FLAG" Type="varchar2" MaxLength="1" />
+    <Property Name="PAY_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_REQ_DATE" Type="date" />
+    <Property Name="RECEIPT_REQ_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_REQ_DATE" Type="date" />
+    <Property Name="PAY_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="PAY_LICENSE_DATE" Type="date" />
+    <Property Name="RECEIPT_LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="RECEIPT_LICENSE_DATE" Type="date" />
+    <Property Name="LICENSE_NO" Type="varchar2" MaxLength="17" />
+    <Property Name="LICENSE_DATE" Type="date" />
+    <Property Name="FEE_AMT" Type="number" Precision="9" Scale="2" />
+    <Property Name="SHAREHOLDER_T_PCT" Type="varchar2" MaxLength="5" />
+    <Property Name="TRADE_DATE" Type="date" />
+    <Property Name="DOC_NO" Type="varchar2" MaxLength="9" />
+    <Property Name="DOC_DATE" Type="date" />
+    <Property Name="STATUS" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="FLAG_MOTOR" Type="varchar2" MaxLength="1" />
+    <Property Name="CURR_PAID_AMT" Type="number" Precision="21" Scale="2" />
+    <Property Name="FEE_LICENSE" Type="number" Precision="9" Scale="2" />
+    <Property Name="OLD_COMP_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="UCOM_CODE" Type="varchar2" MaxLength="4" />
+    <Property Name="MIS_SEQ" Type="number" />
+    <Property Name="MINISTER_APPROVE" Type="varchar2" MaxLength="1" />
+    <Property Name="COMP_NAMEE_MS" Type="varchar2" MaxLength="200" />
+    <Property Name="COMP_START_DATE" Type="date" />
+    <Property Name="ESTA_TYPE" Type="varchar2" MaxLength="1" />
+    <Property Name="MOBILE_NO" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_AMPUR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_AMPUR">
+    <Key>
+      <PropertyRef Name="PROVINCECODE" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PROVINCECODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="NAME" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_COM_CODE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_COM_CODE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NAME" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_PROVINCE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_PROVINCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="NAME" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_TITLE_NAME' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_TITLE_NAME">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NAME" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_TITLE_NAME_PRIORITY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_TITLE_NAME_PRIORITY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" Precision="3" />
+    <Property Name="NAME" Type="varchar2" MaxLength="40" />
+    <Property Name="PRIORITY" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AGDOI.VW_IAS_TUMBON' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VW_IAS_TUMBON">
+    <Key>
+      <PropertyRef Name="PROVINCECODE" />
+      <PropertyRef Name="AMPURCODE" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PROVINCECODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="AMPURCODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="ID" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NAME" Type="varchar2" MaxLength="40" />
+  </EntityType>
+  <Association Name="AG_AGENT_LICENSE_ID_FK">
+    <End Role="AG_PERSONAL_T" Type="Model.Store.AG_PERSONAL_T" Multiplicity="0..1" />
+    <End Role="AG_AGENT_LICENSE_T" Type="Model.Store.AG_AGENT_LICENSE_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_PERSONAL_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Principal>
+      <Dependent Role="AG_AGENT_LICENSE_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_AGENT_LICENSE_PERSONAL_FK">
+    <End Role="AG_PERSONAL_T" Type="Model.Store.AG_PERSONAL_T" Multiplicity="0..1" />
+    <End Role="AG_AGENT_LICENSE_PERSON_T" Type="Model.Store.AG_AGENT_LICENSE_PERSON_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_PERSONAL_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Principal>
+      <Dependent Role="AG_AGENT_LICENSE_PERSON_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_APP_ACCP_PLACECD_FK">
+    <End Role="AG_ACCEPT_OFF_R" Type="Model.Store.AG_ACCEPT_OFF_R" Multiplicity="0..1" />
+    <End Role="AG_APPLICANT_T" Type="Model.Store.AG_APPLICANT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_ACCEPT_OFF_R">
+        <PropertyRef Name="ACCEPT_OFF_CODE" />
+      </Principal>
+      <Dependent Role="AG_APPLICANT_T">
+        <PropertyRef Name="ACCEPT_OFF_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_APP_EDUCD_FK">
+    <End Role="AG_EDUCATION_R" Type="Model.Store.AG_EDUCATION_R" Multiplicity="0..1" />
+    <End Role="AG_APPLICANT_T" Type="Model.Store.AG_APPLICANT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EDUCATION_R">
+        <PropertyRef Name="EDUCATION_CODE" />
+      </Principal>
+      <Dependent Role="AG_APPLICANT_T">
+        <PropertyRef Name="EDUCATION_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_APP_TESTNO_FK">
+    <End Role="AG_EXAM_LICENSE_R" Type="Model.Store.AG_EXAM_LICENSE_R" Multiplicity="1" />
+    <End Role="AG_APPLICANT_T" Type="Model.Store.AG_APPLICANT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EXAM_LICENSE_R">
+        <PropertyRef Name="TESTING_NO" />
+        <PropertyRef Name="EXAM_PLACE_CODE" />
+      </Principal>
+      <Dependent Role="AG_APPLICANT_T">
+        <PropertyRef Name="TESTING_NO" />
+        <PropertyRef Name="EXAM_PLACE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_APPLICANT_SCORE_FK_NEW">
+    <End Role="AG_SUBJECT_R" Type="Model.Store.AG_SUBJECT_R" Multiplicity="0..1" />
+    <End Role="AG_APPLICANT_SCORE_T" Type="Model.Store.AG_APPLICANT_SCORE_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_SUBJECT_R">
+        <PropertyRef Name="SUBJECT_CODE" />
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_APPLICANT_SCORE_T">
+        <PropertyRef Name="SUBJECT_CODE" />
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_APPLICANT_SCORE_TESTNO_FK">
+    <End Role="AG_EXAM_LICENSE_R" Type="Model.Store.AG_EXAM_LICENSE_R" Multiplicity="1" />
+    <End Role="AG_APPLICANT_SCORE_T" Type="Model.Store.AG_APPLICANT_SCORE_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EXAM_LICENSE_R">
+        <PropertyRef Name="TESTING_NO" />
+        <PropertyRef Name="EXAM_PLACE_CODE" />
+      </Principal>
+      <Dependent Role="AG_APPLICANT_SCORE_T">
+        <PropertyRef Name="TESTING_NO" />
+        <PropertyRef Name="EXAM_PLACE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_EXAM_COND_TYPECD_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="1" />
+    <End Role="AG_EXAM_CONDITION_R" Type="Model.Store.AG_EXAM_CONDITION_R" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_EXAM_CONDITION_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_EXAM_LICEN_TIMECD_FK">
+    <End Role="AG_EXAM_TIME_R" Type="Model.Store.AG_EXAM_TIME_R" Multiplicity="0..1" />
+    <End Role="AG_EXAM_LICENSE_R" Type="Model.Store.AG_EXAM_LICENSE_R" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EXAM_TIME_R">
+        <PropertyRef Name="TEST_TIME_CODE" />
+      </Principal>
+      <Dependent Role="AG_EXAM_LICENSE_R">
+        <PropertyRef Name="TEST_TIME_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_EXAM_LICENSE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="0..1" />
+    <End Role="AG_EXAM_LICENSE_R" Type="Model.Store.AG_EXAM_LICENSE_R" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_EXAM_LICENSE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_HIS_MOVE_COMP_AGENT_FK">
+    <End Role="AG_AGENT_LICENSE_T" Type="Model.Store.AG_AGENT_LICENSE_T" Multiplicity="1" />
+    <End Role="AG_HIS_MOVE_COMP_AGENT_T" Type="Model.Store.AG_HIS_MOVE_COMP_AGENT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_AGENT_LICENSE_T">
+        <PropertyRef Name="LICENSE_NO" />
+      </Principal>
+      <Dependent Role="AG_HIS_MOVE_COMP_AGENT_T">
+        <PropertyRef Name="LICENSE_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_HIS_MOVE_COMP_IDCARDNO_FK">
+    <End Role="AG_PERSONAL_T" Type="Model.Store.AG_PERSONAL_T" Multiplicity="1" />
+    <End Role="AG_HIS_MOVE_COMP_AGENT_T" Type="Model.Store.AG_HIS_MOVE_COMP_AGENT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_PERSONAL_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Principal>
+      <Dependent Role="AG_HIS_MOVE_COMP_AGENT_T">
+        <PropertyRef Name="ID_CARD_NO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_LICENSE_LICTYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="0..1" />
+    <End Role="AG_LICENSE_T" Type="Model.Store.AG_LICENSE_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_LICENSE_T">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_PERSON_INCOMP_LICTYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="0..1" />
+    <End Role="AG_PERSON_INCOMP_AGENT_T" Type="Model.Store.AG_PERSON_INCOMP_AGENT_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_PERSON_INCOMP_AGENT_T">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_PERSONAL_EDU_FK">
+    <End Role="AG_EDUCATION_R" Type="Model.Store.AG_EDUCATION_R" Multiplicity="0..1" />
+    <End Role="AG_PERSONAL_T" Type="Model.Store.AG_PERSONAL_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EDUCATION_R">
+        <PropertyRef Name="EDUCATION_CODE" />
+      </Principal>
+      <Dependent Role="AG_PERSONAL_T">
+        <PropertyRef Name="EDUCATION_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_SUBJECT_LICENTYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="1" />
+    <End Role="AG_SUBJECT_R" Type="Model.Store.AG_SUBJECT_R" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_SUBJECT_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_TRAIN_LICENSE_TYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="1" />
+    <End Role="AG_TRAIN_T" Type="Model.Store.AG_TRAIN_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_TRAIN_T">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_TRAIN_PLAIN_LICENSE_TYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="1" />
+    <End Role="AG_TRAIN_PLAN_T" Type="Model.Store.AG_TRAIN_PLAN_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_TRAIN_PLAN_T">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AG_U_TRAIN_LICENSE_TYPE_FK">
+    <End Role="AG_LICENSE_TYPE_R" Type="Model.Store.AG_LICENSE_TYPE_R" Multiplicity="1" />
+    <End Role="AG_U_TRAIN_T" Type="Model.Store.AG_U_TRAIN_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_LICENSE_TYPE_R">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Principal>
+      <Dependent Role="AG_U_TRAIN_T">
+        <PropertyRef Name="LICENSE_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EXAM_PLACE_GROUP_FK">
+    <End Role="AG_EXAM_PLACE_GROUP_R" Type="Model.Store.AG_EXAM_PLACE_GROUP_R" Multiplicity="0..1" />
+    <End Role="AG_EXAM_PLACE_R" Type="Model.Store.AG_EXAM_PLACE_R" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AG_EXAM_PLACE_GROUP_R">
+        <PropertyRef Name="EXAM_PLACE_GROUP_CODE" />
+      </Principal>
+      <Dependent Role="AG_EXAM_PLACE_R">
+        <PropertyRef Name="EXAM_PLACE_GROUP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AG_APP_RUNNING" ReturnType="varchar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="AGDOI">
+    <Parameter Name="TESTING" Type="varchar2" Mode="In" />
+  </Function>
+</Schema>

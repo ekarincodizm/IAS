@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PersonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3333/Person/PersonService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3333/Person/PersonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3333/Person/PersonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:3333/Person/PersonService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:3333/Person/PersonService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonService_GetUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetDataTo8Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTo8Report" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetDataTo8Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTo8ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonTemp" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetPersonTemp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPersonTemp" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetPersonTemp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPersonTempResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPerson" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileAttatchFileByPersonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileAttatchFileByPersonId" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileAttatchFileByPersonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileAttatchFileByPersonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetStatisticResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatisticResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetStatisticResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatisticResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetAttatchFileByPersonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileByPersonId" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetAttatchFileByPersonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileByPersonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonApprove" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonEditApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonEditApprove" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonEditApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonEditApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonNotApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonNotApprove" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_PersonNotApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonNotApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_Authentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authentication" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_Authentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_InsertOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOIC" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_InsertOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_IsRightUserOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRightUserOIC" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_IsRightUserOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRightUserOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ChangePasswordTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordTime" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ChangePasswordTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetUserProfileByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonTempEditByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonTempEditByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonTempEditByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonTempEditByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetTempAttatchFileByPersonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempAttatchFileByPersonId" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetTempAttatchFileByPersonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempAttatchFileByPersonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_UpdateOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOIC" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_UpdateOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCriteriaAtPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCriteriaAtPage" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCriteriaAtPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCriteriaAtPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ForgetPasswordRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForgetPasswordRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_ForgetPasswordRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForgetPasswordRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_RenewPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenewPassword" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_RenewPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenewPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_getPDetailByIDCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPDetailByIDCard" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_getPDetailByIDCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPDetailByIDCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetOffLineStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOffLineStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetOffLineStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOffLineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetOffLineAllStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetOffLineAllStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_SetOffLineAllStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetOffLineAllStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetOnLineUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnLineUser" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetOnLineUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnLineUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonalDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetail" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonalDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetOicPersonSignImg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOicPersonSignImg" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetOicPersonSignImg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOicPersonSignImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_CheckAuthorityEditExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthorityEditExam" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_CheckAuthorityEditExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAuthorityEditExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetEmailMoveExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailMoveExam" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetEmailMoveExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailMoveExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_OICAuthenWithADService_InputMessage">
+    <wsdl:part name="parameters" element="tns:OICAuthenWithADService" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_OICAuthenWithADService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OICAuthenWithADServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetDataRenewReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataRenewReport" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetDataRenewReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataRenewReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPersonService">
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetUserProfile" message="tns:IPersonService_GetUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileResponse" message="tns:IPersonService_GetUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetById" message="tns:IPersonService_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetByIdResponse" message="tns:IPersonService_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTo8Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetDataTo8Report" message="tns:IPersonService_GetDataTo8Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetDataTo8ReportResponse" message="tns:IPersonService_GetDataTo8Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileById" message="tns:IPersonService_GetUserProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileByIdResponse" message="tns:IPersonService_GetUserProfileById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonTemp" message="tns:IPersonService_GetPersonTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonTempResponse" message="tns:IPersonService_GetPersonTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPersonTemp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/SetPersonTemp" message="tns:IPersonService_SetPersonTemp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/SetPersonTempResponse" message="tns:IPersonService_SetPersonTemp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/EditPerson" message="tns:IPersonService_EditPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/EditPersonResponse" message="tns:IPersonService_EditPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileAttatchFileByPersonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileAttatchFileByPersonId" message="tns:IPersonService_GetUserProfileAttatchFileByPersonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileAttatchFileByPersonIdResponse" message="tns:IPersonService_GetUserProfileAttatchFileByPersonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetStatisticResetPassword" message="tns:IPersonService_GetStatisticResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetStatisticResetPasswordResponse" message="tns:IPersonService_GetStatisticResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileByPersonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetAttatchFileByPersonId" message="tns:IPersonService_GetAttatchFileByPersonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetAttatchFileByPersonIdResponse" message="tns:IPersonService_GetAttatchFileByPersonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/PersonApprove" message="tns:IPersonService_PersonApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/PersonApproveResponse" message="tns:IPersonService_PersonApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonEditApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/PersonEditApprove" message="tns:IPersonService_PersonEditApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/PersonEditApproveResponse" message="tns:IPersonService_PersonEditApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonNotApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/PersonNotApprove" message="tns:IPersonService_PersonNotApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/PersonNotApproveResponse" message="tns:IPersonService_PersonNotApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/Authentication" message="tns:IPersonService_Authentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/AuthenticationResponse" message="tns:IPersonService_Authentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/InsertOIC" message="tns:IPersonService_InsertOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/InsertOICResponse" message="tns:IPersonService_InsertOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRightUserOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/IsRightUserOIC" message="tns:IPersonService_IsRightUserOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/IsRightUserOICResponse" message="tns:IPersonService_IsRightUserOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/ChangePasswordTime" message="tns:IPersonService_ChangePasswordTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/ChangePasswordTimeResponse" message="tns:IPersonService_ChangePasswordTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/ChangePassword" message="tns:IPersonService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/ChangePasswordResponse" message="tns:IPersonService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileByUsername" message="tns:IPersonService_GetUserProfileByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetUserProfileByUsernameResponse" message="tns:IPersonService_GetUserProfileByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTempEditByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonTempEditByCriteria" message="tns:IPersonService_GetPersonTempEditByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonTempEditByCriteriaResponse" message="tns:IPersonService_GetPersonTempEditByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCriteria" message="tns:IPersonService_GetPersonByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCriteriaResponse" message="tns:IPersonService_GetPersonByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempAttatchFileByPersonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetTempAttatchFileByPersonId" message="tns:IPersonService_GetTempAttatchFileByPersonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetTempAttatchFileByPersonIdResponse" message="tns:IPersonService_GetTempAttatchFileByPersonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/UpdateOIC" message="tns:IPersonService_UpdateOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/UpdateOICResponse" message="tns:IPersonService_UpdateOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByCriteriaAtPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCriteriaAtPage" message="tns:IPersonService_GetPersonByCriteriaAtPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCriteriaAtPageResponse" message="tns:IPersonService_GetPersonByCriteriaAtPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForgetPasswordRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/ForgetPasswordRequest" message="tns:IPersonService_ForgetPasswordRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/ForgetPasswordRequestResponse" message="tns:IPersonService_ForgetPasswordRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenewPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/RenewPassword" message="tns:IPersonService_RenewPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/RenewPasswordResponse" message="tns:IPersonService_RenewPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPDetailByIDCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/getPDetailByIDCard" message="tns:IPersonService_getPDetailByIDCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/getPDetailByIDCardResponse" message="tns:IPersonService_getPDetailByIDCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOffLineStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/SetOffLineStatus" message="tns:IPersonService_SetOffLineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/SetOffLineStatusResponse" message="tns:IPersonService_SetOffLineStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOffLineAllStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/SetOffLineAllStatus" message="tns:IPersonService_SetOffLineAllStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/SetOffLineAllStatusResponse" message="tns:IPersonService_SetOffLineAllStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnLineUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetOnLineUser" message="tns:IPersonService_GetOnLineUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetOnLineUserResponse" message="tns:IPersonService_GetOnLineUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonalDetail" message="tns:IPersonService_GetPersonalDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonalDetailResponse" message="tns:IPersonService_GetPersonalDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOicPersonSignImg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetOicPersonSignImg" message="tns:IPersonService_GetOicPersonSignImg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetOicPersonSignImgResponse" message="tns:IPersonService_GetOicPersonSignImg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthorityEditExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/CheckAuthorityEditExam" message="tns:IPersonService_CheckAuthorityEditExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/CheckAuthorityEditExamResponse" message="tns:IPersonService_CheckAuthorityEditExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailMoveExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetEmailMoveExam" message="tns:IPersonService_GetEmailMoveExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetEmailMoveExamResponse" message="tns:IPersonService_GetEmailMoveExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OICAuthenWithADService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/OICAuthenWithADService" message="tns:IPersonService_OICAuthenWithADService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/OICAuthenWithADServiceResponse" message="tns:IPersonService_OICAuthenWithADService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataRenewReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetDataRenewReport" message="tns:IPersonService_GetDataRenewReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetDataRenewReportResponse" message="tns:IPersonService_GetDataRenewReport_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersonService" type="tns:IPersonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTo8Report">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetDataTo8Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileById">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetUserProfileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTemp">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetPersonTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPersonTemp">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/SetPersonTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPerson">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/EditPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileAttatchFileByPersonId">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetUserProfileAttatchFileByPersonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticResetPassword">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetStatisticResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileByPersonId">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetAttatchFileByPersonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonApprove">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/PersonApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonEditApprove">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/PersonEditApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonNotApprove">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/PersonNotApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/Authentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOIC">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/InsertOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRightUserOIC">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/IsRightUserOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePasswordTime">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/ChangePasswordTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfileByUsername">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetUserProfileByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonTempEditByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetPersonTempEditByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetPersonByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTempAttatchFileByPersonId">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetTempAttatchFileByPersonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOIC">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/UpdateOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByCriteriaAtPage">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetPersonByCriteriaAtPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ForgetPasswordRequest">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/ForgetPasswordRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenewPassword">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/RenewPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPDetailByIDCard">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/getPDetailByIDCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOffLineStatus">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/SetOffLineStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOffLineAllStatus">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/SetOffLineAllStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnLineUser">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetOnLineUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetail">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetPersonalDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOicPersonSignImg">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetOicPersonSignImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthorityEditExam">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/CheckAuthorityEditExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailMoveExam">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetEmailMoveExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OICAuthenWithADService">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/OICAuthenWithADService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataRenewReport">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetDataRenewReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonService">
+    <wsdl:port name="BasicHttpBinding_IPersonService" binding="tns:BasicHttpBinding_IPersonService">
+      <soap:address location="http://localhost:3333/Person/PersonService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IAS.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ResponseMessageOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseMessageOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfigLicenseId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultMessage" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseMessageOfboolean" nillable="true" type="tns:ResponseMessageOfboolean" />
+  <xs:complexType name="ResponseServiceOfArrayOfDataItem3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDataItem" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfDataItem" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfDataItem3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfDataItem3ZxRaCa1" />
+  <xs:complexType name="ArrayOfDataItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataItem" nillable="true" type="tns:DataItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataItem" nillable="true" type="tns:ArrayOfDataItem" />
+  <xs:complexType name="DataItem">
+    <xs:sequence>
+      <xs:element name="_x003C_EXAM_DISCOUNT_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Request_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SPECIAL_TYPE_CODE_EXAM_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SPECIAL_TYPE_CODE_TRAIN_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TRAIN_DISCOUNT_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataItem" nillable="true" type="tns:DataItem" />
+  <xs:complexType name="Applicant">
+    <xs:sequence>
+      <xs:element name="_x003C_ABSENT_EXAM_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ACCEPT_OFF_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ADDRESS1_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ADDRESS2_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AMOUNT_TRAN_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_APPLICANT_CODE_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_APPLY_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_AREA_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BIRTH_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_CANCEL_REASON_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EDUCATION_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_PLACE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXPIRE_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_ID_CARD_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_INSUR_COMP_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LASTNAME_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LICENSE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_NAMES_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PAYMENT_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PRE_NAME_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PROVINCE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RECORD_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RESULT_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SEX_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TELEPHONE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TESTING_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_USER_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ZIPCODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Applicant" nillable="true" type="tns:Applicant" />
+  <xs:complexType name="ExamLicense">
+    <xs:sequence>
+      <xs:element name="_x003C_EXAM_ADMISSION_x003E_k__BackingField" nillable="true" type="xs:short" />
+      <xs:element name="_x003C_EXAM_APPLY_x003E_k__BackingField" nillable="true" type="xs:short" />
+      <xs:element name="_x003C_EXAM_FEE_x003E_k__BackingField" nillable="true" type="xs:short" />
+      <xs:element name="_x003C_EXAM_OWNER_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_PLACE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LICENSE_TYPE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TESTING_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_TESTING_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TEST_TIME_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_USER_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExamLicense" nillable="true" type="tns:ExamLicense" />
+  <xs:complexType name="ResponseServiceOfDataSetymujubN2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfDataSetymujubN2" nillable="true" type="tns:ResponseServiceOfDataSetymujubN2" />
+  <xs:complexType name="ArrayOfConfigPrintPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigPrintPayment" nillable="true" type="tns:ConfigPrintPayment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigPrintPayment" nillable="true" type="tns:ArrayOfConfigPrintPayment" />
+  <xs:complexType name="ConfigPrintPayment">
+    <xs:sequence>
+      <xs:element name="_x003C_GROUP_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ITEM_VALUE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigPrintPayment" nillable="true" type="tns:ConfigPrintPayment" />
+  <xs:complexType name="ResponseServiceOfArrayOfAssociationLicense3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAssociationLicense" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfAssociationLicense" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfAssociationLicense3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfAssociationLicense3ZxRaCa1" />
+  <xs:complexType name="ArrayOfAssociationLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssociationLicense" nillable="true" type="tns:AssociationLicense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAssociationLicense" nillable="true" type="tns:ArrayOfAssociationLicense" />
+  <xs:complexType name="AssociationLicense">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACTIVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASSOCIATION_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASSOCIATION_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_TYPE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_TYPE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USER_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AssociationLicense" nillable="true" type="tns:AssociationLicense" />
+  <xs:complexType name="ResponseServiceOfArrayOfstringuHEDJ7Dj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfstring" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfstringuHEDJ7Dj" nillable="true" type="tns:ResponseServiceOfArrayOfstringuHEDJ7Dj" />
+  <xs:complexType name="ResponseServiceOfArrayOfConfigExtraEntity3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfConfigExtraEntity" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfConfigExtraEntity" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfConfigExtraEntity3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfConfigExtraEntity3ZxRaCa1" />
+  <xs:complexType name="ArrayOfConfigExtraEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigExtraEntity" nillable="true" type="tns:ConfigExtraEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigExtraEntity" nillable="true" type="tns:ArrayOfConfigExtraEntity" />
+  <xs:complexType name="ConfigExtraEntity">
+    <xs:sequence>
+      <xs:element name="_x003C_Description_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GROUP_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:decimal" />
+      <xs:element name="_x003C_Item_Value_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Value_x003E_k__BackingField" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigExtraEntity" nillable="true" type="tns:ConfigExtraEntity" />
+  <xs:complexType name="UserProfile">
+    <xs:sequence>
+      <xs:element name="_x003C_AgentType_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CanAccessSystem_x003E_k__BackingField" nillable="true" type="tns:ArrayOfFunctionMenu" />
+      <xs:element name="_x003C_CompCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DepartmentCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DepartmentName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DeptCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EmployeeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EmployeeName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IS_APPROVE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IdCard_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LastName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LicenseNo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LoginName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LoginStatus_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MemberType_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OIC_EMP_NO_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OIC_User_Id_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OIC_User_Type_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PositionCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PositionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TitleName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UserGroup_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+  <xs:complexType name="ArrayOfFunctionMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FunctionMenu" nillable="true" type="tns:FunctionMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFunctionMenu" nillable="true" type="tns:ArrayOfFunctionMenu" />
+  <xs:complexType name="FunctionMenu">
+    <xs:sequence>
+      <xs:element name="_x003C_FunctionId_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FunctionName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FunctionMenu" nillable="true" type="tns:FunctionMenu" />
+  <xs:complexType name="ResponseServiceOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfstring" nillable="true" type="tns:ResponseServiceOfstring" />
+  <xs:complexType name="ResponseServiceOfArrayOfTitleName3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfTitleName" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfTitleName" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfTitleName3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfTitleName3ZxRaCa1" />
+  <xs:complexType name="ArrayOfTitleName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TitleName" nillable="true" type="tns:TitleName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTitleName" nillable="true" type="tns:ArrayOfTitleName" />
+  <xs:complexType name="TitleName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRE_CODE" type="xs:short" />
+      <xs:element minOccurs="0" name="PRIORITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SORT_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TitleName" nillable="true" type="tns:TitleName" />
+  <xs:complexType name="ConfigAssociation">
+    <xs:sequence>
+      <xs:element name="_x003C_ACTIVE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AGENT_TYPE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ASSOCIATION_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ASSOCIATION_NAME_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_COMP_TYPE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UPDATED_BY_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UPDATED_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigAssociation" nillable="true" type="tns:ConfigAssociation" />
+  <xs:complexType name="ResponseServiceOfASSOCIATION3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ASSOCIATION" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ASSOCIATION" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfASSOCIATION3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfASSOCIATION3ZxRaCa1" />
+  <xs:complexType name="ASSOCIATION">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACTIVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AGENT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASSOCIATION_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASSOCIATION_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COMP_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ASSOCIATION" nillable="true" type="tns:ASSOCIATION" />
+  <xs:complexType name="ResponseServiceOfArrayOfConfigEntity3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfConfigEntity" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfConfigEntity" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfConfigEntity3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfConfigEntity3ZxRaCa1" />
+  <xs:complexType name="ArrayOfConfigEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigEntity" nillable="true" type="tns:ConfigEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigEntity" nillable="true" type="tns:ArrayOfConfigEntity" />
+  <xs:complexType name="ConfigEntity">
+    <xs:sequence>
+      <xs:element name="_x003C_Description_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_GROUP_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Item_Value_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Value_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigEntity" nillable="true" type="tns:ConfigEntity" />
+  <xs:complexType name="ResponseServiceOfDataItem3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataItem" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:DataItem" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfDataItem3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfDataItem3ZxRaCa1" />
+  <xs:complexType name="ResponseServiceOfArrayOfApproveConfig3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfApproveConfig" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfApproveConfig" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfApproveConfig3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfApproveConfig3ZxRaCa1" />
+  <xs:complexType name="ArrayOfApproveConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApproveConfig" nillable="true" type="tns:ApproveConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApproveConfig" nillable="true" type="tns:ArrayOfApproveConfig" />
+  <xs:complexType name="ApproveConfig">
+    <xs:sequence>
+      <xs:element name="_x003C_DESCRIPTION_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ITEM_VALUE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ITEM_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_KEYWORD_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_USER_DATE_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApproveConfig" nillable="true" type="tns:ApproveConfig" />
+  <xs:complexType name="ResponseServiceOfResponseMessageOfboolean3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseMessageOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO">
+            <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ResponseMessageOfboolean" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfResponseMessageOfboolean3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfResponseMessageOfboolean3ZxRaCa1" />
+  <xs:complexType name="ResponseMessageOfdecimal">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseMessageOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="decimal" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfigLicenseId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultMessage" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseMessageOfdecimal" nillable="true" type="tns:ResponseMessageOfdecimal" />
+  <xs:complexType name="ResponseServiceOfArrayOfConfigDocument3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfConfigDocument" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfConfigDocument" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfConfigDocument3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfConfigDocument3ZxRaCa1" />
+  <xs:complexType name="ArrayOfConfigDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigDocument" nillable="true" type="tns:ConfigDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigDocument" nillable="true" type="tns:ArrayOfConfigDocument" />
+  <xs:complexType name="ConfigDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CREATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATED_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_REQUIRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUNCTION_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LICENSE_TYPE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_TYPE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MEMBER_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MEMBER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MEMBER_TYPE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PETITION_TYPE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_DATE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigDocument" nillable="true" type="tns:ConfigDocument" />
+  <xs:complexType name="DocumentType">
+    <xs:sequence>
+      <xs:element name="_x003C_DOCUMENT_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DOCUMENT_NAME_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_DOCUMENT_REQUIRE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EXAM_DISCOUNT_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IS_CARD_PIC_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_MEMBER_TYPE_CODE_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SPECIAL_TYPE_CODE_EXAM_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SPECIAL_TYPE_CODE_TRAIN_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_TRAIN_DISCOUNT_STATUS_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_USER_DATE_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_USER_ID_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentType" nillable="true" type="tns:DocumentType" />
+  <xs:complexType name="ResponseServiceOfArrayOfSpecialDocument3ZxRaCa1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfSpecialDocument" Namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_x003C_DataResponse_x003E_k__BackingField" nillable="true" type="tns:ArrayOfSpecialDocument" />
+      <xs:element name="_x003C_ErrorMsg_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfSpecialDocument3ZxRaCa1" nillable="true" type="tns:ResponseServiceOfArrayOfSpecialDocument3ZxRaCa1" />
+  <xs:complexType name="ArrayOfSpecialDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialDocument" nillable="true" type="tns:SpecialDocument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialDocument" nillable="true" type="tns:ArrayOfSpecialDocument" />
+  <xs:complexType name="SpecialDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATTACH_FILE_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATTACH_FILE_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATED_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DOCUMENT_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_REQUIRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXAM_DISCOUNT_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GROUP_LICENSE_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_ATTACH_FILE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CARD_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IS_CARD_PIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LICENSE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MEMBER_TYPE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ORDER_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RENEW_TIME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIAL_TYPE_CODE_EXAM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIAL_TYPE_CODE_TRAIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRAIN_DISCOUNT_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATED_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USER_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialDocument" nillable="true" type="tns:SpecialDocument" />
+  <xs:complexType name="ArrayOfDocumentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentType" nillable="true" type="tns:DocumentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentType" nillable="true" type="tns:ArrayOfDocumentType" />
+</xs:schema>

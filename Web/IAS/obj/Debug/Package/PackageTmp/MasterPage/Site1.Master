@@ -1,0 +1,699 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="IAS.MasterPage.Site1" %>
+
+<%@ Register Src="../UserControl/UCModalError.ascx" TagName="UCModalError" TagPrefix="ucModelError" %>
+<%@ Register Src="../UserControl/UCLoadingProgress.ascx" TagName="UCLoadingProgress"
+    TagPrefix="ucLoading" %>
+<%@ Register Src="~/UserControl/UCModalSuccess.ascx" TagName="UCModalSuccess" TagPrefix="ucSuccess" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย</title>
+    <link href="../style/main.css" rel="stylesheet" type="text/css" />
+    <link href="../style/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../style/content.css" rel="stylesheet" type="text/css" />
+    <link href="../style/StyleSheet1.css" rel="stylesheet" type="text/css" />
+    <link href="../style/UCStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../style/PopupPageStyle.css" rel="stylesheet" type="text/css" />
+    <link href="../Scripts/Scripts01042013/jquery/development-bundle/themes/base/ui.core.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../Scripts/Scripts01042013/jquery/development-bundle/themes/base/ui.theme.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../Scripts/Scripts01042013/jquery/development-bundle/themes/base/ui.datepicker.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../Scripts/Scripts01042013/jquery/development-bundle/themes/base/ui.tabs.css"
+        rel="stylesheet" type="text/css" />
+    <script src="../Scripts/formatTextBox.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script src="../Scripts/validate-custom-init.js" type="text/javascript"></script>
+    <!--[if IE 7]>
+    <link href="../style/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="MasterPageBodyTag" runat="server">
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePartialRendering="true"
+        EnableScriptGlobalization="true" LoadScriptsBeforeUI="true" EnablePageMethods="true"
+        ScriptMode="Release" runat="server" AsyncPostBackTimeout="1800">
+    </ajaxToolkit:ToolkitScriptManager>
+    <div id="holder">
+        <div id="header">
+            <div class="header_box_left">
+                <%= GetApplicationVersion() %>
+            </div>
+            <asp:Panel ID="Panel1" runat="server" Visible="true">
+                <div class="header_box_profile">
+                    <div class="header_profile2">
+                        <div class="header_profile3">
+                            <div class="header_profile_text">
+                                <div class="header_profile_text_box2">
+                                    <strong>ชื่อผู้ใช้ : </strong>
+                                    <asp:Label ID="lblUser" runat="server" Text="" Font-Bold="true"></asp:Label>
+                                    <asp:Label ID="lblSession" runat="server"></asp:Label></div>
+                                <div class="header_profile_text_box3">
+                                    ประเภทสมาชิก :</div>
+                                <div class="header_profile_text_box4">
+                                    <asp:Label ID="lbl_status" runat="server" Text=""></asp:Label></div>
+                                <div class="header_profile_text_box7">
+                                    วันที่และเวลา :</div>
+                                <div class="header_profile_text_box8">
+                                </div>
+                                <div class="header_profile_text_box5">
+                                </div>
+                                <div class="header_profile_text_box6">
+                                    <asp:LinkButton ID="hpLogout" runat="server" OnClick="hpLogout_Click" Text="Logout"></asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+        </div>
+        <div class="box_menu">
+            <div id='cssmenu'>
+                <asp:Menu ID="mnuNewGeneral" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisGeneral.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisGeneral.aspx?Mode=E">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuNewCompany" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisCompany.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisCompany.aspx?Mode=E">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuNewAssociate" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisAssociate.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/RegisAssociate.aspx?Mode=E">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuPerson" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" IncludeStyleBlock="false">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonGeneral.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonGeneral.aspx?Mode=E">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="เปลี่ยนรหัสผ่าน" Value="สมาชิก" NavigateUrl="~/ChangePassword/ChangePass.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem Selectable="true" Text="สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantGeneral.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบอนุญาต" Value="3">
+                            <asp:MenuItem Selectable="false" Text="ขอรับใบอนุญาต" Value="ขอรับใบอนุญาต" NavigateUrl="#">
+                                <asp:MenuItem Selectable="true" Text="ขอรับใบอนุญาตใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/NewLicense.aspx?M=1&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขอต่ออายุใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/RenewLicense.aspx?M=2&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขาดต่อขอใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/ExpiredRenewLicense.aspx?M=3&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text=" ใบแทนใบอนุญาต(ชำรุดสูญหาย)" Value="ใบอนุญาต"
+                                    NavigateUrl="~/License/LicenseReplace.aspx?M=4&S=1"></asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text=" ใบแทนใบอนุญาต(เปลี่ยนชื่อ-สกุล)" Value="ใบอนุญาต"
+                                    NavigateUrl="~/License/LicenseReplaceRename.aspx?M=6&S=1"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/License/LicenseCheck.aspx?M=5&amp;S=1" Text="ตรวจสอบผลการอนุมัติเอกสาร"
+                                Value="ตรวจสอบผลการอนุมัติเอกสาร"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="4">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuCompany" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonCompany.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonCompany.aspx?Mode=E">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="เปลี่ยนรหัสผ่าน" Value="สมาชิก" NavigateUrl="~/ChangePassword/ChangePass.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้สมัครสอบ" Value="สมัครสอบ"
+                                NavigateUrl="~/Applicant/CompanyAndAssocImport.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/RequestEditApplicant.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบอนุญาต" Value="3">
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text=" ตรวจสอบผลการอนุมัติเอกสาร" Value=" ตรวจสอบผลการอนุมัติเอกสาร"
+                                NavigateUrl="~/Reporting/Verifydoc.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="4">
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายย่อย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายกลุ่ม" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/InvoiceSubGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuAssociation" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonAssociate.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonAssociate.aspx?Mode=E">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="เปลี่ยนรหัสผ่าน" Value="สมาชิก" NavigateUrl="~/ChangePassword/ChangePass.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้สมัครสอบ" Value="สมัครสอบ"
+                                NavigateUrl="~/Applicant/CompanyAndAssocImport.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/AssocAndPlaceGroupManageExam.aspx" Text="สร้างรอบสอบ"
+                                Value="สร้างรอบสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้สมัครสอบย้อนหลัง" Value="สมัครสอบ"
+                                NavigateUrl="~/Applicant/ImportApplicantAssoc.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="จัดคนเข้า/ออกห้องสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ManageApplicant.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าผลการสอบ" Value="สมัครสอบ" NavigateUrl="~/Exam/ExamResult.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/RequestEditApplicant.aspx" Text="แก้ไขข้อมูลผู้สมัครสอบ"
+                                Value="แก้ไขข้อมูลผู้สมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="พิจารณาการแก้ไขข้อมูลผู้สมัครสอบ" Value="สมัครสอบ"
+                                NavigateUrl="~/Applicant/HistoryApplicant.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบอนุญาต" Value="3">
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/Reporting/Verifydoc.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/Verifydoc.aspx" Text="ตรวจสอบผลการอนุมัติเอกสาร"
+                                Value="ตรวจสอบผลการอนุมัติเอกสาร"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="4">
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายย่อย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายกลุ่ม" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/InvoiceSubGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงินของกลุ่มสนามสอบ" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail3.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ตั้งค่าการสอบ" Value="6">
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าห้องสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/ManageExamRoom.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าสนามสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/SetExamPlace.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuExamPlaceGroup" runat="server" BorderStyle="None" Orientation="Horizontal"
+                    RenderingMode="List" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/Reg_Place_Group.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Register/Reg_Place_Group.aspx?Mode=E">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="เปลี่ยนรหัสผ่าน" Value="สมาชิก" NavigateUrl="~/ChangePassword/ChangePass.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/AssocAndPlaceGroupManageExam.aspx" Text="สร้างรอบสอบ"
+                                Value="สร้างรอบสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="จัดคนเข้า/ออกห้องสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ManageApplicant.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="3">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงินของกลุ่มสนามสอบ" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail3.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ตั้งค่าการสอบ" Value="6">
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าห้องสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/ManageExamRoom.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าสนามสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/SetExamPlace.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuOICFinace" runat="server" Orientation="Horizontal" RenderingMode="List"
+                    Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="สมัครสอบ" Value="สมัครสอบ">
+                            <asp:MenuItem NavigateUrl="~/Applicant/ApplicantNoPay.aspx" Text="ยกเลิกผู้สมัครสอบ"
+                                Value="ยกเลิกผู้สมัครสอบ"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="2">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลการชำระเงิน" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PayRenewFee.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขรายการชำระเงิน ที่ไม่ถูกต้อง" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/RerunTransactionOfBank.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบเสร็จ" Value="ใบสั่งจ่ายใบเสร็จ" NavigateUrl="~/Payment/GenPayment.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงินของกลุ่มสนามสอบ" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail3.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuOICAgent" runat="server" Orientation="Horizontal" RenderingMode="List"
+                    Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบสมาชิก" Value="สมาชิก" NavigateUrl="~/Register/regSearchOfficerOIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ลงทะเบียนเจ้าหน้าที่ คปภ." Value="สมาชิก" NavigateUrl="~/Register/Reg_OIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ลงทะเบียนเจ้าหน้าที่กลุ่มสนามสอบ" Value="สมาชิก"
+                                NavigateUrl="~/Register/Reg_Place_Group.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/AccountDetail.aspx" Text="จัดการบัญชีผู้ใช้"
+                                Value="จัดการบัญชีผู้ใช้"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem NavigateUrl="~/Applicant/SingleApplicant.aspx" Text="สมัครสอบ" Value="สมัครสอบ">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้สมัครสอบ" Value="นำเข้าข้อมูลผู้สมัครสอบ"
+                                NavigateUrl="~/Applicant/CompanyAndAssocImport.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/AssocAndPlaceGroupManageExam.aspx" Text="สร้างรอบสอบ"
+                                Value="สร้างรอบสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="จัดคนเข้า/ออกห้องสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ManageApplicant.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Exam/ExamResult.aspx" Text="นำเข้าผลการสอบ" Value="นำเข้าผลการสอบ">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/ApplicantNoPay.aspx" Text="ยกเลิกผู้สมัครสอบ"
+                                Value="ยกเลิกผู้สมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/RequestEditApplicant.aspx" Text="แก้ไขข้อมูลผู้สมัครสอบ"
+                                Value="แก้ไขข้อมูลผู้สมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบแก้ไขข้อมูลผู้สมัครสอบ" Value="ให้ความเห็นชอบแก้ไขข้อมูลผู้สมัครสอบ"
+                                NavigateUrl="~/Applicant/ApproveEditApplicant.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/ImportCandidateDelay.aspx" Text="กำหนดสิทธิ์การนำเข้าผู้สมัครสอบล่าช้า"
+                                Value="กำหนดสิทธิ์การนำเข้าผู้สมัครสอบล่าช้า"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบอนุญาต" Value="3">
+                            <asp:MenuItem Selectable="false" Text="ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="#">
+                                <asp:MenuItem Selectable="true" Text="ขอรับใบอนุญาตใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/NewLicense.aspx?M=1&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขอต่ออายุใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/RenewLicense.aspx?M=2&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขาดต่อขอใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/ExpiredRenewLicense.aspx?M=3&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text=" ใบแทนใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseReplace.aspx?M=4&S=1">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/License/LicenseCheck.aspx?M=5&amp;S=1" Text="ตรวจสอบผลการอนุมัติเอกสาร"
+                                Value="ตรวจสอบผลการอนุมัติเอกสาร"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/Reporting/Verifydoc.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบในการออกใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseApprove.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างไฟล์ขอรับขอต่อใบอนุญาต" Value="สร้างไฟล์ขอรับขอต่อใบอนุญาต"
+                                NavigateUrl="~/License/RenewLicenseNo.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="4">
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายย่อย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายกลุ่ม" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/InvoiceSubGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงินของกลุ่มสนามสอบ" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail3.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="รายงาน" Value="5">
+                            <asp:MenuItem Selectable="true" Text="รายงานกิจกรรมที่ต้องเร่งดำเนินการ" Value="รายงาน"
+                                NavigateUrl="~/Reporting/QuickReport.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/RegisterLicense.aspx" Text="รายงานการสมัครสอบเพื่อขอรับใบอนุญาต"
+                                Value="รายงานการสมัครสอบเพื่อขอรับใบอนุญาต"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานการออกใบอนุญาต" Value="รายงาน" NavigateUrl="~/Reporting/LicenseReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานสถิติการออกใบอนุญาต" Value="รายงาน" NavigateUrl="~/Reporting/LicenseStatisticsReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานการออกใบแทน" Value="รายงาน" NavigateUrl="~/Reporting/ReplacementReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/MoveComPanyIn.aspx" Text="รายงานการย้ายเข้าบริษัท"
+                                Value="รายงานการย้ายเข้าบริษัท"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/MoveComPanyOut.aspx" Text="รายงานการย้ายออกบริษัท"
+                                Value="รายงานการย้ายออกบริษัท"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/TopCompanyMoveOut.aspx" Text="5 อันดับตัวแทนย้ายออก"
+                                Value="5 อันดับตัวแทนย้ายออก"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/RegisterLicenseStaticRatio.aspx" Text="รายงานสถิติการสมัครสอบ"
+                                Value="รายงานสถิติการสมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/ExamStatistic.aspx" Selectable="true" Text="รายงานแยกประเภทสอบ"
+                                Value="รายงานแยกประเภทสอบ"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ตั้งค่าระบบ" Value="6">
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าเอกสารแนบ" Value="ตั้งค่าระบบ" NavigateUrl="~/Setting/SettingAttach.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="mnuOIC" runat="server" Orientation="Horizontal" Visible="false" StaticEnableDefaultPopOutImage="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/BankPage.aspx" Text="หน้าแรก" Value="0"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="False" Text="สมาชิก" Value="1">
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx?Mode=V">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="แก้ไขข้อมูลผู้ใช้ระบบ" Value="สมาชิก" NavigateUrl="~/Person/PersonOIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบสมาชิก" Value="สมาชิก" NavigateUrl="~/Register/regSearchOfficerOIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ลงทะเบียนเจ้าหน้าที่ คปภ." Value="สมาชิก" NavigateUrl="~/Register/Reg_OIC.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ลงทะเบียนเจ้าหน้าที่กลุ่มสนามสอบ" Value="สมาชิก"
+                                NavigateUrl="~/Register/Reg_Place_Group.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/AccountDetail.aspx" Text="จัดการบัญชีผู้ใช้"
+                                Value="จัดการบัญชีผู้ใช้"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="สมัครสอบ" Value="2">
+                            <asp:MenuItem NavigateUrl="~/Applicant/SingleApplicant.aspx" Text="สมัครสอบ" Value="สมัครสอบ">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้สมัครสอบ" Value="นำเข้าข้อมูลผู้สมัครสอบ"
+                                NavigateUrl="~/Applicant/CompanyAndAssocImport.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้สมัครสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ApplicantDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/AssocAndPlaceGroupManageExam.aspx" Text=" สร้างรอบสอบ"
+                                Value=" สร้างรอบสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="จัดคนเข้า/ออกห้องสอบ" Value="สมัครสอบ" NavigateUrl="~/Applicant/ManageApplicant.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Exam/ExamResult.aspx" Text="นำเข้าผลการสอบ" Value="นำเข้าผลการสอบ">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/ApplicantNoPay.aspx" Text="ยกเลิกผู้สมัครสอบ"
+                                Value="ยกเลิกผู้สมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/RequestEditApplicant.aspx" Text="แก้ไขข้อมูลผู้สมัครสอบ"
+                                Value="แกไข้ข้อมูลผู้สมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบแก้ไขข้อมูลผู้สมัครสอบ" Value="ให้ความเห็นชอบแก้ไขข้อมูลผู้สมัครสอบ"
+                                NavigateUrl="~/Applicant/ApproveEditApplicant.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Applicant/ImportCandidateDelay.aspx" Text="กำหนดสิทธิ์การนำเข้าผู้สมัครสอบล่าช้า"
+                                Value="กำหนดสิทธิ์การนำเข้าผู้สมัครสอบล่าช้า"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบอนุญาต" Value="3">
+                            <asp:MenuItem Selectable="false" Text="ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="#">
+                                <asp:MenuItem Selectable="true" Text="ขอรับใบอนุญาตใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/NewLicense.aspx?M=1&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขอต่ออายุใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/RenewLicense.aspx?M=2&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ขาดต่อขอใหม่" Value="ใบอนุญาต" NavigateUrl="~/License/ExpiredRenewLicense.aspx?M=3&S=1">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text=" ใบแทนใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseReplace.aspx?M=4&S=1">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลผู้ขอรับใบอนุญาต" Value="ใบอนุญาต" NavigateUrl="~/License/LicenseDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/Verifydoc.aspx" Text="ตรวจสอบผลการอนุมัติเอกสาร"
+                                Value="ตรวจสอบผลการอนุมัติเอกสาร"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบผู้ขอรับใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/Reporting/Verifydoc.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ให้ความเห็นชอบในการออกใบอนุญาต" Value="ใบอนุญาต"
+                                NavigateUrl="~/License/LicenseApprove.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างไฟล์ขอรับขอต่อใบอนุญาต" Value="สร้างไฟล์ขอรับขอต่อใบอนุญาต"
+                                NavigateUrl="~/License/RenewLicenseNo.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ใบสั่งจ่าย/ใบเสร็จ" Value="4">
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายย่อย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบสั่งจ่ายกลุ่ม" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/InvoiceSubGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลใบสั่งจ่าย" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/Invoice5.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="นำเข้าข้อมูลการชำระเงิน" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PayRenewFee.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="สร้างใบเสร็จ" Value="ใบสั่งจ่ายใบเสร็จ" NavigateUrl="~/Payment/GenPayment.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงิน" Value="ใบสั่งจ่าย/ใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ข้อมูลการชำระเงินของกลุ่มสนามสอบ" Value="ใบสั่งจ่ายใบเสร็จ"
+                                NavigateUrl="~/Payment/PaymentDetail3.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="รายงาน" Value="5">
+                            <asp:MenuItem Selectable="true" Text="รายงานสถิติขอเปลี่ยนรหัสผ่าน" Value="รายงาน"
+                                NavigateUrl="~/Reporting/ResetReport.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ประวัติการดาวน์โหลดใบเสร็จรับเงิน" Value="รายงาน"
+                                NavigateUrl="~/Reporting/RcvHistory.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานสถิติการขอใบเสร็จ" Value="รายงาน" NavigateUrl="~/Reporting/StatisticPassword.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานกิจกรรมที่ต้องเร่งดำเนินการ" Value="รายงาน"
+                                NavigateUrl="~/Reporting/QuickReport.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/RegisterLicense.aspx" Text="รายงานการสมัครสอบเพื่อขอรับใบอนุญาต"
+                                Value="รายงานการสมัครสอบเพื่อขอรับใบอนุญาต"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานการออกใบอนุญาต" Value="รายงาน" NavigateUrl="~/Reporting/LicenseReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานสถิติการออกใบอนุญาต" Value="รายงาน" NavigateUrl="~/Reporting/LicenseStatisticsReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="รายงานการออกใบแทน" Value="รายงาน" NavigateUrl="~/Reporting/ReplacementReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/MoveComPanyIn.aspx" Text="รายงานการย้ายเข้าบริษัท"
+                                Value="รายงานการย้ายเข้าบริษัท"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/MoveComPanyOut.aspx" Text="รายงานการย้ายออกบริษัท"
+                                Value="รายงานการย้ายออกบริษัท"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/TopCompanyMoveOut.aspx" Text="5 อันดับตัวแทนย้ายออก"
+                                Value="5 อันดับตัวแทนย้ายออก"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/RegisterLicenseStaticRatio.aspx" Text="รายงานสถิติการสมัครสอบ"
+                                Value="รายงานสถิติการสมัครสอบ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/ExamStatistic.aspx" Selectable="true" Text="รายงานแยกประเภทสอบ"
+                                Value="รายงานแยกประเภทสอบ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reporting/CheckFileSizeReport.aspx" Selectable="true"
+                                Text="รายงานแสดงขนาดไฟล์ใบเสร็จ" Value="รายงานแสดงขนาดไฟล์ใบเสร็จ"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="#" Selectable="false" Text="ตั้งค่าระบบ" Value="6">
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าระบบ" Value="ตั้งค่าระบบ" NavigateUrl="~/Setting/Setting.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าเอกสารแนบ" Value="ตั้งค่าระบบ" NavigateUrl="~/Setting/SettingAttach.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าใบสั่งจ่าย" Value="ตั้งค่าใบสั่งจ่าย"
+                                NavigateUrl="~/Setting/SettingBillPayment.aspx"></asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าสมาคม" Value="ตั้งค่าสมาคม" NavigateUrl="~/Setting/ManageAssociation.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Selectable="true" Text="ตั้งค่าหน่วยงานจัดสอบ" Value="ตั้งค่า" NavigateUrl="~/Setting/SetExamPlaceGroup.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="ตั้งค่าการสอบ" NavigateUrl="#" Selectable="false" Value="ตั้งค่า">
+                                <asp:MenuItem Selectable="true" Text="ตั้งค่าการสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/SettingExam.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ตั้งค่าสนามสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/SetExamPlace.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ตั้งค่าห้องสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/ManageExamRoom.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="true" Text="ตั้งค่าเวลาสอบ" Value="ตั้งค่าการสอบ" NavigateUrl="~/Setting/SetExamTime.aspx">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="ตั้งค่าหลักสูตร" NavigateUrl="#" Selectable="false" Value="ตั้งค่า">
+                                <asp:MenuItem NavigateUrl="~/Setting/SetSubject.aspx" Text="จัดการวิชาสอบ" Value="วิชาสอบ">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Setting/SetSubjectGroupD.aspx" Text=" จัดการหลักสูตร"
+                                    Value="วิชาสอบ"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Setting/SearchSubjectGroupD.aspx" Text="ประวัติหลักสูตร"
+                                    Value="วิชาสอบ"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Setting/SetGroupSubject.aspx" Text="จัดการกลุ่มวิชาสอบ"
+                                    Value="วิชาสอบ"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Setting/CheckDocument.aspx" Text="ตรวจสอบเอกสาร" Value="ตรวจสอบเอกสาร">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Setting/SetLincense.aspx" Text="ตั้งค่าการตรวจสอบคุณสมบัติ"
+                                Value="ตั้งค่าการตรวจสอบคุณสมบัติ"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticSelectedStyle CssClass="select" />
+                </asp:Menu>
+            </div>
+        </div>
+        <div id="divPageContent">
+            <asp:ContentPlaceHolder ID="Detail" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <ucSuccess:UCModalSuccess ID="ucModelSuccess" runat="server" />
+        <ucModelError:UCModalError ID="ucModelError" runat="server" />
+        <ucLoading:UCLoadingProgress ID="ucLoad" runat="server" />
+        <div id="footer">
+            <div class="footer_text">
+                <div class="box_footer_f1">
+                    สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย</div>
+                <div class="box_footer_f2">
+                    22/79 ถนนรัชดาภิเษก แขวงจันทรเกษม เขตจตุจักร กรุงเทพมหานคร 10900 โทร.0-2515-3999
+                    โทรสาร.0-2515-3970</div>
+                <div class="box_footer_f3">
+                    webmaster@oic.or.th</div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript">
+
+        $(function () {
+            var mnCount = $('ul.level1 > li > a').length;
+            var homehref = String(window.location.href).split('/');
+            var isFlag = 0;
+            if (homehref[homehref.length - 1] == 'BankPage.aspx') {
+                $('ul.level1 > li:nth-child(1) > a').addClass("actived");
+            } else {
+                for (var i = 1; i <= mnCount; i++) {
+                    if (isFlag == 1) break;
+                    var ulli = $('ul.level1 > li:nth-child(' + i + ') > ul li').length;
+                    for (var k = 1; k <= ulli; k++) {
+                        var href = $('ul.level1 > li:nth-child(' + i + ') > ul >li:nth-child(' + k + ') a').attr('href');
+                        var ihref = String(href).split('/');
+                        if (homehref[homehref.length - 1] == ihref[ihref.length - 1]) {
+                            $('ul.level1 > li:nth-child(' + i + ') > a').addClass("actived");
+                            isFlag = 1;
+                            break;
+                        }
+                    }
+                }
+            }
+            var htm = "";
+            $(".level1").hover(
+         function () {
+             if (htm != $(this).html()) {
+                 $('.level1 ul').hide('fast');
+                 $(this).next('.level2').show('fast');
+             }
+             htm = $(this).html();
+         },
+        function () { });
+
+            $(".level2").click(function () {
+                $('.level1 ul').hide('fast');
+            });
+
+            var time = $(".header_profile_text_box8").html(getDateTime());
+            setInterval(function () {
+                time.html(getDateTime());
+            }, 1000);
+        });
+
+        function getDateTime() {
+            var m = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"],
+                d = new Date();
+            return d.getDate() + ' ' + m[d.getMonth()] + ' ' + (d.getFullYear() + 543) + ' ' + String(d.toLocaleTimeString()).replace(/[a-zA-Z]+/g, '');
+        }
+    </script>
+    <script type="text/javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+        function EndRequestHandler(sender, args) {
+            if (args.get_error() != undefined) {
+                args.set_errorHandled(true);
+            }
+            $('.datepicker').datepicker();
+            $('.ui-datepicker-trigger').css('cursor', 'pointer').attr({ 'title': 'ปฏิทิน', 'alt': 'ปฏิทิน' });
+        }
+    </script>
+    <script type="text/javascript">
+        function Logout() {
+
+            var qstr = "LogOut.aspx?UID=" + '<%= Session["currentusername"] %>' + "&Click=Print";
+
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser            
+                request = new XMLHttpRequest();
+                window.open(qstr, 'popupwindow', 'location=0,scrollbars,resizable=1');
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x           
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+                window.open(qstr, 'popupwindow', 'location=0,scrollbars,resizable=1');
+            }
+        }
+
+    </script>
+    <script type="text/javascript">
+        var clicked = false;
+        function CheckBrowser() {
+            if (clicked == false) {
+                //Browser closed
+            }
+            else {
+                //redirected             
+                clicked = false;
+            }
+        }
+
+        function GetRequest() {
+            var request = null;
+            if (window.XMLHttpRequest) {
+                //incase of IE7,FF, Opera and Safari browser            
+                request = new XMLHttpRequest();
+            }
+            else {
+                //for old browser like IE 6.x and IE 5.x           
+                request = new ActiveXObject('MSXML2.XMLHTTP.3.0');
+            }
+
+            return request;
+        }
+    </script>
+</body>
+</html>

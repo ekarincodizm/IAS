@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="bf079c4d-c1a1-4ee5-95a4-c960bf0a852a" name="Administrator@N-ARG-DEV-034 2014-10-16 16:15:50" runUser="N-ARG-DEV-034\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="2e8ea716-0868-4c73-a342-f8d80533859b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\[-PRO-]\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Administrator_N-ARG-DEV-034 2014-10-16 16_15_50">
+      <DeploymentItem filename="D:\[-PRO-]\WebService\IAS.DataServices\bin\IAS.DataServices.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\IAS.DataServices.Test\bin\Debug\EPPlus.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\IAS.DataServices.Test\bin\Debug\log4net.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\Lib\MessagingToolkit.QRCode.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\Web\IAS.DAL.Repository\bin\Debug\IAS.DTO.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\IAS.Common\bin\Debug\IAS.Common.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.DAL.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\Web\IAS.Utils\bin\Debug\IAS.Utils.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\Lib\itextsharp.dll" />
+      <DeploymentItem filename="D:\[-PRO-]\Lib\Ionic.Zip.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 8.0" MaxConnections="6">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-10-16T16:15:50.7451969+07:00" queuing="2014-10-16T16:15:53.8941269+07:00" start="2014-10-16T16:15:54.1484796+07:00" finish="2014-10-16T16:18:26.1365939+07:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="N-ARG-DEV-034" outcome="Error" timestamp="2014-10-16T16:18:25.8471617+07:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetPersonalTrainByCriteria" storage="d:\[-pro-]\ias.dataservices.test\bin\debug\ias.dataservices.test.dll" id="21e012be-2a78-2936-4a87-6ec31f28eb82">
+      <Execution id="e8d3c744-c1b2-47d2-abde-eb03d2599928" />
+      <TestMethod codeBase="D:/[-PRO-]/IAS.DataServices.Test/bin/Debug/IAS.DataServices.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="IAS.DataServices.Test.LicenseServiceTest, IAS.DataServices.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetPersonalTrainByCriteria" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="21e012be-2a78-2936-4a87-6ec31f28eb82" executionId="e8d3c744-c1b2-47d2-abde-eb03d2599928" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e8d3c744-c1b2-47d2-abde-eb03d2599928" testId="21e012be-2a78-2936-4a87-6ec31f28eb82" testName="GetPersonalTrainByCriteria" computerName="N-ARG-DEV-034" duration="00:02:31.8316067" startTime="2014-10-16T16:15:54.2799682+07:00" endTime="2014-10-16T16:18:26.1115749+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8d3c744-c1b2-47d2-abde-eb03d2599928">
+    </UnitTestResult>
+  </Results>
+</TestRun>

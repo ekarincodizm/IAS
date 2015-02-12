@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IASGBModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="IASGBModelStoreContainer">
+          <EntitySet Name="GB_COUNTRY_R" EntityType="IASGBModel.Store.GB_COUNTRY_R" store:Type="Tables" Schema="GBDOI" />
+          <EntitySet Name="GB_FUNCTION_R" EntityType="IASGBModel.Store.GB_FUNCTION_R" store:Type="Tables" Schema="GBDOI" />
+          <EntitySet Name="GB_HOLIDAY_R" EntityType="IASGBModel.Store.GB_HOLIDAY_R" store:Type="Tables" Schema="GBDOI" />
+          <EntitySet Name="GB_PREFIX_R" EntityType="IASGBModel.Store.GB_PREFIX_R" store:Type="Tables" Schema="GBDOI" />
+          <EntitySet Name="GB_PROVINCE_R" EntityType="IASGBModel.Store.GB_PROVINCE_R" store:Type="Tables" Schema="GBDOI" />
+          <EntitySet Name="GB_REGION_R" EntityType="IASGBModel.Store.GB_REGION_R" store:Type="Tables" Schema="GBDOI" />
+        </EntityContainer>
+        <EntityType Name="GB_COUNTRY_R">
+          <Key>
+            <PropertyRef Name="CT_CODE" />
+          </Key>
+          <Property Name="CT_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="CT_DESE" Type="varchar2" MaxLength="30" />
+          <Property Name="CT_DEST" Type="varchar2" MaxLength="40" />
+          <Property Name="CT_REG" Type="varchar2" MaxLength="2" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+        </EntityType>
+        <EntityType Name="GB_FUNCTION_R">
+          <Key>
+            <PropertyRef Name="FUNCTION_ID" />
+          </Key>
+          <Property Name="FUNCTION_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+          <Property Name="FUNCTION_NAME" Type="varchar2" MaxLength="100" />
+          <Property Name="CPI" Type="number" Precision="2" />
+          <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+        </EntityType>
+        <EntityType Name="GB_HOLIDAY_R">
+          <Key>
+            <PropertyRef Name="HL_DATE" />
+          </Key>
+          <Property Name="HL_DATE" Type="date" Nullable="false" />
+          <Property Name="HL_DESC" Type="varchar2" MaxLength="60" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+        </EntityType>
+        <EntityType Name="GB_PREFIX_R">
+          <Key>
+            <PropertyRef Name="PRE_CODE" />
+          </Key>
+          <Property Name="PRE_CODE" Type="number" Nullable="false" Precision="3" />
+          <Property Name="PRE_FULL" Type="varchar2" MaxLength="40" />
+          <Property Name="PRE_SORT" Type="varchar2" MaxLength="20" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+          <Property Name="PRIORITY" Type="varchar2" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="GB_PROVINCE_R">
+          <Key>
+            <PropertyRef Name="PV_CODE" />
+            <PropertyRef Name="PV_AMPUR" />
+            <PropertyRef Name="PV_TUMBON" />
+          </Key>
+          <Property Name="PV_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+          <Property Name="PV_AMPUR" Type="varchar2" Nullable="false" MaxLength="2" />
+          <Property Name="PV_TUMBON" Type="varchar2" Nullable="false" MaxLength="4" />
+          <Property Name="PV_ZIPCODE" Type="varchar2" MaxLength="5" />
+          <Property Name="PV_DEST" Type="varchar2" MaxLength="40" />
+          <Property Name="PV_DESE" Type="varchar2" MaxLength="40" />
+          <Property Name="PV_OFFICE" Type="varchar2" MaxLength="2" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+          <Property Name="PV_SHDEST" Type="varchar2" MaxLength="2" />
+          <Property Name="PV_REGION" Type="varchar2" MaxLength="1" />
+          <Property Name="POPULATION" Type="number" Precision="15" />
+          <Property Name="SEQ" Type="number" Precision="1" />
+          <Property Name="REMARK" Type="varchar2" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="GB_REGION_R">
+          <Key>
+            <PropertyRef Name="REGION_CODE" />
+          </Key>
+          <Property Name="REGION_CODE" Type="varchar2" Nullable="false" MaxLength="1" />
+          <Property Name="DESCRIPTION" Type="varchar2" MaxLength="100" />
+          <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+          <Property Name="USER_DATE" Type="date" />
+          <Property Name="DESCRIPTION_E" Type="varchar2" MaxLength="100" />
+          <Property Name="SEQ" Type="number" Precision="1" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IASGBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="IASGBModelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GB_COUNTRY_R" EntityType="IASGBModel.GB_COUNTRY_R" />
+          <EntitySet Name="GB_FUNCTION_R" EntityType="IASGBModel.GB_FUNCTION_R" />
+          <EntitySet Name="GB_HOLIDAY_R" EntityType="IASGBModel.GB_HOLIDAY_R" />
+          <EntitySet Name="GB_PROVINCE_R" EntityType="IASGBModel.GB_PROVINCE_R" />
+          <EntitySet Name="GB_REGION_R" EntityType="IASGBModel.GB_REGION_R" />
+          <EntitySet Name="GB_PREFIX_R" EntityType="IASGBModel.GB_PREFIX_R" />
+        </EntityContainer>
+        <EntityType Name="GB_COUNTRY_R">
+          <Key>
+            <PropertyRef Name="CT_CODE" />
+          </Key>
+          <Property Name="CT_CODE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="CT_DESE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CT_DEST" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="CT_REG" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="USER_DATE" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="GB_FUNCTION_R">
+          <Key>
+            <PropertyRef Name="FUNCTION_ID" />
+          </Key>
+          <Property Name="FUNCTION_ID" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="FUNCTION_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CPI" Type="Int16" />
+          <Property Name="ACTIVE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="USER_DATE" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="GB_HOLIDAY_R">
+          <Key>
+            <PropertyRef Name="HL_DATE" />
+          </Key>
+          <Property Name="HL_DATE" Type="DateTime" Nullable="false" />
+          <Property Name="HL_DESC" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="USER_DATE" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="GB_PROVINCE_R">
+          <Key>
+            <PropertyRef Name="PV_CODE" />
+            <PropertyRef Name="PV_AMPUR" />
+            <PropertyRef Name="PV_TUMBON" />
+          </Key>
+          <Property Name="PV_CODE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PV_AMPUR" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PV_TUMBON" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="PV_ZIPCODE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PV_DEST" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="PV_DESE" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="PV_OFFICE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="USER_DATE" Type="DateTime" />
+          <Property Name="PV_SHDEST" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PV_REGION" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="POPULATION" Type="Int64" />
+          <Property Name="SEQ" Type="Int16" />
+          <Property Name="REMARK" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="GB_REGION_R">
+          <Key>
+            <PropertyRef Name="REGION_CODE" />
+          </Key>
+          <Property Name="REGION_CODE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="USER_DATE" Type="DateTime" />
+          <Property Name="DESCRIPTION_E" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SEQ" Type="Int16" />
+        </EntityType>
+        <EntityType Name="GB_PREFIX_R">
+          <Key>
+            <PropertyRef Name="PRE_CODE" />
+          </Key>
+          <Property Type="Int16" Name="PRE_CODE" Nullable="false" />
+          <Property Type="String" Name="PRE_FULL" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRE_SORT" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USER_ID" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="USER_DATE" />
+          <Property Type="String" Name="PRIORITY" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IASGBModelStoreContainer" CdmEntityContainer="IASGBModelEntities">
+          <EntitySetMapping Name="GB_COUNTRY_R"><EntityTypeMapping TypeName="IASGBModel.GB_COUNTRY_R"><MappingFragment StoreEntitySet="GB_COUNTRY_R">
+            <ScalarProperty Name="CT_CODE" ColumnName="CT_CODE" />
+            <ScalarProperty Name="CT_DESE" ColumnName="CT_DESE" />
+            <ScalarProperty Name="CT_DEST" ColumnName="CT_DEST" />
+            <ScalarProperty Name="CT_REG" ColumnName="CT_REG" />
+            <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+            <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GB_FUNCTION_R"><EntityTypeMapping TypeName="IASGBModel.GB_FUNCTION_R"><MappingFragment StoreEntitySet="GB_FUNCTION_R">
+            <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+            <ScalarProperty Name="FUNCTION_NAME" ColumnName="FUNCTION_NAME" />
+            <ScalarProperty Name="CPI" ColumnName="CPI" />
+            <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+            <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+            <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GB_HOLIDAY_R"><EntityTypeMapping TypeName="IASGBModel.GB_HOLIDAY_R"><MappingFragment StoreEntitySet="GB_HOLIDAY_R">
+            <ScalarProperty Name="HL_DATE" ColumnName="HL_DATE" />
+            <ScalarProperty Name="HL_DESC" ColumnName="HL_DESC" />
+            <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+            <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GB_PROVINCE_R"><EntityTypeMapping TypeName="IASGBModel.GB_PROVINCE_R"><MappingFragment StoreEntitySet="GB_PROVINCE_R">
+            <ScalarProperty Name="PV_CODE" ColumnName="PV_CODE" />
+            <ScalarProperty Name="PV_AMPUR" ColumnName="PV_AMPUR" />
+            <ScalarProperty Name="PV_TUMBON" ColumnName="PV_TUMBON" />
+            <ScalarProperty Name="PV_ZIPCODE" ColumnName="PV_ZIPCODE" />
+            <ScalarProperty Name="PV_DEST" ColumnName="PV_DEST" />
+            <ScalarProperty Name="PV_DESE" ColumnName="PV_DESE" />
+            <ScalarProperty Name="PV_OFFICE" ColumnName="PV_OFFICE" />
+            <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+            <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+            <ScalarProperty Name="PV_SHDEST" ColumnName="PV_SHDEST" />
+            <ScalarProperty Name="PV_REGION" ColumnName="PV_REGION" />
+            <ScalarProperty Name="POPULATION" ColumnName="POPULATION" />
+            <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+            <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GB_REGION_R"><EntityTypeMapping TypeName="IASGBModel.GB_REGION_R"><MappingFragment StoreEntitySet="GB_REGION_R">
+            <ScalarProperty Name="REGION_CODE" ColumnName="REGION_CODE" />
+            <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+            <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+            <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+            <ScalarProperty Name="DESCRIPTION_E" ColumnName="DESCRIPTION_E" />
+            <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GB_PREFIX_R">
+            <EntityTypeMapping TypeName="IASGBModel.GB_PREFIX_R">
+              <MappingFragment StoreEntitySet="GB_PREFIX_R">
+                <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+                <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="PRE_SORT" ColumnName="PRE_SORT" />
+                <ScalarProperty Name="PRE_FULL" ColumnName="PRE_FULL" />
+                <ScalarProperty Name="PRE_CODE" ColumnName="PRE_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="IASGBModel">
+        <EntityTypeShape EntityType="IASGBModel.GB_COUNTRY_R" Width="1.5" PointX="0.75" PointY="0.75" Height="2.172587890625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IASGBModel.GB_FUNCTION_R" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="IASGBModel.GB_HOLIDAY_R" Width="1.5" PointX="0.75" PointY="3.75" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="IASGBModel.GB_PROVINCE_R" Width="1.5" PointX="2.75" PointY="3.75" Height="3.7109993489583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="IASGBModel.GB_REGION_R" Width="1.5" PointX="4.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="IASGBModel.GB_PREFIX_R" Width="1.5" PointX="5.375" PointY="3.75" Height="2.1725878906249996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

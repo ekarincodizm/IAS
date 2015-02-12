@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeMenu.master.cs" Inherits="IAS.MasterPage.HomeMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <link href="../style/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server" class="form">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div>
+        <table class="style4">
+            <tr>
+                <td style="vertical-align: top; width: 20%; border: 1px solid black;">
+                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tr>
+                            <td style="text-align: center">
+                                <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/Images/Logo.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background: #194e84; text-align: center;">
+                                <asp:Label ID="lblHeaderMenu1" runat="server" Text="ตัวแทน/นายหน้า" ForeColor="White"
+                                    Font-Underline="true" CssClass="lblbig"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Width="100%" Font-Size="10pt">
+                                    <StaticHoverStyle Width="100%" />
+                                    <Items>
+                                        <asp:MenuItem Text="สมัครสอบแบบกลุ่ม(นายหน้า)" Value="สมัครสอบแบบกลุ่ม(นายหน้า)">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="รายชื่อผู้สมัคร" Value="รายชื่อผู้สมัคร"></asp:MenuItem>
+                                        <asp:MenuItem Text="ใบสั่งจ่ายค่าสมัครสอบ" Value="ใบสั่งจ่ายค่าสมัครสอบ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ใบสั่งจ่ายค่าขอรับใบอนุญาต" Value="ใบสั่งจ่ายค่าขอรับใบอนุญาต">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="กำหนดตารางการสอบ" Value="กำหนดตารางการสอบ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ผลการสอบ" Value="ผลการสอบ"></asp:MenuItem>
+                                        <asp:MenuItem Text="รายชื่อผู้ขอรับใบอนุญาต" Value="รายชื่อผู้ขอรับใบอนุญาต"></asp:MenuItem>
+                                        <asp:MenuItem Text="ใบเสร็จค่าสมัครสอบ" Value="ใบเสร็จค่าสมัครสอบ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ใบเสร็จค่าขอรับใบอนุญาต" Value="ใบเสร็จค่าขอรับใบอนุญาต"></asp:MenuItem>
+                                        <asp:MenuItem Text="ใบเสร็จค่าต่ออายุ" Value="ใบเสร็จค่าต่ออายุ"></asp:MenuItem>
+                                        <asp:MenuItem Text="ออกจากระบบ" Value="ออกจากระบบ"></asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background: #194e84; text-align: center;">
+                                <asp:Label ID="lblHeaderMenu2" runat="server" Text="สมาชิก" ForeColor="White" Font-Underline="true"
+                                    CssClass="lblbig"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Menu ID="Menu2" runat="server" Font-Bold="True" Width="100%" Font-Size="10pt">
+                                    <StaticHoverStyle Width="100%" />
+                                    <Items>
+                                        <asp:MenuItem Text="ข้อมูลส่วนตัว" Value="ข้อมูลส่วนตัว"></asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 80%; vertical-align: top;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="body" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

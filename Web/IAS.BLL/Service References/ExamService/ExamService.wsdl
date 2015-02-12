@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExamService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9999/Exam/ExamService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9999/Exam/ExamService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9999/Exam/ExamService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:9999/Exam/ExamService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:9999/Exam/ExamService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExamService_InsertExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExam" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExam" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExam" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSeatAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeatAmount" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSeatAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeatAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamFee" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestingNoAndPlaceCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestingNoAndPlaceCode" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestingNoAndPlaceCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestingNoAndPlaceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByYearMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByYearMonth" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByYearMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByYearMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestingNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestingNo" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestingNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestingNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertAndCheckExamResultUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckExamResultUpload" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertAndCheckExamResultUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckExamResultUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamResultTempEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamResultTempEdit" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamResultTempEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamResultTempEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamResultEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamResultEdit" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamResultEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamResultEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ExamResultUploadToSubmitNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExamResultUploadToSubmitNew" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ExamResultUploadToSubmitNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExamResultUploadToSubmitNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CanChangeExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanChangeExam" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CanChangeExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanChangeExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamResultUploadByGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamResultUploadByGroupId" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamResultUploadByGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamResultUploadByGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_IsRightTestingNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRightTestingNo" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_IsRightTestingNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRightTestingNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestCenter" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByTestCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByTestCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamMonthByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamMonthByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamMonthByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamMonthByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByCriteriaDefault_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByCriteriaDefault" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamByCriteriaDefault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamByCriteriaDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubject_List_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubject_List" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubject_List_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubject_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHolidayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHolidayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SearchHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchHoliday" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SearchHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHolidayListByYearMonth_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayListByYearMonth" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetHolidayListByYearMonth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayListByYearMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetLicensetypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensetypeList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetLicensetypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensetypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertExamRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertExamRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectrList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectrList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectrList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectrListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubject" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubject" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubject" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetAgentTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetAgentTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetLicenseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetLicenseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteLicensetype_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLicensetype" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteLicensetype_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLicensetypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByPlaceCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByPlaceCode" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByPlaceCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByPlaceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSeatAmountRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeatAmountRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSeatAmountRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeatAmountRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByLicenseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByLicenseNo" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByLicenseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByLicenseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertExamAndRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamAndRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_InsertExamAndRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamAndRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamAndRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamAndRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamAndRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamAndRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByPlaceCodeAndTimeCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByPlaceCodeAndTimeCode" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamRoomByPlaceCodeAndTimeCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByPlaceCodeAndTimeCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamTime" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetCountSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountSearch" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetCountSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_Add_Time_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add_Time" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_Add_Time_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Add_TimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_Del_Time_InputMessage">
+    <wsdl:part name="parameters" element="tns:Del_Time" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_Del_Time_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Del_TimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_getExamTimeShow_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExamTimeShow" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_getExamTimeShow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExamTimeShowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetAssoLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssoLicense" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetAssoLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssoLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DelExamRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelExamRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DelExamRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelExamRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetPlaceDetailByPlaceCode_noCheckActive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaceDetailByPlaceCode_noCheckActive" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetPlaceDetailByPlaceCode_noCheckActive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaceDetailByPlaceCode_noCheckActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddExamGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExamGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddExamGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExamGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroupSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupSearch" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroupSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectInGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectInGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectInGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectInGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetSubjectGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ActiveConditionGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveConditionGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ActiveConditionGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveConditionGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddSubjectGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_AddSubjectGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubjectGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteSubjectGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubjectGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DeleteSubjectGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubjectGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateSubjectGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubjectGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateSubjectGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubjectGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GenLicenseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenLicenseNo" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GenLicenseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenLicenseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SaveSetApplicantRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSetApplicantRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SaveSetApplicantRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSetApplicantRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetCourseNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseNumber" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetCourseNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SaveDeleteApplicantRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDeleteApplicantRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SaveDeleteApplicantRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDeleteApplicantRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamPlaceAndDetailFromProvinceAndGroupCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceAndDetailFromProvinceAndGroupCode" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamPlaceAndDetailFromProvinceAndGroupCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceAndDetailFromProvinceAndGroupCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SavePlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlace" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SavePlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DelPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelPlace" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_DelPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetGVExamRoomByPlaceCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGVExamRoomByPlaceCode" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetGVExamRoomByPlaceCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGVExamRoomByPlaceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SumSeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumSeat" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SumSeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumSeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CountCountSeatUse_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountCountSeatUse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CountCountSeatUse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountCountSeatUseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CheckUsedPlaceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUsedPlaceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_CheckUsedPlaceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUsedPlaceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetddlGroupType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetddlGroupType" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetddlGroupType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetddlGroupTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SumSeatFromPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumSeatFromPlace" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_SumSeatFromPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumSeatFromPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetTestingNoFrom_fileImport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestingNoFrom_fileImport" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetTestingNoFrom_fileImport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestingNoFrom_fileImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ManageApplicantIn_OutRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageApplicantIn_OutRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_ManageApplicantIn_OutRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageApplicantIn_OutRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateManageApplicantIn_OutRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManageApplicantIn_OutRoom" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateManageApplicantIn_OutRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateManageApplicantIn_OutRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamStatistic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStatistic" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamStatistic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamStatisticResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamCondition" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_UpdateExamCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExamConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamLicenseByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamLicenseByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_GetExamLicenseByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamLicenseByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_IsCanSeatRemainSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsCanSeatRemainSingle" />
+  </wsdl:message>
+  <wsdl:message name="IExamService_IsCanSeatRemainSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsCanSeatRemainSingleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExamService">
+    <wsdl:operation name="InsertExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/InsertExam" message="tns:IExamService_InsertExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/InsertExamResponse" message="tns:IExamService_InsertExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateExam" message="tns:IExamService_UpdateExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateExamResponse" message="tns:IExamService_UpdateExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DeleteExam" message="tns:IExamService_DeleteExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DeleteExamResponse" message="tns:IExamService_DeleteExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSeatAmount" message="tns:IExamService_GetSeatAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSeatAmountResponse" message="tns:IExamService_GetSeatAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamFee" message="tns:IExamService_GetExamFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamFeeResponse" message="tns:IExamService_GetExamFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByCriteria" message="tns:IExamService_GetExamByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByCriteriaResponse" message="tns:IExamService_GetExamByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestingNoAndPlaceCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByTestingNoAndPlaceCode" message="tns:IExamService_GetExamByTestingNoAndPlaceCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByTestingNoAndPlaceCodeResponse" message="tns:IExamService_GetExamByTestingNoAndPlaceCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByYearMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByYearMonth" message="tns:IExamService_GetExamByYearMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByYearMonthResponse" message="tns:IExamService_GetExamByYearMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestingNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByTestingNo" message="tns:IExamService_GetExamByTestingNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByTestingNoResponse" message="tns:IExamService_GetExamByTestingNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckExamResultUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/InsertAndCheckExamResultUpload" message="tns:IExamService_InsertAndCheckExamResultUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/InsertAndCheckExamResultUploadResponse" message="tns:IExamService_InsertAndCheckExamResultUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamResultTempEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamResultTempEdit" message="tns:IExamService_GetExamResultTempEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamResultTempEditResponse" message="tns:IExamService_GetExamResultTempEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamResultEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateExamResultEdit" message="tns:IExamService_UpdateExamResultEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateExamResultEditResponse" message="tns:IExamService_UpdateExamResultEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExamResultUploadToSubmitNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/ExamResultUploadToSubmitNew" message="tns:IExamService_ExamResultUploadToSubmitNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/ExamResultUploadToSubmitNewResponse" message="tns:IExamService_ExamResultUploadToSubmitNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanChangeExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/CanChangeExam" message="tns:IExamService_CanChangeExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/CanChangeExamResponse" message="tns:IExamService_CanChangeExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamResultUploadByGroupId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamResultUploadByGroupId" message="tns:IExamService_GetExamResultUploadByGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamResultUploadByGroupIdResponse" message="tns:IExamService_GetExamResultUploadByGroupId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRightTestingNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/IsRightTestingNo" message="tns:IExamService_IsRightTestingNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/IsRightTestingNoResponse" message="tns:IExamService_IsRightTestingNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByTestCenter" message="tns:IExamService_GetExamByTestCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByTestCenterResponse" message="tns:IExamService_GetExamByTestCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamMonthByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamMonthByCriteria" message="tns:IExamService_GetExamMonthByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamMonthByCriteriaResponse" message="tns:IExamService_GetExamMonthByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByCriteriaDefault">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamByCriteriaDefault" message="tns:IExamService_GetExamByCriteriaDefault_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamByCriteriaDefaultResponse" message="tns:IExamService_GetExamByCriteriaDefault_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubject_List">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubject_List" message="tns:IExamService_GetSubject_List_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubject_ListResponse" message="tns:IExamService_GetSubject_List_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetHolidayList" message="tns:IExamService_GetHolidayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetHolidayListResponse" message="tns:IExamService_GetHolidayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetHoliday" message="tns:IExamService_GetHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetHolidayResponse" message="tns:IExamService_GetHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/AddHoliday" message="tns:IExamService_AddHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/AddHolidayResponse" message="tns:IExamService_AddHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DeleteHoliday" message="tns:IExamService_DeleteHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DeleteHolidayResponse" message="tns:IExamService_DeleteHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateHoliday" message="tns:IExamService_UpdateHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateHolidayResponse" message="tns:IExamService_UpdateHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SearchHoliday" message="tns:IExamService_SearchHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SearchHolidayResponse" message="tns:IExamService_SearchHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayListByYearMonth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetHolidayListByYearMonth" message="tns:IExamService_GetHolidayListByYearMonth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetHolidayListByYearMonthResponse" message="tns:IExamService_GetHolidayListByYearMonth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicensetypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetLicensetypeList" message="tns:IExamService_GetLicensetypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetLicensetypeListResponse" message="tns:IExamService_GetLicensetypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamRoom" message="tns:IExamService_GetExamRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamRoomResponse" message="tns:IExamService_GetExamRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/InsertExamRoom" message="tns:IExamService_InsertExamRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/InsertExamRoomResponse" message="tns:IExamService_InsertExamRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateExamRoom" message="tns:IExamService_UpdateExamRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateExamRoomResponse" message="tns:IExamService_UpdateExamRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectrList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubjectrList" message="tns:IExamService_GetSubjectrList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubjectrListResponse" message="tns:IExamService_GetSubjectrList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/AddSubject" message="tns:IExamService_AddSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/AddSubjectResponse" message="tns:IExamService_AddSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateSubject" message="tns:IExamService_UpdateSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateSubjectResponse" message="tns:IExamService_UpdateSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DeleteSubject" message="tns:IExamService_DeleteSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DeleteSubjectResponse" message="tns:IExamService_DeleteSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetAgentTypeList" message="tns:IExamService_GetAgentTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetAgentTypeListResponse" message="tns:IExamService_GetAgentTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetLicenseList" message="tns:IExamService_GetLicenseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetLicenseListResponse" message="tns:IExamService_GetLicenseList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateLicenseType" message="tns:IExamService_UpdateLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateLicenseTypeResponse" message="tns:IExamService_UpdateLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/AddLicenseType" message="tns:IExamService_AddLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/AddLicenseTypeResponse" message="tns:IExamService_AddLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLicensetype">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DeleteLicensetype" message="tns:IExamService_DeleteLicensetype_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DeleteLicensetypeResponse" message="tns:IExamService_DeleteLicensetype_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByPlaceCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByPlaceCode" message="tns:IExamService_GetExamRoomByPlaceCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByPlaceCodeResponse" message="tns:IExamService_GetExamRoomByPlaceCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatAmountRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSeatAmountRoom" message="tns:IExamService_GetSeatAmountRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSeatAmountRoomResponse" message="tns:IExamService_GetSeatAmountRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByLicenseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByLicenseNo" message="tns:IExamService_GetExamRoomByLicenseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByLicenseNoResponse" message="tns:IExamService_GetExamRoomByLicenseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamAndRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/InsertExamAndRoom" message="tns:IExamService_InsertExamAndRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/InsertExamAndRoomResponse" message="tns:IExamService_InsertExamAndRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamAndRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateExamAndRoom" message="tns:IExamService_UpdateExamAndRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateExamAndRoomResponse" message="tns:IExamService_UpdateExamAndRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByPlaceCodeAndTimeCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByPlaceCodeAndTimeCode" message="tns:IExamService_GetExamRoomByPlaceCodeAndTimeCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamRoomByPlaceCodeAndTimeCodeResponse" message="tns:IExamService_GetExamRoomByPlaceCodeAndTimeCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamTime" message="tns:IExamService_GetExamTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamTimeResponse" message="tns:IExamService_GetExamTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetCountSearch" message="tns:IExamService_GetCountSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetCountSearchResponse" message="tns:IExamService_GetCountSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Time">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/Add_Time" message="tns:IExamService_Add_Time_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/Add_TimeResponse" message="tns:IExamService_Add_Time_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_Time">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/Del_Time" message="tns:IExamService_Del_Time_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/Del_TimeResponse" message="tns:IExamService_Del_Time_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExamTimeShow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/getExamTimeShow" message="tns:IExamService_getExamTimeShow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/getExamTimeShowResponse" message="tns:IExamService_getExamTimeShow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssoLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetAssoLicense" message="tns:IExamService_GetAssoLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetAssoLicenseResponse" message="tns:IExamService_GetAssoLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelExamRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DelExamRoom" message="tns:IExamService_DelExamRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DelExamRoomResponse" message="tns:IExamService_DelExamRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceDetailByPlaceCode_noCheckActive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetPlaceDetailByPlaceCode_noCheckActive" message="tns:IExamService_GetPlaceDetailByPlaceCode_noCheckActive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetPlaceDetailByPlaceCode_noCheckActiveResponse" message="tns:IExamService_GetPlaceDetailByPlaceCode_noCheckActive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroup" message="tns:IExamService_GetSubjectGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroupResponse" message="tns:IExamService_GetSubjectGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExamGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/AddExamGroup" message="tns:IExamService_AddExamGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/AddExamGroupResponse" message="tns:IExamService_AddExamGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroupSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroupSearch" message="tns:IExamService_GetSubjectGroupSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroupSearchResponse" message="tns:IExamService_GetSubjectGroupSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectInGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubjectInGroup" message="tns:IExamService_GetSubjectInGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubjectInGroupResponse" message="tns:IExamService_GetSubjectInGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroupList" message="tns:IExamService_GetSubjectGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetSubjectGroupListResponse" message="tns:IExamService_GetSubjectGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveConditionGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/ActiveConditionGroup" message="tns:IExamService_ActiveConditionGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/ActiveConditionGroupResponse" message="tns:IExamService_ActiveConditionGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubjectGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/AddSubjectGroup" message="tns:IExamService_AddSubjectGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/AddSubjectGroupResponse" message="tns:IExamService_AddSubjectGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubjectGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DeleteSubjectGroup" message="tns:IExamService_DeleteSubjectGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DeleteSubjectGroupResponse" message="tns:IExamService_DeleteSubjectGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubjectGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateSubjectGroup" message="tns:IExamService_UpdateSubjectGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateSubjectGroupResponse" message="tns:IExamService_UpdateSubjectGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenLicenseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GenLicenseNo" message="tns:IExamService_GenLicenseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GenLicenseNoResponse" message="tns:IExamService_GenLicenseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSetApplicantRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SaveSetApplicantRoom" message="tns:IExamService_SaveSetApplicantRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SaveSetApplicantRoomResponse" message="tns:IExamService_SaveSetApplicantRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetCourseNumber" message="tns:IExamService_GetCourseNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetCourseNumberResponse" message="tns:IExamService_GetCourseNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeleteApplicantRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SaveDeleteApplicantRoom" message="tns:IExamService_SaveDeleteApplicantRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SaveDeleteApplicantRoomResponse" message="tns:IExamService_SaveDeleteApplicantRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceAndDetailFromProvinceAndGroupCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamPlaceAndDetailFromProvinceAndGroupCode" message="tns:IExamService_GetExamPlaceAndDetailFromProvinceAndGroupCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamPlaceAndDetailFromProvinceAndGroupCodeResponse" message="tns:IExamService_GetExamPlaceAndDetailFromProvinceAndGroupCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SavePlace" message="tns:IExamService_SavePlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SavePlaceResponse" message="tns:IExamService_SavePlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/DelPlace" message="tns:IExamService_DelPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/DelPlaceResponse" message="tns:IExamService_DelPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGVExamRoomByPlaceCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetGVExamRoomByPlaceCode" message="tns:IExamService_GetGVExamRoomByPlaceCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetGVExamRoomByPlaceCodeResponse" message="tns:IExamService_GetGVExamRoomByPlaceCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumSeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SumSeat" message="tns:IExamService_SumSeat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SumSeatResponse" message="tns:IExamService_SumSeat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountCountSeatUse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/CountCountSeatUse" message="tns:IExamService_CountCountSeatUse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/CountCountSeatUseResponse" message="tns:IExamService_CountCountSeatUse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsedPlaceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/CheckUsedPlaceGroup" message="tns:IExamService_CheckUsedPlaceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/CheckUsedPlaceGroupResponse" message="tns:IExamService_CheckUsedPlaceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetddlGroupType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetddlGroupType" message="tns:IExamService_GetddlGroupType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetddlGroupTypeResponse" message="tns:IExamService_GetddlGroupType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumSeatFromPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/SumSeatFromPlace" message="tns:IExamService_SumSeatFromPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/SumSeatFromPlaceResponse" message="tns:IExamService_SumSeatFromPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestingNoFrom_fileImport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetTestingNoFrom_fileImport" message="tns:IExamService_GetTestingNoFrom_fileImport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetTestingNoFrom_fileImportResponse" message="tns:IExamService_GetTestingNoFrom_fileImport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageApplicantIn_OutRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/ManageApplicantIn_OutRoom" message="tns:IExamService_ManageApplicantIn_OutRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/ManageApplicantIn_OutRoomResponse" message="tns:IExamService_ManageApplicantIn_OutRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManageApplicantIn_OutRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateManageApplicantIn_OutRoom" message="tns:IExamService_UpdateManageApplicantIn_OutRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateManageApplicantIn_OutRoomResponse" message="tns:IExamService_UpdateManageApplicantIn_OutRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStatistic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamStatistic" message="tns:IExamService_GetExamStatistic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamStatisticResponse" message="tns:IExamService_GetExamStatistic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/UpdateExamCondition" message="tns:IExamService_UpdateExamCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/UpdateExamConditionResponse" message="tns:IExamService_UpdateExamCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamLicenseByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/GetExamLicenseByCriteria" message="tns:IExamService_GetExamLicenseByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/GetExamLicenseByCriteriaResponse" message="tns:IExamService_GetExamLicenseByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCanSeatRemainSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExamService/IsCanSeatRemainSingle" message="tns:IExamService_IsCanSeatRemainSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExamService/IsCanSeatRemainSingleResponse" message="tns:IExamService_IsCanSeatRemainSingle_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExamService" type="tns:IExamService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertExam">
+      <soap:operation soapAction="http://tempuri.org/IExamService/InsertExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExam">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExam">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DeleteExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatAmount">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSeatAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamFee">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestingNoAndPlaceCode">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByTestingNoAndPlaceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByYearMonth">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByYearMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestingNo">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByTestingNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckExamResultUpload">
+      <soap:operation soapAction="http://tempuri.org/IExamService/InsertAndCheckExamResultUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamResultTempEdit">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamResultTempEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamResultEdit">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateExamResultEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExamResultUploadToSubmitNew">
+      <soap:operation soapAction="http://tempuri.org/IExamService/ExamResultUploadToSubmitNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanChangeExam">
+      <soap:operation soapAction="http://tempuri.org/IExamService/CanChangeExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamResultUploadByGroupId">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamResultUploadByGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRightTestingNo">
+      <soap:operation soapAction="http://tempuri.org/IExamService/IsRightTestingNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByTestCenter">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByTestCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamMonthByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamMonthByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamByCriteriaDefault">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamByCriteriaDefault" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubject_List">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubject_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetHolidayList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHoliday">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHoliday">
+      <soap:operation soapAction="http://tempuri.org/IExamService/AddHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHoliday">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DeleteHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHoliday">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchHoliday">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SearchHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayListByYearMonth">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetHolidayListByYearMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicensetypeList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetLicensetypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/InsertExamRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateExamRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectrList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubjectrList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubject">
+      <soap:operation soapAction="http://tempuri.org/IExamService/AddSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubject">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubject">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DeleteSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentTypeList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetAgentTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetLicenseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IExamService/AddLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLicensetype">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DeleteLicensetype" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByPlaceCode">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamRoomByPlaceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatAmountRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSeatAmountRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByLicenseNo">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamRoomByLicenseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamAndRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/InsertExamAndRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamAndRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateExamAndRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByPlaceCodeAndTimeCode">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamRoomByPlaceCodeAndTimeCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamTime">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountSearch">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetCountSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Time">
+      <soap:operation soapAction="http://tempuri.org/IExamService/Add_Time" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_Time">
+      <soap:operation soapAction="http://tempuri.org/IExamService/Del_Time" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExamTimeShow">
+      <soap:operation soapAction="http://tempuri.org/IExamService/getExamTimeShow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssoLicense">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetAssoLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelExamRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DelExamRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceDetailByPlaceCode_noCheckActive">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetPlaceDetailByPlaceCode_noCheckActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubjectGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExamGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/AddExamGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroupSearch">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubjectGroupSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectInGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubjectInGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroupList">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetSubjectGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveConditionGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/ActiveConditionGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubjectGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/AddSubjectGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubjectGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DeleteSubjectGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubjectGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateSubjectGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenLicenseNo">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GenLicenseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSetApplicantRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SaveSetApplicantRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseNumber">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetCourseNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeleteApplicantRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SaveDeleteApplicantRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceAndDetailFromProvinceAndGroupCode">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamPlaceAndDetailFromProvinceAndGroupCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlace">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SavePlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelPlace">
+      <soap:operation soapAction="http://tempuri.org/IExamService/DelPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGVExamRoomByPlaceCode">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetGVExamRoomByPlaceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumSeat">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SumSeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountCountSeatUse">
+      <soap:operation soapAction="http://tempuri.org/IExamService/CountCountSeatUse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsedPlaceGroup">
+      <soap:operation soapAction="http://tempuri.org/IExamService/CheckUsedPlaceGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetddlGroupType">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetddlGroupType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumSeatFromPlace">
+      <soap:operation soapAction="http://tempuri.org/IExamService/SumSeatFromPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestingNoFrom_fileImport">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetTestingNoFrom_fileImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManageApplicantIn_OutRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/ManageApplicantIn_OutRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateManageApplicantIn_OutRoom">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateManageApplicantIn_OutRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamStatistic">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamStatistic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExamCondition">
+      <soap:operation soapAction="http://tempuri.org/IExamService/UpdateExamCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamLicenseByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IExamService/GetExamLicenseByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCanSeatRemainSingle">
+      <soap:operation soapAction="http://tempuri.org/IExamService/IsCanSeatRemainSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExamService">
+    <wsdl:port name="BasicHttpBinding_IExamService" binding="tns:BasicHttpBinding_IExamService">
+      <soap:address location="http://localhost:9999/Exam/ExamService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

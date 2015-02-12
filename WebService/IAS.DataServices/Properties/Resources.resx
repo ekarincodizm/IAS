@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="propApplicantFileDetailFieldNames_LOAD_STATUS" xml:space="preserve">
+    <value>สถานะการโหลด</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_APPLICANT_CODE" xml:space="preserve">
+    <value>เลขที่สอบ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_TESTING_NO" xml:space="preserve">
+    <value>รหัสห้องสอบ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_EXAM_PLACE_CODE" xml:space="preserve">
+    <value>รหัสสถานที่สอบ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ACCEPT_OFF_CODE" xml:space="preserve">
+    <value>ACCEPT_OFF_CODE</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_APPLY_DATE" xml:space="preserve">
+    <value>วันสมัครสอบ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ID_CARD_NO" xml:space="preserve">
+    <value>รหัสบัตรประชาชน</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_PRE_NAME_CODE" xml:space="preserve">
+    <value>รหัสคำนำหน้า</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_NAMES" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_LASTNAME" xml:space="preserve">
+    <value>นามสกุล</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_BIRTH_DATE" xml:space="preserve">
+    <value>วันเกิด</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_SEX" xml:space="preserve">
+    <value>เพศ</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_EDUCATION_CODE" xml:space="preserve">
+    <value>รหัสการศึกษา</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ADDRESS1" xml:space="preserve">
+    <value>ที่อยู่1</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ADDRESS2" xml:space="preserve">
+    <value>ที่อยู่2</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_AREA_CODE" xml:space="preserve">
+    <value>รหัสพื้นที่</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_PROVINCE_CODE" xml:space="preserve">
+    <value>รหัสจังหวัด</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ZIPCODE" xml:space="preserve">
+    <value>รหัสไปรษณีย์</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_TELEPHONE" xml:space="preserve">
+    <value>เบอร์โทรศัพท์</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_AMOUNT_TRAN_NO" xml:space="preserve">
+    <value>AMOUNT_TRAN_NO</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_PAYMENT_NO" xml:space="preserve">
+    <value>PAYMENT_NO</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_INSUR_COMP_CODE" xml:space="preserve">
+    <value>INSUR_COMP_CODE</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_ABSENT_EXAM" xml:space="preserve">
+    <value>ABSENT_EXAM</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_RESUILT" xml:space="preserve">
+    <value>RESULT</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_EXPIRE_DATE" xml:space="preserve">
+    <value>EXPIRE_DATE</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_LICENSE" xml:space="preserve">
+    <value>LICENSE</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_CANCEL_REASON" xml:space="preserve">
+    <value>CANCEL_REASON</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_RECODE_STATUS" xml:space="preserve">
+    <value>RECORD_STATUS</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_USER_ID" xml:space="preserve">
+    <value>USER_ID</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_USER_DATE" xml:space="preserve">
+    <value>USER_DATE</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_EXAM_STATUS" xml:space="preserve">
+    <value>EXAM_STATUS</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_REQUEST_NO" xml:space="preserve">
+    <value>REQUEST_NO</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_UPLOAD_GROUP_NO" xml:space="preserve">
+    <value>UPLOAD_GROUP_NO</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_SEQ_NO" xml:space="preserve">
+    <value>SEQ_NO</value>
+  </data>
+  <data name="propApplicantFileDetailFieldNames_TITLE" xml:space="preserve">
+    <value>คำนำหน้า</value>
+  </data>
+  <data name="errorApplicantFileDetailFieldNames_ERROR_MSG" xml:space="preserve">
+    <value>ERROR_MSG</value>
+  </data>
+  <data name="errorApplicantFileHeader_001" xml:space="preserve">
+    <value>ข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_FILENAME" xml:space="preserve">
+    <value>ชื่อไฟล์</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_SOURCE_TYPE" xml:space="preserve">
+    <value>SOURCE_TYPE</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_COMP_CODE" xml:space="preserve">
+    <value>รหัสบริษัท</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_LICENSE_TYPE_CODE" xml:space="preserve">
+    <value>รหัสประเภทใบอนุุญาต</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_TESTING_DATE" xml:space="preserve">
+    <value>วันที่สอบ</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_EXAM_APPLY" xml:space="preserve">
+    <value>จำนวนรวมผู้สมัครสอบ</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_EXAM_AMOUNT" xml:space="preserve">
+    <value>จำนวนรวมค่าสมัครสอบ</value>
+  </data>
+  <data name="propApplicantFileHeaderFieldNames_TEST_TIME_CODE" xml:space="preserve">
+    <value>รหัสเวลาสอบ</value>
+  </data>
+  <data name="errorApplicantService_001" xml:space="preserve">
+    <value>ผู้สมัครรายนี้สมัครสอบซ้ำ</value>
+  </data>
+  <data name="errorApplicantService_002" xml:space="preserve">
+    <value>ไม่พบรหัสการสอบ </value>
+  </data>
+  <data name="errorApplicantService_003" xml:space="preserve">
+    <value>เลขที่สอบต้องเป็นตัวเลขล้วน</value>
+  </data>
+  <data name="errorApplicantService_004" xml:space="preserve">
+    <value>ไม่มีเลขบัตรประชาชน</value>
+  </data>
+  <data name="errorApplicantService_005" xml:space="preserve">
+    <value>เลขบัตรประชาชนไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_006" xml:space="preserve">
+    <value>คำนำชื่อไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_007" xml:space="preserve">
+    <value>ไม่มีชื่อ</value>
+  </data>
+  <data name="errorApplicantService_008" xml:space="preserve">
+    <value>ไม่มีนามสกุล</value>
+  </data>
+  <data name="errorApplicantService_009" xml:space="preserve">
+    <value>ไม่ระบุเพศ</value>
+  </data>
+  <data name="errorApplicantService_010" xml:space="preserve">
+    <value>รหัสเพศไม่สัมพันธ์กับคำนำหน้าชื่อ</value>
+  </data>
+  <data name="errorApplicantService_011" xml:space="preserve">
+    <value>ไม่ระบุรหัสประเภทการศึกษา</value>
+  </data>
+  <data name="errorApplicantService_012" xml:space="preserve">
+    <value>รหัสประเภทการศึกษาผิด</value>
+  </data>
+  <data name="errorApplicantService_013" xml:space="preserve">
+    <value>ตัวแทนต้องระบุรหัสบริษัท</value>
+  </data>
+  <data name="errorApplicantService_014" xml:space="preserve">
+    <value>รหัสบริษัทผิด</value>
+  </data>
+  <data name="errorApplicantService_015" xml:space="preserve">
+    <value>วันที่สอบไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_016" xml:space="preserve">
+    <value>รหัสสนามสอบไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_017" xml:space="preserve">
+    <value>รหัสประเภทใบอนุญาตไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_018" xml:space="preserve">
+    <value>จำนวนผู้สมัครไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_019" xml:space="preserve">
+    <value>เวลาสอบไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_020" xml:space="preserve">
+    <value>ไม่สามารถสอบย้อนหลังได้</value>
+  </data>
+  <data name="errorApplicantService_021" xml:space="preserve">
+    <value>จำนวนผู้สมัครมากกว่าจำนวนที่รับได้</value>
+  </data>
+  <data name="errorApplicantService_022" xml:space="preserve">
+    <value>ไม่พบรหัสบริษัท</value>
+  </data>
+  <data name="errorApplicantService_023" xml:space="preserve">
+    <value>ไม่พบรหัสสนามสอบ </value>
+  </data>
+  <data name="errorApplicantService_024" xml:space="preserve">
+    <value>รหัสประเภทใบอนุญาตผิด </value>
+  </data>
+  <data name="errorApplicantService_025" xml:space="preserve">
+    <value>วันที่สอบผิด </value>
+  </data>
+  <data name="errorApplicantService_026" xml:space="preserve">
+    <value>จำนวนคนต้องเป็นตัวเลขล้วน</value>
+  </data>
+  <data name="errorApplicantService_027" xml:space="preserve">
+    <value>ไม่พบรายการผู้สมัครสอบ หรือ รูปแบบของแฟ้มข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="errorApplicantService_028" xml:space="preserve">
+    <value>จำนวนเงินทั้งหมดต้องเป็นตัวเลขล้วน </value>
+  </data>
+  <data name="errorApplicantService_029" xml:space="preserve">
+    <value>ไม่มีรหัสเวลา</value>
+  </data>
+  <data name="errorApplicantService_030" xml:space="preserve">
+    <value>รหัสเวลาสอบผิด </value>
+  </data>
+  <data name="errorApplicantService_031" xml:space="preserve">
+    <value>วันเกิดผิด </value>
+  </data>
+  <data name="errorApplicantService_032" xml:space="preserve">
+    <value>เลขที่ประจำตัวประชาชน ได้ถูกนำเข้าไปก่อนหน้านี้แล้ว</value>
+  </data>
+  <data name="errorApplicantService_033" xml:space="preserve">
+    <value>เกิดความผิดพลาดไม่สามารถ Gen TestingNo ได้</value>
+  </data>
+  <data name="errorApplicantService_034" xml:space="preserve">
+    <value>มีข้อมูลการสมัครสอบที่ยังไม่ถูกต้องอยู่โปรดแก้ไขให้ถูกต้องก่อน Submit ข้อมูล</value>
+  </data>
+  <data name="errorApplicantService_035" xml:space="preserve">
+    <value>ไม่สามารถสอบซ้ำได้</value>
+  </data>
+  <data name="errorApplicantService_036" xml:space="preserve">
+    <value>ที่นั่งสอบเต็ม</value>
+  </data>
+  <data name="errorApplicantService_037" xml:space="preserve">
+    <value>ไม่มีข้อมูล</value>
+  </data>
+  <data name="errorDataCenterService_001" xml:space="preserve">
+    <value>รหัสสมาคมซ้ำ</value>
+  </data>
+  <data name="errorDataCenterService_002" xml:space="preserve">
+    <value>ชื่อสมาคมซ้ำ</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_STATUS_SAVE_SCORE" xml:space="preserve">
+    <value>STATUS_SAVE_SCORE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE14" xml:space="preserve">
+    <value>SCORE_14</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE15" xml:space="preserve">
+    <value>SCORE_15</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE16" xml:space="preserve">
+    <value>SCORE_16</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_PRE_NAME_CODE" xml:space="preserve">
+    <value>PRE_NAME_CODE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SEAT_NO" xml:space="preserve">
+    <value>SEAT_NO</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_ID_CARD_NO" xml:space="preserve">
+    <value>ID_CARD_NO</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_TITLE" xml:space="preserve">
+    <value>TITLE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_NAMES" xml:space="preserve">
+    <value>NAMES</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_LAST_NAME" xml:space="preserve">
+    <value>LAST_NAME</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_ADDRESS1" xml:space="preserve">
+    <value>ADDRESS1</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_ADDRESS2" xml:space="preserve">
+    <value>ADDRESS2</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_AREA_CODE" xml:space="preserve">
+    <value>AREA_CODE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_BIRTH_DATE" xml:space="preserve">
+    <value>BIRTH_DATE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SEX" xml:space="preserve">
+    <value>SEX</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_EDUCATION_CODE" xml:space="preserve">
+    <value>EDUCATION_CODE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_COMP_CODE" xml:space="preserve">
+    <value>COMP_CODE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_APPROVE_DATE" xml:space="preserve">
+    <value>APPROVE_DATE</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_EXAM_RESULT" xml:space="preserve">
+    <value>EXAM_RESULT</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_1" xml:space="preserve">
+    <value>SCORE_1</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_2" xml:space="preserve">
+    <value>SCORE_2</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_3" xml:space="preserve">
+    <value>SCORE_3</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_4" xml:space="preserve">
+    <value>SCORE_4</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_5" xml:space="preserve">
+    <value>SCORE_5</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_6" xml:space="preserve">
+    <value>SCORE_6</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_7" xml:space="preserve">
+    <value>SCORE_7</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_8" xml:space="preserve">
+    <value>SCORE_8</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_9" xml:space="preserve">
+    <value>SCORE_9</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_10" xml:space="preserve">
+    <value>SCORE_10</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_11" xml:space="preserve">
+    <value>SCORE_11</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_12" xml:space="preserve">
+    <value>SCORE_12</value>
+  </data>
+  <data name="propExamFileDetailFieldNames_SCORE_13" xml:space="preserve">
+    <value>SCORE_13</value>
+  </data>
+  <data name="errorExamFileHeader_001" xml:space="preserve">
+    <value>คำนำชื่อผิด</value>
+  </data>
+  <data name="errorExamService_001" xml:space="preserve">
+    <value>ข้อมูลกำหนดการสอบซ้ำ</value>
+  </data>
+  <data name="errorExamService_002" xml:space="preserve">
+    <value>โปรดระบุวันที่สอบ</value>
+  </data>
+  <data name="errorExamService_003" xml:space="preserve">
+    <value>EXAM_STATUS ต้องเป็น E หรือ N เท่านั้น</value>
+  </data>
+  <data name="errorExamService_004" xml:space="preserve">
+    <value>ไม่พบการชำระเงิน</value>
+  </data>
+  <data name="errorExamService_005" xml:space="preserve">
+    <value>ข้อมูลซ้ำ</value>
+  </data>
+  <data name="errorExamService_006" xml:space="preserve">
+    <value>มีข้อมูลซ้ำในไฟล์นำเข้า</value>
+  </data>
+  <data name="errorExamService_007" xml:space="preserve">
+    <value>ไม่พบข้อมูลการสมัครสอบ กรุณาตรวจสอบ สถานที่สอบ ห้องสอบ เลขที่นั่งสอบ และ รหัสบัตรประชาชน</value>
+  </data>
+  <data name="errorExamService_008" xml:space="preserve">
+    <value>พบข้อผิดพลาด</value>
+  </data>
+  <data name="errorExamService_009" xml:space="preserve">
+    <value>ไม่พบรายการสอบของบุคคลนี้ กรุณาตรวจสอบหมายเลขบัตรประชาชน</value>
+  </data>
+  <data name="errorExamService_010" xml:space="preserve">
+    <value>ไม่พบรหัสบริษัทนี้ กรุณาตรวจสอบรหัสบริษัท</value>
+  </data>
+  <data name="errorExamService_011" xml:space="preserve">
+    <value>ส่วนหัวเอกสารเป็นสิ่งจำเป็นต้องระบุ</value>
+  </data>
+  <data name="errorExamService_012" xml:space="preserve">
+    <value>ส่วนรายละเอียดผู้สมัครสอบเป็นสิ่งจำเป็นต้องระบุ</value>
+  </data>
+  <data name="errorExamService_013" xml:space="preserve">
+    <value>- ส่วนหัวเอกสารมีความยาวน้อยกว่าที่กำหนด กรุณาตรวจสอบตำแหน่งของรูปแบบไฟล์นำเข้า</value>
+  </data>
+  <data name="errorExamService_014" xml:space="preserve">
+    <value>- วันที่ไม่ถูกต้อง (คำแนะนำ : ตรวจสอบตำแหน่ง,ต้องใช้เครื่องหมาย '/' เท่านั้น)</value>
+  </data>
+  <data name="errorExamService_015" xml:space="preserve">
+    <value>- วันที่สอบต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_016" xml:space="preserve">
+    <value>- ข้อมูลสมาคมต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_017" xml:space="preserve">
+    <value>ไม่พบวิชาที่ต้องสอบในประเภทใบอนุญาตนี้</value>
+  </data>
+  <data name="errorExamService_018" xml:space="preserve">
+    <value>พบข้อผิดพลาดเกี่ยวกับวิชาที่สอบของประเภทใบอนุญาตนี้ กรุณาติดต่อเจ้าหน้าที่ดูแลระบบ</value>
+  </data>
+  <data name="errorExamService_019" xml:space="preserve">
+    <value>- ประเภทใบอนุญาตต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_020" xml:space="preserve">
+    <value>- รหัสจังหวัดต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_021" xml:space="preserve">
+    <value>- รหัสสมาคมของคุณไม่ตรงกับรหัสสมาคมในไฟล์นำเข้า </value>
+  </data>
+  <data name="errorExamService_022" xml:space="preserve">
+    <value>ทำให้ไม่สามารถนำเข้าข้อมูลชุดนี้ได้</value>
+  </data>
+  <data name="errorExamService_023" xml:space="preserve">
+    <value>- รหัสสมาคมต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_024" xml:space="preserve">
+    <value>- รหัสเวลาสอบต้องเป็นตัวเลขเท่านั้น </value>
+  </data>
+  <data name="errorExamService_025" xml:space="preserve">
+    <value>- รหัสเวลาสอบต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_026" xml:space="preserve">
+    <value>- จำนวนผู้เข้าสอบต้องเป็นตัวเลขเท่านั้น </value>
+  </data>
+  <data name="errorExamService_027" xml:space="preserve">
+    <value>- จำนวนผู้เข้าสอบต้องไม่เป็นค่าว่าง</value>
+  </data>
+  <data name="errorExamService_028" xml:space="preserve">
+    <value>ไม่พบการสอบรายการนี้ กรุณาตรวจสอบ วันที่สอบ รหัสเวลาสอบ ประเภทใบอนุญาต และ รหัสสนามสอบ</value>
+  </data>
+  <data name="errorExamService_029" xml:space="preserve">
+    <value>รูปแบบ ส่วนหัวเอกสาร ไม่ถูกต้อง</value>
+  </data>
+  <data name="errorExamService_030" xml:space="preserve">
+    <value>- ช่องผลการสอบสามารถระบุได้แค่ P F M เท่านั้น</value>
+  </data>
+  <data name="errorExamService_031" xml:space="preserve">
+    <value>- คะแนนวิชาที่</value>
+  </data>
+  <data name="errorExamService_032" xml:space="preserve">
+    <value>ไม่ถูกต้อง (จะต้องเป็นตัวเลขเท่านั้น) </value>
+  </data>
+  <data name="errorExamService_033" xml:space="preserve">
+    <value>คะแนนสอบไม่สามารถระบุได้มากกว่า 3 หลัก </value>
+  </data>
+  <data name="errorExamService_034" xml:space="preserve">
+    <value>(ลำดับที่ </value>
+  </data>
+  <data name="errorExamService_035" xml:space="preserve">
+    <value>  หมายเลขบัตรประชาชน </value>
+  </data>
+  <data name="errorExamService_036" xml:space="preserve">
+    <value>- บุคคลนี้ขาดสอบแต่มีคะแนน</value>
+  </data>
+  <data name="errorExamService_037" xml:space="preserve">
+    <value>- คำนำชื่อผิด </value>
+  </data>
+  <data name="errorExamService_038" xml:space="preserve">
+    <value>จำนวนรายการในส่วนผู้รับการเข้าสอบ ไม่ตรงกับจำนวนในส่วนหัวเอกสาร</value>
+  </data>
+  <data name="errorExamService_039" xml:space="preserve">
+    <value>- จำนวนวิชาที่สอบไม่สอดคล้องกับจำนวนคะแนนที่ระบุ </value>
+  </data>
+  <data name="errorExamService_040" xml:space="preserve">
+    <value>(ประเภทใบอนุญาตนี้สอบ </value>
+  </data>
+  <data name="errorExamService_041" xml:space="preserve">
+    <value> วิชา)</value>
+  </data>
+  <data name="errorExamService_042" xml:space="preserve">
+    <value>- จำนวนวิชาที่สอบไม่สอดคล้องกับจำนวนคะแนนที่ระบุ</value>
+  </data>
+  <data name="errorExamService_043" xml:space="preserve">
+    <value>รูปแบบเอกสารใน ส่วนคะแนนของผู้เข้ารับการสอบ ไม่ถูกต้อง</value>
+  </data>
+  <data name="errorExamService_044" xml:space="preserve">
+    <value>รูปแบบเอกสารใน ส่วนผู้เข้ารับการสอบ ไม่ถูกต้อง</value>
+  </data>
+  <data name="errorExamService_045" xml:space="preserve">
+    <value>ไม่พบข้อมูลการสร้างใบสั่งจ่ายใดๆในรหัสห้องสอบนี้</value>
+  </data>
+  <data name="errorExamService_046" xml:space="preserve">
+    <value>ไฟล์ข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="errorExamService_047" xml:space="preserve">
+    <value>ไม่พบข้อมูลในตารางการสอบ</value>
+  </data>
+  <data name="errorExamService_048" xml:space="preserve">
+    <value>มีการบันทึกข้อมูลซ้ำ</value>
+  </data>
+  <data name="errorExamService_049" xml:space="preserve">
+    <value>ไม่พบข้อมูล กรุณาตรวจสอบเลขที่นั่งสอบ </value>
+  </data>
+  <data name="errorExamService_050" xml:space="preserve">
+    <value> รหัสห้องสอบ </value>
+  </data>
+  <data name="errorExamService_052" xml:space="preserve">
+    <value>พบข้อผิดพลาด กรุณาลองใหม่อีกครั้ง</value>
+  </data>
+  <data name="errorExamService_053" xml:space="preserve">
+    <value>วันที่เลือกมีแล้วในระบบ</value>
+  </data>
+  <data name="errorExamService_054" xml:space="preserve">
+    <value>รหัสที่ป้อนมีแล้วในระบบ</value>
+  </data>
+  <data name="infoFileService_001" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="errorDataLicenseRequestReaderHelper_001" xml:space="preserve">
+    <value>ไม่พบเอกสาร</value>
+  </data>
+  <data name="errorDataLicenseRequestReaderHelper_002" xml:space="preserve">
+    <value>ไม่พบข่้อมูลส่วนของ Header</value>
+  </data>
+  <data name="errorDataLicenseRequestReaderHelper_003" xml:space="preserve">
+    <value>ไม่พบข้อมูลส่วนของ Detail</value>
+  </data>
+  <data name="errorExtractFileLicenseRequestHelper_001" xml:space="preserve">
+    <value>นำเข้าไฟล์ไม่สำเร็จ</value>
+  </data>
+  <data name="errorExtractFileLicenseRequestHelper_002" xml:space="preserve">
+    <value>ไม่ใช่ที่ไฟล์ที่ถูกต้อง</value>
+  </data>
+  <data name="errorExtractFileLicenseRequestHelper_003" xml:space="preserve">
+    <value>Extract File เกิดข้อผิดพลาด</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_ABSENT_EXAM_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวอักษรภาษาอังกฤษ 1 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_SEQ_NO_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวอักษรไม่เกิน 20 หลัก</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_SEAT_NO_Dup" xml:space="preserve">
+    <value>หมายเลขที่นั่งสอบห้ามซ้ำ</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_SEQ_NO_Dup" xml:space="preserve">
+    <value>ลำดับผู้สมัครสอบในเอกสารห้ามซ้ำ</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_ID_CARD_NO_NOT_13" xml:space="preserve">
+    <value>ต้องเป็นตัวเลขจำนวน 13 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_ID_CARD_NO_Dup" xml:space="preserve">
+    <value>หมายเลขบัตรประชาชนซ้ำ</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_AREA_CODE_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวเลขจำนวน 2 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_SEX_NOT_1" xml:space="preserve">
+    <value>ต้องมีจำนวน 1 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_EDUCATION_CODE_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวเลขไม่เกิน 3 หลัก</value>
+  </data>
+  <data name="errorExamFileDetailBusinessRules_SCORE_Required" xml:space="preserve">
+    <value>ต้องมีเป็นตัวเลขไม่เกิน 3 หลัก</value>
+  </data>
+  <data name="errorLicenseFileDetailBusinessRules_SEQ_NotOrder" xml:space="preserve">
+    <value>ข้อมูลเรียงลำดับไม่ถูกต้อง.</value>
+  </data>
+  <data name="errorLicenseFileDetailBusinessRules_LICENSE_NO_NotMatch_Required" xml:space="preserve">
+    <value>เลขที่ใบอนุญาตไม่ตรงกับเลขทะเบียนบริษัท.</value>
+  </data>
+  <data name="errorLicenseFileDetailBusinessRules_CITIZEN_ID_DuplicateInFile" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้ ซ้ำ.</value>
+  </data>
+  <data name="errorLicenseFileDetailBusinessRules_CITIZEN_ID_Duplicate" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้ ได้ทำการขอใบอนุญาตประเภทนี้ไปแล้ว. </value>
+  </data>
+  <data name="errorLicenseFileDetailBusinessRules_CITIZEN_ID_Waiting" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้อยู่ระหว่างการพิจารณา. </value>
+  </data>
+  <data name="errorApplicantFileHelper_001" xml:space="preserve">
+    <value>บรรทัดแรก ตำแหน่งแรก ต้องเป็น Header เท่านั้น!</value>
+  </data>
+  <data name="errorApplicantFileDetailBusinessRules_ID_CARD_NO_DuplicateInFile" xml:space="preserve">
+    <value>หมายเลขบัตรประชาชนซ้ำในเอกสาร.</value>
+  </data>
+  <data name="errorApplicantFileDetailBusinessRules_ID_CARD_NO_Registed" xml:space="preserve">
+    <value>ได้มีการสมัครในวันและเวลาสอบนี้แล้วไม่สามารถสมัครสอบได้ กรุณาทำการสมัครสอบในวันพรุ่งนี้</value>
+  </data>
+  <data name="errorApplicantFileDetailBusinessRules_NAMES_TooLong" xml:space="preserve">
+    <value>ชื่อความยาวเกิน 30 ตัวอักษร</value>
+  </data>
+  <data name="errorApplicantFileDetailBusinessRules_LASTNAME_TooLong" xml:space="preserve">
+    <value>นามสกุลความยาวเกิน 30 ตัวอักษร</value>
+  </data>
+  <data name="errorExamFileHeaderBusinessRules_ASSOCIATE_NAME_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวอักษรไม่เกิน 80 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileHeaderBusinessRules_LICENSE_TYPE_CODE_Worng" xml:space="preserve">
+    <value>ประเภทการขอใบอนุญาตต้องเป็นตัวเลขจำนวน 2 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileHeaderBusinessRules_ASSOCIATE_CODE_Worng" xml:space="preserve">
+    <value>ต้องมีเป็นตัวเลข 3 หลักเท่านั้น</value>
+  </data>
+  <data name="errorExamFileHeaderBusinessRules_CNT_PER_Worng" xml:space="preserve">
+    <value>ต้องเป็นตัวเลขไม่เกิน 18 หลักเท่านั้น</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_IMPORT_ID" xml:space="preserve">
+    <value>รหัสการ Import</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_PETITION_TYPE" xml:space="preserve">
+    <value>ประเภทรายการ</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_SEQ" xml:space="preserve">
+    <value>ลำดับรายการในไฟล์</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_LICENSE_NO" xml:space="preserve">
+    <value>เลขที่ใบอนุญาต</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_LICENSE_ACTIVE_DATE" xml:space="preserve">
+    <value>วันที่ออกใบอนุญาตครั้งแรก</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_LICENSESE_EXPIRE_DATE" xml:space="preserve">
+    <value>วันที่ใบอนุญาตหมดอายุ</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_LICENSE_FEE" xml:space="preserve">
+    <value>ค่าธรรมเนียม</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_CITIZEN_ID" xml:space="preserve">
+    <value>เลขบัตรประชาชน</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_TITLE_NAME" xml:space="preserve">
+    <value>คำนำหน้านาม</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_ADDR1" xml:space="preserve">
+    <value>ที่อยู่ 1</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_ADDR2" xml:space="preserve">
+    <value>ที่อยู่เพิ่มเติม 2</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames__EMAIL" xml:space="preserve">
+    <value>e-mail </value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_CUR_ADDR" xml:space="preserve">
+    <value>ที่อยู่ปัจจุบัน</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_TEL_NO" xml:space="preserve">
+    <value>หมายเลขโทรศัพท์ </value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_CUR_AREA_CODE" xml:space="preserve">
+    <value>รหัสพื้นที่ปัจจุบัน</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_REMARK" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_AR_ANSWER" xml:space="preserve">
+    <value>บริษัทที่ขอย้าย</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_OLD_COMP_CODE" xml:space="preserve">
+    <value>รหัสบริษัทเก่า</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_ERR_MSG" xml:space="preserve">
+    <value>ข้อมูลผิดพลาด</value>
+  </data>
+  <data name="propLicenseFileDetailFieldNames_LOAD_STATUS" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_IMPORT_DATETIME" xml:space="preserve">
+    <value>วันที่นำเข้า</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_LICENSE_TYPE_CODE" xml:space="preserve">
+    <value>ประเภทใบอนุญาต</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_COMP_NAME" xml:space="preserve">
+    <value>ชื่อบริษัท</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_SEND_DATE" xml:space="preserve">
+    <value>วันที่สร้างเอกสาร</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_TOTAL_AGENT" xml:space="preserve">
+    <value>จำนวนผู้ขอใบอนุญาต</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_TOTAL_FEE" xml:space="preserve">
+    <value>จำนวนเงินรวม</value>
+  </data>
+  <data name="propLicenseFileHeaderFieldNames_APPROVE_COMPCODE" xml:space="preserve">
+    <value>รหัสอนุมัติ</value>
+  </data>
+  <data name="errorLicenseService_001" xml:space="preserve">
+    <value>โปรดระบุรหัสบัตรประชาชน</value>
+  </data>
+  <data name="errorLicenseService_002" xml:space="preserve">
+    <value>ประเภทใบอนุญาตไม่ถูกต้อง</value>
+  </data>
+  <data name="errorLicenseService_003" xml:space="preserve">
+    <value>ไม่พบเลขบัตรประชาชน</value>
+  </data>
+  <data name="errorLicenseService_004" xml:space="preserve">
+    <value>เกิดความผิดพลาดโปรดตรวจสอบข้อมูลอีกครั้ง</value>
+  </data>
+  <data name="errorLicenseService_005" xml:space="preserve">
+    <value>มีข้อมูลการขอรับใบอนุญาตที่ยังไม่ถูกต้องอยู่โปรดแก้ไขให้ถูกต้องก่อน Submit ข้อมูล</value>
+  </data>
+  <data name="errorLicenseService_006" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้ ได้ทำการขอใบอนุญาตไปแล้ว</value>
+  </data>
+  <data name="errorLicenseService_007" xml:space="preserve">
+    <value>ไม่พบส่วนของ Header</value>
+  </data>
+  <data name="errorLicenseService_008" xml:space="preserve">
+    <value>รหัสประเภทใบอนุญาตในไฟล์ที่ Upload ไม่ตรงกับที่เลือก</value>
+  </data>
+  <data name="errorLicenseService_009" xml:space="preserve">
+    <value>โปรดใส่รหัสบริษัท</value>
+  </data>
+  <data name="errorLicenseService_010" xml:space="preserve">
+    <value>รหัสสมาคมผิด</value>
+  </data>
+  <data name="errorLicenseService_011" xml:space="preserve">
+    <value>วันที่นำส่งผิด </value>
+  </data>
+  <data name="errorLicenseService_012" xml:space="preserve">
+    <value>วันที่นำส่งผิด ปีผิดต้องเป็น พ.ศ. </value>
+  </data>
+  <data name="errorLicenseService_013" xml:space="preserve">
+    <value>วันที่นำส่งมากกว่าวันนี้ไม่ได้</value>
+  </data>
+  <data name="errorLicenseService_014" xml:space="preserve">
+    <value>ไม่ได้ระบุจำนวนคน</value>
+  </data>
+  <data name="errorLicenseService_015" xml:space="preserve">
+    <value>ระบุจำนวนคนนำเข้าไม่ถูกต้อง</value>
+  </data>
+  <data name="errorLicenseService_016" xml:space="preserve">
+    <value>ไม่ได้ระบุจำนวนเงินที่นำส่ง</value>
+  </data>
+  <data name="errorLicenseService_017" xml:space="preserve">
+    <value>ระบุจำนวนเงินรวมไม่ถูกต้อง</value>
+  </data>
+  <data name="errorLicenseService_018" xml:space="preserve">
+    <value>เลขบัตรประชาชนซ้ำ </value>
+  </data>
+  <data name="errorLicenseService_019" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้ ได้ทำการขอใบอนุญาติประเภท</value>
+  </data>
+  <data name="errorLicenseService_020" xml:space="preserve">
+    <value>ไปแล้ว </value>
+  </data>
+  <data name="errorLicenseService_021" xml:space="preserve">
+    <value>เลขบัตรประชาชนเลขนี้อยู่ระหว่างการพิจารณา </value>
+  </data>
+  <data name="errorLicenseService_022" xml:space="preserve">
+    <value>ระบุค่าธรรมเนียมผิด </value>
+  </data>
+  <data name="errorLicenseService_023" xml:space="preserve">
+    <value> กรุณาแนบไฟล์</value>
+  </data>
+  <data name="errorLicenseService_024" xml:space="preserve">
+    <value>ไม่สามารถนำเข้าไฟล์ข้อมูลได้   ติดต่อเจ้าหน้าที่ผู้ดูแลระบบ</value>
+  </data>
+  <data name="errorLicenseService_025" xml:space="preserve">
+    <value>ไม่พบไฟล์แนบ กรุณาทำรายการใหม่</value>
+  </data>
+  <data name="infoLicenseService_026" xml:space="preserve">
+    <value>การทำงานเสร็จสมบูรณ์</value>
+  </data>
+  <data name="propLicenseService_P" xml:space="preserve">
+    <value>ผ่าน</value>
+  </data>
+  <data name="propLicenseService_F" xml:space="preserve">
+    <value>ไม่ผ่าน</value>
+  </data>
+  <data name="propLicenseService_M" xml:space="preserve">
+    <value>ขาดสอบ</value>
+  </data>
+  <data name="propLicenseService_B" xml:space="preserve">
+    <value>Black List</value>
+  </data>
+  <data name="propLicenseService_N" xml:space="preserve">
+    <value>ไม่มีผลสอบ</value>
+  </data>
+  <data name="propLicenseService_026" xml:space="preserve">
+    <value>ไม่มีผลอบรม</value>
+  </data>
+  <data name="propLicenseService_027" xml:space="preserve">
+    <value>อบรม</value>
+  </data>
+  <data name="propLicenseService_029" xml:space="preserve">
+    <value>ไม่มีประเภทการอบรม</value>
+  </data>
+  <data name="propLicenseService_028" xml:space="preserve">
+    <value>สัมมนา</value>
+  </data>
+  <data name="errorLicenseService_030" xml:space="preserve">
+    <value>ไม่สามารถทำรายการได้เนื่องจากมีใบอนุญาต</value>
+  </data>
+  <data name="errorLicenseService_031" xml:space="preserve">
+    <value> สถานะ'รออการอนุมัติ' ในระบบแล้ว</value>
+  </data>
+  <data name="propLicenseService_032" xml:space="preserve">
+    <value>ตัวแทนประกันชีวิต</value>
+  </data>
+  <data name="propLicenseService_033" xml:space="preserve">
+    <value>ตัวแทนประกันวินาศภัย</value>
+  </data>
+  <data name="propLicenseService_034" xml:space="preserve">
+    <value>การจัดการประกันชีวิตโดยตรง</value>
+  </data>
+  <data name="propLicenseService_035" xml:space="preserve">
+    <value>การจัดการประกันวินาศภัยโดยตรง</value>
+  </data>
+  <data name="propLicenseService_036" xml:space="preserve">
+    <value>การประกันภัยอุบัติเหตุส่วนบุคคลและประกันสุขภาพ</value>
+  </data>
+  <data name="propLicenseService_037" xml:space="preserve">
+    <value>พรบ.คุ้มครองผู้ประสบภัยจากรถ</value>
+  </data>
+  <data name="propLicenseService_038" xml:space="preserve">
+    <value>สำหรับการประกันภัยรายย่อย(ชีวิต)</value>
+  </data>
+  <data name="propLicenseService_039" xml:space="preserve">
+    <value>สำหรับการประกันภัยรายย่อย(วินาศภัย)</value>
+  </data>
+  <data name="propLicenseService_040" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="propLicenseService_041" xml:space="preserve">
+    <value>ขอใบอนุญาตใหม่</value>
+  </data>
+  <data name="propLicenseService_042" xml:space="preserve">
+    <value>ขอต่ออายุใบอนุญาต 1 ปี</value>
+  </data>
+  <data name="propLicenseService_043" xml:space="preserve">
+    <value>ขอต่ออายุใบอนุญาต 5 ปี</value>
+  </data>
+  <data name="propLicenseService_044" xml:space="preserve">
+    <value>ขาดต่อขอใหม่</value>
+  </data>
+  <data name="propLicenseService_045" xml:space="preserve">
+    <value>ใบแทนใบอนุญาต(ชำรุดสูญหาย)</value>
+  </data>
+  <data name="propLicenseService_046" xml:space="preserve">
+    <value>รออนุมัติ</value>
+  </data>
+  <data name="propLicenseService_047" xml:space="preserve">
+    <value>ไม่อนุมัติ</value>
+  </data>
+  <data name="propLicenseService_048" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="propLicenseService_049" xml:space="preserve">
+    <value>ต่ออายุบุคคลธรรมดา 1 ปี</value>
+  </data>
+  <data name="propLicenseService_050" xml:space="preserve">
+    <value> ครั้งที่ </value>
+  </data>
+  <data name="propLicenseService_052" xml:space="preserve">
+    <value>ต่ออายุบุคคลธรรมดา 5 ปี</value>
+  </data>
+  <data name="propLicenseService_051" xml:space="preserve">
+    <value>ต่ออายุบุคคลธรรมดา</value>
+  </data>
+  <data name="propLicenseService_053" xml:space="preserve">
+    <value>ไม่พบรายละเอียดในการดำเนินการ</value>
+  </data>
+  <data name="errorLicenseService_54" xml:space="preserve">
+    <value>ไม่พบข้อมูลตรงตามวันที่ระบุ</value>
+  </data>
+  <data name="errorLicenseService_055" xml:space="preserve">
+    <value>พบข้อผิดพลาดในการสร้างไฟล์ .zip (อาจเกิดจากข้อมูลของผู้ร้องขอรับใบอนุญาตไม่เพียงพอต่อการสร้างเอกสาร)</value>
+  </data>
+  <data name="errorGenQRcode_001" xml:space="preserve">
+    <value>Error: Running Receive Number.</value>
+  </data>
+  <data name="errorBillBiz_001" xml:space="preserve">
+    <value>ไม่พบข้อมูล BatchID : </value>
+  </data>
+  <data name="errorBillBiz_002" xml:space="preserve">
+    <value>ข้อมูลวันที่ Header ธนาคารไม่ถูกต้อง : </value>
+  </data>
+  <data name="errorBillBiz_003" xml:space="preserve">
+    <value>ไม่พบรหัสอ้างอิง Ref1 : </value>
+  </data>
+  <data name="errorBillBiz_004" xml:space="preserve">
+    <value>ข้อมูลการเงินไฟล์นี้นำเข้าระบบแล้ว</value>
+  </data>
+  <data name="errorBillBiz_005" xml:space="preserve">
+    <value>จำนวนเงินจากธนาคารไม่ตรงกับใบสั่งจ่าย</value>
+  </data>
+  <data name="errorBillBiz_006" xml:space="preserve">
+    <value>พบข้อมูลไม่ถูกต้อง</value>
+  </data>
+  <data name="errorBillBiz_007" xml:space="preserve">
+    <value>ไม่สามารถบันทึกข้อมูลการเงินได้ ติดต่อผู้ดูแลระบบ</value>
+  </data>
+  <data name="errorBillBiz_008" xml:space="preserve">
+    <value>ไม่พบข้อมูลทางบัญชี</value>
+  </data>
+  <data name="errorBillBiz_009" xml:space="preserve">
+    <value>ไม่พบข้อมูลประเภทเอกสาร</value>
+  </data>
+  <data name="errorBillBiz_010" xml:space="preserve">
+    <value>ไม่พบข้อมูลผู้สมัครสอบ.</value>
+  </data>
+  <data name="errorBillBiz_012" xml:space="preserve">
+    <value>ไม่ข้อมูลบัญชี</value>
+  </data>
+  <data name="errorBillBiz_013" xml:space="preserve">
+    <value>ไม่สามารถทำการรายการได้ กรุณาติดต่อเจ้าหน้าที่ดูแลระบบ</value>
+  </data>
+  <data name="errorBillBiz_014" xml:space="preserve">
+    <value>ไม่พบ Batch ID : </value>
+  </data>
+  <data name="errorBillBiz_015" xml:space="preserve">
+    <value> ในระบบ</value>
+  </data>
+  <data name="errorPaymentService_001" xml:space="preserve">
+    <value>ไม่มีการเลือกรายการ</value>
+  </data>
+  <data name="errorPaymentService_002" xml:space="preserve">
+    <value>ผลอบรมหมดอายุ</value>
+  </data>
+  <data name="errorPaymentService_003" xml:space="preserve">
+    <value>วันที่เริ่มต้นต้องน้อยกว่าวันที่สิ้นสุด</value>
+  </data>
+  <data name="errorPaymentService_004" xml:space="preserve">
+    <value>พบข้อมูลผิดผลาด กรุณาติดต่อผู้ดูแลระบบ.</value>
+  </data>
+  <data name="errorPaymentService_005" xml:space="preserve">
+    <value> ไม่สามารถบันทึกข้อมูลทางการเงินได้.</value>
+  </data>
+  <data name="errorPaymentService_006" xml:space="preserve">
+    <value>บันทึกข้อมูลใบอนุญาตไม่สำเร็จ</value>
+  </data>
+  <data name="infoPaymentService_007" xml:space="preserve">
+    <value>ส่งข้อมูลเรียบร้อยแล้ว...</value>
+  </data>
+  <data name="errorPaymentService_008" xml:space="preserve">
+    <value>ไม่พบข้อมูล ประเภทใบอนุญาต ในแฟ้มข้อมูลหลัก</value>
+  </data>
+  <data name="errorPaymentService_009" xml:space="preserve">
+    <value>ไม่พบเลขที่ใบอนุญาตที่ยื่นคำร้อง</value>
+  </data>
+  <data name="errorPaymentService_010" xml:space="preserve">
+    <value>สร้างใบเสร็จไม่สำเร็จ กรุณาติดต่อเจ้าหน้าที่ที่เกี่ยวข้อง</value>
+  </data>
+  <data name="infoMailApprovePersonHelper_001" xml:space="preserve">
+    <value>ขณะนี้สถานะของคุณ ได้รับการอนุมัติแล้ว </value>
+  </data>
+  <data name="infoMailApprovePersonHelper_002" xml:space="preserve">
+    <value>ขณะนี้สถานะของคุณ ไม่ได้รับการอนุมัติแล้ว ด้วยเหตุผลบางประการ </value>
+  </data>
+  <data name="infoMailApprovePersonHelper_003" xml:space="preserve">
+    <value>กรุณาตรวจสอบข้อมูลของในระบบ </value>
+  </data>
+  <data name="infoMailNotApprovePersonHelper_001" xml:space="preserve">
+    <value>ขณะนี้สถานะของคุณ ไม่ได้รับการอนุมัติ </value>
+  </data>
+  <data name="infoPersonService_001" xml:space="preserve">
+    <value>ชื่อ-สกุล หรือ E-Mail นี้ได้ลงทะเบียนในระบบแล้ว</value>
+  </data>
+  <data name="errorPersonService_002" xml:space="preserve">
+    <value>ไม่สามารถแก้ไขข้อมูลได้</value>
+  </data>
+  <data name="errorPersonService_003" xml:space="preserve">
+    <value>ไม่ย้ายข้อมูลได้</value>
+  </data>
+  <data name="errorPersonService_004" xml:space="preserve">
+    <value>ไม่สามารถย้ายข้อมูลได้</value>
+  </data>
+  <data name="errorPersonService_005" xml:space="preserve">
+    <value>ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</value>
+  </data>
+  <data name="errorPersonService_006" xml:space="preserve">
+    <value>ไม่สามารถใช้งานได้ เนื่องจากผู้ใช้งาน </value>
+  </data>
+  <data name="errorPersonService_007" xml:space="preserve">
+    <value> กำลังออนไลน์อยู่ในระบบ</value>
+  </data>
+  <data name="errorPersonService_008" xml:space="preserve">
+    <value>ชื่อผู้ใช้ </value>
+  </data>
+  <data name="errorPersonService_009" xml:space="preserve">
+    <value> ยังไม่ลงทะเบียนในระบบ</value>
+  </data>
+  <data name="errorPersonService_010" xml:space="preserve">
+    <value>มีผู้ใช้งาน</value>
+  </data>
+  <data name="errorPersonService_011" xml:space="preserve">
+    <value>Username หรือ Password ไม่ถูกต้อง</value>
+  </data>
+  <data name="errorPersonService_012" xml:space="preserve">
+    <value>ชื่อผู้ใช้ :</value>
+  </data>
+  <data name="errorPersonService_013" xml:space="preserve">
+    <value> มีในระบบแล้ว</value>
+  </data>
+  <data name="errorPersonService_014" xml:space="preserve">
+    <value>ไม่พบ ชื่อผู้ใช้ :</value>
+  </data>
+  <data name="errorPersonService_015" xml:space="preserve">
+    <value> มีในระบบ</value>
+  </data>
+  <data name="errorPersonService_016" xml:space="preserve">
+    <value>ไม่พบผู้ใช้ดังกล่าวในระบบ</value>
+  </data>
+  <data name="errorPersonService_017" xml:space="preserve">
+    <value>รหัสผ่านเดิมไม่ถูกต้อง</value>
+  </data>
+  <data name="errorPersonService_018" xml:space="preserve">
+    <value>ไม่พบข้อมูลในระบบ</value>
+  </data>
+  <data name="errorRegistrationService_001" xml:space="preserve">
+    <value>ประเภทการสมัครไม่ถูกต้อง</value>
+  </data>
+  <data name="errorRegistrationService_002" xml:space="preserve">
+    <value>เลขบัตรประชาชนนี้ได้ลงทะเบียนในระบบแล้ว</value>
+  </data>
+  <data name="errorRegistrationService_003" xml:space="preserve">
+    <value>E-mail นี้ได้ลงทะเบียนในระบบแล้ว</value>
+  </data>
+  <data name="errorRegistrationService_004" xml:space="preserve">
+    <value>ไม่พบประเภทสมาชิก กรุณาติดต่อ Administrator</value>
+  </data>
+  <data name="errorRegistrationService_005" xml:space="preserve">
+    <value>Err 404 : Entity Not found</value>
+  </data>
+  <data name="errorServiceAuthen_001" xml:space="preserve">
+    <value>Incorrect Username or Password</value>
+  </data>
+  <data name="errorDataCenterService_003" xml:space="preserve">
+    <value>ชื่อประเภทเอกสารซ้ำ</value>
+  </data>
+  <data name="errorLicenseFileDetail_001" xml:space="preserve">
+    <value>ขนาดของไฟล์รูปถ่ายต้องมีขนาดเท่ากับ 1 นิ้ว</value>
+  </data>
+  <data name="errorLicenseFileDetail_002" xml:space="preserve">
+    <value>(3x4 ซ.ม.)</value>
+  </data>
+  <data name="errorBankFileDetailBusinessRules_001" xml:space="preserve">
+    <value>ใบสั่งจ่ายนี้ได้ถูกนำเข้าแล้ว</value>
+  </data>
+  <data name="errorBankFileDetailBusinessRules_002" xml:space="preserve">
+    <value>หมายเลขใบสั่งจ่ายซ้ำ</value>
+  </data>
+  <data name="errorBankFileHeaderBusinessRules_001" xml:space="preserve">
+    <value>ข้อมูล Sequence header ไม่เท่ากับ 1</value>
+  </data>
+  <data name="infoMailReceiptSuccessHelper_001" xml:space="preserve">
+    <value> จึงขอส่ง ใบเสร็จรับเงิน เพื่อยืนยันการรับชำระเงิน </value>
+  </data>
+  <data name="infoMailReceiptSuccessHelper_002" xml:space="preserve">
+    <value> จึงขอส่ง รายการใบเสร็จรับเงิน เพื่อยืนยันการรับชำระเงิน </value>
+  </data>
+  <data name="errorGenReferanceNumber_001" xml:space="preserve">
+    <value>Error: Running Referrent Number.</value>
+  </data>
+  <data name="propGenQRcode_002" xml:space="preserve">
+    <value>เลขที่ใบเสร็จ:</value>
+  </data>
+  <data name="infoLicenseService_001" xml:space="preserve">
+    <value>การขอใบอนุญาตประเภท</value>
+  </data>
+  <data name="infoLicenseService_002" xml:space="preserve">
+    <value>อยู่ระหว่างรอการอนุมัติ </value>
+  </data>
+  <data name="errorRegistrationService_nullData" xml:space="preserve">
+    <value>ไม่พบข้อมูล</value>
+  </data>
+  <data name="errorContainDetail_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorDeleteFile_FileNotFound" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorMoveFile_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorUploadFile_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoAmendFile_Success" xml:space="preserve">
+    <value />
+  </data>
+  <data name="infoDeleteContainer_001" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errorSubmitPaymentBankUpload_permistion" xml:space="preserve">
+    <value>คุณไม่ได้รับสิทธิ์การใช่ระบบ!</value>
+  </data>
+  <data name="errorPaymentUploadFileBankDup" xml:space="preserve">
+    <value>นำเข้าซ้ำ.</value>
+  </data>
+</root>

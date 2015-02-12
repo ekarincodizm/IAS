@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IASGBModel.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="9.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="IASGBModelStoreContainer">
+    <EntitySet Name="GB_COUNTRY_R" EntityType="IASGBModel.Store.GB_COUNTRY_R" store:Type="Tables" Schema="GBDOI" />
+    <EntitySet Name="GB_FUNCTION_R" EntityType="IASGBModel.Store.GB_FUNCTION_R" store:Type="Tables" Schema="GBDOI" />
+    <EntitySet Name="GB_HOLIDAY_R" EntityType="IASGBModel.Store.GB_HOLIDAY_R" store:Type="Tables" Schema="GBDOI" />
+    <EntitySet Name="GB_PREFIX_R" EntityType="IASGBModel.Store.GB_PREFIX_R" store:Type="Tables" Schema="GBDOI" />
+    <EntitySet Name="GB_PROVINCE_R" EntityType="IASGBModel.Store.GB_PROVINCE_R" store:Type="Tables" Schema="GBDOI" />
+    <EntitySet Name="GB_REGION_R" EntityType="IASGBModel.Store.GB_REGION_R" store:Type="Tables" Schema="GBDOI" />
+  </EntityContainer>
+  <EntityType Name="GB_COUNTRY_R">
+    <Key>
+      <PropertyRef Name="CT_CODE" />
+    </Key>
+    <Property Name="CT_CODE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="CT_DESE" Type="varchar2" MaxLength="30" />
+    <Property Name="CT_DEST" Type="varchar2" MaxLength="40" />
+    <Property Name="CT_REG" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="GB_FUNCTION_R">
+    <Key>
+      <PropertyRef Name="FUNCTION_ID" />
+    </Key>
+    <Property Name="FUNCTION_ID" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="FUNCTION_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="CPI" Type="number" Precision="2" />
+    <Property Name="ACTIVE" Type="varchar2" MaxLength="1" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="GB_HOLIDAY_R">
+    <Key>
+      <PropertyRef Name="HL_DATE" />
+    </Key>
+    <Property Name="HL_DATE" Type="date" Nullable="false" />
+    <Property Name="HL_DESC" Type="varchar2" MaxLength="60" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="GB_PREFIX_R">
+    <Key>
+      <PropertyRef Name="PRE_CODE" />
+    </Key>
+    <Property Name="PRE_CODE" Type="number" Nullable="false" Precision="3" />
+    <Property Name="PRE_FULL" Type="varchar2" MaxLength="40" />
+    <Property Name="PRE_SORT" Type="varchar2" MaxLength="20" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="PRIORITY" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GB_PROVINCE_R">
+    <Key>
+      <PropertyRef Name="PV_CODE" />
+      <PropertyRef Name="PV_AMPUR" />
+      <PropertyRef Name="PV_TUMBON" />
+    </Key>
+    <Property Name="PV_CODE" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PV_AMPUR" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="PV_TUMBON" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="PV_ZIPCODE" Type="varchar2" MaxLength="5" />
+    <Property Name="PV_DEST" Type="varchar2" MaxLength="40" />
+    <Property Name="PV_DESE" Type="varchar2" MaxLength="40" />
+    <Property Name="PV_OFFICE" Type="varchar2" MaxLength="2" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="PV_SHDEST" Type="varchar2" MaxLength="2" />
+    <Property Name="PV_REGION" Type="varchar2" MaxLength="1" />
+    <Property Name="POPULATION" Type="number" Precision="15" />
+    <Property Name="SEQ" Type="number" Precision="1" />
+    <Property Name="REMARK" Type="varchar2" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="GB_REGION_R">
+    <Key>
+      <PropertyRef Name="REGION_CODE" />
+    </Key>
+    <Property Name="REGION_CODE" Type="varchar2" Nullable="false" MaxLength="1" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="100" />
+    <Property Name="USER_ID" Type="varchar2" MaxLength="15" />
+    <Property Name="USER_DATE" Type="date" />
+    <Property Name="DESCRIPTION_E" Type="varchar2" MaxLength="100" />
+    <Property Name="SEQ" Type="number" Precision="1" />
+  </EntityType>
+</Schema>

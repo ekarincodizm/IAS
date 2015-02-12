@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IASGBModelStoreContainer" CdmEntityContainer="IASGBModelEntities">
+    <EntitySetMapping Name="GB_COUNTRY_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_COUNTRY_R">
+        <MappingFragment StoreEntitySet="GB_COUNTRY_R">
+          <ScalarProperty Name="CT_CODE" ColumnName="CT_CODE" />
+          <ScalarProperty Name="CT_DESE" ColumnName="CT_DESE" />
+          <ScalarProperty Name="CT_DEST" ColumnName="CT_DEST" />
+          <ScalarProperty Name="CT_REG" ColumnName="CT_REG" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GB_FUNCTION_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_FUNCTION_R">
+        <MappingFragment StoreEntitySet="GB_FUNCTION_R">
+          <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+          <ScalarProperty Name="FUNCTION_NAME" ColumnName="FUNCTION_NAME" />
+          <ScalarProperty Name="CPI" ColumnName="CPI" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GB_HOLIDAY_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_HOLIDAY_R">
+        <MappingFragment StoreEntitySet="GB_HOLIDAY_R">
+          <ScalarProperty Name="HL_DATE" ColumnName="HL_DATE" />
+          <ScalarProperty Name="HL_DESC" ColumnName="HL_DESC" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GB_PROVINCE_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_PROVINCE_R">
+        <MappingFragment StoreEntitySet="GB_PROVINCE_R">
+          <ScalarProperty Name="PV_CODE" ColumnName="PV_CODE" />
+          <ScalarProperty Name="PV_AMPUR" ColumnName="PV_AMPUR" />
+          <ScalarProperty Name="PV_TUMBON" ColumnName="PV_TUMBON" />
+          <ScalarProperty Name="PV_ZIPCODE" ColumnName="PV_ZIPCODE" />
+          <ScalarProperty Name="PV_DEST" ColumnName="PV_DEST" />
+          <ScalarProperty Name="PV_DESE" ColumnName="PV_DESE" />
+          <ScalarProperty Name="PV_OFFICE" ColumnName="PV_OFFICE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="PV_SHDEST" ColumnName="PV_SHDEST" />
+          <ScalarProperty Name="PV_REGION" ColumnName="PV_REGION" />
+          <ScalarProperty Name="POPULATION" ColumnName="POPULATION" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GB_REGION_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_REGION_R">
+        <MappingFragment StoreEntitySet="GB_REGION_R">
+          <ScalarProperty Name="REGION_CODE" ColumnName="REGION_CODE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="DESCRIPTION_E" ColumnName="DESCRIPTION_E" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GB_PREFIX_R">
+      <EntityTypeMapping TypeName="IASGBModel.GB_PREFIX_R">
+        <MappingFragment StoreEntitySet="GB_PREFIX_R">
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PRE_SORT" ColumnName="PRE_SORT" />
+          <ScalarProperty Name="PRE_FULL" ColumnName="PRE_FULL" />
+          <ScalarProperty Name="PRE_CODE" ColumnName="PRE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

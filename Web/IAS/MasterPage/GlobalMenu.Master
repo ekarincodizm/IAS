@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GlobalMenu.master.cs"
+    Inherits="IAS.MasterPage.GlobalMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../style/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="templatemo_container">
+        <div id="templatemo_header">
+            <div id="logosection">
+            </div>
+        </div>
+        <div id="templatemo_menu">
+            <div id="menu">
+                <ul>
+                    <li><a href="#" class="current">หน้าหลัก</a></li>
+                    <li><a href="#">อื่นๆ</a></li>
+                    <li><a href="#">บริการ</a></li>
+                    <li><a href="#">โซลูชั่น</a></li>
+                    <li><a href="#">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- start of content -->
+        <div id="templatemo_content">
+            <!-- start of left column -->
+            <%--<div id="templatemo_left_column">
+            </div>--%>
+            <!-- end of left column -->
+            <!-- start of middle column -->
+            <div id="templatemo_middle">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- end of content -->
+    </div>
+    </form>
+</body>
+</html>

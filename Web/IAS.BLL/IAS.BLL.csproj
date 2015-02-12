@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IAS.BLL.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{019E5CEE-6A51-4115-A535-57923627962C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAS.BLL</RootNamespace>
+    <AssemblyName>IAS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=3.1.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IAS\Library\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="GenCode128">
+      <HintPath>..\IAS\Library\GenCode128.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IAS\Library\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IAS\Library\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBiz.cs" />
+    <Compile Include="ApplicantBiz.cs" />
+    <Compile Include="ApploveDocumnetTypeBiz.cs" />
+    <Compile Include="AttachFilesIAS\AttachFile.cs" />
+    <Compile Include="AttachFilesIAS\AttachFileBusinessRule.cs" />
+    <Compile Include="AttachFilesIAS\AttachFileFactory.cs" />
+    <Compile Include="AttachFilesIAS\AttachFileFieldTHNames.cs" />
+    <Compile Include="AttachFilesIAS\AttachFileIssueException.cs" />
+    <Compile Include="AttachFilesIAS\AttachFileMapper.cs" />
+    <Compile Include="AttachFilesIAS\IAttachFile.cs" />
+    <Compile Include="AttachFilesIAS\States\DeleteAttachFileState.cs" />
+    <Compile Include="AttachFilesIAS\States\EditAttachFileState.cs" />
+    <Compile Include="AttachFilesIAS\States\AddAttachFileState.cs" />
+    <Compile Include="AttachFilesIAS\States\AttachFileState.cs" />
+    <Compile Include="AttachFilesIAS\States\AttachFileStatus.cs" />
+    <Compile Include="AttachFilesIAS\States\IAttachFileState.cs" />
+    <Compile Include="AttachFilesIAS\States\WaitAttachFileState.cs" />
+    <Compile Include="BusinessRule.cs" />
+    <Compile Include="ConfigBiz.cs" />
+    <Compile Include="DataCenterBiz.cs" />
+    <Compile Include="DomainEventHandlers\WebClientSentMailHandler.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="EnumsBiz.cs" />
+    <Compile Include="ExamResultBiz.cs" />
+    <Compile Include="ExamRoomBiz.cs" />
+    <Compile Include="ExamScheduleBiz.cs" />
+    <Compile Include="ExportBiz.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileBiz.cs" />
+    <Compile Include="GBBiz.cs" />
+    <Compile Include="GroupSubjectBiz.cs" />
+    <Compile Include="HeaderExcel.cs" />
+    <Compile Include="Helpers\GenerateIdHelper.cs" />
+    <Compile Include="IBaseEntity.cs" />
+    <Compile Include="IndexChangeBiz.cs" />
+    <Compile Include="LicenseBiz.cs" />
+    <Compile Include="LicenseTypeBiz.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="MoveCompanyInBiz.cs" />
+    <Compile Include="MoveCompanyOutBiz.cs" />
+    <Compile Include="OICActiveDirectoryBiz.cs" />
+    <Compile Include="PaymentBiz.cs" />
+    <Compile Include="PersonalIAS\Implements\AssociatePerson.cs" />
+    <Compile Include="PersonalIAS\Implements\OICAdminPerson.cs" />
+    <Compile Include="PersonalIAS\Implements\OICAgantStaffPerson.cs" />
+    <Compile Include="PersonalIAS\Implements\OICFinanceStuffPerson.cs" />
+    <Compile Include="PersonalIAS\Implements\OICTestStuffPerson.cs" />
+    <Compile Include="PersonalIAS\PersonalIssueException.cs" />
+    <Compile Include="PersonBiz.cs" />
+    <Compile Include="PersonalIAS\BasePersonal.cs" />
+    <Compile Include="PersonalIAS\Implements\CompanyPersonal.cs" />
+    <Compile Include="PersonalIAS\Implements\GeneralPerson.cs" />
+    <Compile Include="PersonalIAS\IPersonal.cs" />
+    <Compile Include="PrimaryKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryStringBuilder.cs" />
+    <Compile Include="RegisterLicenseBiz.cs" />
+    <Compile Include="RegistrationIAS\BaseRegistration.cs" />
+    <Compile Include="RegistrationIAS\ExtenAttachValidate.cs" />
+    <Compile Include="RegistrationIAS\Implements\AssociateRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\CompanyRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\OICAdminRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\OICAgantStaffRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\OICFinanceStuffRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\OICTestStuffRegistration.cs" />
+    <Compile Include="RegistrationIAS\Implements\GeneralRegistration.cs" />
+    <Compile Include="RegistrationIAS\IRegistration.cs" />
+    <Compile Include="RegistrationIAS\RegistrationBusinessRules.cs" />
+    <Compile Include="RegistrationIAS\RegistrationException.cs" />
+    <Compile Include="RegistrationIAS\RegistrationFactory.cs" />
+    <Compile Include="RegistrationIAS\RegistrationMapper.cs" />
+    <Compile Include="RegistrationIAS\RegistrationAttachFileBusinessRule.cs" />
+    <Compile Include="RegistrationIAS\States\ApproveEditRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\ApproveRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\CancelRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\DisapproveEditRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\DisapproveRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\IRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\NewRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\RegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\RegistrationStates.cs" />
+    <Compile Include="RegistrationIAS\States\RegistrationStatus.cs" />
+    <Compile Include="RegistrationIAS\States\WaitForApproveEditRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\States\WaitForApproveRegistrationState.cs" />
+    <Compile Include="RegistrationIAS\THRegFieldNames.cs" />
+    <Compile Include="RegistrationBiz.cs" />
+    <Compile Include="ReportPDF.cs" />
+    <Compile Include="Service References\AccountService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ADService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ApplicantService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataCenterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EmailSmtpService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ExamService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FileManagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FileService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LicenseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PaymentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PersonService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RegistrationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectBiz.cs" />
+    <Compile Include="SubjectGroup.cs" />
+    <Compile Include="SubjectGroupBiz.cs" />
+    <Compile Include="SysMessage.cs" />
+    <Compile Include="UploadDataBiz.cs" />
+    <Compile Include="UserAuthenBiz.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\IAS.DAL.AG_EXAM_LICENSE_R.datasource" />
+    <None Include="Properties\DataSources\IAS.DAL.AG_IAS_IMPORT_DETAIL_TEMP.datasource" />
+    <None Include="Properties\DataSources\IAS.DAL.AG_IAS_LICENSE_D.datasource" />
+    <None Include="Properties\DataSources\IAS.DAL.AG_IAS_PERSONAL_T.datasource" />
+    <None Include="Properties\DataSources\IAS.DAL.AG_IAS_REGISTRATION_T.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AcceptOff.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AccountDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AccountDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentType.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentType1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentType12.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AgentTypeEntity5.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Applicant.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Applicant11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApplicantInfo.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApplicantInfo11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApplicantTemp.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApplicantTemp11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApplicantUploadHeader.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApploveDocumnetType.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApploveDocumnetType1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproveConfig.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproveConfig12.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproverDoctype.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproverDoctype1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproverDoctype21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproverDoctype3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ApproverDoctype4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ASSOCIATION.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AssociationLicense11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AssociationLicense4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ASSOCIATION_APPROVE.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ASSOCIATION_APPROVE1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttachFileApplicantChangeEntity.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileLicense.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileLicense1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileLicense21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileLicense3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.AttatchFileLicense4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransaction.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransaction1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransaction2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.BankTransDetail2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ConfigDocument.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ConfigDocument12.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ConfigEntity.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ConfigEntity12.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ConfigExtraEntity.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DataItem.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DataItem12.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DetailTemp.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DetailTemp11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DetailTemp2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DetailTemp3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DocumentType1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.DocumentType13.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamGroup.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamHistory.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamHistory1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamHistory21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamHistory3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamHistory4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamPlace.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamResultTemp.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamResultTemp11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamResultTempEdit.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamResultTempEdit11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Exams.CarlendarExamInitResponse.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Exams.GetExamByCriteriaResponse.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Exams.GetExamScheduleByCriteriaResponse.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSchedule.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSchedule11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSpecial.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSpecial1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSpecial2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSubLicense.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSubLicense1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSubLicense2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExamSubLicense31.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ExapPlaceTimeEntity.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GBHoliday.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GBHoliday1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GBHoliday21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GBHoliday3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GBHoliday4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GetPaymentByRangeResponse.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GetPaymentByRangeResponse1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GroupPayment.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.GroupSubject.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.InsuranceAssociate.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyper.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTyperDropDrown41.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTypet.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseTypet11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseVerifyDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseVerifyDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseVerifyDetail21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseVerifyDetail3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.LicenseVerifyDetail4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ManageApplicantList.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ManageApplicantList1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.OICADProperties.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PaymentDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PaymentDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PaymentDetail2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PaymentNotCompleteResponse.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Person.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Person1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Person2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Person3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Person4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonalHistory.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonalHistory1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonalHistory21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonalHistory3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonalHistory4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonAttatchFile5.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonHistory.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseApprover.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseApprover1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseDetail21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseDetail3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseDetail4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseTransaction.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseTransaction1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseTransaction21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseTransaction3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonLicenseTransaction4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonTemp.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonTemp1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.PersonTemp2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReceiveLicenseDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReceiveLicenseDetail1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReceiveLicenseDetail21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReceiveLicenseDetail3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReceiveLicenseDetail4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReferanceNumber.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReferanceNumber1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReferanceNumber2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Registration.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Registration1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Registration2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Registration3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Registration4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.RegistrationAttatchFile.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.RegistrationAttatchFile1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.RegistrationAttatchFile2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.RegistrationAttatchFile3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ReportMoveComPanyIn.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ResultValidateApplicant.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ResultValidateApplicant1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SignatureImg.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SignatureImg1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SignatureImg2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SpecialDocument.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SpecialTemp.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubjectGroup.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubjectGroupD.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Subjectr.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Subjectr1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Subjectr2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Subjectr21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubPaymentDetail.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubPaymentHead.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubPaymentHead1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubPaymentHead2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SubPaymentHead3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryBankTransaction.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryBankTransaction1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryBankTransaction2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveApplicant.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveApplicant11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveLicense.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveLicense1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveLicense21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveLicense3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.SummaryReceiveLicense4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TitleName.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainHistory.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainPersonHistory.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainPersonHistory1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainPersonHistory21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainPersonHistory3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainPersonHistory4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainSpecial.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainSpecial1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.TrainSpecial2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Tran3To7.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Tran3To71.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Tran3To721.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Tran3To73.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.Tran3To74.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UnitLink.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UnitLink1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UnitLink21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UnitLink3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UnitLink4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadHeader.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadHeader1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadHeader21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadHeader31.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadHeader4.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadResultHeader.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UploadResultHeader11.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UserProfile.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UserProfile1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.UserProfile2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ValidateLicense.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ValidateLicense1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.ValidateLicense2.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.VerifyDocumentHeader.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.VerifyDocumentHeader1.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.VerifyDocumentHeader21.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.VerifyDocumentHeader3.datasource" />
+    <None Include="Properties\DataSources\IAS.DTO.VerifyDocumentHeader4.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\AccountService\AccountService.wsdl" />
+    <None Include="Service References\AccountService\AccountService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\AccountService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\AccountService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountService\AccountService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\AD_Service.wsdl" />
+    <None Include="Service References\ADService\AD_Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\AD_Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\AD_Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADService\IAS.BLL.ADService.LoginResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService.wsdl" />
+    <None Include="Service References\ApplicantService\ApplicantService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApplicantService\ApplicantService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCenterService\DataCenterService1.wsdl" />
+    <None Include="Service References\DataCenterService\DataCenterService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCenterService\DataCenterService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCenterService\DataCenterService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCenterService\DataCenterService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCenterService\DataCenterService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService.wsdl" />
+    <None Include="Service References\EmailSmtpService\EmailSmtpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService1.wsdl" />
+    <None Include="Service References\ExamService\ExamService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExamService\ExamService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService.wsdl" />
+    <None Include="Service References\FileManagement\FileService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\FileService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileManagement\IAS.BLL.FileManagement.FileMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FileService\FileTransferService.wsdl" />
+    <None Include="Service References\FileService\FileTransferService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileService\FileTransferService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileService\FileTransferService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FileService\FileTransferService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenseService\LicenseService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenseService\LicenseService1.wsdl" />
+    <None Include="Service References\LicenseService\LicenseService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenseService\LicenseService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenseService\LicenseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LicenseService\LicenseService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService.wsdl" />
+    <None Include="Service References\PaymentService\PaymentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService1.wsdl" />
+    <None Include="Service References\PersonService\PersonService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RegistrationService\RegistationService.wsdl" />
+    <None Include="Service References\RegistrationService\RegistrationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RegistrationService\RegistrationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RegistrationService\RegistrationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RegistrationService\RegistrationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RegistrationService\RegistrationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountService\" />
+    <WCFMetadataStorage Include="Service References\ADService\" />
+    <WCFMetadataStorage Include="Service References\ApplicantService\" />
+    <WCFMetadataStorage Include="Service References\DataCenterService\" />
+    <WCFMetadataStorage Include="Service References\EmailSmtpService\" />
+    <WCFMetadataStorage Include="Service References\ExamService\" />
+    <WCFMetadataStorage Include="Service References\FileManagement\" />
+    <WCFMetadataStorage Include="Service References\FileService\" />
+    <WCFMetadataStorage Include="Service References\LicenseService\" />
+    <WCFMetadataStorage Include="Service References\PaymentService\" />
+    <WCFMetadataStorage Include="Service References\PersonService\" />
+    <WCFMetadataStorage Include="Service References\RegistrationService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IAS.Common\IAS.Common.csproj">
+      <Project>{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}</Project>
+      <Name>IAS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAS.DAL.Repository\IAS.DTO.csproj">
+      <Project>{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}</Project>
+      <Name>IAS.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAS.Utils\IAS.Utils.csproj">
+      <Project>{b126a37a-a12f-4c9d-b92b-37aba90e72b0}</Project>
+      <Name>IAS.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataCenterService\configuration91.svcinfo" />
+    <None Include="Service References\DataCenterService\configuration.svcinfo" />
+    <None Include="Service References\DataCenterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ExamService\configuration91.svcinfo" />
+    <None Include="Service References\ExamService\configuration.svcinfo" />
+    <None Include="Service References\ExamService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LicenseService\configuration91.svcinfo" />
+    <None Include="Service References\LicenseService\configuration.svcinfo" />
+    <None Include="Service References\LicenseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PaymentService\PaymentService.disco" />
+    <None Include="Service References\PaymentService\configuration91.svcinfo" />
+    <None Include="Service References\PaymentService\configuration.svcinfo" />
+    <None Include="Service References\PaymentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PersonService\configuration91.svcinfo" />
+    <None Include="Service References\PersonService\configuration.svcinfo" />
+    <None Include="Service References\PersonService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\RegistrationService\RegistrationService.disco" />
+    <None Include="Service References\RegistrationService\configuration91.svcinfo" />
+    <None Include="Service References\RegistrationService\configuration.svcinfo" />
+    <None Include="Service References\RegistrationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AccountService\AccountService.disco" />
+    <None Include="Service References\AccountService\configuration91.svcinfo" />
+    <None Include="Service References\AccountService\configuration.svcinfo" />
+    <None Include="Service References\AccountService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileService\FileTransferService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailSmtpService\EmailSmtpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailSmtpService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailSmtpService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EmailSmtpService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileManagement\FileService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileManagement\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileManagement\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FileManagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ADService\AD_Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ADService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ADService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ADService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApplicantService\ApplicantService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApplicantService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApplicantService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApplicantService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExamService\ExamService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonService\PersonService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataCenterService\DataCenterService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LicenseService\LicenseService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

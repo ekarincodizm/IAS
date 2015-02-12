@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+  <xs:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:9999/Payment/PaymentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="CancelGroupRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupRequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelGroupRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CancelGroupRequestNoResult" nillable="true" type="q1:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrintGroupRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="reqList" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePrintGroupRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="UpdatePrintGroupRequestNoResult" nillable="true" type="q3:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHolidayDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHolidayDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CheckHolidayDateResult" nillable="true" type="q4:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentByGenPaymentForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hearReqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountRecord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentByGenPaymentFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSubPaymentByGenPaymentFormResult" nillable="true" type="q5:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubGroupDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UploadGroupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="CountTotalRecord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubGroupDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSubGroupDetailResult" nillable="true" type="q6:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePaymentNoFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Date_Time" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="CIT" type="xs:int" />
+        <xs:element minOccurs="0" name="KTB" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePaymentNoFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SavePaymentNoFileResult" nillable="true" type="q7:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndOfPay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="typeEnd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountRecord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndOfPayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetEndOfPayResult" nillable="true" type="q8:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroupSingleApplicant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="subGroups" nillable="true" type="q9:ArrayOfOrderInvoice" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroupSingleApplicantResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SetSubGroupSingleApplicantResult" nillable="true" type="q10:ResponseServiceOfstring" />
+        <xs:element minOccurs="0" name="groupHeaderNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Auto_CancelAppNoPay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="enDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Auto_CancelAppNoPayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="Auto_CancelAppNoPayResult" nillable="true" type="q11:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Auto_GetApplicantNoPaymentHeadder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Auto_GetApplicantNoPaymentHeadderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="Auto_GetApplicantNoPaymentHeadderResult" nillable="true" type="q12:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastEndDate">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastEndDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLastEndDateResult" nillable="true" type="q13:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceiptSomePay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HeadrequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceiptSomePayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetReceiptSomePayResult" nillable="true" type="q14:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentNotComplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q15:PaymentNotCompleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PaymentNotCompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="PaymentNotCompleteResult" nillable="true" type="q16:ResponseServiceOfPaymentNotCompleteResponse3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScheduleEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PKdatetime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="enDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="actionEvent" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScheduleEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ScheduleEventResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReSubmitBankTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q17:ImportBankTransferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReSubmitBankTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ReSubmitBankTransResult" nillable="true" type="q18:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCheckFileSize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PetitionTypeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCheckFileSizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetCheckFileSizeResult" nillable="true" type="q19:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDownloadReceiptHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDownloadReceiptHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetDownloadReceiptHistoryResult" nillable="true" type="q20:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGroupDetailLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group_reuest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGroupDetailLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="getGroupDetailLicenseResult" nillable="true" type="q21:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecriptByHeadRequestNoAndPaymentNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeadNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PaymentNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecriptByHeadRequestNoAndPaymentNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRecriptByHeadRequestNoAndPaymentNoResult" nillable="true" type="q22:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetExamCodeResult" nillable="true" type="q23:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicantCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="examPlace_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renewTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isApplicant" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentDetailResult" nillable="true" type="q24:ResponseServiceOfPaymentDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAndCheckPaymentUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="data" nillable="true" type="q25:UploadData" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAndCheckPaymentUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="InsertAndCheckPaymentUploadResult" nillable="true" type="q26:ResponseServiceOfUploadResultOfSummaryBankTransactionBankTransaction97_Pem7Ov3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempBankTransDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="headerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempBankTransDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTempBankTransDetailResult" nillable="true" type="q27:ResponseServiceOfBankTransDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentHeadByHeadRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="headReqNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentHeadByHeadRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSubPaymentHeadByHeadRequestNoResult" nillable="true" type="q28:ResponseServiceOfSubPaymentHead3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountPaymentDetailByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q29:UserProfile" />
+        <xs:element minOccurs="0" name="paymentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="order" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ViewYear" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountPaymentDetailByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetCountPaymentDetailByCriteriaResult" nillable="true" type="q30:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q31:UserProfile" />
+        <xs:element minOccurs="0" name="paymentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="order" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="ViewYear" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentDetailByCriteriaResult" nillable="true" type="q32:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlusPrintDownloadCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="subPaymentDetail" nillable="true" type="q33:ArrayOfSubPaymentDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlusPrintDownloadCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="PlusPrintDownloadCountResult" nillable="true" type="q34:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintDownloadCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="subPaymentDetail" nillable="true" type="q35:ArrayOfSubPaymentDetail" />
+        <xs:element minOccurs="0" name="id_card" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createby" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintDownloadCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="PrintDownloadCountResult" nillable="true" type="q36:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Zip_PrintDownloadCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="rcvPath" nillable="true" type="q37:ArrayOfstring" />
+        <xs:element minOccurs="0" name="EventZip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_card" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createby" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Zip_PrintDownloadCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="Zip_PrintDownloadCountResult" nillable="true" type="q38:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailSubPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hearReqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="CountRecord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailSubPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetDetailSubPaymentResult" nillable="true" type="q39:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitBankTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q40:ImportBankTransferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitBankTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SubmitBankTransResult" nillable="true" type="q41:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGroupDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group_reuest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGroupDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="getGroupDetailResult" nillable="true" type="q42:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNamePaymentBy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group_reuest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNamePaymentByResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="getNamePaymentByResult" nillable="true" type="q43:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBindbillPaymentExam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupRequestNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="examPlaceCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBindbillPaymentExamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="getBindbillPaymentExamResult" nillable="true" type="q44:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateReferanceNumber">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateReferanceNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CreateReferanceNumberResult" nillable="true" type="q45:ResponseServiceOfReferanceNumber3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insert12T">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenLicense" nillable="true" type="q46:ArrayOfGenLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insert12TResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="Insert12TResult" nillable="true" type="q47:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseGroupRequestPaid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q48:RangeDateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseGroupRequestPaidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseGroupRequestPaidResult" nillable="true" type="q49:ResponseServiceOfArrayOfdateTimeuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRcvHisDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RcvId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EventCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="st_num" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="en_num" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRcvHisDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRcvHisDetailResult" nillable="true" type="q50:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentExpireDay">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentExpireDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentExpireDayResult" nillable="true" type="q51:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentExpireDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ls" nillable="true" type="q52:ArrayOfConfigPaymentExpireDay" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q53:UserProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentExpireDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="UpdatePaymentExpireDayResult" nillable="true" type="q54:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCountDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="Event" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCountDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="UpdateCountDownloadResult" nillable="true" type="q55:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentLicenseAppove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitonType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentLicenseAppoveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentLicenseAppoveResult" nillable="true" type="q56:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentExamDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupRequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentExamDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentExamDetailResult" nillable="true" type="q57:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigViewFile">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigViewFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetConfigViewFileResult" nillable="true" type="q58:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startExamDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndExamDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="para" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="Totalrecoad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetNonPaymentResult" nillable="true" type="q59:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigViewBillPayment">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigViewBillPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetConfigViewBillPaymentResult" nillable="true" type="q60:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentByRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q61:GetPaymentByRangeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentByRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentByRangeResult" nillable="true" type="q62:ResponseServiceOfGetPaymentByRangeResponse3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePdf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileNames" nillable="true" type="q63:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePdfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePdfResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateZip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="parthpdf" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateZipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateZipResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doc_date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doc_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doc_type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date_mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetBillNoResult" nillable="true" type="q64:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q65:UserProfile" />
+        <xs:element minOccurs="0" name="CompanyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="CountTotalRecord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSubGroupResult" nillable="true" type="q66:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="subGroups" nillable="true" type="q67:ArrayOfOrderInvoice" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="compCodestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="typeUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SetSubGroupResult" nillable="true" type="q68:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroupSingleLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="subGroups" nillable="true" type="q69:ArrayOfSubGroupPayment" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSubGroupSingleLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SetSubGroupSingleLicenseResult" nillable="true" type="q70:ResponseServiceOfstring" />
+        <xs:element minOccurs="0" name="groupHeaderNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="UserT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompanyCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="Count" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetGroupPaymentResult" nillable="true" type="q71:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="reqList" nillable="true" type="q72:ArrayOfOrderInvoice" />
+        <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="paymentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CreatePaymentResult" nillable="true" type="q73:ResponseMessageOfboolean" />
+        <xs:element minOccurs="0" name="groupRequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCreatePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="Groups" nillable="true" type="q74:ArrayOfOrderInvoice" />
+        <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dayExp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewCreatePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="NewCreatePaymentResult" nillable="true" type="q75:ResponseMessageOfboolean" />
+        <xs:element minOccurs="0" name="groupRequestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroupPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroupPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetAllGroupPaymentResult" nillable="true" type="q76:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupPaymentByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupPaymentByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetGroupPaymentByCriteriaResult" nillable="true" type="q77:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSinglePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startExamDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndExamDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="para" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="Totalrecoad" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSinglePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSinglePaymentResult" nillable="true" type="q78:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentByHeaderRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hearReqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountRecord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubPaymentByHeaderRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSubPaymentByHeaderRequestNoResult" nillable="true" type="q79:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="testingDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testing_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="examPlace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="GroupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="resultPage" type="xs:int" />
+        <xs:element minOccurs="0" name="PageSizeDetail" type="xs:int" />
+        <xs:element minOccurs="0" name="Count" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetApplicantNoPaymentResult" nillable="true" type="q80:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPaymentHeadder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="testingDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExamPlaceCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="resultPage" type="xs:int" />
+        <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="Count" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsAuto" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPaymentHeadderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetApplicantNoPaymentHeadderResult" nillable="true" type="q81:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPayById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicantCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testingNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="examPlaceCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicantNoPayByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetApplicantNoPayByIdResult" nillable="true" type="q82:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelApplicantsHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GroupNo" nillable="true" type="q83:ArrayOfAppNoPay" />
+        <xs:element minOccurs="0" name="IsAuto" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelApplicantsHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CancelApplicantsHeaderResult" nillable="true" type="q84:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportNumberPrintBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="resultPage" type="xs:int" />
+        <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="CountAgain" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportNumberPrintBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetReportNumberPrintBillResult" nillable="true" type="q85:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenPaymentNumberTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentCodestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountRecord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenPaymentNumberTableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenPaymentNumberTableResult" nillable="true" type="q86:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenPaymentNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentCodestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receiptNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenPaymentNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenPaymentNumberResult" nillable="true" type="q87:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenReceiptAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenReceipt" nillable="true" type="q88:ArrayOfGenReceipt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenReceiptAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenReceiptAllResult" nillable="true" type="q89:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddStatusReceiveCompletetoDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeadNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDcard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hashing" nillable="true" type="xs:string" />
+        <xs:element xmlns:q90="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="G" type="q90:guid" />
+        <xs:element minOccurs="0" name="receiveNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileSize" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddStatusReceiveCompletetoDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddStatusReceiveCompletetoDBResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataFromSub_D_T">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HeadNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HeadOrDetail" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataFromSub_D_TResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetDataFromSub_D_TResult" nillable="true" type="q91:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Signature_Img">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imgPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Signature_ImgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Signature_ImgResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataPayment_BeforeSentToReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="H_req_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IDcard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PayNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataPayment_BeforeSentToReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetDataPayment_BeforeSentToReportResult" nillable="true" type="q92:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q93:UserProfile" />
+        <xs:element minOccurs="0" name="paymentType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentByCriteriaResult" nillable="true" type="q94:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" type="xs:int" />
+        <xs:element minOccurs="0" name="Gcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ccode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="RowPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="num_page" type="xs:int" />
+        <xs:element minOccurs="0" name="Count" type="xs:boolean" />
+        <xs:element minOccurs="0" name="CompCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentDetailByGroupResult" nillable="true" type="q95:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupExam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" type="xs:int" />
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupExamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetGroupExamResult" nillable="true" type="q96:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

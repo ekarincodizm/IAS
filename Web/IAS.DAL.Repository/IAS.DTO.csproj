@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IAS.DTO.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAS.DTO</RootNamespace>
+    <AssemblyName>IAS.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountDetail.cs" />
+    <Compile Include="AddApplicant.cs" />
+    <Compile Include="AgentType.cs" />
+    <Compile Include="AgentTypeEntity.cs" />
+    <Compile Include="ApplicantChange.cs" />
+    <Compile Include="ApplicantTLog.cs" />
+    <Compile Include="ApploveDocumnetType.cs" />
+    <Compile Include="ASSOCIATION.cs" />
+    <Compile Include="AssociationLicense.cs" />
+    <Compile Include="ASSOCIATION_APPROVE.cs" />
+    <Compile Include="AttachFileApplicantChange.cs" />
+    <Compile Include="AttachFileApplicantChangeEntity.cs" />
+    <Compile Include="ConditionGroup.cs" />
+    <Compile Include="ConfigAssociation.cs" />
+    <Compile Include="ConfigExamRoom.cs" />
+    <Compile Include="ConfigExtraEntity.cs" />
+    <Compile Include="ConfigPrintPayment.cs" />
+    <Compile Include="DetailTemp.cs" />
+    <Compile Include="EmailAddOwnerToExamRoom.cs" />
+    <Compile Include="EmailSingleReceipt.cs" />
+    <Compile Include="EmailApplicantChange.cs" />
+    <Compile Include="ExamRoomDDLTemp.cs" />
+    <Compile Include="ExamRoomLicense .cs" />
+    <Compile Include="ExamSpecial.cs" />
+    <Compile Include="ExamStatistic.cs" />
+    <Compile Include="Exams\CarlendarExamInitRequest.cs" />
+    <Compile Include="Exams\CarlendarExamInitResponse.cs" />
+    <Compile Include="Exams\ExamCriteriaDTO.cs" />
+    <Compile Include="Exams\ExamInfoDTO.cs" />
+    <Compile Include="Exams\GetExamByCriteriaRequest.cs" />
+    <Compile Include="Exams\GetExamByCriteriaResponse.cs" />
+    <Compile Include="Exams\GetExamScheduleByCriteriaRequest.cs" />
+    <Compile Include="Exams\GetExamScheduleByCriteriaResponse.cs" />
+    <Compile Include="GenLicenseDetail.cs" />
+    <Compile Include="GenReceipt.cs" />
+    <Compile Include="GetPaymentByRangeRequest.cs" />
+    <Compile Include="GetPaymentByRangeResponse.cs" />
+    <Compile Include="GroupSubject.cs" />
+    <Compile Include="ExamSubLicense.cs" />
+    <Compile Include="ExapPlaceTimeEntity.cs" />
+    <Compile Include="HistoryReceiptDownload.cs" />
+    <Compile Include="ImportBankTransferRequest.cs" />
+    <Compile Include="ImportPaymentStatus.cs" />
+    <Compile Include="InsertAndCheckApplicantGroupUploadRequest.cs" />
+    <Compile Include="IsPersonCanApplicantRequest.cs" />
+    <Compile Include="LicenseQuickReport.cs" />
+    <Compile Include="FIleService\AmendFileRequest.cs" />
+    <Compile Include="FIleService\AmendFileResponse.cs" />
+    <Compile Include="FIleService\ContainDetailRequest.cs" />
+    <Compile Include="FIleService\ContainDetailResponse.cs" />
+    <Compile Include="FIleService\DeleteContainerRequest.cs" />
+    <Compile Include="FIleService\DeleteContainerResponse.cs" />
+    <Compile Include="FIleService\DeleteFileRequest.cs" />
+    <Compile Include="FIleService\DeleteFileResponse.cs" />
+    <Compile Include="FIleService\DownloadFileRequest.cs" />
+    <Compile Include="FIleService\DownloadFileResponse.cs" />
+    <Compile Include="FIleService\MoveFileRequest.cs" />
+    <Compile Include="FIleService\MoveFileResponse.cs" />
+    <Compile Include="FIleService\UploadFileRequest.cs" />
+    <Compile Include="FIleService\UploadFileResponse.cs" />
+    <Compile Include="LicenseStaticRatioReport.cs" />
+    <Compile Include="LsApplicant.cs" />
+    <Compile Include="ManageApplicantList.cs" />
+    <Compile Include="MoveCompanyInReport.cs" />
+    <Compile Include="MoveCompanyOutReport.cs" />
+    <Compile Include="OICADProperties.cs" />
+    <Compile Include="OrderInvoice.cs" />
+    <Compile Include="OutLicenseReport.cs" />
+    <Compile Include="PaymentNotCompleteRequest.cs" />
+    <Compile Include="PaymentNotCompleteResponse.cs" />
+    <Compile Include="PersonalT.cs" />
+    <Compile Include="PersonLicenseApprover.cs" />
+    <Compile Include="ReplacementReport.cs" />
+    <Compile Include="ReportMoveComPanyIn.cs" />
+    <Compile Include="ReportRegisLincense.cs" />
+    <Compile Include="ResponePage.cs" />
+    <Compile Include="ResultValidateApplicant.cs" />
+    <Compile Include="SaveSetApplicantRoom.cs" />
+    <Compile Include="SignatureImg.cs" />
+    <Compile Include="SpecialDocument.cs" />
+    <Compile Include="SpecialTemp.cs" />
+    <Compile Include="SubjectGroup.cs" />
+    <Compile Include="SubjectGroupD.cs" />
+    <Compile Include="TopCompanyMoveOut.cs" />
+    <Compile Include="TrainSpecial.cs" />
+    <Compile Include="UploadResultHeader.cs" />
+    <Compile Include="RegistrationNotApproveRequest.cs" />
+    <Compile Include="GBHoliday.cs" />
+    <Compile Include="ConfigPaymentExpireDay.cs" />
+    <Compile Include="GenLicense.cs" />
+    <Compile Include="GetByFirstLastNameRequest.cs" />
+    <Compile Include="GetReistrationByCriteriaRequest.cs" />
+    <Compile Include="LicenseTyperDropDrown.cs" />
+    <Compile Include="LicenseTypet.cs" />
+    <Compile Include="Payment12TEntity.cs" />
+    <Compile Include="AcceptOff.cs" />
+    <Compile Include="Applicant.cs" />
+    <Compile Include="ApplicantDisplayDetail.cs" />
+    <Compile Include="ApplicantHeaderTemp.cs" />
+    <Compile Include="ApplicantInfo.cs" />
+    <Compile Include="ApplicantNoPay.cs" />
+    <Compile Include="ApplicantTemp.cs" />
+    <Compile Include="ApplicantUploadRequest.cs" />
+    <Compile Include="AppNoPay.cs" />
+    <Compile Include="ApproverDoctype.cs" />
+    <Compile Include="AttachFileLicense2.cs" />
+    <Compile Include="AttatchFileLicense.cs" />
+    <Compile Include="BankTrans.cs" />
+    <Compile Include="Bill.cs" />
+    <Compile Include="CancelApplicant.cs" />
+    <Compile Include="ComCode.cs" />
+    <Compile Include="CompressFileDetail.cs" />
+    <Compile Include="ConfigEntity.cs" />
+    <Compile Include="ConfigListModel.cs" />
+    <Compile Include="ConfigModel.cs" />
+    <Compile Include="ConfigTabModel.cs" />
+    <Compile Include="EmailReceiptTaskingRequest.cs" />
+    <Compile Include="ExamTemp.cs" />
+    <Compile Include="LicensePaymentRequest.cs" />
+    <Compile Include="LicenseRuningNo.cs" />
+    <Compile Include="ls_AG_EXAM_CONDITION_R.cs" />
+    <Compile Include="RegistrationApproveRequest.cs" />
+    <Compile Include="RegSearchOfficer.cs" />
+    <Compile Include="SessionsState.cs" />
+    <Compile Include="Subjectr.cs" />
+    <Compile Include="SummaryReceiveApplicant.cs" />
+    <Compile Include="Credit.cs" />
+    <Compile Include="DataLicenseRequest.cs" />
+    <Compile Include="Debit.cs" />
+    <Compile Include="DetailSubPayment.cs" />
+    <Compile Include="DownloadRequest.cs" />
+    <Compile Include="ExamHeaderResultTemp.cs" />
+    <Compile Include="ExamHistory.cs" />
+    <Compile Include="ExamRender.cs" />
+    <Compile Include="ExamResultTemp.cs" />
+    <Compile Include="ExamResultTempEdit.cs" />
+    <Compile Include="FunctionMenu.cs" />
+    <Compile Include="GroupPayment.cs" />
+    <Compile Include="ConfigDocument.cs" />
+    <Compile Include="InsuranceAssociate.cs" />
+    <Compile Include="AccountItem.cs" />
+    <Compile Include="LicenseGroupRequestPaid.cs" />
+    <Compile Include="LicenseVerifyDetail.cs" />
+    <Compile Include="LogOpenMenu.cs" />
+    <Compile Include="PagingInfo.cs" />
+    <Compile Include="PagingResponse.cs" />
+    <Compile Include="PayByCheque.cs" />
+    <Compile Include="PaymentDetail.cs" />
+    <Compile Include="PersonalHistory.cs" />
+    <Compile Include="PersonLicenseDetail.cs" />
+    <Compile Include="PersonLicenseHead.cs" />
+    <Compile Include="PersonLicenseTransaction.cs" />
+    <Compile Include="RangeDateRequest.cs" />
+    <Compile Include="ReceiveLicenseDetail.cs" />
+    <Compile Include="ReceiveLicenseHeader.cs" />
+    <Compile Include="SummaryReceiveExam.cs" />
+    <Compile Include="SummaryReceiveLicense.cs" />
+    <Compile Include="ReceiveNo.cs" />
+    <Compile Include="ReferanceNumber.cs" />
+    <Compile Include="RemoteFileInfo.cs" />
+    <Compile Include="SubGroupPayment.cs" />
+    <Compile Include="SubmitLicenseVerify.cs" />
+    <Compile Include="SubPaymentDetail.cs" />
+    <Compile Include="SubPaymentHead.cs" />
+    <Compile Include="TitleName.cs" />
+    <Compile Include="TrainHistory.cs" />
+    <Compile Include="TrainPersonHistory.cs" />
+    <Compile Include="Tran3To7.cs" />
+    <Compile Include="TranSpecial.cs" />
+    <Compile Include="UnitLink.cs" />
+    <Compile Include="UploadBankTemp.cs" />
+    <Compile Include="UploadHeader.cs" />
+    <Compile Include="ApproveConfig.cs" />
+    <Compile Include="AttachFile.cs" />
+    <Compile Include="BankTransaction.cs" />
+    <Compile Include="DataItem.cs" />
+    <Compile Include="DocumentType.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExamLicense.cs" />
+    <Compile Include="ExamPlace.cs" />
+    <Compile Include="ExamPlaceGroup.cs" />
+    <Compile Include="ExamSchedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExamTime.cs" />
+    <Compile Include="HistoryPersonal.cs" />
+    <Compile Include="IasApplicant.cs" />
+    <Compile Include="IasApplicantTemp.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="RegistrationAttatchFile.cs" />
+    <Compile Include="ResponseMessage.cs" />
+    <Compile Include="ResponseService.cs" />
+    <Compile Include="SummaryBankTransaction.cs" />
+    <Compile Include="TempPersonal.cs" />
+    <Compile Include="TestReport.cs" />
+    <Compile Include="UploadData.cs" />
+    <Compile Include="UploadResult.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="ValidateApplicantBeforeSaveListRequest.cs" />
+    <Compile Include="ValidateApplicantSingleBeforeSubmitRequest.cs" />
+    <Compile Include="ValidateLicense.cs" />
+    <Compile Include="VerifyDocumentHeader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IAS.Common\IAS.Common.csproj">
+      <Project>{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}</Project>
+      <Name>IAS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebService\IAS.DAL\IAS.DAL.csproj">
+      <Project>{D1D1A269-D964-4462-AE45-535E67A5A8F2}</Project>
+      <Name>IAS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAS.Utils\IAS.Utils.csproj">
+      <Project>{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}</Project>
+      <Name>IAS.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Applicants\" />
+    <Folder Include="License\" />
+    <Folder Include="Payments\" />
+    <Folder Include="Personals\" />
+    <Folder Include="Registrations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IAS.DataServices.Email.EmailSmtpService" CodeBehind="EmailSmtpService.svc.cs" %>

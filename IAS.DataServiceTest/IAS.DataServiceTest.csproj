@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E504795D-40E3-41B8-9345-8ECAF17E9B93}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IAS.DataServiceTest</RootNamespace>
+    <AssemblyName>IAS.DataServiceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IAS.DataServiceTest.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddYearTest.cs" />
+    <Compile Include="ApplicationFileUploadTest.cs" />
+    <Compile Include="AssemblyInfoTest.cs" />
+    <Compile Include="BankReferanceNumberTest.cs" />
+    <Compile Include="BootStrapper.cs" />
+    <Compile Include="ByteArrayHelperTest.cs" />
+    <Compile Include="CaseCustomClassToDalInherisTest.cs" />
+    <Compile Include="CheckSumPaymentNumberTest.cs" />
+    <Compile Include="CityBankTextFileTest.cs" />
+    <Compile Include="CodedUITest1.cs" />
+    <Compile Include="CompressFolderTest.cs" />
+    <Compile Include="BarCodeTest.cs" />
+    <Compile Include="DataCenter_GetConfigApproveMemberTest.cs" />
+    <Compile Include="DataServiceEmailTesting.cs" />
+    <Compile Include="DateTimeTest.cs" />
+    <Compile Include="EmailDataServiceTest.cs" />
+    <Compile Include="ErrorTraceLog_ToDatabaseTest.cs" />
+    <Compile Include="FinanceAccountTest.cs" />
+    <Compile Include="FinanceDALTest.cs" />
+    <Compile Include="GenerateComposeLicenseRequestTest.cs" />
+    <Compile Include="GenerateReceiptNumberTest.cs" />
+    <Compile Include="GenZipLicenseRequestTest.cs" />
+    <Compile Include="GetRunnigNoFromFunctionOracleTest.cs" />
+    <Compile Include="IAS_DataService_PaymentServiceTest.cs" />
+    <Compile Include="IAS_PAYMENT_GETReceiptTests.cs" />
+    <Compile Include="InsertAccountingTest.cs" />
+    <Compile Include="InsertEntityTest.cs" />
+    <Compile Include="KTBFileTextFileUploadTest.cs" />
+    <Compile Include="LicenseRequestFileUploadTest.cs" />
+    <Compile Include="LinqTestingSumEntitiesValue.cs" />
+    <Compile Include="Logging\OICLog4netAdapter.cs" />
+    <Compile Include="MailConfirmHelperTest.cs" />
+    <Compile Include="MapperTableToObjectTest.cs" />
+    <Compile Include="MethodDuplicateTest.cs" />
+    <Compile Include="ObjectClass_BindSting_Property_And_ValueTest.cs" />
+    <Compile Include="Payment_BillBiz_AddToAccountTest.cs" />
+    <Compile Include="PhaseAmountHelperTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BillBizTests.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistationServiceTest.cs" />
+    <Compile Include="SelectDataTesting.cs" />
+    <Compile Include="StringNameHelperTest.cs" />
+    <Compile Include="SwitchCaseTest.cs" />
+    <Compile Include="TestEntity.cs" />
+    <Compile Include="TestGuidOracleAndDotNet.cs" />
+    <Compile Include="TestTimerInterval.cs" />
+    <Compile Include="TestValue.cs" />
+    <Compile Include="TestValueCoding.cs" />
+    <Compile Include="ucAttachFileControlTest.cs" />
+    <Compile Include="UpdateLicenseOracleStoreProdTest.cs" />
+    <Compile Include="UserOIC_id_FormatTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="SimpleFile\TestZip2\TestZip.gz" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+    <Folder Include="SimpleFile\Zip\01\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IAS.Common\IAS.Common.csproj">
+      <Project>{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}</Project>
+      <Name>IAS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebService\IAS.DAL\IAS.DAL.csproj">
+      <Project>{D1D1A269-D964-4462-AE45-535E67A5A8F2}</Project>
+      <Name>IAS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebService\IAS.DataServices\IAS.DataServices.csproj">
+      <Project>{C4501664-118D-4F45-8897-3152D2F465B9}</Project>
+      <Name>IAS.DataServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebService\OIC.FileService\IAS.FileService.csproj">
+      <Project>{BFBC708B-59FF-4142-B507-09F1A87B7511}</Project>
+      <Name>IAS.FileService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\IAS.DAL.Repository\IAS.DTO.csproj">
+      <Project>{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}</Project>
+      <Name>IAS.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\IAS.Utils\IAS.Utils.csproj">
+      <Project>{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}</Project>
+      <Name>IAS.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SimpleFile\KTB_payment.txt" />
+    <Content Include="SimpleFile\KTB_payment2.txt" />
+    <Content Include="SimpleFile\KTB_payment999999560900000012.txt" />
+    <Content Include="SimpleFile\receivable_20101217_9281%28สมัครสอบ%29 - Copy.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!--<Import Project="$(SolutionDir)\.nuget\nuget.targets" />-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

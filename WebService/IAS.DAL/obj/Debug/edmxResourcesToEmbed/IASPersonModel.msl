@@ -1,0 +1,2428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="IASPersonEntities">
+    <EntitySetMapping Name="AG_AGENT_LICENSE_JURISTIC_T">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_LICENSE_JURISTIC_T">
+        <MappingFragment StoreEntitySet="AG_AGENT_LICENSE_JURISTIC_T">
+          <ScalarProperty Name="BANK_FLAG" ColumnName="BANK_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="JURIS_PERSON_TYPE" ColumnName="JURIS_PERSON_TYPE" />
+          <ScalarProperty Name="INSURANCE_TYPE" ColumnName="INSURANCE_TYPE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="REGISTER_COMP_NO" ColumnName="REGISTER_COMP_NO" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_AGENT_LICENSE_PERSON_T">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_LICENSE_PERSON_T">
+        <MappingFragment StoreEntitySet="AG_AGENT_LICENSE_PERSON_T">
+          <ScalarProperty Name="COMP_LICENSE_TYPE" ColumnName="COMP_LICENSE_TYPE" />
+          <ScalarProperty Name="COMP_LICENSE_NO" ColumnName="COMP_LICENSE_NO" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_AGENT_LICENSE_T">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_LICENSE_T">
+        <MappingFragment StoreEntitySet="AG_AGENT_LICENSE_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="INSURANCE_COMP_CODE" ColumnName="INSURANCE_COMP_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_APP_RUNNING_NO_T">
+      <EntityTypeMapping TypeName="Model.AG_APP_RUNNING_NO_T">
+        <MappingFragment StoreEntitySet="AG_APP_RUNNING_NO_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LAST_APP_NO" ColumnName="LAST_APP_NO" />
+          <ScalarProperty Name="LEAD_TESTING" ColumnName="LEAD_TESTING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_APPLICANT_SCORE_T">
+      <EntityTypeMapping TypeName="Model.AG_APPLICANT_SCORE_T">
+        <MappingFragment StoreEntitySet="AG_APPLICANT_SCORE_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="SCORE" ColumnName="SCORE" />
+          <ScalarProperty Name="SUBJECT_CODE" ColumnName="SUBJECT_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_APPLICANT_T">
+      <EntityTypeMapping TypeName="Model.AG_APPLICANT_T">
+        <MappingFragment StoreEntitySet="AG_APPLICANT_T">
+          <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+          <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+          <ScalarProperty Name="EXAM_ROOM" ColumnName="EXAM_ROOM" />
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+          <ScalarProperty Name="EXAM_STATUS" ColumnName="EXAM_STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="LICENSE" ColumnName="LICENSE" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="ABSENT_EXAM" ColumnName="ABSENT_EXAM" />
+          <ScalarProperty Name="INSUR_COMP_CODE" ColumnName="INSUR_COMP_CODE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="AMOUNT_TRAN_NO" ColumnName="AMOUNT_TRAN_NO" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="APPLY_DATE" ColumnName="APPLY_DATE" />
+          <ScalarProperty Name="ACCEPT_OFF_CODE" ColumnName="ACCEPT_OFF_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EDUCATION_R">
+      <EntityTypeMapping TypeName="Model.AG_EDUCATION_R">
+        <MappingFragment StoreEntitySet="AG_EDUCATION_R">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EDUCATION_NAME" ColumnName="EDUCATION_NAME" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EXAM_LICENSE_R">
+      <EntityTypeMapping TypeName="Model.AG_EXAM_LICENSE_R">
+        <MappingFragment StoreEntitySet="AG_EXAM_LICENSE_R">
+          <ScalarProperty Name="PRIVILEGE_STATUS" ColumnName="PRIVILEGE_STATUS" />
+          <ScalarProperty Name="IMPORT_TYPE" ColumnName="IMPORT_TYPE" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="EXAM_STATE" ColumnName="EXAM_STATE" />
+          <ScalarProperty Name="COURSE_NUMBER" ColumnName="COURSE_NUMBER" />
+          <ScalarProperty Name="SPECIAL" ColumnName="SPECIAL" />
+          <ScalarProperty Name="EXAM_OWNER" ColumnName="EXAM_OWNER" />
+          <ScalarProperty Name="EXAM_FEE" ColumnName="EXAM_FEE" />
+          <ScalarProperty Name="EXAM_ADMISSION" ColumnName="EXAM_ADMISSION" />
+          <ScalarProperty Name="EXAM_APPLY" ColumnName="EXAM_APPLY" />
+          <ScalarProperty Name="EXAM_STATUS" ColumnName="EXAM_STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="TEST_TIME_CODE" ColumnName="TEST_TIME_CODE" />
+          <ScalarProperty Name="TESTING_DATE" ColumnName="TESTING_DATE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EXAM_PLACE_GROUP_R">
+      <EntityTypeMapping TypeName="Model.AG_EXAM_PLACE_GROUP_R">
+        <MappingFragment StoreEntitySet="AG_EXAM_PLACE_GROUP_R">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EXAM_PLACE_GROUP_NAME" ColumnName="EXAM_PLACE_GROUP_NAME" />
+          <ScalarProperty Name="EXAM_PLACE_GROUP_CODE" ColumnName="EXAM_PLACE_GROUP_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_HEADER_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_HEADER_T">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_HEADER_T">
+          <ScalarProperty Name="TEST_TIME_CODE" ColumnName="TEST_TIME_CODE" />
+          <ScalarProperty Name="EXAM_AMOUNT" ColumnName="EXAM_AMOUNT" />
+          <ScalarProperty Name="EXAM_APPLY" ColumnName="EXAM_APPLY" />
+          <ScalarProperty Name="TESTING_DATE" ColumnName="TESTING_DATE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="SOURCE_TYPE" ColumnName="SOURCE_TYPE" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_HEADER_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_HEADER_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_HEADER_TEMP">
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="TEST_TIME_CODE" ColumnName="TEST_TIME_CODE" />
+          <ScalarProperty Name="EXAM_AMOUNT" ColumnName="EXAM_AMOUNT" />
+          <ScalarProperty Name="EXAM_APPLY" ColumnName="EXAM_APPLY" />
+          <ScalarProperty Name="TESTING_DATE" ColumnName="TESTING_DATE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="SOURCE_TYPE" ColumnName="SOURCE_TYPE" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPROVE_CONFIG">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPROVE_CONFIG">
+        <MappingFragment StoreEntitySet="AG_IAS_APPROVE_CONFIG">
+          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+          <ScalarProperty Name="KEYWORD" ColumnName="KEYWORD" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ITEM_VALUE" ColumnName="ITEM_VALUE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPROVE_DOC_TYPE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPROVE_DOC_TYPE">
+        <MappingFragment StoreEntitySet="AG_IAS_APPROVE_DOC_TYPE">
+          <ScalarProperty Name="ITEM_VALUE" ColumnName="ITEM_VALUE" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="APPROVER" ColumnName="APPROVER" />
+          <ScalarProperty Name="APPROVE_DOC_NAME" ColumnName="APPROVE_DOC_NAME" />
+          <ScalarProperty Name="APPROVE_DOC_TYPE" ColumnName="APPROVE_DOC_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ATTACH_FILE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ATTACH_FILE">
+        <MappingFragment StoreEntitySet="AG_IAS_ATTACH_FILE">
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ATTACH_FILE_PATH" ColumnName="ATTACH_FILE_PATH" />
+          <ScalarProperty Name="ATTACH_FILE_TYPE" ColumnName="ATTACH_FILE_TYPE" />
+          <ScalarProperty Name="REGISTRATION_ID" ColumnName="REGISTRATION_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_FUNCTION_R">
+      <EntityTypeMapping TypeName="Model.AG_IAS_FUNCTION_R">
+        <MappingFragment StoreEntitySet="AG_IAS_FUNCTION_R">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="FUNCTION_URI" ColumnName="FUNCTION_URI" />
+          <ScalarProperty Name="FUNCTION_NAME" ColumnName="FUNCTION_NAME" />
+          <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_MEMBER_TYPE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_MEMBER_TYPE">
+        <MappingFragment StoreEntitySet="AG_IAS_MEMBER_TYPE">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="MEMBER_NAME" ColumnName="MEMBER_NAME" />
+          <ScalarProperty Name="MEMBER_CODE" ColumnName="MEMBER_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_NATIONALITY">
+      <EntityTypeMapping TypeName="Model.AG_IAS_NATIONALITY">
+        <MappingFragment StoreEntitySet="AG_IAS_NATIONALITY">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="NATIONALITY_NAME" ColumnName="NATIONALITY_NAME" />
+          <ScalarProperty Name="NATIONALITY_CODE" ColumnName="NATIONALITY_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_OIC_TYPE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_OIC_TYPE">
+        <MappingFragment StoreEntitySet="AG_IAS_OIC_TYPE">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="OIC_NAME" ColumnName="OIC_NAME" />
+          <ScalarProperty Name="OIC_CODE" ColumnName="OIC_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_RESET_HISTORY">
+      <EntityTypeMapping TypeName="Model.AG_IAS_RESET_HISTORY">
+        <MappingFragment StoreEntitySet="AG_IAS_RESET_HISTORY">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="RESET_TIMES" ColumnName="RESET_TIMES" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="RESET_ID" ColumnName="RESET_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_ATTACH_FILE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_ATTACH_FILE">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_ATTACH_FILE">
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ATTACH_FILE_PATH" ColumnName="ATTACH_FILE_PATH" />
+          <ScalarProperty Name="ATTACH_FILE_TYPE" ColumnName="ATTACH_FILE_TYPE" />
+          <ScalarProperty Name="REGISTRATION_ID" ColumnName="REGISTRATION_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_LICENSE_RENEW_LOAD">
+      <EntityTypeMapping TypeName="Model.AG_LICENSE_RENEW_LOAD">
+        <MappingFragment StoreEntitySet="AG_LICENSE_RENEW_LOAD">
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+          <ScalarProperty Name="LICENSE_FEE" ColumnName="LICENSE_FEE" />
+          <ScalarProperty Name="APPROVE_DOC_TYPE" ColumnName="APPROVE_DOC_TYPE" />
+          <ScalarProperty Name="INS_CASE" ColumnName="INS_CASE" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="COMP_FLAG" ColumnName="COMP_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="INS_FLAG" ColumnName="INS_FLAG" />
+          <ScalarProperty Name="ID_FLAG" ColumnName="ID_FLAG" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="RENEW_DATE" ColumnName="RENEW_DATE" />
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_LICENSE_RUNNING_NO_T">
+      <EntityTypeMapping TypeName="Model.AG_LICENSE_RUNNING_NO_T">
+        <MappingFragment StoreEntitySet="AG_LICENSE_RUNNING_NO_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LAST_LICENSE_NO" ColumnName="LAST_LICENSE_NO" />
+          <ScalarProperty Name="LEAD_STR" ColumnName="LEAD_STR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_LICENSE_T">
+      <EntityTypeMapping TypeName="Model.AG_LICENSE_T">
+        <MappingFragment StoreEntitySet="AG_LICENSE_T">
+          <ScalarProperty Name="LICENSE_REINSURE" ColumnName="LICENSE_REINSURE" />
+          <ScalarProperty Name="UNIT_LINK_RENEW" ColumnName="UNIT_LINK_RENEW" />
+          <ScalarProperty Name="U_TYPE" ColumnName="U_TYPE" />
+          <ScalarProperty Name="LICENSE_REP" ColumnName="LICENSE_REP" />
+          <ScalarProperty Name="UCOM_COMP_ID" ColumnName="UCOM_COMP_ID" />
+          <ScalarProperty Name="UCOM_REF_AGENT_ID" ColumnName="UCOM_REF_AGENT_ID" />
+          <ScalarProperty Name="UCOM_AGENT_ID" ColumnName="UCOM_AGENT_ID" />
+          <ScalarProperty Name="EXPIRE_UL_DATE" ColumnName="EXPIRE_UL_DATE" />
+          <ScalarProperty Name="START_UL_DATE" ColumnName="START_UL_DATE" />
+          <ScalarProperty Name="UNIT_LINK_STATUS" ColumnName="UNIT_LINK_STATUS" />
+          <ScalarProperty Name="UNIT_LINK" ColumnName="UNIT_LINK" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="DATE_LICENSE_ACT" ColumnName="DATE_LICENSE_ACT" />
+          <ScalarProperty Name="LICENSE_ACTOR" ColumnName="LICENSE_ACTOR" />
+          <ScalarProperty Name="NEW_LICENSE_NO" ColumnName="NEW_LICENSE_NO" />
+          <ScalarProperty Name="REVOKE_TYPE_CODE" ColumnName="REVOKE_TYPE_CODE" />
+          <ScalarProperty Name="REVOKE_LICENSE_DATE" ColumnName="REVOKE_LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_PERSONAL_T">
+      <EntityTypeMapping TypeName="Model.AG_PERSONAL_T">
+        <MappingFragment StoreEntitySet="AG_PERSONAL_T">
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="NAME_CHG_DATE" ColumnName="NAME_CHG_DATE" />
+          <ScalarProperty Name="UCOM_AGENT_TYPE" ColumnName="UCOM_AGENT_TYPE" />
+          <ScalarProperty Name="UCOM_AGENT_ID" ColumnName="UCOM_AGENT_ID" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LOCAL_TELEPHONE" ColumnName="LOCAL_TELEPHONE" />
+          <ScalarProperty Name="LOCAL_ZIPCODE" ColumnName="LOCAL_ZIPCODE" />
+          <ScalarProperty Name="LOCAL_PROVINCE_CODE" ColumnName="LOCAL_PROVINCE_CODE" />
+          <ScalarProperty Name="LOCAL_AREA_CODE" ColumnName="LOCAL_AREA_CODE" />
+          <ScalarProperty Name="LOCAL_ADDRESS2" ColumnName="LOCAL_ADDRESS2" />
+          <ScalarProperty Name="LOCAL_ADDRESS1" ColumnName="LOCAL_ADDRESS1" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_PLAN_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_PLAN_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_PLAN_T">
+          <ScalarProperty Name="TRAIN_TYPE" ColumnName="TRAIN_TYPE" />
+          <ScalarProperty Name="G_TRAIN_CODE" ColumnName="G_TRAIN_CODE" />
+          <ScalarProperty Name="TRAIN_PERIOD" ColumnName="TRAIN_PERIOD" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TRAIN_CODE" ColumnName="TRAIN_CODE" />
+          <ScalarProperty Name="TRAIN_PASS" ColumnName="TRAIN_PASS" />
+          <ScalarProperty Name="TRAIN_NUMBER" ColumnName="TRAIN_NUMBER" />
+          <ScalarProperty Name="TRAIN_PLACE" ColumnName="TRAIN_PLACE" />
+          <ScalarProperty Name="TRAIN_EXP_DATE" ColumnName="TRAIN_EXP_DATE" />
+          <ScalarProperty Name="TRAIN_DATE" ColumnName="TRAIN_DATE" />
+          <ScalarProperty Name="ST_TRAIN_DATE" ColumnName="ST_TRAIN_DATE" />
+          <ScalarProperty Name="TRAIN_TIMES" ColumnName="TRAIN_TIMES" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="TRAIN_COMP_CODE" ColumnName="TRAIN_COMP_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_SPECIAL_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_SPECIAL_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_SPECIAL_T">
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+          <ScalarProperty Name="UNI_NAME" ColumnName="UNI_NAME" />
+          <ScalarProperty Name="UNI_CODE" ColumnName="UNI_CODE" />
+          <ScalarProperty Name="SEND_YEAR" ColumnName="SEND_YEAR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="SEND_BY" ColumnName="SEND_BY" />
+          <ScalarProperty Name="SEND_DATE" ColumnName="SEND_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_AMPUR">
+      <EntityTypeMapping TypeName="Model.VW_IAS_AMPUR">
+        <MappingFragment StoreEntitySet="VW_IAS_AMPUR">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PROVINCECODE" ColumnName="PROVINCECODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_COM_CODE">
+      <EntityTypeMapping TypeName="Model.VW_IAS_COM_CODE">
+        <MappingFragment StoreEntitySet="VW_IAS_COM_CODE">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_PROVINCE">
+      <EntityTypeMapping TypeName="Model.VW_IAS_PROVINCE">
+        <MappingFragment StoreEntitySet="VW_IAS_PROVINCE">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_TITLE_NAME">
+      <EntityTypeMapping TypeName="Model.VW_IAS_TITLE_NAME">
+        <MappingFragment StoreEntitySet="VW_IAS_TITLE_NAME">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_TUMBON">
+      <EntityTypeMapping TypeName="Model.VW_IAS_TUMBON">
+        <MappingFragment StoreEntitySet="VW_IAS_TUMBON">
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AMPURCODE" ColumnName="AMPURCODE" />
+          <ScalarProperty Name="PROVINCECODE" ColumnName="PROVINCECODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_STATUS">
+      <EntityTypeMapping TypeName="Model.AG_IAS_STATUS">
+        <MappingFragment StoreEntitySet="AG_IAS_STATUS">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS_NAME" ColumnName="STATUS_NAME" />
+          <ScalarProperty Name="STATUS_CODE" ColumnName="STATUS_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_LICENSE_RENEW_T">
+      <EntityTypeMapping TypeName="Model.AG_LICENSE_RENEW_T">
+        <MappingFragment StoreEntitySet="AG_LICENSE_RENEW_T">
+          <ScalarProperty Name="APPROVE_FLAG" ColumnName="APPROVE_FLAG" />
+          <ScalarProperty Name="LICENSE_FEE" ColumnName="LICENSE_FEE" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="APPROVE_DATE" ColumnName="APPROVE_DATE" />
+          <ScalarProperty Name="APPROVE_BY" ColumnName="APPROVE_BY" />
+          <ScalarProperty Name="APPROVE_DOC_TYPE" ColumnName="APPROVE_DOC_TYPE" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="ELICENSING_FLAG" ColumnName="ELICENSING_FLAG" />
+          <ScalarProperty Name="RECEIPT_DATE" ColumnName="RECEIPT_DATE" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="LICENSE_ACTOR" ColumnName="LICENSE_ACTOR" />
+          <ScalarProperty Name="LICENSE_ACT_DATE" ColumnName="LICENSE_ACT_DATE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="RENEW_DATE" ColumnName="RENEW_DATE" />
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LICENSE_H_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LICENSE_H_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_LICENSE_H_TEMP">
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="FLAG_REQ" ColumnName="FLAG_REQ" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="MONEY" ColumnName="MONEY" />
+          <ScalarProperty Name="LOTS" ColumnName="LOTS" />
+          <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+          <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_SCORE_H_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_SCORE_H_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_SCORE_H_TEMP">
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="CNT_PER" ColumnName="CNT_PER" />
+          <ScalarProperty Name="EXAM_TIME_CODE" ColumnName="EXAM_TIME_CODE" />
+          <ScalarProperty Name="TESTING_DATE" ColumnName="TESTING_DATE" />
+          <ScalarProperty Name="ASSOCIATE_CODE" ColumnName="ASSOCIATE_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="ASSOCIATE_NAME" ColumnName="ASSOCIATE_NAME" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_INVOICE_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_INVOICE_T">
+        <MappingFragment StoreEntitySet="AG_IAS_INVOICE_T">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PAYMENT_BY" ColumnName="PAYMENT_BY" />
+          <ScalarProperty Name="INVOICE_DATE" ColumnName="INVOICE_DATE" />
+          <ScalarProperty Name="APPLY_DATE" ColumnName="APPLY_DATE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="INV_AMOUNT" ColumnName="INV_AMOUNT" />
+          <ScalarProperty Name="PERSON_NO" ColumnName="PERSON_NO" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_HEADER_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_HEADER_T">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_HEADER_T">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="PAY_AMOUNT" ColumnName="PAY_AMOUNT" />
+          <ScalarProperty Name="SERVICE_CODE" ColumnName="SERVICE_CODE" />
+          <ScalarProperty Name="EFFECTIVE_DATE" ColumnName="EFFECTIVE_DATE" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_USERS_RIGHT">
+      <EntityTypeMapping TypeName="Model.AG_IAS_USERS_RIGHT">
+        <MappingFragment StoreEntitySet="AG_IAS_USERS_RIGHT">
+          <ScalarProperty Name="OIC_TYPE" ColumnName="OIC_TYPE" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="VISIBLE" ColumnName="VISIBLE" />
+          <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+          <ScalarProperty Name="RIGHT_DESCRIPTION" ColumnName="RIGHT_DESCRIPTION" />
+          <ScalarProperty Name="USER_RIGHT" ColumnName="USER_RIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_PAYMENT_HEADER">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_PAYMENT_HEADER">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_PAYMENT_HEADER">
+          <ScalarProperty Name="SERVICE_CODE" ColumnName="SERVICE_CODE" />
+          <ScalarProperty Name="EFFECTIVE_DATE" ColumnName="EFFECTIVE_DATE" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="SEQUENCE_NO" ColumnName="SEQUENCE_NO" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_PAYMENT_DETAIL">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_PAYMENT_DETAIL">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_PAYMENT_DETAIL">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="CHEQUE_BANK_CODE" ColumnName="CHEQUE_BANK_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="TRANSACTION_CODE" ColumnName="TRANSACTION_CODE" />
+          <ScalarProperty Name="KIND_OF_TRANSACTION" ColumnName="KIND_OF_TRANSACTION" />
+          <ScalarProperty Name="TELLER_NO" ColumnName="TELLER_NO" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="REF3" ColumnName="REF3" />
+          <ScalarProperty Name="REF2" ColumnName="REF2" />
+          <ScalarProperty Name="CUSTOMER_NO_REF1" ColumnName="CUSTOMER_NO_REF1" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="PAYMENT_TIME" ColumnName="PAYMENT_TIME" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_PAYMENT_TOTAL">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_PAYMENT_TOTAL">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_PAYMENT_TOTAL">
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="TOTAL_CREDIT_TRANSACTION" ColumnName="TOTAL_CREDIT_TRANSACTION" />
+          <ScalarProperty Name="TOTAL_CREDIT_AMOUNT" ColumnName="TOTAL_CREDIT_AMOUNT" />
+          <ScalarProperty Name="TOTAL_DEBIT_TRANSACTION" ColumnName="TOTAL_DEBIT_TRANSACTION" />
+          <ScalarProperty Name="TOTAL_DEBIT_AMOUNT" ColumnName="TOTAL_DEBIT_AMOUNT" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="SEQUENCE_NO" ColumnName="SEQUENCE_NO" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_BILL_CODE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_BILL_CODE">
+        <MappingFragment StoreEntitySet="AG_IAS_BILL_CODE">
+          <ScalarProperty Name="BILL_CODE" ColumnName="BILL_CODE" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LICENSE_D_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LICENSE_D_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_LICENSE_D_TEMP">
+          <ScalarProperty Name="ERR_DESC" ColumnName="ERR_DESC" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="AR_DATE" ColumnName="AR_DATE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURRENT_AREA_CODE" ColumnName="CURRENT_AREA_CODE" />
+          <ScalarProperty Name="CURRENT_ADDRESS_2" ColumnName="CURRENT_ADDRESS_2" />
+          <ScalarProperty Name="CURRENT_ADDRESS_1" ColumnName="CURRENT_ADDRESS_1" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="TITLE_NAME" ColumnName="TITLE_NAME" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="RENEW_TIMES" ColumnName="RENEW_TIMES" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="FEES" ColumnName="FEES" />
+          <ScalarProperty Name="LICENSE_EXPIRE_DATE" ColumnName="LICENSE_EXPIRE_DATE" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="ORDERS" ColumnName="ORDERS" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LOG_ACTIVITY">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LOG_ACTIVITY">
+        <MappingFragment StoreEntitySet="AG_IAS_LOG_ACTIVITY">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="ACTIVITY_DATETIME" ColumnName="ACTIVITY_DATETIME" />
+          <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_ACCEPT_OFF_R">
+      <EntityTypeMapping TypeName="Model.AG_ACCEPT_OFF_R">
+        <MappingFragment StoreEntitySet="AG_ACCEPT_OFF_R">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="OFF_NAME" ColumnName="OFF_NAME" />
+          <ScalarProperty Name="ACCEPT_OFF_CODE" ColumnName="ACCEPT_OFF_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_LICENSE_TYPE_R">
+      <EntityTypeMapping TypeName="Model.AG_LICENSE_TYPE_R">
+        <MappingFragment StoreEntitySet="AG_LICENSE_TYPE_R">
+          <ScalarProperty Name="ACTIVE_FLAG" ColumnName="ACTIVE_FLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="IAS_FLAG" ColumnName="IAS_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TIME_PERIOD" ColumnName="TIME_PERIOD" />
+          <ScalarProperty Name="RENEWAL_TIMES" ColumnName="RENEWAL_TIMES" />
+          <ScalarProperty Name="JURIS_PERSON_TYPE" ColumnName="JURIS_PERSON_TYPE" />
+          <ScalarProperty Name="INSURANCE_TYPE" ColumnName="INSURANCE_TYPE" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="LICENSE_TYPE_NAME" ColumnName="LICENSE_TYPE_NAME" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_PETITION_TYPE_R">
+      <EntityTypeMapping TypeName="Model.AG_PETITION_TYPE_R">
+        <MappingFragment StoreEntitySet="AG_PETITION_TYPE_R">
+          <ScalarProperty Name="IAS_FLAG" ColumnName="IAS_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="FEE" ColumnName="FEE" />
+          <ScalarProperty Name="PETITION_TYPE_NAME" ColumnName="PETITION_TYPE_NAME" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_DETAIL_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_DETAIL_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_DETAIL_TEMP">
+          <ScalarProperty Name="LOAD_STATUS" ColumnName="LOAD_STATUS" />
+          <ScalarProperty Name="ERROR_MSG" ColumnName="ERROR_MSG" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="EXAM_STATUS" ColumnName="EXAM_STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="LICENSE" ColumnName="LICENSE" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="ABSENT_EXAM" ColumnName="ABSENT_EXAM" />
+          <ScalarProperty Name="INSUR_COMP_CODE" ColumnName="INSUR_COMP_CODE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="AMOUNT_TRAN_NO" ColumnName="AMOUNT_TRAN_NO" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="APPLY_DATE" ColumnName="APPLY_DATE" />
+          <ScalarProperty Name="ACCEPT_OFF_CODE" ColumnName="ACCEPT_OFF_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ATTACH_FILE_LICENSE2">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ATTACH_FILE_LICENSE2">
+        <MappingFragment StoreEntitySet="AG_IAS_ATTACH_FILE_LICENSE2">
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ATTACH_FILE_PATH" ColumnName="ATTACH_FILE_PATH" />
+          <ScalarProperty Name="ATTACH_FILE_TYPE" ColumnName="ATTACH_FILE_TYPE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_IMPORT_HEADER_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_IMPORT_HEADER_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_IMPORT_HEADER_TEMP">
+          <ScalarProperty Name="APPROVE_COMPCODE" ColumnName="APPROVE_COMPCODE" />
+          <ScalarProperty Name="ERR_MSG" ColumnName="ERR_MSG" />
+          <ScalarProperty Name="TOTAL_FEE" ColumnName="TOTAL_FEE" />
+          <ScalarProperty Name="TOTAL_AGENT" ColumnName="TOTAL_AGENT" />
+          <ScalarProperty Name="SEND_DATE" ColumnName="SEND_DATE" />
+          <ScalarProperty Name="LICENSE_TYPE" ColumnName="LICENSE_TYPE" />
+          <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="PETTITION_TYPE" ColumnName="PETTITION_TYPE" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="IMPORT_DATETIME" ColumnName="IMPORT_DATETIME" />
+          <ScalarProperty Name="IMPORT_ID" ColumnName="IMPORT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_IMPORT_DETAIL_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_IMPORT_DETAIL_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_IMPORT_DETAIL_TEMP">
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="LOAD_STATUS" ColumnName="LOAD_STATUS" />
+          <ScalarProperty Name="ERR_MSG" ColumnName="ERR_MSG" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="AR_ANSWER" ColumnName="AR_ANSWER" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="CUR_AREA_CODE" ColumnName="CUR_AREA_CODE" />
+          <ScalarProperty Name="TEL_NO" ColumnName="TEL_NO" />
+          <ScalarProperty Name="CUR_ADDR" ColumnName="CUR_ADDR" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDR2" ColumnName="ADDR2" />
+          <ScalarProperty Name="ADDR1" ColumnName="ADDR1" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="TITLE_NAME" ColumnName="TITLE_NAME" />
+          <ScalarProperty Name="CITIZEN_ID" ColumnName="CITIZEN_ID" />
+          <ScalarProperty Name="LICENSE_FEE" ColumnName="LICENSE_FEE" />
+          <ScalarProperty Name="LICENSE_EXPIRE_DATE" ColumnName="LICENSE_EXPIRE_DATE" />
+          <ScalarProperty Name="LICENSE_ACTIVE_DATE" ColumnName="LICENSE_ACTIVE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="PETITION_TYPE" ColumnName="PETITION_TYPE" />
+          <ScalarProperty Name="IMPORT_ID" ColumnName="IMPORT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ATTACH_FILE_LICENSE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ATTACH_FILE_LICENSE">
+        <MappingFragment StoreEntitySet="AG_IAS_ATTACH_FILE_LICENSE">
+          <ScalarProperty Name="GROUP_LICENSE_ID" ColumnName="GROUP_LICENSE_ID" />
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ATTACH_FILE_PATH" ColumnName="ATTACH_FILE_PATH" />
+          <ScalarProperty Name="ATTACH_FILE_TYPE" ColumnName="ATTACH_FILE_TYPE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_DOCUMENT_TYPE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_DOCUMENT_TYPE">
+        <MappingFragment StoreEntitySet="AG_IAS_DOCUMENT_TYPE">
+          <ScalarProperty Name="ORDER_BY" ColumnName="ORDER_BY" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE_EXAM" ColumnName="SPECIAL_TYPE_CODE_EXAM" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE_TRAIN" ColumnName="SPECIAL_TYPE_CODE_TRAIN" />
+          <ScalarProperty Name="EXAM_DISCOUNT_STATUS" ColumnName="EXAM_DISCOUNT_STATUS" />
+          <ScalarProperty Name="TRAIN_DISCOUNT_STATUS" ColumnName="TRAIN_DISCOUNT_STATUS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="IS_CARD_PIC" ColumnName="IS_CARD_PIC" />
+          <ScalarProperty Name="DOCUMENT_REQUIRE" ColumnName="DOCUMENT_REQUIRE" />
+          <ScalarProperty Name="MEMBER_TYPE_CODE" ColumnName="MEMBER_TYPE_CODE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="DOCUMENT_NAME" ColumnName="DOCUMENT_NAME" />
+          <ScalarProperty Name="DOCUMENT_CODE" ColumnName="DOCUMENT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PETITION_TYPE_R">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PETITION_TYPE_R">
+        <MappingFragment StoreEntitySet="AG_IAS_PETITION_TYPE_R">
+          <ScalarProperty Name="INSURANCE_TYPE" ColumnName="INSURANCE_TYPE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PETITION_TYPE_NAME" ColumnName="PETITION_TYPE_NAME" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_RUNNINGNO">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_RUNNINGNO">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_RUNNINGNO">
+          <ScalarProperty Name="DOCUMENTNAME" ColumnName="DOCUMENTNAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="LAST_RUNNO" ColumnName="LAST_RUNNO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_AS_COMPANY_T_BC1">
+      <EntityTypeMapping TypeName="Model.VW_AS_COMPANY_T_BC1">
+        <MappingFragment StoreEntitySet="VW_AS_COMPANY_T_BC1">
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="ESTA_TYPE" ColumnName="ESTA_TYPE" />
+          <ScalarProperty Name="COMP_START_DATE" ColumnName="COMP_START_DATE" />
+          <ScalarProperty Name="COMP_NAMEE_MS" ColumnName="COMP_NAMEE_MS" />
+          <ScalarProperty Name="MINISTER_APPROVE" ColumnName="MINISTER_APPROVE" />
+          <ScalarProperty Name="MIS_SEQ" ColumnName="MIS_SEQ" />
+          <ScalarProperty Name="UCOM_CODE" ColumnName="UCOM_CODE" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="FEE_LICENSE" ColumnName="FEE_LICENSE" />
+          <ScalarProperty Name="CURR_PAID_AMT" ColumnName="CURR_PAID_AMT" />
+          <ScalarProperty Name="FLAG_MOTOR" ColumnName="FLAG_MOTOR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+          <ScalarProperty Name="SHAREHOLDER_T_PCT" ColumnName="SHAREHOLDER_T_PCT" />
+          <ScalarProperty Name="FEE_AMT" ColumnName="FEE_AMT" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_LICENSE_DATE" ColumnName="RECEIPT_LICENSE_DATE" />
+          <ScalarProperty Name="RECEIPT_LICENSE_NO" ColumnName="RECEIPT_LICENSE_NO" />
+          <ScalarProperty Name="PAY_LICENSE_DATE" ColumnName="PAY_LICENSE_DATE" />
+          <ScalarProperty Name="PAY_LICENSE_NO" ColumnName="PAY_LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_REQ_DATE" ColumnName="RECEIPT_REQ_DATE" />
+          <ScalarProperty Name="RECEIPT_REQ_NO" ColumnName="RECEIPT_REQ_NO" />
+          <ScalarProperty Name="PAY_REQ_DATE" ColumnName="PAY_REQ_DATE" />
+          <ScalarProperty Name="PAY_REQ_NO" ColumnName="PAY_REQ_NO" />
+          <ScalarProperty Name="APPROVE_FLAG" ColumnName="APPROVE_FLAG" />
+          <ScalarProperty Name="CURR_STOCK_AMT" ColumnName="CURR_STOCK_AMT" />
+          <ScalarProperty Name="CURR_STOCK_PRICE" ColumnName="CURR_STOCK_PRICE" />
+          <ScalarProperty Name="FUND_PAID_AMT" ColumnName="FUND_PAID_AMT" />
+          <ScalarProperty Name="INFORM_LICENSE_DATE" ColumnName="INFORM_LICENSE_DATE" />
+          <ScalarProperty Name="INFORM_LICENSE_NO" ColumnName="INFORM_LICENSE_NO" />
+          <ScalarProperty Name="INFORM_PERMIT_DATE" ColumnName="INFORM_PERMIT_DATE" />
+          <ScalarProperty Name="INFORM_PERMIT_NO" ColumnName="INFORM_PERMIT_NO" />
+          <ScalarProperty Name="PROP_CODE" ColumnName="PROP_CODE" />
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="TELEPHONE_NO" ColumnName="TELEPHONE_NO" />
+          <ScalarProperty Name="PV_CODE" ColumnName="PV_CODE" />
+          <ScalarProperty Name="PV_AMPUR" ColumnName="PV_AMPUR" />
+          <ScalarProperty Name="PV_TUMBON" ColumnName="PV_TUMBON" />
+          <ScalarProperty Name="ROAD_E" ColumnName="ROAD_E" />
+          <ScalarProperty Name="ROAD_T" ColumnName="ROAD_T" />
+          <ScalarProperty Name="SOI_E" ColumnName="SOI_E" />
+          <ScalarProperty Name="SOI_T" ColumnName="SOI_T" />
+          <ScalarProperty Name="MOO_E" ColumnName="MOO_E" />
+          <ScalarProperty Name="MOO" ColumnName="MOO" />
+          <ScalarProperty Name="ADDR_NO_E" ColumnName="ADDR_NO_E" />
+          <ScalarProperty Name="ADDR_NO" ColumnName="ADDR_NO" />
+          <ScalarProperty Name="SHAREHOLDER_E_PCT" ColumnName="SHAREHOLDER_E_PCT" />
+          <ScalarProperty Name="CURR_FUND" ColumnName="CURR_FUND" />
+          <ScalarProperty Name="REGIS_FUND" ColumnName="REGIS_FUND" />
+          <ScalarProperty Name="COMM_LTD" ColumnName="COMM_LTD" />
+          <ScalarProperty Name="CT_CODE" ColumnName="CT_CODE" />
+          <ScalarProperty Name="ZONE_ID" ColumnName="ZONE_ID" />
+          <ScalarProperty Name="RECV_CODE" ColumnName="RECV_CODE" />
+          <ScalarProperty Name="COMP_FLAG" ColumnName="COMP_FLAG" />
+          <ScalarProperty Name="TRADE_NO" ColumnName="TRADE_NO" />
+          <ScalarProperty Name="ESTA_COND" ColumnName="ESTA_COND" />
+          <ScalarProperty Name="BUSINESS_CODE" ColumnName="BUSINESS_CODE" />
+          <ScalarProperty Name="COMP_TYPE_CODE" ColumnName="COMP_TYPE_CODE" />
+          <ScalarProperty Name="COMP_ABBR_NAMEE" ColumnName="COMP_ABBR_NAMEE" />
+          <ScalarProperty Name="COMP_NAMEE" ColumnName="COMP_NAMEE" />
+          <ScalarProperty Name="COMP_ABBR_NAMET" ColumnName="COMP_ABBR_NAMET" />
+          <ScalarProperty Name="COMP_NAMET" ColumnName="COMP_NAMET" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_AS_COMPANY_T_BC2">
+      <EntityTypeMapping TypeName="Model.VW_AS_COMPANY_T_BC2">
+        <MappingFragment StoreEntitySet="VW_AS_COMPANY_T_BC2">
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="ESTA_TYPE" ColumnName="ESTA_TYPE" />
+          <ScalarProperty Name="COMP_START_DATE" ColumnName="COMP_START_DATE" />
+          <ScalarProperty Name="COMP_NAMEE_MS" ColumnName="COMP_NAMEE_MS" />
+          <ScalarProperty Name="MINISTER_APPROVE" ColumnName="MINISTER_APPROVE" />
+          <ScalarProperty Name="MIS_SEQ" ColumnName="MIS_SEQ" />
+          <ScalarProperty Name="UCOM_CODE" ColumnName="UCOM_CODE" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="FEE_LICENSE" ColumnName="FEE_LICENSE" />
+          <ScalarProperty Name="CURR_PAID_AMT" ColumnName="CURR_PAID_AMT" />
+          <ScalarProperty Name="FLAG_MOTOR" ColumnName="FLAG_MOTOR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+          <ScalarProperty Name="SHAREHOLDER_T_PCT" ColumnName="SHAREHOLDER_T_PCT" />
+          <ScalarProperty Name="FEE_AMT" ColumnName="FEE_AMT" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_LICENSE_DATE" ColumnName="RECEIPT_LICENSE_DATE" />
+          <ScalarProperty Name="RECEIPT_LICENSE_NO" ColumnName="RECEIPT_LICENSE_NO" />
+          <ScalarProperty Name="PAY_LICENSE_DATE" ColumnName="PAY_LICENSE_DATE" />
+          <ScalarProperty Name="PAY_LICENSE_NO" ColumnName="PAY_LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_REQ_DATE" ColumnName="RECEIPT_REQ_DATE" />
+          <ScalarProperty Name="RECEIPT_REQ_NO" ColumnName="RECEIPT_REQ_NO" />
+          <ScalarProperty Name="PAY_REQ_DATE" ColumnName="PAY_REQ_DATE" />
+          <ScalarProperty Name="PAY_REQ_NO" ColumnName="PAY_REQ_NO" />
+          <ScalarProperty Name="APPROVE_FLAG" ColumnName="APPROVE_FLAG" />
+          <ScalarProperty Name="CURR_STOCK_AMT" ColumnName="CURR_STOCK_AMT" />
+          <ScalarProperty Name="CURR_STOCK_PRICE" ColumnName="CURR_STOCK_PRICE" />
+          <ScalarProperty Name="FUND_PAID_AMT" ColumnName="FUND_PAID_AMT" />
+          <ScalarProperty Name="INFORM_LICENSE_DATE" ColumnName="INFORM_LICENSE_DATE" />
+          <ScalarProperty Name="INFORM_LICENSE_NO" ColumnName="INFORM_LICENSE_NO" />
+          <ScalarProperty Name="INFORM_PERMIT_DATE" ColumnName="INFORM_PERMIT_DATE" />
+          <ScalarProperty Name="INFORM_PERMIT_NO" ColumnName="INFORM_PERMIT_NO" />
+          <ScalarProperty Name="PROP_CODE" ColumnName="PROP_CODE" />
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="TELEPHONE_NO" ColumnName="TELEPHONE_NO" />
+          <ScalarProperty Name="PV_CODE" ColumnName="PV_CODE" />
+          <ScalarProperty Name="PV_AMPUR" ColumnName="PV_AMPUR" />
+          <ScalarProperty Name="PV_TUMBON" ColumnName="PV_TUMBON" />
+          <ScalarProperty Name="ROAD_E" ColumnName="ROAD_E" />
+          <ScalarProperty Name="ROAD_T" ColumnName="ROAD_T" />
+          <ScalarProperty Name="SOI_E" ColumnName="SOI_E" />
+          <ScalarProperty Name="SOI_T" ColumnName="SOI_T" />
+          <ScalarProperty Name="MOO_E" ColumnName="MOO_E" />
+          <ScalarProperty Name="MOO" ColumnName="MOO" />
+          <ScalarProperty Name="ADDR_NO_E" ColumnName="ADDR_NO_E" />
+          <ScalarProperty Name="ADDR_NO" ColumnName="ADDR_NO" />
+          <ScalarProperty Name="SHAREHOLDER_E_PCT" ColumnName="SHAREHOLDER_E_PCT" />
+          <ScalarProperty Name="CURR_FUND" ColumnName="CURR_FUND" />
+          <ScalarProperty Name="REGIS_FUND" ColumnName="REGIS_FUND" />
+          <ScalarProperty Name="COMM_LTD" ColumnName="COMM_LTD" />
+          <ScalarProperty Name="CT_CODE" ColumnName="CT_CODE" />
+          <ScalarProperty Name="ZONE_ID" ColumnName="ZONE_ID" />
+          <ScalarProperty Name="RECV_CODE" ColumnName="RECV_CODE" />
+          <ScalarProperty Name="COMP_FLAG" ColumnName="COMP_FLAG" />
+          <ScalarProperty Name="TRADE_NO" ColumnName="TRADE_NO" />
+          <ScalarProperty Name="ESTA_COND" ColumnName="ESTA_COND" />
+          <ScalarProperty Name="BUSINESS_CODE" ColumnName="BUSINESS_CODE" />
+          <ScalarProperty Name="COMP_TYPE_CODE" ColumnName="COMP_TYPE_CODE" />
+          <ScalarProperty Name="COMP_ABBR_NAMEE" ColumnName="COMP_ABBR_NAMEE" />
+          <ScalarProperty Name="COMP_NAMEE" ColumnName="COMP_NAMEE" />
+          <ScalarProperty Name="COMP_ABBR_NAMET" ColumnName="COMP_ABBR_NAMET" />
+          <ScalarProperty Name="COMP_NAMET" ColumnName="COMP_NAMET" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_AS_BUSI_TYPE_R">
+      <EntityTypeMapping TypeName="Model.VW_AS_BUSI_TYPE_R">
+        <MappingFragment StoreEntitySet="VW_AS_BUSI_TYPE_R">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="BUSINESS_DESC" ColumnName="BUSINESS_DESC" />
+          <ScalarProperty Name="BUSINESS_CODE" ColumnName="BUSINESS_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_AS_COMPANY_T">
+      <EntityTypeMapping TypeName="Model.VW_AS_COMPANY_T">
+        <MappingFragment StoreEntitySet="VW_AS_COMPANY_T">
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="ESTA_TYPE" ColumnName="ESTA_TYPE" />
+          <ScalarProperty Name="COMP_START_DATE" ColumnName="COMP_START_DATE" />
+          <ScalarProperty Name="COMP_NAMEE_MS" ColumnName="COMP_NAMEE_MS" />
+          <ScalarProperty Name="MINISTER_APPROVE" ColumnName="MINISTER_APPROVE" />
+          <ScalarProperty Name="MIS_SEQ" ColumnName="MIS_SEQ" />
+          <ScalarProperty Name="UCOM_CODE" ColumnName="UCOM_CODE" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="FEE_LICENSE" ColumnName="FEE_LICENSE" />
+          <ScalarProperty Name="CURR_PAID_AMT" ColumnName="CURR_PAID_AMT" />
+          <ScalarProperty Name="FLAG_MOTOR" ColumnName="FLAG_MOTOR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="TRADE_DATE" ColumnName="TRADE_DATE" />
+          <ScalarProperty Name="SHAREHOLDER_T_PCT" ColumnName="SHAREHOLDER_T_PCT" />
+          <ScalarProperty Name="FEE_AMT" ColumnName="FEE_AMT" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_LICENSE_DATE" ColumnName="RECEIPT_LICENSE_DATE" />
+          <ScalarProperty Name="RECEIPT_LICENSE_NO" ColumnName="RECEIPT_LICENSE_NO" />
+          <ScalarProperty Name="PAY_LICENSE_DATE" ColumnName="PAY_LICENSE_DATE" />
+          <ScalarProperty Name="PAY_LICENSE_NO" ColumnName="PAY_LICENSE_NO" />
+          <ScalarProperty Name="RECEIPT_REQ_DATE" ColumnName="RECEIPT_REQ_DATE" />
+          <ScalarProperty Name="RECEIPT_REQ_NO" ColumnName="RECEIPT_REQ_NO" />
+          <ScalarProperty Name="PAY_REQ_DATE" ColumnName="PAY_REQ_DATE" />
+          <ScalarProperty Name="PAY_REQ_NO" ColumnName="PAY_REQ_NO" />
+          <ScalarProperty Name="APPROVE_FLAG" ColumnName="APPROVE_FLAG" />
+          <ScalarProperty Name="CURR_STOCK_AMT" ColumnName="CURR_STOCK_AMT" />
+          <ScalarProperty Name="CURR_STOCK_PRICE" ColumnName="CURR_STOCK_PRICE" />
+          <ScalarProperty Name="FUND_PAID_AMT" ColumnName="FUND_PAID_AMT" />
+          <ScalarProperty Name="INFORM_LICENSE_DATE" ColumnName="INFORM_LICENSE_DATE" />
+          <ScalarProperty Name="INFORM_LICENSE_NO" ColumnName="INFORM_LICENSE_NO" />
+          <ScalarProperty Name="INFORM_PERMIT_DATE" ColumnName="INFORM_PERMIT_DATE" />
+          <ScalarProperty Name="INFORM_PERMIT_NO" ColumnName="INFORM_PERMIT_NO" />
+          <ScalarProperty Name="PROP_CODE" ColumnName="PROP_CODE" />
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="TELEPHONE_NO" ColumnName="TELEPHONE_NO" />
+          <ScalarProperty Name="PV_CODE" ColumnName="PV_CODE" />
+          <ScalarProperty Name="PV_AMPUR" ColumnName="PV_AMPUR" />
+          <ScalarProperty Name="PV_TUMBON" ColumnName="PV_TUMBON" />
+          <ScalarProperty Name="ROAD_E" ColumnName="ROAD_E" />
+          <ScalarProperty Name="ROAD_T" ColumnName="ROAD_T" />
+          <ScalarProperty Name="SOI_E" ColumnName="SOI_E" />
+          <ScalarProperty Name="SOI_T" ColumnName="SOI_T" />
+          <ScalarProperty Name="MOO_E" ColumnName="MOO_E" />
+          <ScalarProperty Name="MOO" ColumnName="MOO" />
+          <ScalarProperty Name="ADDR_NO_E" ColumnName="ADDR_NO_E" />
+          <ScalarProperty Name="ADDR_NO" ColumnName="ADDR_NO" />
+          <ScalarProperty Name="SHAREHOLDER_E_PCT" ColumnName="SHAREHOLDER_E_PCT" />
+          <ScalarProperty Name="CURR_FUND" ColumnName="CURR_FUND" />
+          <ScalarProperty Name="REGIS_FUND" ColumnName="REGIS_FUND" />
+          <ScalarProperty Name="COMM_LTD" ColumnName="COMM_LTD" />
+          <ScalarProperty Name="CT_CODE" ColumnName="CT_CODE" />
+          <ScalarProperty Name="ZONE_ID" ColumnName="ZONE_ID" />
+          <ScalarProperty Name="RECV_CODE" ColumnName="RECV_CODE" />
+          <ScalarProperty Name="COMP_FLAG" ColumnName="COMP_FLAG" />
+          <ScalarProperty Name="TRADE_NO" ColumnName="TRADE_NO" />
+          <ScalarProperty Name="ESTA_COND" ColumnName="ESTA_COND" />
+          <ScalarProperty Name="BUSINESS_CODE" ColumnName="BUSINESS_CODE" />
+          <ScalarProperty Name="COMP_TYPE_CODE" ColumnName="COMP_TYPE_CODE" />
+          <ScalarProperty Name="COMP_ABBR_NAMEE" ColumnName="COMP_ABBR_NAMEE" />
+          <ScalarProperty Name="COMP_NAMEE" ColumnName="COMP_NAMEE" />
+          <ScalarProperty Name="COMP_ABBR_NAMET" ColumnName="COMP_ABBR_NAMET" />
+          <ScalarProperty Name="COMP_NAMET" ColumnName="COMP_NAMET" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TRAIN_COMP_CODE" ColumnName="TRAIN_COMP_CODE" />
+          <ScalarProperty Name="TRAIN_DATE_EXP" ColumnName="TRAIN_DATE_EXP" />
+          <ScalarProperty Name="TRAIN_DATE" ColumnName="TRAIN_DATE" />
+          <ScalarProperty Name="TRAIN_TIMES" ColumnName="TRAIN_TIMES" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_U_TRAIN_T">
+      <EntityTypeMapping TypeName="Model.AG_U_TRAIN_T">
+        <MappingFragment StoreEntitySet="AG_U_TRAIN_T">
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="F_FLAG" ColumnName="F_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TRAIN_DATE" ColumnName="TRAIN_DATE" />
+          <ScalarProperty Name="TRAIN_TIMES" ColumnName="TRAIN_TIMES" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_PERSON_INCOMP_AGENT_T">
+      <EntityTypeMapping TypeName="Model.AG_PERSON_INCOMP_AGENT_T">
+        <MappingFragment StoreEntitySet="AG_PERSON_INCOMP_AGENT_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="SHARE_NO" ColumnName="SHARE_NO" />
+          <ScalarProperty Name="OUT_DATE" ColumnName="OUT_DATE" />
+          <ScalarProperty Name="IN_DATE" ColumnName="IN_DATE" />
+          <ScalarProperty Name="NAME_LASTNAME" ColumnName="NAME_LASTNAME" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="PERSON_TYPE_CODE" ColumnName="PERSON_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="COMP_LICENSE_TYPE" ColumnName="COMP_LICENSE_TYPE" />
+          <ScalarProperty Name="COMP_LICENSE_NO" ColumnName="COMP_LICENSE_NO" />
+          <ScalarProperty Name="REGISTER_COMP_NO" ColumnName="REGISTER_COMP_NO" />
+          <ScalarProperty Name="BRANCH_SEQ" ColumnName="BRANCH_SEQ" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LICENSE_H">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LICENSE_H">
+        <MappingFragment StoreEntitySet="AG_IAS_LICENSE_H">
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="APPROVED_DATE" ColumnName="APPROVED_DATE" />
+          <ScalarProperty Name="APPROVED_DOC" ColumnName="APPROVED_DOC" />
+          <ScalarProperty Name="APPROVE_COMPCODE" ColumnName="APPROVE_COMPCODE" />
+          <ScalarProperty Name="FLAG_LIC" ColumnName="FLAG_LIC" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="FLAG_REQ" ColumnName="FLAG_REQ" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="MONEY" ColumnName="MONEY" />
+          <ScalarProperty Name="LOTS" ColumnName="LOTS" />
+          <ScalarProperty Name="TRAN_DATE" ColumnName="TRAN_DATE" />
+          <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_DOCUMENT_TYPE_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_DOCUMENT_TYPE_T">
+        <MappingFragment StoreEntitySet="AG_IAS_DOCUMENT_TYPE_T">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCUMENT_REQUIRE" ColumnName="DOCUMENT_REQUIRE" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="DOCUMENT_CODE" ColumnName="DOCUMENT_CODE" />
+          <ScalarProperty Name="MEMBER_CODE" ColumnName="MEMBER_CODE" />
+          <ScalarProperty Name="FUNCTION_ID" ColumnName="FUNCTION_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_SCORE_D_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_SCORE_D_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_SCORE_D_TEMP">
+          <ScalarProperty Name="STATUS_SAVE_SCORE" ColumnName="STATUS_SAVE_SCORE" />
+          <ScalarProperty Name="ABSENT_EXAM" ColumnName="ABSENT_EXAM" />
+          <ScalarProperty Name="ERROR_MSG" ColumnName="ERROR_MSG" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="SCORE_16" ColumnName="SCORE_16" />
+          <ScalarProperty Name="SCORE_15" ColumnName="SCORE_15" />
+          <ScalarProperty Name="SCORE_14" ColumnName="SCORE_14" />
+          <ScalarProperty Name="SCORE_13" ColumnName="SCORE_13" />
+          <ScalarProperty Name="SCORE_12" ColumnName="SCORE_12" />
+          <ScalarProperty Name="SCORE_11" ColumnName="SCORE_11" />
+          <ScalarProperty Name="SCORE_10" ColumnName="SCORE_10" />
+          <ScalarProperty Name="SCORE_9" ColumnName="SCORE_9" />
+          <ScalarProperty Name="SCORE_8" ColumnName="SCORE_8" />
+          <ScalarProperty Name="SCORE_7" ColumnName="SCORE_7" />
+          <ScalarProperty Name="SCORE_6" ColumnName="SCORE_6" />
+          <ScalarProperty Name="SCORE_5" ColumnName="SCORE_5" />
+          <ScalarProperty Name="SCORE_4" ColumnName="SCORE_4" />
+          <ScalarProperty Name="SCORE_3" ColumnName="SCORE_3" />
+          <ScalarProperty Name="SCORE_2" ColumnName="SCORE_2" />
+          <ScalarProperty Name="SCORE_1" ColumnName="SCORE_1" />
+          <ScalarProperty Name="EXAM_RESULT" ColumnName="EXAM_RESULT" />
+          <ScalarProperty Name="APPROVE_DATE" ColumnName="APPROVE_DATE" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="SEAT_NO" ColumnName="SEAT_NO" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_AGENT_T">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_T">
+        <MappingFragment StoreEntitySet="AG_AGENT_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COMP_LICENSE_TYPE" ColumnName="COMP_LICENSE_TYPE" />
+          <ScalarProperty Name="COMP_LICENSE_NO" ColumnName="COMP_LICENSE_NO" />
+          <ScalarProperty Name="INSURANCE_COMP_CODE" ColumnName="INSURANCE_COMP_CODE" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_HIS_MOVE_COMP_AGENT_T">
+      <EntityTypeMapping TypeName="Model.AG_HIS_MOVE_COMP_AGENT_T">
+        <MappingFragment StoreEntitySet="AG_HIS_MOVE_COMP_AGENT_T">
+          <ScalarProperty Name="MOVE_FLAG" ColumnName="MOVE_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="NEW_LICENSE_NO" ColumnName="NEW_LICENSE_NO" />
+          <ScalarProperty Name="COMP_MOVE_IN_ID" ColumnName="COMP_MOVE_IN_ID" />
+          <ScalarProperty Name="COMP_MOVE_OUT_ID" ColumnName="COMP_MOVE_OUT_ID" />
+          <ScalarProperty Name="MOVE_DATE" ColumnName="MOVE_DATE" />
+          <ScalarProperty Name="MOVE_TIME" ColumnName="MOVE_TIME" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_REGISTRATION_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_REGISTRATION_T">
+        <MappingFragment StoreEntitySet="AG_IAS_REGISTRATION_T">
+          <ScalarProperty Name="IMPORT_STATUS" ColumnName="IMPORT_STATUS" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="APPROVE_RESULT" ColumnName="APPROVE_RESULT" />
+          <ScalarProperty Name="REG_PASS" ColumnName="REG_PASS" />
+          <ScalarProperty Name="LINK_REDIRECT" ColumnName="LINK_REDIRECT" />
+          <ScalarProperty Name="NOT_APPROVE_DATE" ColumnName="NOT_APPROVE_DATE" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="LOCAL_TUMBON_CODE" ColumnName="LOCAL_TUMBON_CODE" />
+          <ScalarProperty Name="TUMBON_CODE" ColumnName="TUMBON_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LOCAL_TELEPHONE" ColumnName="LOCAL_TELEPHONE" />
+          <ScalarProperty Name="LOCAL_ZIPCODE" ColumnName="LOCAL_ZIPCODE" />
+          <ScalarProperty Name="LOCAL_PROVINCE_CODE" ColumnName="LOCAL_PROVINCE_CODE" />
+          <ScalarProperty Name="LOCAL_AREA_CODE" ColumnName="LOCAL_AREA_CODE" />
+          <ScalarProperty Name="LOCAL_ADDRESS2" ColumnName="LOCAL_ADDRESS2" />
+          <ScalarProperty Name="LOCAL_ADDRESS1" ColumnName="LOCAL_ADDRESS1" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="EMPLOYEE_NO" ColumnName="EMPLOYEE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_AGENT_TYPE_R">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_TYPE_R">
+        <MappingFragment StoreEntitySet="AG_AGENT_TYPE_R">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="AGENT_TYPE_REMARK" ColumnName="AGENT_TYPE_REMARK" />
+          <ScalarProperty Name="AGENT_TYPE_DESC" ColumnName="AGENT_TYPE_DESC" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_EXPIRE_DAY">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_EXPIRE_DAY">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_EXPIRE_DAY">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="PAYMENT_EXPIRE_DAY" ColumnName="PAYMENT_EXPIRE_DAY" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_RECEIPT_HISTORY">
+      <EntityTypeMapping TypeName="Model.AG_IAS_RECEIPT_HISTORY">
+        <MappingFragment StoreEntitySet="AG_IAS_RECEIPT_HISTORY">
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="RCV_EVENT" ColumnName="RCV_EVENT" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="RCV_HIS_ID" ColumnName="RCV_HIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_IAS_TITLE_NAME_PRIORITY">
+      <EntityTypeMapping TypeName="Model.VW_IAS_TITLE_NAME_PRIORITY">
+        <MappingFragment StoreEntitySet="VW_IAS_TITLE_NAME_PRIORITY">
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_USERS">
+      <EntityTypeMapping TypeName="Model.AG_IAS_USERS">
+        <MappingFragment StoreEntitySet="AG_IAS_USERS">
+          <ScalarProperty Name="IP_LOGIN" ColumnName="IP_LOGIN" />
+          <ScalarProperty Name="TIME_LOGIN" ColumnName="TIME_LOGIN" />
+          <ScalarProperty Name="OTH_DELETE_USER" ColumnName="OTH_DELETE_USER" />
+          <ScalarProperty Name="DELETE_USER" ColumnName="DELETE_USER" />
+          <ScalarProperty Name="LASTPASSWORD_CHANGDATE" ColumnName="LASTPASSWORD_CHANGDATE" />
+          <ScalarProperty Name="OTH_USER_TYPE" ColumnName="OTH_USER_TYPE" />
+          <ScalarProperty Name="APP_CLOSED" ColumnName="APP_CLOSED" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="IS_APPROVE" ColumnName="IS_APPROVE" />
+          <ScalarProperty Name="OIC_EMP_NO" ColumnName="OIC_EMP_NO" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="OIC_TYPE" ColumnName="OIC_TYPE" />
+          <ScalarProperty Name="RESET_TIMES" ColumnName="RESET_TIMES" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="USER_TERM_ACCEPTED" ColumnName="USER_TERM_ACCEPTED" />
+          <ScalarProperty Name="USER_RIGHT" ColumnName="USER_RIGHT" />
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="USER_TYPE" ColumnName="USER_TYPE" />
+          <ScalarProperty Name="USER_PASS" ColumnName="USER_PASS" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_T">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_T">
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="DEPT_CODE" ColumnName="DEPT_CODE" />
+          <ScalarProperty Name="INSURE_TYPE" ColumnName="INSURE_TYPE" />
+          <ScalarProperty Name="ELICENSING_FLAG" ColumnName="ELICENSING_FLAG" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="PAYMENT_REP" ColumnName="PAYMENT_REP" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="OLD_LICENSE_NO" ColumnName="OLD_LICENSE_NO" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="RECEIPT_DATE" ColumnName="RECEIPT_DATE" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PERSONAL_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PERSONAL_T">
+        <MappingFragment StoreEntitySet="AG_IAS_PERSONAL_T">
+          <ScalarProperty Name="IMG_SIGN" ColumnName="IMG_SIGN" />
+          <ScalarProperty Name="SIGNATUER_IMG" ColumnName="SIGNATUER_IMG" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="APPROVE_RESULT" ColumnName="APPROVE_RESULT" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="LOCAL_TUMBON_CODE" ColumnName="LOCAL_TUMBON_CODE" />
+          <ScalarProperty Name="TUMBON_CODE" ColumnName="TUMBON_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LOCAL_TELEPHONE" ColumnName="LOCAL_TELEPHONE" />
+          <ScalarProperty Name="LOCAL_ZIPCODE" ColumnName="LOCAL_ZIPCODE" />
+          <ScalarProperty Name="LOCAL_PROVINCE_CODE" ColumnName="LOCAL_PROVINCE_CODE" />
+          <ScalarProperty Name="LOCAL_AREA_CODE" ColumnName="LOCAL_AREA_CODE" />
+          <ScalarProperty Name="LOCAL_ADDRESS2" ColumnName="LOCAL_ADDRESS2" />
+          <ScalarProperty Name="LOCAL_ADDRESS1" ColumnName="LOCAL_ADDRESS1" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="EMPLOYEE_NO" ColumnName="EMPLOYEE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_PERSON_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_PERSON_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_PERSON_T">
+          <ScalarProperty Name="TRAIN_TYPE" ColumnName="TRAIN_TYPE" />
+          <ScalarProperty Name="PILAR_3" ColumnName="PILAR_3" />
+          <ScalarProperty Name="PILAR_2" ColumnName="PILAR_2" />
+          <ScalarProperty Name="PILAR_1" ColumnName="PILAR_1" />
+          <ScalarProperty Name="TRAIN_PERIOD" ColumnName="TRAIN_PERIOD" />
+          <ScalarProperty Name="TRAIN_EXP_DATE" ColumnName="TRAIN_EXP_DATE" />
+          <ScalarProperty Name="TRAIN_DATE" ColumnName="TRAIN_DATE" />
+          <ScalarProperty Name="TRAIN_TIMES" ColumnName="TRAIN_TIMES" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="E_FLAG" ColumnName="E_FLAG" />
+          <ScalarProperty Name="C_FLAG" ColumnName="C_FLAG" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME" ColumnName="PRE_NAME" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="TRAIN_CODE" ColumnName="TRAIN_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_SPECIAL_R">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_SPECIAL_R">
+        <MappingFragment StoreEntitySet="AG_TRAIN_SPECIAL_R">
+          <ScalarProperty Name="USED_TYPE" ColumnName="USED_TYPE" />
+          <ScalarProperty Name="SPECIAL_TYPE_DESC" ColumnName="SPECIAL_TYPE_DESC" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SUBPAYMENT_D_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SUBPAYMENT_D_T">
+        <MappingFragment StoreEntitySet="AG_IAS_SUBPAYMENT_D_T">
+          <ScalarProperty Name="SEQ_OF_SUBGROUP" ColumnName="SEQ_OF_SUBGROUP" />
+          <ScalarProperty Name="COPY_RECEIVE_PATH" ColumnName="COPY_RECEIVE_PATH" />
+          <ScalarProperty Name="SIGNATUER_POSITION" ColumnName="SIGNATUER_POSITION" />
+          <ScalarProperty Name="HASHING_CODE" ColumnName="HASHING_CODE" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+          <ScalarProperty Name="RECEIVE_PATH" ColumnName="RECEIVE_PATH" />
+          <ScalarProperty Name="RECEIPT_BY_ID" ColumnName="RECEIPT_BY_ID" />
+          <ScalarProperty Name="DOWNLOAD_TIMES" ColumnName="DOWNLOAD_TIMES" />
+          <ScalarProperty Name="ACCOUNTING" ColumnName="ACCOUNTING" />
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+          <ScalarProperty Name="PRINT_TIMES" ColumnName="PRINT_TIMES" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="DEPT_CODE" ColumnName="DEPT_CODE" />
+          <ScalarProperty Name="INSURE_TYPE" ColumnName="INSURE_TYPE" />
+          <ScalarProperty Name="ELICENSING_FLAG" ColumnName="ELICENSING_FLAG" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="PAYMENT_REP" ColumnName="PAYMENT_REP" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="OLD_LICENSE_NO" ColumnName="OLD_LICENSE_NO" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECORD_STATUS" ColumnName="RECORD_STATUS" />
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="RECEIPT_DATE" ColumnName="RECEIPT_DATE" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_SUBJECT_R">
+      <EntityTypeMapping TypeName="Model.AG_SUBJECT_R">
+        <MappingFragment StoreEntitySet="AG_SUBJECT_R">
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="MAX_SCORE" ColumnName="MAX_SCORE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="SUBJECT_NAME" ColumnName="SUBJECT_NAME" />
+          <ScalarProperty Name="SUBJECT_CODE" ColumnName="SUBJECT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_HIST_PERSONAL_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_HIST_PERSONAL_T">
+        <MappingFragment StoreEntitySet="AG_IAS_HIST_PERSONAL_T">
+          <ScalarProperty Name="IMG_SIGN" ColumnName="IMG_SIGN" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="LOCAL_TUMBON_CODE" ColumnName="LOCAL_TUMBON_CODE" />
+          <ScalarProperty Name="TUMBON_CODE" ColumnName="TUMBON_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LOCAL_TELEPHONE" ColumnName="LOCAL_TELEPHONE" />
+          <ScalarProperty Name="LOCAL_ZIPCODE" ColumnName="LOCAL_ZIPCODE" />
+          <ScalarProperty Name="LOCAL_PROVINCE_CODE" ColumnName="LOCAL_PROVINCE_CODE" />
+          <ScalarProperty Name="LOCAL_AREA_CODE" ColumnName="LOCAL_AREA_CODE" />
+          <ScalarProperty Name="LOCAL_ADDRESS2" ColumnName="LOCAL_ADDRESS2" />
+          <ScalarProperty Name="LOCAL_ADDRESS1" ColumnName="LOCAL_ADDRESS1" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="EMPLOYEE_NO" ColumnName="EMPLOYEE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TRANS_ID" ColumnName="TRANS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_PERSONAL_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_PERSONAL_T">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_PERSONAL_T">
+          <ScalarProperty Name="IMG_SIGN" ColumnName="IMG_SIGN" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="APPROVE_RESULT" ColumnName="APPROVE_RESULT" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="LOCAL_TUMBON_CODE" ColumnName="LOCAL_TUMBON_CODE" />
+          <ScalarProperty Name="TUMBON_CODE" ColumnName="TUMBON_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LOCAL_TELEPHONE" ColumnName="LOCAL_TELEPHONE" />
+          <ScalarProperty Name="LOCAL_ZIPCODE" ColumnName="LOCAL_ZIPCODE" />
+          <ScalarProperty Name="LOCAL_PROVINCE_CODE" ColumnName="LOCAL_PROVINCE_CODE" />
+          <ScalarProperty Name="LOCAL_AREA_CODE" ColumnName="LOCAL_AREA_CODE" />
+          <ScalarProperty Name="LOCAL_ADDRESS2" ColumnName="LOCAL_ADDRESS2" />
+          <ScalarProperty Name="LOCAL_ADDRESS1" ColumnName="LOCAL_ADDRESS1" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIP_CODE" ColumnName="ZIP_CODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="EMPLOYEE_NO" ColumnName="EMPLOYEE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_CONFIG">
+      <EntityTypeMapping TypeName="Model.AG_IAS_CONFIG">
+        <MappingFragment StoreEntitySet="AG_IAS_CONFIG">
+          <ScalarProperty Name="GROUP_CODE" ColumnName="GROUP_CODE" />
+          <ScalarProperty Name="ITEM_TYPE" ColumnName="ITEM_TYPE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ITEM_VALUE" ColumnName="ITEM_VALUE" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ASSOCIATION_LICENSE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ASSOCIATION_LICENSE">
+        <MappingFragment StoreEntitySet="AG_IAS_ASSOCIATION_LICENSE">
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="ASSOCIATION_CODE" ColumnName="ASSOCIATION_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_PLACE_ROOM">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_PLACE_ROOM">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_PLACE_ROOM">
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="USER_DATE_UPDATE" ColumnName="USER_DATE_UPDATE" />
+          <ScalarProperty Name="USER_ID_UPDATE" ColumnName="USER_ID_UPDATE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="SEAT_AMOUNT" ColumnName="SEAT_AMOUNT" />
+          <ScalarProperty Name="EXAM_ROOM_NAME" ColumnName="EXAM_ROOM_NAME" />
+          <ScalarProperty Name="EXAM_ROOM_CODE" ColumnName="EXAM_ROOM_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EXAM_PLACE_R">
+      <EntityTypeMapping TypeName="Model.AG_EXAM_PLACE_R">
+        <MappingFragment StoreEntitySet="AG_EXAM_PLACE_R">
+          <ScalarProperty Name="ASSOCIATION_CODE" ColumnName="ASSOCIATION_CODE" />
+          <ScalarProperty Name="FREE" ColumnName="FREE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="USER_DATE_UPDATE" ColumnName="USER_DATE_UPDATE" />
+          <ScalarProperty Name="USER_ID_UPDATE" ColumnName="USER_ID_UPDATE" />
+          <ScalarProperty Name="EXAM_PLACE_GROUP_CODE" ColumnName="EXAM_PLACE_GROUP_CODE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="SEAT_AMOUNT" ColumnName="SEAT_AMOUNT" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_NAME" ColumnName="EXAM_PLACE_NAME" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EXAM_TIME_R">
+      <EntityTypeMapping TypeName="Model.AG_EXAM_TIME_R">
+        <MappingFragment StoreEntitySet="AG_EXAM_TIME_R">
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="USER_ID_UPDATE" ColumnName="USER_ID_UPDATE" />
+          <ScalarProperty Name="USER_DATE_UPDATE" ColumnName="USER_DATE_UPDATE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TEST_TIME" ColumnName="TEST_TIME" />
+          <ScalarProperty Name="TEST_TIME_CODE" ColumnName="TEST_TIME_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ASSOCIATION">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ASSOCIATION">
+        <MappingFragment StoreEntitySet="AG_IAS_ASSOCIATION">
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="COMP_TYPE" ColumnName="COMP_TYPE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ASSOCIATION_NAME" ColumnName="ASSOCIATION_NAME" />
+          <ScalarProperty Name="ASSOCIATION_CODE" ColumnName="ASSOCIATION_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_EXAM_CONDITION_R">
+      <EntityTypeMapping TypeName="Model.AG_EXAM_CONDITION_R">
+        <MappingFragment StoreEntitySet="AG_EXAM_CONDITION_R">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="MAX_SCORE" ColumnName="MAX_SCORE" />
+          <ScalarProperty Name="EXAM_PASS" ColumnName="EXAM_PASS" />
+          <ScalarProperty Name="SUBJECT_CODE" ColumnName="SUBJECT_CODE" />
+          <ScalarProperty Name="GRP_SUBJECT_CODE" ColumnName="GRP_SUBJECT_CODE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_ROOM_LICENSE_R">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_ROOM_LICENSE_R">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_ROOM_LICENSE_R">
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="USER_DATE_UPDATE" ColumnName="USER_DATE_UPDATE" />
+          <ScalarProperty Name="USER_ID_UPDATE" ColumnName="USER_ID_UPDATE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="NUMBER_SEAT_ROOM" ColumnName="NUMBER_SEAT_ROOM" />
+          <ScalarProperty Name="EXAM_ROOM_CODE" ColumnName="EXAM_ROOM_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ATTACH_FILE_APPLICANT">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ATTACH_FILE_APPLICANT">
+        <MappingFragment StoreEntitySet="AG_IAS_ATTACH_FILE_APPLICANT">
+          <ScalarProperty Name="CHANGE_ID" ColumnName="CHANGE_ID" />
+          <ScalarProperty Name="FILE_STATUS" ColumnName="FILE_STATUS" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="ATTACH_FILE_PATH" ColumnName="ATTACH_FILE_PATH" />
+          <ScalarProperty Name="ATTACH_FILE_TYPE" ColumnName="ATTACH_FILE_TYPE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_T_LOG">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_T_LOG">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_T_LOG">
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+          <ScalarProperty Name="EXAM_STATUS" ColumnName="EXAM_STATUS" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RECODE_STATUS" ColumnName="RECODE_STATUS" />
+          <ScalarProperty Name="CANCEL_RESON" ColumnName="CANCEL_RESON" />
+          <ScalarProperty Name="LICENSE" ColumnName="LICENSE" />
+          <ScalarProperty Name="EXPIRE_DATE" ColumnName="EXPIRE_DATE" />
+          <ScalarProperty Name="RESULT" ColumnName="RESULT" />
+          <ScalarProperty Name="ABSENT_EXAM" ColumnName="ABSENT_EXAM" />
+          <ScalarProperty Name="INUSR_COMP_CODE" ColumnName="INUSR_COMP_CODE" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+          <ScalarProperty Name="AMOUNT_TRAN_NO" ColumnName="AMOUNT_TRAN_NO" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+          <ScalarProperty Name="PROVINCE_CODE" ColumnName="PROVINCE_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="EDUCATION_CODE" ColumnName="EDUCATION_CODE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="BIRTH_DATE" ColumnName="BIRTH_DATE" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="APPLY_DATE" ColumnName="APPLY_DATE" />
+          <ScalarProperty Name="ACCEPT_OFF_CODE" ColumnName="ACCEPT_OFF_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+          <ScalarProperty Name="APPLICANT_CODE_LOG" ColumnName="APPLICANT_CODE_LOG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_VALIDATE_LICENSE_GROUP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_VALIDATE_LICENSE_GROUP">
+        <MappingFragment StoreEntitySet="AG_IAS_VALIDATE_LICENSE_GROUP">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SUBJECT_GROUP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SUBJECT_GROUP">
+        <MappingFragment StoreEntitySet="AG_IAS_SUBJECT_GROUP">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EXAM_PASS" ColumnName="EXAM_PASS" />
+          <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_VALIDATE_LICENSE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_VALIDATE_LICENSE">
+        <MappingFragment StoreEntitySet="AG_IAS_VALIDATE_LICENSE">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ITEM" ColumnName="ITEM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_VALIDATE_LICENSE_CON">
+      <EntityTypeMapping TypeName="Model.AG_IAS_VALIDATE_LICENSE_CON">
+        <MappingFragment StoreEntitySet="AG_IAS_VALIDATE_LICENSE_CON">
+          <ScalarProperty Name="RENEW_TIME" ColumnName="RENEW_TIME" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="ITEM_GROUP" ColumnName="ITEM_GROUP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_CONDITION_GROUP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_CONDITION_GROUP">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_CONDITION_GROUP">
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="COURSE_NUMBER" ColumnName="COURSE_NUMBER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_CONDITION_GROUP_D">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_CONDITION_GROUP_D">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_CONDITION_GROUP_D">
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="MAX_SCORE" ColumnName="MAX_SCORE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="SUBJECT_CODE" ColumnName="SUBJECT_CODE" />
+          <ScalarProperty Name="COURSE_NUMBER" ColumnName="COURSE_NUMBER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPROVE_FIELD">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPROVE_FIELD">
+        <MappingFragment StoreEntitySet="AG_IAS_APPROVE_FIELD">
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="FIELD_NAME" ColumnName="FIELD_NAME" />
+          <ScalarProperty Name="APPEOVE_FIELD_ID" ColumnName="APPEOVE_FIELD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_SPECIAL_R">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_SPECIAL_R">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_SPECIAL_R">
+          <ScalarProperty Name="USED_TYPE" ColumnName="USED_TYPE" />
+          <ScalarProperty Name="SPECIAL_TYPE_DESC" ColumnName="SPECIAL_TYPE_DESC" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_SPECIAL_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_SPECIAL_T">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_SPECIAL_T">
+          <ScalarProperty Name="UNI_NAME" ColumnName="UNI_NAME" />
+          <ScalarProperty Name="UNI_CODE" ColumnName="UNI_CODE" />
+          <ScalarProperty Name="SEND_YEAR" ColumnName="SEND_YEAR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="SEND_BY" ColumnName="SEND_BY" />
+          <ScalarProperty Name="SEND_DATE" ColumnName="SEND_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SPECIAL_T_TEMP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SPECIAL_T_TEMP">
+        <MappingFragment StoreEntitySet="AG_IAS_SPECIAL_T_TEMP">
+          <ScalarProperty Name="ID_ATTACH_FILE" ColumnName="ID_ATTACH_FILE" />
+          <ScalarProperty Name="EXAM_DISCOUNT_STATUS" ColumnName="EXAM_DISCOUNT_STATUS" />
+          <ScalarProperty Name="TRAIN_DISCOUNT_STATUS" ColumnName="TRAIN_DISCOUNT_STATUS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="UNI_NAME" ColumnName="UNI_NAME" />
+          <ScalarProperty Name="UNI_CODE" ColumnName="UNI_CODE" />
+          <ScalarProperty Name="SEND_YEAR" ColumnName="SEND_YEAR" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="SEND_BY" ColumnName="SEND_BY" />
+          <ScalarProperty Name="SEND_DATE" ColumnName="SEND_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_SUBJECT_GROUP">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_SUBJECT_GROUP">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_SUBJECT_GROUP">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="COURSE_NUMBER" ColumnName="COURSE_NUMBER" />
+          <ScalarProperty Name="EXAMPASS" ColumnName="EXAMPASS" />
+          <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TRAIN_HOUR_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TRAIN_HOUR_T">
+        <MappingFragment StoreEntitySet="AG_IAS_TRAIN_HOUR_T">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="RENEW_TIMES" ColumnName="RENEW_TIMES" />
+          <ScalarProperty Name="TRAIN_TYPE" ColumnName="TRAIN_TYPE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TRAIN_HOURS" ColumnName="TRAIN_HOURS" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="YEAR_Y" ColumnName="YEAR_Y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_ROOM">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_ROOM">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_ROOM">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_GROUP_CODE" ColumnName="EXAM_PLACE_GROUP_CODE" />
+          <ScalarProperty Name="EXAM_ROOM_CODE" ColumnName="EXAM_ROOM_CODE" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="APPLICANT_CODE" ColumnName="APPLICANT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_TEMP_PAYMENT_DETAIL_HIS">
+      <EntityTypeMapping TypeName="Model.AG_IAS_TEMP_PAYMENT_DETAIL_HIS">
+        <MappingFragment StoreEntitySet="AG_IAS_TEMP_PAYMENT_DETAIL_HIS">
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="CHEQUE_BANK_CODE" ColumnName="CHEQUE_BANK_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="TRANSACTION_CODE" ColumnName="TRANSACTION_CODE" />
+          <ScalarProperty Name="KIND_OF_TRANSACTION" ColumnName="KIND_OF_TRANSACTION" />
+          <ScalarProperty Name="TELLER_NO" ColumnName="TELLER_NO" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="REF3" ColumnName="REF3" />
+          <ScalarProperty Name="REF2" ColumnName="REF2" />
+          <ScalarProperty Name="CUSTOMER_NO_REF1" ColumnName="CUSTOMER_NO_REF1" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="PAYMENT_TIME" ColumnName="PAYMENT_TIME" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HIS_ID" ColumnName="HIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LICENSE_D">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LICENSE_D">
+        <MappingFragment StoreEntitySet="AG_IAS_LICENSE_D">
+          <ScalarProperty Name="IS_DOWNLOAD" ColumnName="IS_DOWNLOAD" />
+          <ScalarProperty Name="OIC_APPROVED_DATE" ColumnName="OIC_APPROVED_DATE" />
+          <ScalarProperty Name="OIC_APPROVED_BY" ColumnName="OIC_APPROVED_BY" />
+          <ScalarProperty Name="PAY_EXPIRE" ColumnName="PAY_EXPIRE" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="REQUEST_NO" ColumnName="REQUEST_NO" />
+          <ScalarProperty Name="APPROVED_BY" ColumnName="APPROVED_BY" />
+          <ScalarProperty Name="APPROVED_DATE" ColumnName="APPROVED_DATE" />
+          <ScalarProperty Name="APPROVED" ColumnName="APPROVED" />
+          <ScalarProperty Name="ERR_DESC" ColumnName="ERR_DESC" />
+          <ScalarProperty Name="OLD_COMP_CODE" ColumnName="OLD_COMP_CODE" />
+          <ScalarProperty Name="AR_DATE" ColumnName="AR_DATE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CURRENT_AREA_CODE" ColumnName="CURRENT_AREA_CODE" />
+          <ScalarProperty Name="CURRENT_ADDRESS_2" ColumnName="CURRENT_ADDRESS_2" />
+          <ScalarProperty Name="CURRENT_ADDRESS_1" ColumnName="CURRENT_ADDRESS_1" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="ADDRESS_2" ColumnName="ADDRESS_2" />
+          <ScalarProperty Name="ADDRESS_1" ColumnName="ADDRESS_1" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="NAMES" ColumnName="NAMES" />
+          <ScalarProperty Name="TITLE_NAME" ColumnName="TITLE_NAME" />
+          <ScalarProperty Name="PRE_NAME_CODE" ColumnName="PRE_NAME_CODE" />
+          <ScalarProperty Name="RENEW_TIMES" ColumnName="RENEW_TIMES" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="FEES" ColumnName="FEES" />
+          <ScalarProperty Name="LICENSE_EXPIRE_DATE" ColumnName="LICENSE_EXPIRE_DATE" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="ORDERS" ColumnName="ORDERS" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_EXAM_APPLICANT">
+      <EntityTypeMapping TypeName="Model.AG_IAS_EXAM_APPLICANT">
+        <MappingFragment StoreEntitySet="AG_IAS_EXAM_APPLICANT">
+          <ScalarProperty Name="TESTINGNO" ColumnName="TESTINGNO" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="APPICANT_CODE" ColumnName="APPICANT_CODE" />
+          <ScalarProperty Name="EXAM_APPLICANT_CODE" ColumnName="EXAM_APPLICANT_CODE" />
+          <ScalarProperty Name="EXAM_ROOM_CODE" ColumnName="EXAM_ROOM_CODE" />
+          <ScalarProperty Name="EXAM_PLACE_CODE" ColumnName="EXAM_PLACE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_ASSOCIATION_APPROVE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_ASSOCIATION_APPROVE">
+        <MappingFragment StoreEntitySet="AG_IAS_ASSOCIATION_APPROVE">
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="UPDATE_BY" ColumnName="UPDATE_BY" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="APPROVE_DOC_TYPE" ColumnName="APPROVE_DOC_TYPE" />
+          <ScalarProperty Name="ASSOCIATION_CODE" ColumnName="ASSOCIATION_CODE" />
+          <ScalarProperty Name="ASSOCIATION_APPROVE_ID" ColumnName="ASSOCIATION_APPROVE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_FILE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_FILE">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_FILE">
+          <ScalarProperty Name="COUNT" ColumnName="COUNT" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="UPDATE_ID" ColumnName="UPDATE_ID" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CITYBANK" ColumnName="CITYBANK" />
+          <ScalarProperty Name="KTB" ColumnName="KTB" />
+          <ScalarProperty Name="FILE_DATE" ColumnName="FILE_DATE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_LICENSE_TYPE_R">
+      <EntityTypeMapping TypeName="Model.AG_IAS_LICENSE_TYPE_R">
+        <MappingFragment StoreEntitySet="AG_IAS_LICENSE_TYPE_R">
+          <ScalarProperty Name="ACTIVE_FLAG" ColumnName="ACTIVE_FLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="IAS_FLAG" ColumnName="IAS_FLAG" />
+          <ScalarProperty Name="AGENT_TYPE" ColumnName="AGENT_TYPE" />
+          <ScalarProperty Name="INSURANCE_TYPE" ColumnName="INSURANCE_TYPE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LICENSE_TYPE_NAME" ColumnName="LICENSE_TYPE_NAME" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SUBPAYMENT_RECEIPT">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SUBPAYMENT_RECEIPT">
+        <MappingFragment StoreEntitySet="AG_IAS_SUBPAYMENT_RECEIPT">
+          <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+          <ScalarProperty Name="PETITION_TYPE_NAME" ColumnName="PETITION_TYPE_NAME" />
+          <ScalarProperty Name="FULL_NAME" ColumnName="FULL_NAME" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+          <ScalarProperty Name="PRINT_TIMES" ColumnName="PRINT_TIMES" />
+          <ScalarProperty Name="RECEIPT_NO" ColumnName="RECEIPT_NO" />
+          <ScalarProperty Name="GEN_STATUS" ColumnName="GEN_STATUS" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+          <ScalarProperty Name="SEQ_OF_SUBGROUP" ColumnName="SEQ_OF_SUBGROUP" />
+          <ScalarProperty Name="COPY_RECEIVE_PATH" ColumnName="COPY_RECEIVE_PATH" />
+          <ScalarProperty Name="SIGNATUER_POSITION" ColumnName="SIGNATUER_POSITION" />
+          <ScalarProperty Name="HASHING_CODE" ColumnName="HASHING_CODE" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="RECEIVE_PATH" ColumnName="RECEIVE_PATH" />
+          <ScalarProperty Name="RECEIPT_BY_ID" ColumnName="RECEIPT_BY_ID" />
+          <ScalarProperty Name="DOWNLOAD_TIMES" ColumnName="DOWNLOAD_TIMES" />
+          <ScalarProperty Name="ACCOUNTING" ColumnName="ACCOUNTING" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="RECEIPT_DATE" ColumnName="RECEIPT_DATE" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+          <ScalarProperty Name="PAYMENT_NO" ColumnName="PAYMENT_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SUBPAYMENT_H_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SUBPAYMENT_H_T">
+        <MappingFragment StoreEntitySet="AG_IAS_SUBPAYMENT_H_T">
+          <ScalarProperty Name="SEQ_OF_GROUP" ColumnName="SEQ_OF_GROUP" />
+          <ScalarProperty Name="DATE_EXP" ColumnName="DATE_EXP" />
+          <ScalarProperty Name="UPLOAD_GROUP_NO" ColumnName="UPLOAD_GROUP_NO" />
+          <ScalarProperty Name="APPROVED_DOC" ColumnName="APPROVED_DOC" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="SUBPAYMENT_DATE" ColumnName="SUBPAYMENT_DATE" />
+          <ScalarProperty Name="SUBPAYMENT_AMOUNT" ColumnName="SUBPAYMENT_AMOUNT" />
+          <ScalarProperty Name="PERSON_NO" ColumnName="PERSON_NO" />
+          <ScalarProperty Name="PETITION_TYPE_CODE" ColumnName="PETITION_TYPE_CODE" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+          <ScalarProperty Name="HEAD_REQUEST_NO" ColumnName="HEAD_REQUEST_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_PERIOD_R">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_PERIOD_R">
+        <MappingFragment StoreEntitySet="AG_TRAIN_PERIOD_R">
+          <ScalarProperty Name="TRAIN_TYPE" ColumnName="TRAIN_TYPE" />
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PERIOD_HH" ColumnName="PERIOD_HH" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="YEAR_Y" ColumnName="YEAR_Y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_SPECIAL_USED_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_SPECIAL_USED_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_SPECIAL_USED_T">
+          <ScalarProperty Name="USER_DATE" ColumnName="USER_DATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USED_DATE" ColumnName="USED_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="SPECIAL_TYPE_CODE" ColumnName="SPECIAL_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+          <ScalarProperty Name="ID_CARD_NO" ColumnName="ID_CARD_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_TRAIN_SPECIAL_DISCOUNT_T">
+      <EntityTypeMapping TypeName="Model.AG_TRAIN_SPECIAL_DISCOUNT_T">
+        <MappingFragment StoreEntitySet="AG_TRAIN_SPECIAL_DISCOUNT_T">
+          <ScalarProperty Name="HOUR_DISCOUNT" ColumnName="HOUR_DISCOUNT" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="P_YEAR" ColumnName="P_YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_HEADER">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_HEADER">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_HEADER">
+          <ScalarProperty Name="BANK" ColumnName="BANK" />
+          <ScalarProperty Name="SERVICE_CODE" ColumnName="SERVICE_CODE" />
+          <ScalarProperty Name="EFFECTIVE_DATE" ColumnName="EFFECTIVE_DATE" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="SEQUENCE_NO" ColumnName="SEQUENCE_NO" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_TOTAL">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_TOTAL">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_TOTAL">
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="TOTAL_CREDIT_TRANSACTION" ColumnName="TOTAL_CREDIT_TRANSACTION" />
+          <ScalarProperty Name="TOTAL_CREDIT_AMOUNT" ColumnName="TOTAL_CREDIT_AMOUNT" />
+          <ScalarProperty Name="TOTAL_DEBIT_TRANSACTION" ColumnName="TOTAL_DEBIT_TRANSACTION" />
+          <ScalarProperty Name="TOTAL_DEBIT_AMOUNT" ColumnName="TOTAL_DEBIT_AMOUNT" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="SEQUENCE_NO" ColumnName="SEQUENCE_NO" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_SCHEDULE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_SCHEDULE">
+        <MappingFragment StoreEntitySet="AG_IAS_SCHEDULE">
+          <ScalarProperty Name="SCHEDULE_REMARK" ColumnName="SCHEDULE_REMARK" />
+          <ScalarProperty Name="SCHEDULE_END_DATE" ColumnName="SCHEDULE_END_DATE" />
+          <ScalarProperty Name="SCHEDULE_START_DATE" ColumnName="SCHEDULE_START_DATE" />
+          <ScalarProperty Name="SCHEDULE_NAME" ColumnName="SCHEDULE_NAME" />
+          <ScalarProperty Name="SCHEDULE_ACTION" ColumnName="SCHEDULE_ACTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_DETAIL">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_DETAIL">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_DETAIL">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="CHEQUE_BANK_CODE" ColumnName="CHEQUE_BANK_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="TRANSACTION_CODE" ColumnName="TRANSACTION_CODE" />
+          <ScalarProperty Name="KIND_OF_TRANSACTION" ColumnName="KIND_OF_TRANSACTION" />
+          <ScalarProperty Name="TELLER_NO" ColumnName="TELLER_NO" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="REF3" ColumnName="REF3" />
+          <ScalarProperty Name="REF2" ColumnName="REF2" />
+          <ScalarProperty Name="CUSTOMER_NO_REF1" ColumnName="CUSTOMER_NO_REF1" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="PAYMENT_TIME" ColumnName="PAYMENT_TIME" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_DETAIL_HIS">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_DETAIL_HIS">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_DETAIL_HIS">
+          <ScalarProperty Name="HEADER_ID" ColumnName="HEADER_ID" />
+          <ScalarProperty Name="CHEQUE_BANK_CODE" ColumnName="CHEQUE_BANK_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="TRANSACTION_CODE" ColumnName="TRANSACTION_CODE" />
+          <ScalarProperty Name="KIND_OF_TRANSACTION" ColumnName="KIND_OF_TRANSACTION" />
+          <ScalarProperty Name="TELLER_NO" ColumnName="TELLER_NO" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="REF3" ColumnName="REF3" />
+          <ScalarProperty Name="REF2" ColumnName="REF2" />
+          <ScalarProperty Name="CUSTOMER_NO_REF1" ColumnName="CUSTOMER_NO_REF1" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="PAYMENT_TIME" ColumnName="PAYMENT_TIME" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="COMPANY_ACCOUNT" ColumnName="COMPANY_ACCOUNT" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="RECORD_TYPE" ColumnName="RECORD_TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HIS_ID" ColumnName="HIS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_AGENT_LICENSE_REINSURE_T">
+      <EntityTypeMapping TypeName="Model.AG_AGENT_LICENSE_REINSURE_T">
+        <MappingFragment StoreEntitySet="AG_AGENT_LICENSE_REINSURE_T">
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="LICENSE_TYPE_CODE" ColumnName="LICENSE_TYPE_CODE" />
+          <ScalarProperty Name="LICENSE_DATE" ColumnName="LICENSE_DATE" />
+          <ScalarProperty Name="LICENSE_NO" ColumnName="LICENSE_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_PAYMENT_G_T">
+      <EntityTypeMapping TypeName="Model.AG_IAS_PAYMENT_G_T">
+        <MappingFragment StoreEntitySet="AG_IAS_PAYMENT_G_T">
+          <ScalarProperty Name="CANCLE_SEAT_DATE" ColumnName="CANCLE_SEAT_DATE" />
+          <ScalarProperty Name="LAST_PRINT" ColumnName="LAST_PRINT" />
+          <ScalarProperty Name="REF2" ColumnName="REF2" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="EXPIRATION_DATE" ColumnName="EXPIRATION_DATE" />
+          <ScalarProperty Name="PAYMENT_DATE" ColumnName="PAYMENT_DATE" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="UPLOAD_BY_SESSION" ColumnName="UPLOAD_BY_SESSION" />
+          <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PAYMENT_BY" ColumnName="PAYMENT_BY" />
+          <ScalarProperty Name="GROUP_DATE" ColumnName="GROUP_DATE" />
+          <ScalarProperty Name="GROUP_AMOUNT" ColumnName="GROUP_AMOUNT" />
+          <ScalarProperty Name="SUBPAYMENT_QTY" ColumnName="SUBPAYMENT_QTY" />
+          <ScalarProperty Name="GROUP_REQUEST_NO" ColumnName="GROUP_REQUEST_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AG_IAS_APPLICANT_CHANGE">
+      <EntityTypeMapping TypeName="Model.AG_IAS_APPLICANT_CHANGE">
+        <MappingFragment StoreEntitySet="AG_IAS_APPLICANT_CHANGE">
+          <ScalarProperty Name="CANCEL_REASON" ColumnName="CANCEL_REASON" />
+          <ScalarProperty Name="OLD_LNAME" ColumnName="OLD_LNAME" />
+          <ScalarProperty Name="COLUMN4" ColumnName="COLUMN4" />
+          <ScalarProperty Name="OIC_RESULT" ColumnName="OIC_RESULT" />
+          <ScalarProperty Name="OIC_DATE" ColumnName="OIC_DATE" />
+          <ScalarProperty Name="OIC_USER_ID" ColumnName="OIC_USER_ID" />
+          <ScalarProperty Name="ASSOCIATION_RESULT" ColumnName="ASSOCIATION_RESULT" />
+          <ScalarProperty Name="ASSOCIATION_DATE" ColumnName="ASSOCIATION_DATE" />
+          <ScalarProperty Name="ASSOCIATION_USER_ID" ColumnName="ASSOCIATION_USER_ID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_BY" ColumnName="CREATE_BY" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="NEW_LNAME" ColumnName="NEW_LNAME" />
+          <ScalarProperty Name="NEW_FNAME" ColumnName="NEW_FNAME" />
+          <ScalarProperty Name="NEW_PREFIX" ColumnName="NEW_PREFIX" />
+          <ScalarProperty Name="NEW_ID_CARD_NO" ColumnName="NEW_ID_CARD_NO" />
+          <ScalarProperty Name="OLD_FNAME" ColumnName="OLD_FNAME" />
+          <ScalarProperty Name="OLD_PREFIX" ColumnName="OLD_PREFIX" />
+          <ScalarProperty Name="OLD_ID_CARD_NO" ColumnName="OLD_ID_CARD_NO" />
+          <ScalarProperty Name="TESTING_NO" ColumnName="TESTING_NO" />
+          <ScalarProperty Name="COMP_CODE" ColumnName="COMP_CODE" />
+          <ScalarProperty Name="CHANGE_ID" ColumnName="CHANGE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

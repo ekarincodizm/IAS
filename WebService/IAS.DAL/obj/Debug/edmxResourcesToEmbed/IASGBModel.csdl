@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IASGBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="IASGBModelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GB_COUNTRY_R" EntityType="IASGBModel.GB_COUNTRY_R" />
+    <EntitySet Name="GB_FUNCTION_R" EntityType="IASGBModel.GB_FUNCTION_R" />
+    <EntitySet Name="GB_HOLIDAY_R" EntityType="IASGBModel.GB_HOLIDAY_R" />
+    <EntitySet Name="GB_PROVINCE_R" EntityType="IASGBModel.GB_PROVINCE_R" />
+    <EntitySet Name="GB_REGION_R" EntityType="IASGBModel.GB_REGION_R" />
+    <EntitySet Name="GB_PREFIX_R" EntityType="IASGBModel.GB_PREFIX_R" />
+  </EntityContainer>
+  <EntityType Name="GB_COUNTRY_R">
+    <Key>
+      <PropertyRef Name="CT_CODE" />
+    </Key>
+    <Property Name="CT_CODE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="CT_DESE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CT_DEST" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CT_REG" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="USER_DATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="GB_FUNCTION_R">
+    <Key>
+      <PropertyRef Name="FUNCTION_ID" />
+    </Key>
+    <Property Name="FUNCTION_ID" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="FUNCTION_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CPI" Type="Int16" />
+    <Property Name="ACTIVE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="USER_DATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="GB_HOLIDAY_R">
+    <Key>
+      <PropertyRef Name="HL_DATE" />
+    </Key>
+    <Property Name="HL_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="HL_DESC" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="USER_DATE" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="GB_PROVINCE_R">
+    <Key>
+      <PropertyRef Name="PV_CODE" />
+      <PropertyRef Name="PV_AMPUR" />
+      <PropertyRef Name="PV_TUMBON" />
+    </Key>
+    <Property Name="PV_CODE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PV_AMPUR" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PV_TUMBON" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="PV_ZIPCODE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="PV_DEST" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="PV_DESE" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="PV_OFFICE" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="USER_DATE" Type="DateTime" />
+    <Property Name="PV_SHDEST" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="PV_REGION" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="POPULATION" Type="Int64" />
+    <Property Name="SEQ" Type="Int16" />
+    <Property Name="REMARK" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="GB_REGION_R">
+    <Key>
+      <PropertyRef Name="REGION_CODE" />
+    </Key>
+    <Property Name="REGION_CODE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="USER_DATE" Type="DateTime" />
+    <Property Name="DESCRIPTION_E" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SEQ" Type="Int16" />
+  </EntityType>
+  <EntityType Name="GB_PREFIX_R">
+    <Key>
+      <PropertyRef Name="PRE_CODE" />
+    </Key>
+    <Property Type="Int16" Name="PRE_CODE" Nullable="false" />
+    <Property Type="String" Name="PRE_FULL" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRE_SORT" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USER_ID" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="USER_DATE" />
+    <Property Type="String" Name="PRIORITY" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

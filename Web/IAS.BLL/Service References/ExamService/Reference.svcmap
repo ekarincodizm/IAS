@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b26e097-310d-48c0-8190-80e595ed0460" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="IAS.DTO" />
+      <ReferencedAssembly AssemblyName="IAS.Utils" />
+      <ReferencedAssembly AssemblyName="System.Core" />
+      <ReferencedAssembly AssemblyName="System.Data" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3333/Exam/ExamService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExamService2.xsd" MetadataType="Schema" ID="64d5422b-2269-4665-9d43-7fea626f6e78" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ExamService21.xsd" MetadataType="Schema" ID="bfa1fb91-a233-4bd8-a6c1-d356d4a20762" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ExamService1.wsdl" MetadataType="Wsdl" ID="7b56a0c6-86f8-4695-9510-763d0a3cfb2a" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?wsdl" />
+    <MetadataFile FileName="ExamService22.xsd" MetadataType="Schema" ID="64035f5e-2365-4418-8a13-8d5ead91f92e" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ExamService23.xsd" MetadataType="Schema" ID="7948b7e1-d217-46aa-8ec3-2cce8b5a8226" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ExamService1.disco" MetadataType="Disco" ID="2a5a094e-be43-4e46-a24b-36bbab0f5d76" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?disco" />
+    <MetadataFile FileName="ExamService24.xsd" MetadataType="Schema" ID="f5144027-ddd0-495b-b906-0217362eb14d" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ExamService25.xsd" MetadataType="Schema" ID="35f682cd-d8da-4a50-991e-70e6f4e5737d" SourceId="1" SourceUrl="http://localhost:3333/Exam/ExamService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,84 @@
+/*
+Navicat Oracle Data Transfer
+Oracle Client Version : 11.2.0.3.0
+
+Source Server         : AGDOI
+Source Server Version : 90200
+Source Host           : :1521
+Source Schema         : AGDOI
+
+Target Server Type    : ORACLE
+Target Server Version : 90200
+File Encoding         : 65001
+
+Date: 2014-04-21 09:45:31
+*/
+
+
+-- ----------------------------
+-- Table structure for "AGDOI"."AG_IAS_APPLICANT_CHANGE"
+-- ----------------------------
+DROP TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE";
+CREATE TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" (
+"CHANGE_ID" NUMBER NOT NULL ,
+"COMP_CODE" NUMBER NOT NULL ,
+"TESTING_NO" VARCHAR2(6 BYTE) NULL ,
+"OLD_ID_CARD_NO" VARCHAR2(13 BYTE) NULL ,
+"OLD_PREFIX" NUMBER NULL ,
+"OLD_FNAME" VARCHAR2(100 BYTE) NULL ,
+"NEW_ID_CARD_NO" VARCHAR2(13 BYTE) NULL ,
+"NEW_PREFIX" NUMBER NULL ,
+"NEW_FNAME" VARCHAR2(100 BYTE) NULL ,
+"NEW_LNAME" VARCHAR2(100 BYTE) NULL ,
+"REMARK" VARCHAR2(500 BYTE) NULL ,
+"STATUS" NUMBER(1) NOT NULL ,
+"CREATE_BY" VARCHAR2(20 BYTE) NOT NULL ,
+"CREATE_DATE" DATE NOT NULL ,
+"ASSOCIATION_USER_ID" VARCHAR2(20 BYTE) NULL ,
+"ASSOCIATION_DATE" DATE NULL ,
+"ASSOCIATION_RESULT" NUMBER(1) NULL ,
+"OIC_USER_ID" VARCHAR2(20 BYTE) NULL ,
+"OIC_DATE" DATE NULL ,
+"OIC_RESULT" NUMBER(1) NULL ,
+"COLUMN4" VARCHAR2(20 BYTE) NULL ,
+"OLD_LNAME" VARCHAR2(100 BYTE) NULL ,
+"CANCEL_REASON" VARCHAR2(300 BYTE) NULL 
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+
+;
+
+-- ----------------------------
+-- Records of AG_IAS_APPLICANT_CHANGE
+-- ----------------------------
+INSERT INTO "AGDOI"."AG_IAS_APPLICANT_CHANGE" VALUES ('137', '3139', '511658', '3140600100956', '1', 'ปุญญติร์', '3140600100956', '193', 'ปุญญติร์aaa', 'อุนนะนันทน์aaa', 'aaa', '0', '131113144530492', TO_DATE('2014-04-21 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), null, null, '0', null, null, '0', null, 'อุนนะนันทน์', null);
+
+-- ----------------------------
+-- Indexes structure for table AG_IAS_APPLICANT_CHANGE
+-- ----------------------------
+
+create sequence IAS_APP_CHANGE;
+
+-- ----------------------------
+-- Triggers structure for table "AGDOI"."AG_IAS_APPLICANT_CHANGE"
+-- ----------------------------
+CREATE OR REPLACE TRIGGER "AGDOI"."IAS_APP_CHANGE" BEFORE INSERT ON "AGDOI"."AG_IAS_APPLICANT_CHANGE" REFERENCING OLD AS "OLD" NEW AS "NEW" FOR EACH ROW
+BEGIN
+  SELECT IAS_APP_CHANGE.nextval INTO :new.CHANGE_ID FROM dual;
+END;
+
+-- ----------------------------
+-- Checks structure for table "AGDOI"."AG_IAS_APPLICANT_CHANGE"
+-- ----------------------------
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD CHECK ("CHANGE_ID" IS NOT NULL);
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD CHECK ("COMP_CODE" IS NOT NULL);
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD CHECK ("STATUS" IS NOT NULL);
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD CHECK ("CREATE_BY" IS NOT NULL);
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD CHECK ("CREATE_DATE" IS NOT NULL);
+
+-- ----------------------------
+-- Primary Key structure for table "AGDOI"."AG_IAS_APPLICANT_CHANGE"
+-- ----------------------------
+ALTER TABLE "AGDOI"."AG_IAS_APPLICANT_CHANGE" ADD PRIMARY KEY ("CHANGE_ID");

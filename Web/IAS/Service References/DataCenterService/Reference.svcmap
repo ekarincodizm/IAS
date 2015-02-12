@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2dd43848-55dd-45b4-930b-4e2937a4a278" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="IAS.DTO" />
+      <ReferencedAssembly AssemblyName="IAS.Utils" />
+      <ReferencedAssembly AssemblyName="System.Core" />
+      <ReferencedAssembly AssemblyName="System.Data" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3333/DataCenter/DataCenterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataCenterService5.xsd" MetadataType="Schema" ID="04abbf7c-43eb-4ade-932f-feff92ee3dd3" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataCenterService1.disco" MetadataType="Disco" ID="e33ad3ed-0ae3-4104-b6e8-46e831946ab6" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?disco" />
+    <MetadataFile FileName="DataCenterService51.xsd" MetadataType="Schema" ID="aad01375-9fe3-4b5b-bfff-3d9322058020" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataCenterService52.xsd" MetadataType="Schema" ID="20e79647-49b6-4bf1-9c9c-0d00130c8712" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataCenterService1.wsdl" MetadataType="Wsdl" ID="2870f1f8-dde8-49da-a78c-ccadca6da565" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?wsdl" />
+    <MetadataFile FileName="DataCenterService53.xsd" MetadataType="Schema" ID="218a0b26-71d5-4686-b7da-fcc56e1bb7d7" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataCenterService54.xsd" MetadataType="Schema" ID="1b31e7d5-1cb4-4645-b58c-3b563108a73f" SourceId="1" SourceUrl="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

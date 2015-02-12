@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Fixed for IE7 */
+form{text-align:left !important;}
+
+body{margin:0px auto; padding:0px;  background-color:#FFF;}
+#header{margin:auto;width:1000px; height:auto;}
+/*gobal*/
+.wrapper{width:1000px; height:auto; margin:auto;clear:none;}
+
+.bg_footter_login{background-image:url(../image/bg_footter.png); width:930px; height:435px; bottom:0; position:fixed; z-index:-997;}
+.bg_center_login{background-image:url(../image/bg_center.png); width:930px; height:645px; position:fixed; z-index:-998; bottom:0; margin-bottom:88px;}
+.bg_header_login{background-image:url(../image/bg_header.png); width:930px; height:426px; position:fixed; z-index:-999; top:0;}
+.bg{background: #028fc1 url(../image/bg.png) repeat-x; z-index:-999999; width:930px; height:1400px; top:0; position:fixed;}
+.logo_pagelogin{background-image:url(../image/logo.png); width:307px; height:101px; float:left; clear:none; margin-top:69px; margin-left:78px;}
+.bg_text{ width:630px; height:42px; float:left; clear:none; margin-top:18px; margin-left:175px;}
+.text_head{font-family: Tahoma; font-size:24px; font-weight:500; color:#FFF; margin-top:6px; margin-left:10px;}
+.box_login{background-image:url(../image/bg_boxlogin.png); width:217px; height:211px; float:right; clear:none; margin-right:170px; margin-top:100px;}
+.h1_login{width:auto; height:14px; float:left; clear:none; font-family: Tahoma; font-size:15px; font-weight:bold; color:#020202; margin:15px 0 0 85px; text-shadow: 1px 1px 3px #FFF;}
+
+.boxusername{width:169px; height:26px; float:left; clear:none; margin-top:24px; margin-left:23px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.boxusername #txtUserName{  width:169px; height:26px; border:1px solid #cbcbcb; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+
+input[type=text].name{ height:26px; line-height:20px;  color:#65c3e3; font-size:13px; background:none; border:none; float:left; clear:none; width:184px; margin-top:-2px; padding-left:5px; font-family: Tahoma;}
+.boxpassword{width:169px; height:26px; float:left; clear:none; margin-top:10px; margin-left:23px;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.box_buttonlogin{width:83px; height:25px; float:left; clear:none; margin-top:30px; margin-left:67px;}
+.boxpassword #txtPassword{width:169px; height:26px;border:1px solid #cbcbcb; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;color:#000; }
+
+.myButtonlogin {
+        
+        
+        box-shadow:inset 0px 0px 1px 0px #ffffff;
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #e4e5e8));
+        background:-moz-linear-gradient(top, #ffffff 5%, #e4e5e8 100%);
+        background:-webkit-linear-gradient(top, #ffffff 5%, #e4e5e8 100%);
+        background:-o-linear-gradient(top, #ffffff 5%, #e4e5e8 100%);
+        background:-ms-linear-gradient(top, #ffffff 5%, #e4e5e8 100%);
+        background:linear-gradient(to bottom, #ffffff 5%, #e4e5e8 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e4e5e8',GradientType=0);
+        
+        background-color:#ffffff;
+        border:1px solid #7d7d7d;
+        
+        display:inline-block;
+        color:#222222;
+        font-family: Tahoma;
+        font-size:13px;
+        font-weight:bold;
+        padding:4px 23px;
+        text-decoration:none;
+        
+        text-shadow: 0 1px 0 #ffffff;
+        height:26px;
+        width:80px;
+        
+    }
+    .myButtonlogin:hover {
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e4e5e8), color-stop(1, #ffffff));
+        background:-moz-linear-gradient(top, #e4e5e8 5%, #ffffff 100%);
+        background:-webkit-linear-gradient(top, #e4e5e8 5%, #ffffff 100%);
+        background:-o-linear-gradient(top, #e4e5e8 5%, #ffffff 100%);
+        background:-ms-linear-gradient(top, #e4e5e8 5%, #ffffff 100%);
+        background:linear-gradient(to bottom, #e4e5e8 5%, #ffffff 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e5e8', endColorstr='#ffffff',GradientType=0);
+        border:1px solid #7d7d7d;
+        background-color:#e4e5e8;
+		color:#222222;
+		text-shadow: 0 1px 0 #ffffff;
+    }
+    .myButtonlogin:active {
+		color:#222222;
+		border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; 
+        position:relative;
+        top:1px;}
+
+		
+.box_textlogin{width:125px; height:11px; float:left; clear:none; margin-top:6px; margin-left:47px; font-family: Tahoma; font-size:11px; color:#FFF; font-weight:100;}
+.box_textlogin_r1{width:auto; height:11px; float:left; clear:none; cursor:pointer;}
+.box_textlogin_r2{width:auto; height:11px; float:left; clear:none; margin-left:3px;}
+.box_textlogin_r3{width:auto; height:11px; float:left; clear:none; margin-left:3px; cursor:pointer;}
+
+/*footter--contect*/
+.box_footter{width:898px; height:48px; float:left; clear:none; font-family: Tahoma; font-size:11px; color:#FFF; margin-bottom:30px; bottom:0; position:fixed; z-index:-99; text-shadow: 0 1px 0 #222222;}
+.box_footter_f1{height:14px; float:right; clear:both;}
+.box_footter_f2{height:14px; float:right; clear:both; margin-top:2px;}
+.box_footter_f3{height:14px; float:right; clear:both; margin-top:2px;}
+
+.box_textlogin a{ color:#fff; }
+.txt {
+    background-color: #FFFFFF;
+    border: 1px solid #A7A7A7;
+    border-radius: 3px;
+    color: #2F3436;
+    font-family: Tahoma;
+    font-size: 12px;
+    height: 15px;
+    line-height: 14px;
+    margin-bottom: 0;
+    padding: 3px;
+    width: 180px;
+}
+
+.modalbackground
+{
+    background-color: Gray;
+    opacity: 0.5;
+    filter: Alpha(opacity=50);
+    position:absolute;
+    z-index: 6001 !important;
+}
+
+.modalpopup
+{
+    padding: 6px 20px 6px 6px;
+    width: 60%;
+    z-index: 7001 !important;
+}

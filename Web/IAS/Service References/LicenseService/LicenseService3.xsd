@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+  <xs:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetLicenseByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeReceive" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q1:UserProfile" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseByCriteriaResult" nillable="true" type="q2:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalHistoryByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalHistoryByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPersonalHistoryByIdCardResult" nillable="true" type="q3:ResponseServiceOfPersonalHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetExamHistoryByIdCardResult" nillable="true" type="q4:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryBy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryByResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTrainingHistoryByResult" nillable="true" type="q5:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrain_1_To_4_ByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrain_1_To_4_ByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTrain_1_To_4_ByIdCardResult" nillable="true" type="q6:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetUnitLinkByIdCardResult" nillable="true" type="q7:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestLicenseByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestLicenseByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRequestLicenseByIdCardResult" nillable="true" type="q8:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceiveLicenseByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReceiveLicenseByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetReceiveLicenseByCriteriaResult" nillable="true" type="q9:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAndCheckReceiveLicenseGroupUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="data" nillable="true" type="q10:UploadData" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="compressFile" nillable="true" type="q11:CompressFileDetail" />
+        <xs:element minOccurs="0" name="groupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAndCheckReceiveLicenseGroupUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="InsertAndCheckReceiveLicenseGroupUploadResult" nillable="true" type="q12:ResponseServiceOfUploadResultOfUploadHeaderReceiveLicenseDetail97_Pem7Ov3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="requestCompCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyResult" nillable="true" type="q13:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyByRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyByRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyByRequestResult" nillable="true" type="q14:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupUploadNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="seqNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyDetailResult" nillable="true" type="q15:ResponseServiceOfLicenseVerifyDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyImgDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupUploadNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyImgDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyImgDetailResult" nillable="true" type="q16:ResponseServiceOfArrayOfAttatchFileLicense3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveLicenseVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="list" nillable="true" type="q17:ArrayOfSubmitLicenseVerify" />
+        <xs:element minOccurs="0" name="flgApprove" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApproveID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApproveLicenseVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ApproveLicenseVerifyResult" nillable="true" type="q18:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSingleReceiveLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="header" nillable="true" type="q19:ReceiveLicenseHeader" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="detail" nillable="true" type="q20:ReceiveLicenseDetail" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q21:UserProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertSingleReceiveLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="InsertSingleReceiveLicenseResult" nillable="true" type="q22:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitSingleOrGroupReceiveLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="attachs" nillable="true" type="q23:ArrayOfAttatchFileLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitSingleOrGroupReceiveLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SubmitSingleOrGroupReceiveLicenseResult" nillable="true" type="q24:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadDataLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q25:DataLicenseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadDataLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="UploadDataLicenseResult" nillable="true" type="q26:ResponseServiceOfSummaryReceiveLicense3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveExtachFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetPath" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="attachFiles" nillable="true" type="q27:ArrayOfAttachFileDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveExtachFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="MoveExtachFileResult" nillable="true" type="q28:ResponseServiceOfArrayOfAttatchFileLicense3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetExamHistoryByIDResult" nillable="true" type="q29:ResponseServiceOfArrayOfExamHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByIDWithCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamHistoryByIDWithConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetExamHistoryByIDWithConditionResult" nillable="true" type="q30:ResponseServiceOfArrayOfExamHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTrainingHistoryByIDResult" nillable="true" type="q31:ResponseServiceOfArrayOfTrainPersonHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryByIDWithCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrainingHistoryByIDWithConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTrainingHistoryByIDWithConditionResult" nillable="true" type="q32:ResponseServiceOfArrayOfTrainPersonHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalTrainByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pettitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renewTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalTrainByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPersonalTrainByCriteriaResult" nillable="true" type="q33:ResponseServiceOfTrainPersonHistory3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrain_3_To_7_ByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrain_3_To_7_ByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTrain_3_To_7_ByIDResult" nillable="true" type="q34:ResponseServiceOfArrayOfTran3To73ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetUnitLinkByIDResult" nillable="true" type="q35:ResponseServiceOfArrayOfUnitLink3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByIDWithCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitLinkByIDWithConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetUnitLinkByIDWithConditionResult" nillable="true" type="q36:ResponseServiceOfArrayOfUnitLink3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttatchFileLicenseByPersonId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="personID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttatchFileLicenseByPersonIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetAttatchFileLicenseByPersonIdResult" nillable="true" type="q37:ResponseServiceOfArrayOfPersonAttatchFile3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPersonLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="header" nillable="true" type="q38:ArrayOfPersonLicenseHead" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="detail" nillable="true" type="q39:ArrayOfPersonLicenseDetail" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q40:UserProfile" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="files" nillable="true" type="q41:ArrayOfAttatchFileLicense" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPersonLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="InsertPersonLicenseResult" nillable="true" type="q42:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprocerByDocType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appdocType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprocerByDocTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetApprocerByDocTypeResult" nillable="true" type="q43:ResponseServiceOfArrayOfApproverDoctype3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenSEQLicenseDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="uploadGroupNo" nillable="true" type="q44:PersonLicenseHead" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenSEQLicenseDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenSEQLicenseDetailResult" nillable="true" type="q45:ResponseServiceOfArrayOfPersonLicenseDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="head" nillable="true" type="q46:ArrayOfPersonLicenseHead" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="detail" nillable="true" type="q47:ArrayOfPersonLicenseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseTransactionResult" nillable="true" type="q48:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleLicenseValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="head" nillable="true" type="q49:PersonLicenseHead" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="detail" nillable="true" type="q50:PersonLicenseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SingleLicenseValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="SingleLicenseValidationResult" nillable="true" type="q51:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentLicenseTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="head" nillable="true" type="q52:ArrayOfPersonLicenseHead" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="detail" nillable="true" type="q53:ArrayOfPersonLicenseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentLicenseTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPaymentLicenseTransactionResult" nillable="true" type="q54:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequesPersontLicenseByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequesPersontLicenseByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRequesPersontLicenseByIdCardResult" nillable="true" type="q55:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLicneseByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLicneseByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRenewLicneseByIdCardResult" nillable="true" type="q56:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLiceneEntityByLicenseNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLiceneEntityByLicenseNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRenewLiceneEntityByLicenseNoResult" nillable="true" type="q57:ResponseServiceOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateRenewLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="h" nillable="true" type="q58:PersonLicenseHead" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="d" nillable="true" type="q59:PersonLicenseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateRenewLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="updateRenewLicenseResult" nillable="true" type="q60:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateLicenseDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="d" nillable="true" type="q61:PersonLicenseDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateLicenseDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="updateLicenseDetailResult" nillable="true" type="q62:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiredLicneseByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiredLicneseByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetExpiredLicneseByIdCardResult" nillable="true" type="q63:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getViewPersonLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getViewPersonLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="getViewPersonLicenseResult" nillable="true" type="q64:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDetailByUploadGroupNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="upGroupNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDetailByUploadGroupNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseDetailByUploadGroupNoResult" nillable="true" type="q65:ResponseServiceOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLicenseByIDCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="feemode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLicenseByIDCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetAllLicenseByIDCardResult" nillable="true" type="q66:ResponseServiceOfArrayOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseRenewDateByLicenseNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseRenewDateByLicenseNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseRenewDateByLicenseNoResult" nillable="true" type="q67:ResponseServiceOfPersonLicenseTransaction3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="requestCompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="StatusApprove" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyHeadResult" nillable="true" type="q68:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uploadGroupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetListLicenseDetailVerifyResult" nillable="true" type="q69:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyHeadByUploadGroupNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uploadGroupNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyHeadByUploadGroupNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetVerifyHeadByUploadGroupNoResult" nillable="true" type="q70:ResponseServiceOfVerifyDocumentHeader3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLicenseDetailVerifyHasNotApprove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uploadGroupNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLicenseDetailVerifyHasNotApproveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CheckLicenseDetailVerifyHasNotApproveResult" nillable="true" type="q71:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ValidateDetailResult" nillable="true" type="q72:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetDetailResult" nillable="true" type="q73:ResponseServiceOfArrayOfDetailTemp3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenZipFileLicenseRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="findDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenZipFileLicenseRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenZipFileLicenseRequestResult" nillable="true" type="q74:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeReceive" nillable="true" type="xs:string" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q75:UserProfile" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="PageCount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetListLicenseDetailByCriteriaResult" nillable="true" type="q76:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultLicenseVerifyHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultLicenseVerifyHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetResultLicenseVerifyHeadResult" nillable="true" type="q77:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailByPersonal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeReceive" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q78:UserProfile" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="CountAgain" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailByPersonalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetListLicenseDetailByPersonalResult" nillable="true" type="q79:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyHeadByOIC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="requestCompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="StatusApprove" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseVerifyHeadByOICResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseVerifyHeadByOICResult" nillable="true" type="q80:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailAdminByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="paymentNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseTypeReceive" nillable="true" type="xs:string" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="userProfile" nillable="true" type="q81:UserProfile" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="PageCount" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListLicenseDetailAdminByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetListLicenseDetailAdminByCriteriaResult" nillable="true" type="q82:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GETGBHoliday">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GETGBHolidayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GETGBHolidayResult" nillable="true" type="q83:ResponseServiceOfArrayOfGBHoliday3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEditLicenseHead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CountPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="recordPerPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEditLicenseHeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetEditLicenseHeadResult" nillable="true" type="q84:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropLiecense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pettionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renewTime" type="xs:int" />
+        <xs:element minOccurs="0" name="groupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropLiecenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPropLiecenseResult" nillable="true" type="q85:ResponseServiceOfArrayOfValidateLicense3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkSpecialExam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileType" nillable="true" type="q86:ArrayOfstring" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkSpecialExamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ChkSpecialExamResult" nillable="true" type="q87:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewTimebyLicenseNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewTimebyLicenseNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRenewTimebyLicenseNoResult" nillable="true" type="q88:ResponseMessageOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSpecial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSpecialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="CheckSpecialResult" nillable="true" type="q89:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialTempTrainById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialTempTrainByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSpecialTempTrainByIdResult" nillable="true" type="q90:ResponseServiceOfArrayOfTrainSpecial3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialTempExamById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialTempExamByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSpecialTempExamByIdResult" nillable="true" type="q91:ResponseServiceOfArrayOfExamSpecial3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateProp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePropResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ValidatePropResult" nillable="true" type="q92:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicenseRevokedValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="license" nillable="true" type="q93:ArrayOfstring" />
+        <xs:element minOccurs="0" name="licenseTypeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LicenseRevokedValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="LicenseRevokedValidationResult" nillable="true" type="q94:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLicenseQuick">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PetitionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateStart" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="CompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Days" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRenewLicenseQuickResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetRenewLicenseQuickResult" nillable="true" type="q95:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalLicenseApprover">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonalLicenseApproverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetPersonalLicenseApproverResult" nillable="true" type="q96:ResponseServiceOfArrayOfPersonLicenseApprover3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseRequestOicApprove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="request" nillable="true" type="q97:RangeDateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseRequestOicApproveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseRequestOicApproveResult" nillable="true" type="q98:ResponseServiceOfArrayOfdateTimeuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoveCompanyIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateStart" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoveCompanyInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetMoveCompanyInResult" nillable="true" type="q99:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoveCompanyOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateStart" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoveCompanyOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetMoveCompanyOutResult" nillable="true" type="q100:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseStatisticsReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicenseTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseStatisticsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseStatisticsReportResult" nillable="true" type="q101:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSumLicenseStatisticsReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDate1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate1" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSumLicenseStatisticsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetSumLicenseStatisticsReportResult" nillable="true" type="q102:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopCompanyMoveOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateStart" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DateEnd" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopCompanyMoveOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetTopCompanyMoveOutResult" nillable="true" type="q103:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexSubPaymentH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupReqNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexSubPaymentHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetIndexSubPaymentHResult" nillable="true" type="q104:ResponseServiceOfArrayOfSubPaymentHead3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexSubPaymentD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="headReqNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexSubPaymentDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetIndexSubPaymentDResult" nillable="true" type="q105:ResponseServiceOfArrayOfSubPaymentDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexLicenseD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uploadGroupNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndexLicenseDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetIndexLicenseDResult" nillable="true" type="q106:ResponseServiceOfArrayOfPersonLicenseDetail3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReplacementReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LicenseTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Compcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Replacement" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReplacementReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetReplacementReportResult" nillable="true" type="q107:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLincse0304">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lincense" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLincse0304Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLincse0304Result" nillable="true" type="q108:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLincse0304">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lincense" nillable="true" type="q109:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLincse0304Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="AddLincse0304Result" nillable="true" type="q110:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseConfigByPetition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="petitionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseConfigByPetitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseConfigByPetitionResult" nillable="true" type="q111:ResponseServiceOfArrayOfConfigDocument3ZxRaCa1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentCheckTrain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentCheckTrainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetAgentCheckTrainResult" nillable="true" type="q112:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainLicenseByIdCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObtainLicenseByIdCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetObtainLicenseByIdCardResult" nillable="true" type="q113:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDetailByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dateStart" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateEnd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IdCardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Names" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lastname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LicenseType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Page" type="xs:int" />
+        <xs:element minOccurs="0" name="RowPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="isCount" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDetailByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GetLicenseDetailByCriteriaResult" nillable="true" type="q114:ResponseServiceOfDataSetymujubN2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenZipFileLicenseByIdCardNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="LicenseDetail" nillable="true" type="q115:ArrayOfGenLicenseDetail" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenZipFileLicenseByIdCardNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="GenZipFileLicenseByIdCardNoResult" nillable="true" type="q116:ResponseServiceOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkLicenseAboutActive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="licenseType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkLicenseAboutActiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/IAS.DTO" minOccurs="0" name="ChkLicenseAboutActiveResult" nillable="true" type="q117:ResponseMessageOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

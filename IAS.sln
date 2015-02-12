@@ -1,0 +1,323 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{986F1A06-F220-4ADA-8701-9119D3446E22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{3F3566B6-2212-4ABA-A34F-B7D2A3482535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS", "Web\IAS\IAS.csproj", "{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4501664-118D-4F45-8897-3152D2F465B9} = {C4501664-118D-4F45-8897-3152D2F465B9}
+		{BFBC708B-59FF-4142-B507-09F1A87B7511} = {BFBC708B-59FF-4142-B507-09F1A87B7511}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.BLL", "Web\IAS.BLL\IAS.BLL.csproj", "{019E5CEE-6A51-4115-A535-57923627962C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4501664-118D-4F45-8897-3152D2F465B9} = {C4501664-118D-4F45-8897-3152D2F465B9}
+		{BFBC708B-59FF-4142-B507-09F1A87B7511} = {BFBC708B-59FF-4142-B507-09F1A87B7511}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.DTO", "Web\IAS.DAL.Repository\IAS.DTO.csproj", "{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.Utils", "Web\IAS.Utils\IAS.Utils.csproj", "{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.DataServices", "WebService\IAS.DataServices\IAS.DataServices.csproj", "{C4501664-118D-4F45-8897-3152D2F465B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.DAL", "WebService\IAS.DAL\IAS.DAL.csproj", "{D1D1A269-D964-4462-AE45-535E67A5A8F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.FileService", "WebService\OIC.FileService\IAS.FileService.csproj", "{BFBC708B-59FF-4142-B507-09F1A87B7511}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57341358-221D-4120-9FAE-6708044D9E91}"
+	ProjectSection(SolutionItems) = preProject
+		C:\IAS.vsd = C:\IAS.vsd
+		IAS.vsmdi = IAS.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{3078C784-603D-4066-A19B-30B031B7AB26}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\BarcodeLib.dll = Lib\BarcodeLib.dll
+		Lib\Ionic.Zip.dll = Lib\Ionic.Zip.dll
+		Lib\Ionic.Zip.pdb = Lib\Ionic.Zip.pdb
+		Lib\Ionic.Zip.xml = Lib\Ionic.Zip.xml
+		Lib\itextsharp.dll = Lib\itextsharp.dll
+		Lib\MessagingToolkit.QRCode.dll = Lib\MessagingToolkit.QRCode.dll
+		Lib\Spire.Barcode.dll = Lib\Spire.Barcode.dll
+		Lib\Spire.Barcode.xml = Lib\Spire.Barcode.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.DataServiceTest", "IAS.DataServiceTest\IAS.DataServiceTest.csproj", "{E504795D-40E3-41B8-9345-8ECAF17E9B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.DataServices.Test", "IAS.DataServices.Test\IAS.DataServices.Test.csproj", "{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C73B9BCD-AF48-49A6-99A3-9AC43F2DAFD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAS.Common", "IAS.Common\IAS.Common.csproj", "{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{19974E9E-AA73-4918-9F5B-EF93CBB1E948}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptDb", "ScriptDb", "{00E398FA-015E-4591-A6DC-29297C7EA910}"
+	ProjectSection(SolutionItems) = preProject
+		ScriptDb\AG_ACCEPT_OFF_R.sql = ScriptDb\AG_ACCEPT_OFF_R.sql
+		ScriptDb\AG_AGENT_LICENSE_JURISTIC_T.sql = ScriptDb\AG_AGENT_LICENSE_JURISTIC_T.sql
+		ScriptDb\AG_AGENT_LICENSE_PERSON_T.sql = ScriptDb\AG_AGENT_LICENSE_PERSON_T.sql
+		ScriptDb\AG_AGENT_LICENSE_T.sql = ScriptDb\AG_AGENT_LICENSE_T.sql
+		ScriptDb\AG_AGENT_T.sql = ScriptDb\AG_AGENT_T.sql
+		ScriptDb\AG_AGENT_TYPE_R.sql = ScriptDb\AG_AGENT_TYPE_R.sql
+		ScriptDb\AG_APP_RUNNING_NO_T.sql = ScriptDb\AG_APP_RUNNING_NO_T.sql
+		ScriptDb\AG_APPLICANT_SCORE_T.sql = ScriptDb\AG_APPLICANT_SCORE_T.sql
+		ScriptDb\AG_APPLICANT_T.sql = ScriptDb\AG_APPLICANT_T.sql
+		ScriptDb\AG_EDUCATION_R.sql = ScriptDb\AG_EDUCATION_R.sql
+		ScriptDb\AG_EXAM_CONDITION_R.sql = ScriptDb\AG_EXAM_CONDITION_R.sql
+		ScriptDb\AG_EXAM_LICENSE_R.sql = ScriptDb\AG_EXAM_LICENSE_R.sql
+		ScriptDb\AG_EXAM_PLACE_GROUP_R.sql = ScriptDb\AG_EXAM_PLACE_GROUP_R.sql
+		ScriptDb\AG_EXAM_PLACE_R.sql = ScriptDb\AG_EXAM_PLACE_R.sql
+		ScriptDb\AG_EXAM_TIME_R.sql = ScriptDb\AG_EXAM_TIME_R.sql
+		ScriptDb\AG_HIS_MOVE_COMP_AGENT_T.sql = ScriptDb\AG_HIS_MOVE_COMP_AGENT_T.sql
+		ScriptDb\AG_IAS_APPLICANT_CHANGE.sql = ScriptDb\AG_IAS_APPLICANT_CHANGE.sql
+		ScriptDb\AG_IAS_APPLICANT_DETAIL_T.sql = ScriptDb\AG_IAS_APPLICANT_DETAIL_T.sql
+		ScriptDb\AG_IAS_APPLICANT_DETAIL_TEMP.sql = ScriptDb\AG_IAS_APPLICANT_DETAIL_TEMP.sql
+		ScriptDb\AG_IAS_APPLICANT_HEADER_T.sql = ScriptDb\AG_IAS_APPLICANT_HEADER_T.sql
+		ScriptDb\AG_IAS_APPLICANT_HEADER_TEMP.sql = ScriptDb\AG_IAS_APPLICANT_HEADER_TEMP.sql
+		ScriptDb\AG_IAS_APPLICANT_ROOM.sql = ScriptDb\AG_IAS_APPLICANT_ROOM.sql
+		ScriptDb\AG_IAS_APPLICANT_SCORE_D_TEMP.sql = ScriptDb\AG_IAS_APPLICANT_SCORE_D_TEMP.sql
+		ScriptDb\AG_IAS_APPLICANT_SCORE_H_TEMP.sql = ScriptDb\AG_IAS_APPLICANT_SCORE_H_TEMP.sql
+		ScriptDb\AG_IAS_APPLICANT_T.sql = ScriptDb\AG_IAS_APPLICANT_T.sql
+		ScriptDb\AG_IAS_APPLICANT_T_LOG.sql = ScriptDb\AG_IAS_APPLICANT_T_LOG.sql
+		ScriptDb\AG_IAS_APPROVE_CONFIG.sql = ScriptDb\AG_IAS_APPROVE_CONFIG.sql
+		ScriptDb\AG_IAS_APPROVE_DOC_TYPE.sql = ScriptDb\AG_IAS_APPROVE_DOC_TYPE.sql
+		ScriptDb\AG_IAS_APPROVE_FIELD.sql = ScriptDb\AG_IAS_APPROVE_FIELD.sql
+		ScriptDb\AG_IAS_ASSOCIATION.sql = ScriptDb\AG_IAS_ASSOCIATION.sql
+		ScriptDb\AG_IAS_ASSOCIATION_APPROVE.sql = ScriptDb\AG_IAS_ASSOCIATION_APPROVE.sql
+		ScriptDb\AG_IAS_ASSOCIATION_LICENSE.sql = ScriptDb\AG_IAS_ASSOCIATION_LICENSE.sql
+		ScriptDb\AG_IAS_ATTACH_FILE.sql = ScriptDb\AG_IAS_ATTACH_FILE.sql
+		ScriptDb\AG_IAS_ATTACH_FILE_APPLICANT.sql = ScriptDb\AG_IAS_ATTACH_FILE_APPLICANT.sql
+		ScriptDb\AG_IAS_ATTACH_FILE_LICENSE2.sql = ScriptDb\AG_IAS_ATTACH_FILE_LICENSE2.sql
+		ScriptDb\AG_IAS_BILL_CODE.sql = ScriptDb\AG_IAS_BILL_CODE.sql
+		ScriptDb\AG_IAS_CONFIG.sql = ScriptDb\AG_IAS_CONFIG.sql
+		ScriptDb\AG_IAS_DOCUMENT_TYPE.sql = ScriptDb\AG_IAS_DOCUMENT_TYPE.sql
+		ScriptDb\AG_IAS_DOCUMENT_TYPE_T.sql = ScriptDb\AG_IAS_DOCUMENT_TYPE_T.sql
+		ScriptDb\AG_IAS_EXAM_APPLICANT.sql = ScriptDb\AG_IAS_EXAM_APPLICANT.sql
+		ScriptDb\AG_IAS_EXAM_CONDITION_GROUP.sql = ScriptDb\AG_IAS_EXAM_CONDITION_GROUP.sql
+		ScriptDb\AG_IAS_EXAM_CONDITION_GROUP_D.sql = ScriptDb\AG_IAS_EXAM_CONDITION_GROUP_D.sql
+		ScriptDb\AG_IAS_EXAM_PLACE_ROOM.sql = ScriptDb\AG_IAS_EXAM_PLACE_ROOM.sql
+		ScriptDb\AG_IAS_EXAM_ROOM_LICENSE_R.sql = ScriptDb\AG_IAS_EXAM_ROOM_LICENSE_R.sql
+		ScriptDb\AG_IAS_EXAM_SCHEDULE.sql = ScriptDb\AG_IAS_EXAM_SCHEDULE.sql
+		ScriptDb\AG_IAS_EXAM_SPECIAL_R.sql = ScriptDb\AG_IAS_EXAM_SPECIAL_R.sql
+		ScriptDb\AG_IAS_EXAM_SPECIAL_T.sql = ScriptDb\AG_IAS_EXAM_SPECIAL_T.sql
+		ScriptDb\AG_IAS_EXAM_SUBJECT_GROUP.sql = ScriptDb\AG_IAS_EXAM_SUBJECT_GROUP.sql
+		ScriptDb\AG_IAS_FILE_ATTACH_T.sql = ScriptDb\AG_IAS_FILE_ATTACH_T.sql
+		ScriptDb\AG_IAS_FUNCTION_R.sql = ScriptDb\AG_IAS_FUNCTION_R.sql
+		ScriptDb\AG_IAS_HIST_PERSONAL_T.sql = ScriptDb\AG_IAS_HIST_PERSONAL_T.sql
+		ScriptDb\AG_IAS_IMPORT_HEADER_TEMP.sql = ScriptDb\AG_IAS_IMPORT_HEADER_TEMP.sql
+		ScriptDb\AG_IAS_INVOICE_T.sql = ScriptDb\AG_IAS_INVOICE_T.sql
+		ScriptDb\AG_IAS_LICENSE_D.sql = ScriptDb\AG_IAS_LICENSE_D.sql
+		ScriptDb\AG_IAS_LICENSE_D_TEMP.sql = ScriptDb\AG_IAS_LICENSE_D_TEMP.sql
+		ScriptDb\AG_IAS_LICENSE_H.sql = ScriptDb\AG_IAS_LICENSE_H.sql
+		ScriptDb\AG_IAS_LICENSE_H_TEMP.sql = ScriptDb\AG_IAS_LICENSE_H_TEMP.sql
+		ScriptDb\AG_IAS_LICENSE_TYPE_R.sql = ScriptDb\AG_IAS_LICENSE_TYPE_R.sql
+		ScriptDb\AG_IAS_LOG4NET.sql = ScriptDb\AG_IAS_LOG4NET.sql
+		ScriptDb\AG_IAS_LOG_ACTIVITY.sql = ScriptDb\AG_IAS_LOG_ACTIVITY.sql
+		ScriptDb\AG_IAS_MEMBER_RUNNO.sql = ScriptDb\AG_IAS_MEMBER_RUNNO.sql
+		ScriptDb\AG_IAS_MEMBER_TYPE.sql = ScriptDb\AG_IAS_MEMBER_TYPE.sql
+		ScriptDb\AG_IAS_NATIONALITY.sql = ScriptDb\AG_IAS_NATIONALITY.sql
+		ScriptDb\AG_IAS_OIC_TYPE.sql = ScriptDb\AG_IAS_OIC_TYPE.sql
+		ScriptDb\AG_IAS_PAYMENT_DETAIL.sql = ScriptDb\AG_IAS_PAYMENT_DETAIL.sql
+		ScriptDb\AG_IAS_PAYMENT_EXPIRE_DAY.sql = ScriptDb\AG_IAS_PAYMENT_EXPIRE_DAY.sql
+		ScriptDb\AG_IAS_PAYMENT_G_T.sql = ScriptDb\AG_IAS_PAYMENT_G_T.sql
+		ScriptDb\AG_IAS_PAYMENT_HEADER.sql = ScriptDb\AG_IAS_PAYMENT_HEADER.sql
+		ScriptDb\AG_IAS_PAYMENT_HEADER_T.sql = ScriptDb\AG_IAS_PAYMENT_HEADER_T.sql
+		ScriptDb\AG_IAS_PAYMENT_RUNNINGNO.sql = ScriptDb\AG_IAS_PAYMENT_RUNNINGNO.sql
+		ScriptDb\AG_IAS_PAYMENT_T.sql = ScriptDb\AG_IAS_PAYMENT_T.sql
+		ScriptDb\AG_IAS_PERSONAL_T.sql = ScriptDb\AG_IAS_PERSONAL_T.sql
+		ScriptDb\AG_IAS_PETITION_TYPE_R.sql = ScriptDb\AG_IAS_PETITION_TYPE_R.sql
+		ScriptDb\AG_IAS_RECEIPT_HISTORY.sql = ScriptDb\AG_IAS_RECEIPT_HISTORY.sql
+		ScriptDb\AG_IAS_REGISTRATION_REMARK_T.sql = ScriptDb\AG_IAS_REGISTRATION_REMARK_T.sql
+		ScriptDb\AG_IAS_REGISTRATION_T.sql = ScriptDb\AG_IAS_REGISTRATION_T.sql
+		ScriptDb\AG_IAS_RESET_HISTORY.sql = ScriptDb\AG_IAS_RESET_HISTORY.sql
+		ScriptDb\AG_IAS_SPECIAL_T_TEMP.sql = ScriptDb\AG_IAS_SPECIAL_T_TEMP.sql
+		ScriptDb\AG_IAS_STATUS.sql = ScriptDb\AG_IAS_STATUS.sql
+		ScriptDb\AG_IAS_SUBJECT_GROUP.sql = ScriptDb\AG_IAS_SUBJECT_GROUP.sql
+		ScriptDb\AG_IAS_SUBPAYMENT_RECEIPT.sql = ScriptDb\AG_IAS_SUBPAYMENT_RECEIPT.sql
+		ScriptDb\AG_IAS_TEMP_ATTACH_FILE.sql = ScriptDb\AG_IAS_TEMP_ATTACH_FILE.sql
+		ScriptDb\AG_IAS_TEMP_PAYMENT_DETAIL.sql = ScriptDb\AG_IAS_TEMP_PAYMENT_DETAIL.sql
+		ScriptDb\AG_IAS_TEMP_PAYMENT_DETAIL_HIS.sql = ScriptDb\AG_IAS_TEMP_PAYMENT_DETAIL_HIS.sql
+		ScriptDb\AG_IAS_TEMP_PAYMENT_HEADER.sql = ScriptDb\AG_IAS_TEMP_PAYMENT_HEADER.sql
+		ScriptDb\AG_IAS_TEMP_PAYMENT_TOTAL.sql = ScriptDb\AG_IAS_TEMP_PAYMENT_TOTAL.sql
+		ScriptDb\AG_IAS_TEMP_PERSONAL_T.sql = ScriptDb\AG_IAS_TEMP_PERSONAL_T.sql
+		ScriptDb\AG_IAS_TRAIN_HOUR_T.sql = ScriptDb\AG_IAS_TRAIN_HOUR_T.sql
+		ScriptDb\AG_IAS_USERS.sql = ScriptDb\AG_IAS_USERS.sql
+		ScriptDb\AG_IAS_USERS_RIGHT.sql = ScriptDb\AG_IAS_USERS_RIGHT.sql
+		ScriptDb\AG_IAS_VALIDATE_LICENSE.sql = ScriptDb\AG_IAS_VALIDATE_LICENSE.sql
+		ScriptDb\AG_IAS_VALIDATE_LICENSE_CON.sql = ScriptDb\AG_IAS_VALIDATE_LICENSE_CON.sql
+		ScriptDb\AG_LICENSE_RENEW_LOAD.sql = ScriptDb\AG_LICENSE_RENEW_LOAD.sql
+		ScriptDb\AG_LICENSE_RENEW_T.sql = ScriptDb\AG_LICENSE_RENEW_T.sql
+		ScriptDb\AG_LICENSE_RUNNING_NO_T.sql = ScriptDb\AG_LICENSE_RUNNING_NO_T.sql
+		ScriptDb\AG_LICENSE_T.sql = ScriptDb\AG_LICENSE_T.sql
+		ScriptDb\AG_LICENSE_TYPE_R.sql = ScriptDb\AG_LICENSE_TYPE_R.sql
+		ScriptDb\AG_PERSON_INCOMP_AGENT_T.sql = ScriptDb\AG_PERSON_INCOMP_AGENT_T.sql
+		ScriptDb\AG_PERSONAL_T.sql = ScriptDb\AG_PERSONAL_T.sql
+		ScriptDb\AG_PETITION_TYPE_R.sql = ScriptDb\AG_PETITION_TYPE_R.sql
+		ScriptDb\AG_SUBJECT_R.sql = ScriptDb\AG_SUBJECT_R.sql
+		ScriptDb\AG_TRAIN_PERSON_T.sql = ScriptDb\AG_TRAIN_PERSON_T.sql
+		ScriptDb\AG_TRAIN_PLAN_T.sql = ScriptDb\AG_TRAIN_PLAN_T.sql
+		ScriptDb\AG_TRAIN_SPECIAL_R.sql = ScriptDb\AG_TRAIN_SPECIAL_R.sql
+		ScriptDb\AG_TRAIN_T.sql = ScriptDb\AG_TRAIN_T.sql
+		ScriptDb\AG_U_TRAIN_T.sql = ScriptDb\AG_U_TRAIN_T.sql
+		ScriptDb\Sql_VIEW.sql = ScriptDb\Sql_VIEW.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://203.148.255.216/tfs/ar_dot_net
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IAS.Common\\IAS.Common.csproj
+		SccProjectTopLevelParentUniqueName1 = IAS.sln
+		SccProjectName1 = IAS.Common
+		SccLocalPath1 = IAS.Common
+		SccProjectUniqueName2 = IAS.DataServices.Test\\IAS.DataServices.Test.csproj
+		SccProjectTopLevelParentUniqueName2 = IAS.sln
+		SccProjectName2 = IAS.DataServices.Test
+		SccLocalPath2 = IAS.DataServices.Test
+		SccProjectUniqueName3 = IAS.DataServiceTest\\IAS.DataServiceTest.csproj
+		SccProjectName3 = IAS.DataServiceTest
+		SccLocalPath3 = IAS.DataServiceTest
+		SccProjectUniqueName4 = Web\\IAS.BLL\\IAS.BLL.csproj
+		SccProjectTopLevelParentUniqueName4 = IAS.sln
+		SccProjectName4 = Web/IAS.BLL
+		SccLocalPath4 = Web\\IAS.BLL
+		SccProjectUniqueName5 = Web\\IAS.DAL.Repository\\IAS.DTO.csproj
+		SccProjectTopLevelParentUniqueName5 = IAS.sln
+		SccProjectName5 = Web/IAS.DAL.Repository
+		SccLocalPath5 = Web\\IAS.DAL.Repository
+		SccProjectUniqueName6 = Web\\IAS.Utils\\IAS.Utils.csproj
+		SccProjectTopLevelParentUniqueName6 = IAS.sln
+		SccProjectName6 = Web/IAS.Utils
+		SccLocalPath6 = Web\\IAS.Utils
+		SccProjectUniqueName7 = Web\\IAS\\IAS.csproj
+		SccProjectTopLevelParentUniqueName7 = IAS.sln
+		SccProjectName7 = Web/IAS
+		SccLocalPath7 = Web\\IAS
+		SccProjectUniqueName8 = WebService\\IAS.DAL\\IAS.DAL.csproj
+		SccProjectTopLevelParentUniqueName8 = IAS.sln
+		SccProjectName8 = WebService/IAS.DAL
+		SccLocalPath8 = WebService\\IAS.DAL
+		SccProjectUniqueName9 = WebService\\IAS.DataServices\\IAS.DataServices.csproj
+		SccProjectTopLevelParentUniqueName9 = IAS.sln
+		SccProjectName9 = WebService/IAS.DataServices
+		SccLocalPath9 = WebService\\IAS.DataServices
+		SccProjectUniqueName10 = WebService\\OIC.FileService\\IAS.FileService.csproj
+		SccProjectTopLevelParentUniqueName10 = IAS.sln
+		SccProjectName10 = WebService/OIC.FileService
+		SccLocalPath10 = WebService\\OIC.FileService
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = IAS.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Development|Any CPU.Build.0 = Development|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Production|Any CPU.Build.0 = Production|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Development|Any CPU.Build.0 = Development|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Production|Any CPU.Build.0 = Production|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019E5CEE-6A51-4115-A535-57923627962C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Development|Any CPU.Build.0 = Development|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Production|Any CPU.Build.0 = Production|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Development|Any CPU.Build.0 = Development|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Production|Any CPU.Build.0 = Production|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Development|Any CPU.Build.0 = Development|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Production|Any CPU.Build.0 = Production|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4501664-118D-4F45-8897-3152D2F465B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Development|Any CPU.Build.0 = Development|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Production|Any CPU.Build.0 = Production|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Development|Any CPU.Build.0 = Development|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Production|Any CPU.Build.0 = Production|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBC708B-59FF-4142-B507-09F1A87B7511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Development|Any CPU.Build.0 = Development|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Production|Any CPU.Build.0 = Release|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E504795D-40E3-41B8-9345-8ECAF17E9B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Production|Any CPU.Build.0 = Release|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Production|Any CPU.Build.0 = Release|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3915EDE6-E54C-4FA4-9DFF-7D1AE5DE6C95} = {986F1A06-F220-4ADA-8701-9119D3446E22}
+		{019E5CEE-6A51-4115-A535-57923627962C} = {986F1A06-F220-4ADA-8701-9119D3446E22}
+		{5161F0B7-A0EC-4772-98EB-75546CDEA7A3} = {986F1A06-F220-4ADA-8701-9119D3446E22}
+		{57341358-221D-4120-9FAE-6708044D9E91} = {986F1A06-F220-4ADA-8701-9119D3446E22}
+		{B126A37A-A12F-4C9D-B92B-37ABA90E72B0} = {3F3566B6-2212-4ABA-A34F-B7D2A3482535}
+		{C4501664-118D-4F45-8897-3152D2F465B9} = {3F3566B6-2212-4ABA-A34F-B7D2A3482535}
+		{D1D1A269-D964-4462-AE45-535E67A5A8F2} = {3F3566B6-2212-4ABA-A34F-B7D2A3482535}
+		{BFBC708B-59FF-4142-B507-09F1A87B7511} = {3F3566B6-2212-4ABA-A34F-B7D2A3482535}
+		{4661E99A-1EC4-4196-B857-BBAE1D2FC5CB} = {3F3566B6-2212-4ABA-A34F-B7D2A3482535}
+		{6B55F34B-1FCA-40DD-A053-7C887BCF7CD4} = {C73B9BCD-AF48-49A6-99A3-9AC43F2DAFD5}
+	EndGlobalSection
+EndGlobal

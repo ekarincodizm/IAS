@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IAS.DataServices.Person.PersonService">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABcAABCQBAgAACAQMABACRAAAAFIEAAUQAMoFAEoQ=</HashCode>
+      <FileName>Person\PersonService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IAS.DataServices.Person.Helpers.MailApprovePersonHelper">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Person\Helpers\MailApprovePersonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAS.DataServices.Person.Helpers.MailChangePasswordHelper">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Helpers\MailChangePasswordHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IAS.DataServices.Person.Helpers.MailNotApprovePersonHelper">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Person\Helpers\MailNotApprovePersonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IAS.DataServices.Person.IPersonService">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABcAAACQBAgAACAQMABACBAAAAFIEAAEQAIIBAEIQ=</HashCode>
+      <FileName>Person\IPersonService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

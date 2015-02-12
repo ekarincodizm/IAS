@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IAS.DataServices.Registration.RegistationService">
+    <Position X="7" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAQgIEAFACAAAAIAgAAIABAqMEUChCAEICAAwAQRAIA=</HashCode>
+      <FileName>Registration\RegistrationService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IAS.DataServices.Registration.IRegistrationService">
+    <Position X="2.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAQgIEAAAAAAAAIAgAAIAAAqMAECgCAEIAAAQAQQAIA=</HashCode>
+      <FileName>Registration\IRegistrationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

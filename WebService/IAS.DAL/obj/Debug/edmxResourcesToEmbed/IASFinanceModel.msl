@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IASFinanceModelStoreContainer" CdmEntityContainer="IASFinanceEntities">
+    <EntitySetMapping Name="APPR_GL_HEADER">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_GL_HEADER">
+        <MappingFragment StoreEntitySet="APPR_GL_HEADER">
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DESCRIPTION1" ColumnName="DESCRIPTION1" />
+          <ScalarProperty Name="DESCRIPTION2" ColumnName="DESCRIPTION2" />
+          <ScalarProperty Name="JOB_NO" ColumnName="JOB_NO" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="STATUS_" ColumnName="STATUS_" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="CONTRACT_CODE" ColumnName="CONTRACT_CODE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="PAYMENT_AMOUNT" ColumnName="PAYMENT_AMOUNT" />
+          <ScalarProperty Name="STATUS_PAYMENT" ColumnName="STATUS_PAYMENT" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="REFER_TYPE" ColumnName="REFER_TYPE" />
+          <ScalarProperty Name="REFER_NO" ColumnName="REFER_NO" />
+          <ScalarProperty Name="REFER_DATE" ColumnName="REFER_DATE" />
+          <ScalarProperty Name="PAYMENT_TERM" ColumnName="PAYMENT_TERM" />
+          <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="REF_BUDGET" ColumnName="REF_BUDGET" />
+          <ScalarProperty Name="REF_PROJECT" ColumnName="REF_PROJECT" />
+          <ScalarProperty Name="REF_ACTIVITY" ColumnName="REF_ACTIVITY" />
+          <ScalarProperty Name="REF_BUD_ACCOUNT" ColumnName="REF_BUD_ACCOUNT" />
+          <ScalarProperty Name="BUD_YEAR" ColumnName="BUD_YEAR" />
+          <ScalarProperty Name="APPROVE_STATUS" ColumnName="APPROVE_STATUS" />
+          <ScalarProperty Name="DATE_APPROVED" ColumnName="DATE_APPROVED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_DO_ADDRESS">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_DO_ADDRESS">
+        <MappingFragment StoreEntitySet="APPR_DO_ADDRESS">
+          <ScalarProperty Name="SHOW_DOC_DATE" ColumnName="SHOW_DOC_DATE" />
+          <ScalarProperty Name="CUSTOMER_NAME" ColumnName="CUSTOMER_NAME" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="ADDRESS_SHIPTO4" ColumnName="ADDRESS_SHIPTO4" />
+          <ScalarProperty Name="ADDRESS_SHIPTO3" ColumnName="ADDRESS_SHIPTO3" />
+          <ScalarProperty Name="ADDRESS_SHIPTO2" ColumnName="ADDRESS_SHIPTO2" />
+          <ScalarProperty Name="ADDRESS_SHIPTO1" ColumnName="ADDRESS_SHIPTO1" />
+          <ScalarProperty Name="ADDRESS4" ColumnName="ADDRESS4" />
+          <ScalarProperty Name="ADDRESS3" ColumnName="ADDRESS3" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_DO_HEADER">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_DO_HEADER">
+        <MappingFragment StoreEntitySet="APPR_DO_HEADER">
+          <ScalarProperty Name="FUND_CODE" ColumnName="FUND_CODE" />
+          <ScalarProperty Name="PLAN_CODE" ColumnName="PLAN_CODE" />
+          <ScalarProperty Name="PREMIUM_AMOUNT" ColumnName="PREMIUM_AMOUNT" />
+          <ScalarProperty Name="TYPE_DISPOSE" ColumnName="TYPE_DISPOSE" />
+          <ScalarProperty Name="SHOW_DOC_DATE" ColumnName="SHOW_DOC_DATE" />
+          <ScalarProperty Name="AR_ACCOUNT" ColumnName="AR_ACCOUNT" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+          <ScalarProperty Name="TIME_PRINT" ColumnName="TIME_PRINT" />
+          <ScalarProperty Name="PAY_DEPOSIT" ColumnName="PAY_DEPOSIT" />
+          <ScalarProperty Name="PAY_OTHER" ColumnName="PAY_OTHER" />
+          <ScalarProperty Name="PAY_CASH" ColumnName="PAY_CASH" />
+          <ScalarProperty Name="SALE_TYPE" ColumnName="SALE_TYPE" />
+          <ScalarProperty Name="MEMBER_CODE" ColumnName="MEMBER_CODE" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" />
+          <ScalarProperty Name="PAY_TYPE" ColumnName="PAY_TYPE" />
+          <ScalarProperty Name="TYPE_TAX" ColumnName="TYPE_TAX" />
+          <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="PAYMENT_TERM" ColumnName="PAYMENT_TERM" />
+          <ScalarProperty Name="BUD_YEAR" ColumnName="BUD_YEAR" />
+          <ScalarProperty Name="DATE_APPROVED" ColumnName="DATE_APPROVED" />
+          <ScalarProperty Name="REMARK_APPROVE" ColumnName="REMARK_APPROVE" />
+          <ScalarProperty Name="STATUS_APPROVE" ColumnName="STATUS_APPROVE" />
+          <ScalarProperty Name="REF_ACTIVITY" ColumnName="REF_ACTIVITY" />
+          <ScalarProperty Name="BUD_ACCOUNT_CODE" ColumnName="BUD_ACCOUNT_CODE" />
+          <ScalarProperty Name="REF_PROJECT" ColumnName="REF_PROJECT" />
+          <ScalarProperty Name="REF_BUDGET" ColumnName="REF_BUDGET" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="LAST_LINE" ColumnName="LAST_LINE" />
+          <ScalarProperty Name="REFER_DATE" ColumnName="REFER_DATE" />
+          <ScalarProperty Name="REFER_NO" ColumnName="REFER_NO" />
+          <ScalarProperty Name="REFER_TYPE" ColumnName="REFER_TYPE" />
+          <ScalarProperty Name="CUSTOMER_CODE_SHIPTO" ColumnName="CUSTOMER_CODE_SHIPTO" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="VAT_AMOUNT" ColumnName="VAT_AMOUNT" />
+          <ScalarProperty Name="VAT_RATE" ColumnName="VAT_RATE" />
+          <ScalarProperty Name="AMOUNT_BEFORE_VAT" ColumnName="AMOUNT_BEFORE_VAT" />
+          <ScalarProperty Name="DISCOUNT_CASH" ColumnName="DISCOUNT_CASH" />
+          <ScalarProperty Name="DISCOUNT_CREDIT" ColumnName="DISCOUNT_CREDIT" />
+          <ScalarProperty Name="DISCOUNT_CASH_PATTERN" ColumnName="DISCOUNT_CASH_PATTERN" />
+          <ScalarProperty Name="DISCOUNT_CREDIT_PATTERN" ColumnName="DISCOUNT_CREDIT_PATTERN" />
+          <ScalarProperty Name="AMOUNT_BEFORE_DISCOUNT" ColumnName="AMOUNT_BEFORE_DISCOUNT" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_DO_REMARK">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_DO_REMARK">
+        <MappingFragment StoreEntitySet="APPR_DO_REMARK">
+          <ScalarProperty Name="SHOW_DOC_DATE" ColumnName="SHOW_DOC_DATE" />
+          <ScalarProperty Name="REF_REMARK" ColumnName="REF_REMARK" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_DO_DETAIL">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_DO_DETAIL">
+        <MappingFragment StoreEntitySet="APPR_DO_DETAIL">
+          <ScalarProperty Name="FUND_CODE" ColumnName="FUND_CODE" />
+          <ScalarProperty Name="PLAN_CODE" ColumnName="PLAN_CODE" />
+          <ScalarProperty Name="PREMIUM_AMOUNT" ColumnName="PREMIUM_AMOUNT" />
+          <ScalarProperty Name="SHOW_DOC_DATE" ColumnName="SHOW_DOC_DATE" />
+          <ScalarProperty Name="REF_PROJECT" ColumnName="REF_PROJECT" />
+          <ScalarProperty Name="CHECK_PM" ColumnName="CHECK_PM" />
+          <ScalarProperty Name="TYPE_TAX" ColumnName="TYPE_TAX" />
+          <ScalarProperty Name="VAT_DISCOUNT_BILL" ColumnName="VAT_DISCOUNT_BILL" />
+          <ScalarProperty Name="DISCOUNT_BILL_AMOUNT" ColumnName="DISCOUNT_BILL_AMOUNT" />
+          <ScalarProperty Name="ASSET_END" ColumnName="ASSET_END" />
+          <ScalarProperty Name="ASSET_START" ColumnName="ASSET_START" />
+          <ScalarProperty Name="REF_SO_DOCSEQ" ColumnName="REF_SO_DOCSEQ" />
+          <ScalarProperty Name="REF_SO_DOCDATE" ColumnName="REF_SO_DOCDATE" />
+          <ScalarProperty Name="REF_SO_DOCNO" ColumnName="REF_SO_DOCNO" />
+          <ScalarProperty Name="REF_SO_DOCTYPE" ColumnName="REF_SO_DOCTYPE" />
+          <ScalarProperty Name="QTY_OUT" ColumnName="QTY_OUT" />
+          <ScalarProperty Name="DATE_APPROVED" ColumnName="DATE_APPROVED" />
+          <ScalarProperty Name="REMARK_APPROVED" ColumnName="REMARK_APPROVED" />
+          <ScalarProperty Name="STATUS_APPROVED" ColumnName="STATUS_APPROVED" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REF_SERIAL_NO" ColumnName="REF_SERIAL_NO" />
+          <ScalarProperty Name="REF_ASSET_NO" ColumnName="REF_ASSET_NO" />
+          <ScalarProperty Name="REF_PRODUCT_CODE" ColumnName="REF_PRODUCT_CODE" />
+          <ScalarProperty Name="REF_ACTIVITY" ColumnName="REF_ACTIVITY" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="CURRENCY_CODE" ColumnName="CURRENCY_CODE" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="AMOUNT_AFTER_VAT" ColumnName="AMOUNT_AFTER_VAT" />
+          <ScalarProperty Name="VAT_AMOUNT" ColumnName="VAT_AMOUNT" />
+          <ScalarProperty Name="AMOUNT_BEFORE_VAT" ColumnName="AMOUNT_BEFORE_VAT" />
+          <ScalarProperty Name="DISCOUNT_AMOUNT" ColumnName="DISCOUNT_AMOUNT" />
+          <ScalarProperty Name="DISCOUNT_PATTERN" ColumnName="DISCOUNT_PATTERN" />
+          <ScalarProperty Name="AMOUNT_BEFORE_DISCOUNT" ColumnName="AMOUNT_BEFORE_DISCOUNT" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="QUANTITY_UNIT" ColumnName="QUANTITY_UNIT" />
+          <ScalarProperty Name="UNIT_CODE" ColumnName="UNIT_CODE" />
+          <ScalarProperty Name="LOT_NO" ColumnName="LOT_NO" />
+          <ScalarProperty Name="WAREHOUSE" ColumnName="WAREHOUSE" />
+          <ScalarProperty Name="PRODUCT_CODE" ColumnName="PRODUCT_CODE" />
+          <ScalarProperty Name="DESCRIPTION_DETAIL" ColumnName="DESCRIPTION_DETAIL" />
+          <ScalarProperty Name="DESCRIPTION_HEADER" ColumnName="DESCRIPTION_HEADER" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_GL_DETAIL">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_GL_DETAIL">
+        <MappingFragment StoreEntitySet="APPR_GL_DETAIL">
+          <ScalarProperty Name="DESCRIPTION3" ColumnName="DESCRIPTION3" />
+          <ScalarProperty Name="R_SECTION" ColumnName="R_SECTION" />
+          <ScalarProperty Name="R_PROJECT" ColumnName="R_PROJECT" />
+          <ScalarProperty Name="R_ACTIVITY" ColumnName="R_ACTIVITY" />
+          <ScalarProperty Name="FLAG_CURRENCY" ColumnName="FLAG_CURRENCY" />
+          <ScalarProperty Name="CREATE_FROM_CANCEL" ColumnName="CREATE_FROM_CANCEL" />
+          <ScalarProperty Name="JOB_NO" ColumnName="JOB_NO" />
+          <ScalarProperty Name="DEBIT_CREDIT" ColumnName="DEBIT_CREDIT" />
+          <ScalarProperty Name="FUND_CODE" ColumnName="FUND_CODE" />
+          <ScalarProperty Name="PLAN_CODE" ColumnName="PLAN_CODE" />
+          <ScalarProperty Name="UNIT_END" ColumnName="UNIT_END" />
+          <ScalarProperty Name="UNIT_START" ColumnName="UNIT_START" />
+          <ScalarProperty Name="REF_BUD_YEAR" ColumnName="REF_BUD_YEAR" />
+          <ScalarProperty Name="BUD_ACCOUNT_CODE" ColumnName="BUD_ACCOUNT_CODE" />
+          <ScalarProperty Name="REF_PROJECT" ColumnName="REF_PROJECT" />
+          <ScalarProperty Name="REF_BUDGET_CODE" ColumnName="REF_BUDGET_CODE" />
+          <ScalarProperty Name="TIME_POSTED" ColumnName="TIME_POSTED" />
+          <ScalarProperty Name="DATE_POSTED" ColumnName="DATE_POSTED" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS_" ColumnName="STATUS_" />
+          <ScalarProperty Name="REF_TAX_NO" ColumnName="REF_TAX_NO" />
+          <ScalarProperty Name="REF_CHECK_NO" ColumnName="REF_CHECK_NO" />
+          <ScalarProperty Name="REF_FIXASSET" ColumnName="REF_FIXASSET" />
+          <ScalarProperty Name="REF_AR" ColumnName="REF_AR" />
+          <ScalarProperty Name="REF_AP" ColumnName="REF_AP" />
+          <ScalarProperty Name="UNIT_AMOUNT" ColumnName="UNIT_AMOUNT" />
+          <ScalarProperty Name="UNIT_TYPE" ColumnName="UNIT_TYPE" />
+          <ScalarProperty Name="CURRENCY_TYPE" ColumnName="CURRENCY_TYPE" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="CREDIT" ColumnName="CREDIT" />
+          <ScalarProperty Name="DEBIT" ColumnName="DEBIT" />
+          <ScalarProperty Name="DESCRIPTION2" ColumnName="DESCRIPTION2" />
+          <ScalarProperty Name="DESCRIPTION1" ColumnName="DESCRIPTION1" />
+          <ScalarProperty Name="SECRET_ACCOUNT" ColumnName="SECRET_ACCOUNT" />
+          <ScalarProperty Name="GL_ACCOUNT" ColumnName="GL_ACCOUNT" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="SUBSIDAIRY" ColumnName="SUBSIDAIRY" />
+          <ScalarProperty Name="ACCOUNT_CODE" ColumnName="ACCOUNT_CODE" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_RECEIVE_DETAIL_D">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_RECEIVE_DETAIL_D">
+        <MappingFragment StoreEntitySet="APPR_RECEIVE_DETAIL_D">
+          <ScalarProperty Name="SHOW_DOC_DATE" ColumnName="SHOW_DOC_DATE" />
+          <ScalarProperty Name="REF_SEQUENCE_NO" ColumnName="REF_SEQUENCE_NO" />
+          <ScalarProperty Name="SENDING_DATE" ColumnName="SENDING_DATE" />
+          <ScalarProperty Name="SENDING_NO" ColumnName="SENDING_NO" />
+          <ScalarProperty Name="SENDING_TYPE" ColumnName="SENDING_TYPE" />
+          <ScalarProperty Name="SENDING_FLAG" ColumnName="SENDING_FLAG" />
+          <ScalarProperty Name="RETURN_DATE" ColumnName="RETURN_DATE" />
+          <ScalarProperty Name="RETURN_NO" ColumnName="RETURN_NO" />
+          <ScalarProperty Name="RETURN_TYPE" ColumnName="RETURN_TYPE" />
+          <ScalarProperty Name="RETURN_FLAG" ColumnName="RETURN_FLAG" />
+          <ScalarProperty Name="ACCOUNT_CODE" ColumnName="ACCOUNT_CODE" />
+          <ScalarProperty Name="SLIP_DATE" ColumnName="SLIP_DATE" />
+          <ScalarProperty Name="SLIP_NO" ColumnName="SLIP_NO" />
+          <ScalarProperty Name="RECEIVE_DATE" ColumnName="RECEIVE_DATE" />
+          <ScalarProperty Name="FLAG_RECEIVE" ColumnName="FLAG_RECEIVE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TIME_UPDATE" ColumnName="TIME_UPDATE" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="REFER_DATE" ColumnName="REFER_DATE" />
+          <ScalarProperty Name="REFER_NO" ColumnName="REFER_NO" />
+          <ScalarProperty Name="PAYMENT_CODE" ColumnName="PAYMENT_CODE" />
+          <ScalarProperty Name="PAYMENT_GROUP" ColumnName="PAYMENT_GROUP" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_RECEIVE_H">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_RECEIVE_H">
+        <MappingFragment StoreEntitySet="APPR_RECEIVE_H">
+          <ScalarProperty Name="FUND_CODE" ColumnName="FUND_CODE" />
+          <ScalarProperty Name="PLAN_CODE" ColumnName="PLAN_CODE" />
+          <ScalarProperty Name="PREMIUM_AMOUNT" ColumnName="PREMIUM_AMOUNT" />
+          <ScalarProperty Name="DONATE_NO" ColumnName="DONATE_NO" />
+          <ScalarProperty Name="DONATE_FLAG" ColumnName="DONATE_FLAG" />
+          <ScalarProperty Name="SENDING_DATE" ColumnName="SENDING_DATE" />
+          <ScalarProperty Name="SENDING_NO" ColumnName="SENDING_NO" />
+          <ScalarProperty Name="SENDING_TYPE" ColumnName="SENDING_TYPE" />
+          <ScalarProperty Name="SENDING_FLAG" ColumnName="SENDING_FLAG" />
+          <ScalarProperty Name="INVOICE_RECEIVE_VAT" ColumnName="INVOICE_RECEIVE_VAT" />
+          <ScalarProperty Name="INVOICE_RECEIVE_BEFORE_VAT" ColumnName="INVOICE_RECEIVE_BEFORE_VAT" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" />
+          <ScalarProperty Name="RECEIVE_TYPE" ColumnName="RECEIVE_TYPE" />
+          <ScalarProperty Name="PAY_OTHER" ColumnName="PAY_OTHER" />
+          <ScalarProperty Name="PAY_CASH" ColumnName="PAY_CASH" />
+          <ScalarProperty Name="AMOUNT_DEPOSIT" ColumnName="AMOUNT_DEPOSIT" />
+          <ScalarProperty Name="BUD_YEAR" ColumnName="BUD_YEAR" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="BUD_ACCOUNT_CODE" ColumnName="BUD_ACCOUNT_CODE" />
+          <ScalarProperty Name="REF_PROJECT" ColumnName="REF_PROJECT" />
+          <ScalarProperty Name="REF_BUDGET" ColumnName="REF_BUDGET" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="REFER_DATE" ColumnName="REFER_DATE" />
+          <ScalarProperty Name="REFER_NO" ColumnName="REFER_NO" />
+          <ScalarProperty Name="REFER_TYPE" ColumnName="REFER_TYPE" />
+          <ScalarProperty Name="PAYMENT_AMOUNT" ColumnName="PAYMENT_AMOUNT" />
+          <ScalarProperty Name="CHARGE_AMOUNT" ColumnName="CHARGE_AMOUNT" />
+          <ScalarProperty Name="WITHOLDINGTAX_AMOUNT" ColumnName="WITHOLDINGTAX_AMOUNT" />
+          <ScalarProperty Name="INVOICE_RECEIVE_AMOUNT" ColumnName="INVOICE_RECEIVE_AMOUNT" />
+          <ScalarProperty Name="INVOICE_AMOUNT" ColumnName="INVOICE_AMOUNT" />
+          <ScalarProperty Name="DEBIT_CHARGE_SECRET_ACCOUNT" ColumnName="DEBIT_CHARGE_SECRET_ACCOUNT" />
+          <ScalarProperty Name="DEBIT_CHARGE_ACCOUNT" ColumnName="DEBIT_CHARGE_ACCOUNT" />
+          <ScalarProperty Name="CREDIT_WHOLDING_SECRET_ACCOUNT" ColumnName="CREDIT_WHOLDING_SECRET_ACCOUNT" />
+          <ScalarProperty Name="CREDIT_WHOLDING_ACCOUNT" ColumnName="CREDIT_WHOLDING_ACCOUNT" />
+          <ScalarProperty Name="DEBIT_AR_SECRET_ACCOUNT" ColumnName="DEBIT_AR_SECRET_ACCOUNT" />
+          <ScalarProperty Name="DEBIT_AR_ACCOUNT" ColumnName="DEBIT_AR_ACCOUNT" />
+          <ScalarProperty Name="CREDIT_BANK_SECRET_ACCOUNT" ColumnName="CREDIT_BANK_SECRET_ACCOUNT" />
+          <ScalarProperty Name="CREDIT_BANK_ACCOUNT" ColumnName="CREDIT_BANK_ACCOUNT" />
+          <ScalarProperty Name="CHEQUE_DATE" ColumnName="CHEQUE_DATE" />
+          <ScalarProperty Name="CHEQUE_NO" ColumnName="CHEQUE_NO" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="DESCRIPTION2" ColumnName="DESCRIPTION2" />
+          <ScalarProperty Name="DESCRIPTION1" ColumnName="DESCRIPTION1" />
+          <ScalarProperty Name="CUSTOMER_CODE" ColumnName="CUSTOMER_CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="BRACH_NO" ColumnName="BRACH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPS_TABLE_YM_DOCNO">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPS_TABLE_YM_DOCNO">
+        <MappingFragment StoreEntitySet="APPS_TABLE_YM_DOCNO">
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="TYPE_CAL_COST" ColumnName="TYPE_CAL_COST" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOC_RUNNING" ColumnName="DOC_RUNNING" />
+          <ScalarProperty Name="YEAR_MONTH_BREAK" ColumnName="YEAR_MONTH_BREAK" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="INTERNALCODE" ColumnName="INTERNALCODE" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPS_CONFIG_INPUT">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPS_CONFIG_INPUT">
+        <MappingFragment StoreEntitySet="APPS_CONFIG_INPUT">
+          <ScalarProperty Name="DEFAULT_CUSTOMER_CODE" ColumnName="DEFAULT_CUSTOMER_CODE" />
+          <ScalarProperty Name="DEFAULT_PAYMENT_GROUP" ColumnName="DEFAULT_PAYMENT_GROUP" />
+          <ScalarProperty Name="DEFAULT_RECEIVE_GROUP" ColumnName="DEFAULT_RECEIVE_GROUP" />
+          <ScalarProperty Name="DEFAULT_BUD_ACCOUNT" ColumnName="DEFAULT_BUD_ACCOUNT" />
+          <ScalarProperty Name="DEFAULT_ACTIVITY" ColumnName="DEFAULT_ACTIVITY" />
+          <ScalarProperty Name="DEFAULT_PROJECT" ColumnName="DEFAULT_PROJECT" />
+          <ScalarProperty Name="DEFAULT_BUDGET" ColumnName="DEFAULT_BUDGET" />
+          <ScalarProperty Name="RANGE_DOC_TYPE_REF" ColumnName="RANGE_DOC_TYPE_REF" />
+          <ScalarProperty Name="RANGE_DOC_TYPE" ColumnName="RANGE_DOC_TYPE" />
+          <ScalarProperty Name="DEFAULT_DOC_TYPE" ColumnName="DEFAULT_DOC_TYPE" />
+          <ScalarProperty Name="MENU_CODE" ColumnName="MENU_CODE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPS_SLC_USERS">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPS_SLC_USERS">
+        <MappingFragment StoreEntitySet="APPS_SLC_USERS">
+          <ScalarProperty Name="USER_SECTION_LIKE2" ColumnName="USER_SECTION_LIKE2" />
+          <ScalarProperty Name="ID_CODE" ColumnName="ID_CODE" />
+          <ScalarProperty Name="USERNAME_AD" ColumnName="USERNAME_AD" />
+          <ScalarProperty Name="OT_SECTION_LIKE" ColumnName="OT_SECTION_LIKE" />
+          <ScalarProperty Name="USERS_OT_LIKE" ColumnName="USERS_OT_LIKE" />
+          <ScalarProperty Name="CLASSIFIED" ColumnName="CLASSIFIED" />
+          <ScalarProperty Name="USERS_DOC_TYPE" ColumnName="USERS_DOC_TYPE" />
+          <ScalarProperty Name="USERS_BOOK_TYPE" ColumnName="USERS_BOOK_TYPE" />
+          <ScalarProperty Name="USERS_BUDGET" ColumnName="USERS_BUDGET" />
+          <ScalarProperty Name="USERS_SECTION_IN" ColumnName="USERS_SECTION_IN" />
+          <ScalarProperty Name="USERS_SECTION_LIKE" ColumnName="USERS_SECTION_LIKE" />
+          <ScalarProperty Name="FLAG_CHANGE_KPI" ColumnName="FLAG_CHANGE_KPI" />
+          <ScalarProperty Name="USERS_EMP_TYPE" ColumnName="USERS_EMP_TYPE" />
+          <ScalarProperty Name="USERS_PC" ColumnName="USERS_PC" />
+          <ScalarProperty Name="FLAG_CHANGE_SALARY" ColumnName="FLAG_CHANGE_SALARY" />
+          <ScalarProperty Name="FLAG_SHOW_SALARY" ColumnName="FLAG_SHOW_SALARY" />
+          <ScalarProperty Name="USER_LANGUAGE" ColumnName="USER_LANGUAGE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NICK_NAME" ColumnName="NICK_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="USER_BUDGET_YEAR" ColumnName="USER_BUDGET_YEAR" />
+          <ScalarProperty Name="USER_LOGINTIMES" ColumnName="USER_LOGINTIMES" />
+          <ScalarProperty Name="USERS_INSTITUTE" ColumnName="USERS_INSTITUTE" />
+          <ScalarProperty Name="USERS_DIVISION" ColumnName="USERS_DIVISION" />
+          <ScalarProperty Name="USERS_SECTION" ColumnName="USERS_SECTION" />
+          <ScalarProperty Name="FLAG_ALL_SECTION" ColumnName="FLAG_ALL_SECTION" />
+          <ScalarProperty Name="USER_EXPDATE" ColumnName="USER_EXPDATE" />
+          <ScalarProperty Name="USER_GMUCODE" ColumnName="USER_GMUCODE" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPM_ACCOUNT_CODE">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPM_ACCOUNT_CODE">
+        <MappingFragment StoreEntitySet="APPM_ACCOUNT_CODE">
+          <ScalarProperty Name="TYPE_SPECIAL_ACCOUNT" ColumnName="TYPE_SPECIAL_ACCOUNT" />
+          <ScalarProperty Name="ACCOUNT_DETAIL_CR" ColumnName="ACCOUNT_DETAIL_CR" />
+          <ScalarProperty Name="INCOME_TYPE" ColumnName="INCOME_TYPE" />
+          <ScalarProperty Name="PARAMETER_VALUE_CR" ColumnName="PARAMETER_VALUE_CR" />
+          <ScalarProperty Name="PARAMETER_VALUE" ColumnName="PARAMETER_VALUE" />
+          <ScalarProperty Name="PATH_APP_CR" ColumnName="PATH_APP_CR" />
+          <ScalarProperty Name="PATH_APP" ColumnName="PATH_APP" />
+          <ScalarProperty Name="AMOUNT_TYPE" ColumnName="AMOUNT_TYPE" />
+          <ScalarProperty Name="ACCOUNT_DETAIL" ColumnName="ACCOUNT_DETAIL" />
+          <ScalarProperty Name="NATURE_ACCOUNT" ColumnName="NATURE_ACCOUNT" />
+          <ScalarProperty Name="TYPE_ACCOUNT" ColumnName="TYPE_ACCOUNT" />
+          <ScalarProperty Name="DESCRIPTION_ENG" ColumnName="DESCRIPTION_ENG" />
+          <ScalarProperty Name="GFMIS_ACCOUNT_CODE" ColumnName="GFMIS_ACCOUNT_CODE" />
+          <ScalarProperty Name="PARENT_ACCOUNT_CODE" ColumnName="PARENT_ACCOUNT_CODE" />
+          <ScalarProperty Name="ACCOUNT_CODE_NOPAD" ColumnName="ACCOUNT_CODE_NOPAD" />
+          <ScalarProperty Name="GL_ACCOUNT_" ColumnName="GL_ACCOUNT_" />
+          <ScalarProperty Name="DESCRIPTION_" ColumnName="DESCRIPTION_" />
+          <ScalarProperty Name="TYPE_POST_" ColumnName="TYPE_POST_" />
+          <ScalarProperty Name="GROUP3" ColumnName="GROUP3" />
+          <ScalarProperty Name="GROUP2" ColumnName="GROUP2" />
+          <ScalarProperty Name="GROUP1" ColumnName="GROUP1" />
+          <ScalarProperty Name="LEVEL_" ColumnName="LEVEL_" />
+          <ScalarProperty Name="SECRET_ACCOUNT_" ColumnName="SECRET_ACCOUNT_" />
+          <ScalarProperty Name="SUBSIDIARY_" ColumnName="SUBSIDIARY_" />
+          <ScalarProperty Name="ACCOUNT_CODE" ColumnName="ACCOUNT_CODE" />
+          <ScalarProperty Name="SECTION_CODE" ColumnName="SECTION_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPM_PRODUCT">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPM_PRODUCT">
+        <MappingFragment StoreEntitySet="APPM_PRODUCT">
+          <ScalarProperty Name="TIME_UPDATE" ColumnName="TIME_UPDATE" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+          <ScalarProperty Name="USER_UPDATE" ColumnName="USER_UPDATE" />
+          <ScalarProperty Name="PO_CREDIT_ACCOUNT" ColumnName="PO_CREDIT_ACCOUNT" />
+          <ScalarProperty Name="PO_DEBIT_ACCOUNT" ColumnName="PO_DEBIT_ACCOUNT" />
+          <ScalarProperty Name="REF_GFMIS_PRODUCT_CODE" ColumnName="REF_GFMIS_PRODUCT_CODE" />
+          <ScalarProperty Name="FLAG_DEFAULT" ColumnName="FLAG_DEFAULT" />
+          <ScalarProperty Name="PRO_PRICE_MEMBER" ColumnName="PRO_PRICE_MEMBER" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="REFER_PROD_CODE" ColumnName="REFER_PROD_CODE" />
+          <ScalarProperty Name="FLAG_HAVE_LOT" ColumnName="FLAG_HAVE_LOT" />
+          <ScalarProperty Name="COLOUR_CODE" ColumnName="COLOUR_CODE" />
+          <ScalarProperty Name="HIGH_SIZE" ColumnName="HIGH_SIZE" />
+          <ScalarProperty Name="LONG_SIZE" ColumnName="LONG_SIZE" />
+          <ScalarProperty Name="WIDE_SIZE" ColumnName="WIDE_SIZE" />
+          <ScalarProperty Name="TYPE_ITEM" ColumnName="TYPE_ITEM" />
+          <ScalarProperty Name="CHECK_STOCK" ColumnName="CHECK_STOCK" />
+          <ScalarProperty Name="STOCK_MOVEMENT" ColumnName="STOCK_MOVEMENT" />
+          <ScalarProperty Name="FLAG_HAVE_SERIAL" ColumnName="FLAG_HAVE_SERIAL" />
+          <ScalarProperty Name="WARANTEE_DAY" ColumnName="WARANTEE_DAY" />
+          <ScalarProperty Name="CREDIT_SECRET_ACCOUNT" ColumnName="CREDIT_SECRET_ACCOUNT" />
+          <ScalarProperty Name="CREDIT_GL_ACCOUNT" ColumnName="CREDIT_GL_ACCOUNT" />
+          <ScalarProperty Name="DEBIT_SECRET_ACCOUNT" ColumnName="DEBIT_SECRET_ACCOUNT" />
+          <ScalarProperty Name="DEBIT_GL_ACCOUNT" ColumnName="DEBIT_GL_ACCOUNT" />
+          <ScalarProperty Name="PREFIX_ASSET_CODE" ColumnName="PREFIX_ASSET_CODE" />
+          <ScalarProperty Name="LAST_PRICE" ColumnName="LAST_PRICE" />
+          <ScalarProperty Name="REC_DATE" ColumnName="REC_DATE" />
+          <ScalarProperty Name="STOCK_STATUS" ColumnName="STOCK_STATUS" />
+          <ScalarProperty Name="PRO_CANTYPE" ColumnName="PRO_CANTYPE" />
+          <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+          <ScalarProperty Name="PRO_BUY_DISC" ColumnName="PRO_BUY_DISC" />
+          <ScalarProperty Name="PRO_SALE_DISC" ColumnName="PRO_SALE_DISC" />
+          <ScalarProperty Name="QTY_ONREQUEST" ColumnName="QTY_ONREQUEST" />
+          <ScalarProperty Name="QTY_ONPURCHASE" ColumnName="QTY_ONPURCHASE" />
+          <ScalarProperty Name="QTY_ONHAND" ColumnName="QTY_ONHAND" />
+          <ScalarProperty Name="WAREHOUSE" ColumnName="WAREHOUSE" />
+          <ScalarProperty Name="PRO_BUY" ColumnName="PRO_BUY" />
+          <ScalarProperty Name="PRO_PRICE" ColumnName="PRO_PRICE" />
+          <ScalarProperty Name="AVERAGE_COST" ColumnName="AVERAGE_COST" />
+          <ScalarProperty Name="PRO_AMTFIFO" ColumnName="PRO_AMTFIFO" />
+          <ScalarProperty Name="STANDARD_COST" ColumnName="STANDARD_COST" />
+          <ScalarProperty Name="MIN_QTY" ColumnName="MIN_QTY" />
+          <ScalarProperty Name="ORD_QTY" ColumnName="ORD_QTY" />
+          <ScalarProperty Name="MAX_QTY" ColumnName="MAX_QTY" />
+          <ScalarProperty Name="SALE_UNIT" ColumnName="SALE_UNIT" />
+          <ScalarProperty Name="BUY_UNIT" ColumnName="BUY_UNIT" />
+          <ScalarProperty Name="STORE_UNIT" ColumnName="STORE_UNIT" />
+          <ScalarProperty Name="VEN_CODE" ColumnName="VEN_CODE" />
+          <ScalarProperty Name="PRO_MODEL" ColumnName="PRO_MODEL" />
+          <ScalarProperty Name="PRO_BRAND" ColumnName="PRO_BRAND" />
+          <ScalarProperty Name="TYPE_TAX" ColumnName="TYPE_TAX" />
+          <ScalarProperty Name="PROGROUP_CODE" ColumnName="PROGROUP_CODE" />
+          <ScalarProperty Name="PRO_TYPE" ColumnName="PRO_TYPE" />
+          <ScalarProperty Name="PRO_ENAME" ColumnName="PRO_ENAME" />
+          <ScalarProperty Name="PRO_TNAME" ColumnName="PRO_TNAME" />
+          <ScalarProperty Name="PROD_CODE" ColumnName="PROD_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPS_TABLE_DOCUMENT">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPS_TABLE_DOCUMENT">
+        <MappingFragment StoreEntitySet="APPS_TABLE_DOCUMENT">
+          <ScalarProperty Name="FLAG_GL_ADJUST" ColumnName="FLAG_GL_ADJUST" />
+          <ScalarProperty Name="MENU_CODE" ColumnName="MENU_CODE" />
+          <ScalarProperty Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" />
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="SECTION_DIGITS" ColumnName="SECTION_DIGITS" />
+          <ScalarProperty Name="YEAR_TYPE" ColumnName="YEAR_TYPE" />
+          <ScalarProperty Name="DOC_USESECTION" ColumnName="DOC_USESECTION" />
+          <ScalarProperty Name="SEQ_DOCNO" ColumnName="SEQ_DOCNO" />
+          <ScalarProperty Name="PICTURE_DOCNO" ColumnName="PICTURE_DOCNO" />
+          <ScalarProperty Name="TYPE_ITEM" ColumnName="TYPE_ITEM" />
+          <ScalarProperty Name="TYPE_COST_CALCULATE" ColumnName="TYPE_COST_CALCULATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_RUNDIGIT" ColumnName="DOC_RUNDIGIT" />
+          <ScalarProperty Name="DOC_RUNBY" ColumnName="DOC_RUNBY" />
+          <ScalarProperty Name="DOC_USETYPE" ColumnName="DOC_USETYPE" />
+          <ScalarProperty Name="DOC_USEBRANCH" ColumnName="DOC_USEBRANCH" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="DOC_DESC" ColumnName="DOC_DESC" />
+          <ScalarProperty Name="DOC_CODE" ColumnName="DOC_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPR_BD_HEADER">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPR_BD_HEADER">
+        <MappingFragment StoreEntitySet="APPR_BD_HEADER">
+          <ScalarProperty Name="BUDGET_REMAIN" ColumnName="BUDGET_REMAIN" />
+          <ScalarProperty Name="BUDGET_USED" ColumnName="BUDGET_USED" />
+          <ScalarProperty Name="BUDGET_BALANCE" ColumnName="BUDGET_BALANCE" />
+          <ScalarProperty Name="BUDGET_AMOUNT" ColumnName="BUDGET_AMOUNT" />
+          <ScalarProperty Name="PURCHASE_TYPE" ColumnName="PURCHASE_TYPE" />
+          <ScalarProperty Name="TYPE_TAX" ColumnName="TYPE_TAX" />
+          <ScalarProperty Name="DUEDATE" ColumnName="DUEDATE" />
+          <ScalarProperty Name="DELIVERY_DATE" ColumnName="DELIVERY_DATE" />
+          <ScalarProperty Name="PAYMENT_TERM" ColumnName="PAYMENT_TERM" />
+          <ScalarProperty Name="BUD_YEAR" ColumnName="BUD_YEAR" />
+          <ScalarProperty Name="DATE_APPROVE" ColumnName="DATE_APPROVE" />
+          <ScalarProperty Name="REMARK_APPROVE" ColumnName="REMARK_APPROVE" />
+          <ScalarProperty Name="STATUS_APPROVE" ColumnName="STATUS_APPROVE" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="BUD_ACCOUNT_CODE" ColumnName="BUD_ACCOUNT_CODE" />
+          <ScalarProperty Name="PROJECT_CODE" ColumnName="PROJECT_CODE" />
+          <ScalarProperty Name="BUDGET_CODE" ColumnName="BUDGET_CODE" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="LAST_LINE" ColumnName="LAST_LINE" />
+          <ScalarProperty Name="REFER_DATE" ColumnName="REFER_DATE" />
+          <ScalarProperty Name="REFER_NO" ColumnName="REFER_NO" />
+          <ScalarProperty Name="REFER_TYPE" ColumnName="REFER_TYPE" />
+          <ScalarProperty Name="VENDOR_CODE" ColumnName="VENDOR_CODE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="LEDGER_TYPE" ColumnName="LEDGER_TYPE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="VAT_AMOUNT" ColumnName="VAT_AMOUNT" />
+          <ScalarProperty Name="VAT_RATE" ColumnName="VAT_RATE" />
+          <ScalarProperty Name="AMOUNT_BEFORE_VAT" ColumnName="AMOUNT_BEFORE_VAT" />
+          <ScalarProperty Name="DISCOUNT_CASH" ColumnName="DISCOUNT_CASH" />
+          <ScalarProperty Name="DISCOUNT_CREDIT" ColumnName="DISCOUNT_CREDIT" />
+          <ScalarProperty Name="DISCOUNT_CASH_PATTERN" ColumnName="DISCOUNT_CASH_PATTERN" />
+          <ScalarProperty Name="DISCOUNT_CREDIT_PATTERN" ColumnName="DISCOUNT_CREDIT_PATTERN" />
+          <ScalarProperty Name="AMOUNT_BEFORE_DISCOUNT" ColumnName="AMOUNT_BEFORE_DISCOUNT" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOC_DATE" ColumnName="DOC_DATE" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="DOC_TYPE" ColumnName="DOC_TYPE" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPM_BUDGET_CODE">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPM_BUDGET_CODE">
+        <MappingFragment StoreEntitySet="APPM_BUDGET_CODE">
+          <ScalarProperty Name="USER_UPDATE" ColumnName="USER_UPDATE" />
+          <ScalarProperty Name="FLAG_BUDGET" ColumnName="FLAG_BUDGET" />
+          <ScalarProperty Name="TIME_UPDATE" ColumnName="TIME_UPDATE" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+          <ScalarProperty Name="TYPE_CALENDAR" ColumnName="TYPE_CALENDAR" />
+          <ScalarProperty Name="TYPE_BUDGET" ColumnName="TYPE_BUDGET" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="BUDGET_CODE" ColumnName="BUDGET_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APPM_RECEIVE_GROUP">
+      <EntityTypeMapping TypeName="IASFinanceModel.APPM_RECEIVE_GROUP">
+        <MappingFragment StoreEntitySet="APPM_RECEIVE_GROUP">
+          <ScalarProperty Name="BRANCH_NO" ColumnName="BRANCH_NO" />
+          <ScalarProperty Name="GL_ACCOUNT_DR_CONFIRM" ColumnName="GL_ACCOUNT_DR_CONFIRM" />
+          <ScalarProperty Name="FLAG_POST_GL" ColumnName="FLAG_POST_GL" />
+          <ScalarProperty Name="FLAG_MORE_DETAIL" ColumnName="FLAG_MORE_DETAIL" />
+          <ScalarProperty Name="GL_ACCOUNT" ColumnName="GL_ACCOUNT" />
+          <ScalarProperty Name="TYPE_CHARGE" ColumnName="TYPE_CHARGE" />
+          <ScalarProperty Name="PERCENT_CHARGE" ColumnName="PERCENT_CHARGE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="RECEIVE_GROUP" ColumnName="RECEIVE_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

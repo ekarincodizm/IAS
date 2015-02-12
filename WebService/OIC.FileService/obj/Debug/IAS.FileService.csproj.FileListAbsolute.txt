@@ -1,0 +1,16 @@
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.FileService.dll
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.FileService.pdb
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.Common.dll
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.DTO.dll
+D:\[-PRO-]\WebService\OIC.FileService\bin\StructureMap.dll
+D:\[-PRO-]\WebService\OIC.FileService\bin\log4net.dll
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.Common.pdb
+D:\[-PRO-]\WebService\OIC.FileService\bin\IAS.DTO.pdb
+D:\[-PRO-]\WebService\OIC.FileService\bin\StructureMap.pdb
+D:\[-PRO-]\WebService\OIC.FileService\bin\StructureMap.xml
+D:\[-PRO-]\WebService\OIC.FileService\bin\log4net.xml
+D:\[-PRO-]\WebService\OIC.FileService\obj\Debug\IAS.FileService.csprojResolveAssemblyReference.cache
+D:\[-PRO-]\WebService\OIC.FileService\obj\Debug\IAS.FileService.Properties.Resources.resources
+D:\[-PRO-]\WebService\OIC.FileService\obj\Debug\IAS.FileService.csproj.GenerateResource.Cache
+D:\[-PRO-]\WebService\OIC.FileService\obj\Debug\IAS.FileService.dll
+D:\[-PRO-]\WebService\OIC.FileService\obj\Debug\IAS.FileService.pdb

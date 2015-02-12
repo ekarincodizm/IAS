@@ -1,0 +1,14 @@
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.DAL.dll.config
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.DAL.dll
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.DAL.pdb
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.Common.dll
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\Oracle.DataAccess.dll
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\log4net.dll
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\StructureMap.dll
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\IAS.Common.pdb
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\log4net.xml
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\StructureMap.pdb
+D:\[-PRO-]\WebService\IAS.DAL\bin\Debug\StructureMap.xml
+D:\[-PRO-]\WebService\IAS.DAL\obj\Debug\IAS.DAL.csprojResolveAssemblyReference.cache
+D:\[-PRO-]\WebService\IAS.DAL\obj\Debug\IAS.DAL.dll
+D:\[-PRO-]\WebService\IAS.DAL\obj\Debug\IAS.DAL.pdb

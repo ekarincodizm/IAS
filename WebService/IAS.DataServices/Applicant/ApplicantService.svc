@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IAS.DataServices.Applicant.ApplicantService" CodeBehind="ApplicantService.svc.cs" %>

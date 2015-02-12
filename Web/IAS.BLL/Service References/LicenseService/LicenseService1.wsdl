@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LicenseService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:3333/License/LicenseService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILicenseService_GetLicenseByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalHistoryByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalHistoryByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalHistoryByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalHistoryByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryBy" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryByResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrain_1_To_4_ByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrain_1_To_4_ByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrain_1_To_4_ByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrain_1_To_4_ByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRequestLicenseByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRequestLicenseByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetReceiveLicenseByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiveLicenseByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetReceiveLicenseByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceiveLicenseByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertAndCheckReceiveLicenseGroupUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckReceiveLicenseGroupUpload" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertAndCheckReceiveLicenseGroupUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckReceiveLicenseGroupUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerify" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyByRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyByRequest" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyByRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyByRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyImgDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyImgDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyImgDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyImgDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ApproveLicenseVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLicenseVerify" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ApproveLicenseVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLicenseVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertSingleReceiveLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSingleReceiveLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertSingleReceiveLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSingleReceiveLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_SubmitSingleOrGroupReceiveLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitSingleOrGroupReceiveLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_SubmitSingleOrGroupReceiveLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitSingleOrGroupReceiveLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_UploadDataLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadDataLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_UploadDataLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadDataLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_MoveExtachFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveExtachFile" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_MoveExtachFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveExtachFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByID" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByIDWithCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByIDWithCondition" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExamHistoryByIDWithCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamHistoryByIDWithConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryByID" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryByIDWithCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryByIDWithCondition" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrainingHistoryByIDWithCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainingHistoryByIDWithConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalTrainByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalTrainByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalTrainByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalTrainByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrain_3_To_7_ByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrain_3_To_7_ByID" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTrain_3_To_7_ByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrain_3_To_7_ByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByID" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByIDWithCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByIDWithCondition" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetUnitLinkByIDWithCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitLinkByIDWithConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAttatchFileLicenseByPersonId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileLicenseByPersonId" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAttatchFileLicenseByPersonId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFileLicenseByPersonIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertPersonLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_InsertPersonLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetApprocerByDocType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprocerByDocType" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetApprocerByDocType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprocerByDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenSEQLicenseDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenSEQLicenseDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenSEQLicenseDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenSEQLicenseDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_SingleLicenseValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SingleLicenseValidation" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_SingleLicenseValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SingleLicenseValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPaymentLicenseTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentLicenseTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPaymentLicenseTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentLicenseTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRequesPersontLicenseByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequesPersontLicenseByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRequesPersontLicenseByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequesPersontLicenseByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLicneseByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLicneseByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLicneseByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLicneseByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLiceneEntityByLicenseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLiceneEntityByLicenseNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLiceneEntityByLicenseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLiceneEntityByLicenseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_updateRenewLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateRenewLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_updateRenewLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateRenewLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_updateLicenseDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLicenseDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_updateLicenseDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLicenseDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExpiredLicneseByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredLicneseByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetExpiredLicneseByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredLicneseByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_getViewPersonLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:getViewPersonLicense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_getViewPersonLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getViewPersonLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseDetailByUploadGroupNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDetailByUploadGroupNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseDetailByUploadGroupNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDetailByUploadGroupNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAllLicenseByIDCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLicenseByIDCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAllLicenseByIDCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLicenseByIDCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseRenewDateByLicenseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseRenewDateByLicenseNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseRenewDateByLicenseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseRenewDateByLicenseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyHead" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailVerify" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetVerifyHeadByUploadGroupNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyHeadByUploadGroupNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetVerifyHeadByUploadGroupNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyHeadByUploadGroupNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_CheckLicenseDetailVerifyHasNotApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLicenseDetailVerifyHasNotApprove" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_CheckLicenseDetailVerifyHasNotApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLicenseDetailVerifyHasNotApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ValidateDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ValidateDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetail" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenZipFileLicenseRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenZipFileLicenseRequest" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenZipFileLicenseRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenZipFileLicenseRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetResultLicenseVerifyHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultLicenseVerifyHead" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetResultLicenseVerifyHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultLicenseVerifyHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailByPersonal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailByPersonal" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailByPersonal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailByPersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyHeadByOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyHeadByOIC" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseVerifyHeadByOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseVerifyHeadByOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailAdminByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailAdminByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetListLicenseDetailAdminByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListLicenseDetailAdminByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GETGBHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:GETGBHoliday" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GETGBHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GETGBHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetEditLicenseHead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEditLicenseHead" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetEditLicenseHead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEditLicenseHeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPropLiecense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropLiecense" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPropLiecense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropLiecenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ChkSpecialExam_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChkSpecialExam" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ChkSpecialExam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChkSpecialExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewTimebyLicenseNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewTimebyLicenseNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewTimebyLicenseNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewTimebyLicenseNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_CheckSpecial_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSpecial" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_CheckSpecial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckSpecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSpecialTempTrainById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialTempTrainById" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSpecialTempTrainById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialTempTrainByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSpecialTempExamById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialTempExamById" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSpecialTempExamById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialTempExamByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ValidateProp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateProp" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ValidateProp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePropResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_LicenseRevokedValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseRevokedValidation" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_LicenseRevokedValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LicenseRevokedValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLicenseQuick_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLicenseQuick" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetRenewLicenseQuick_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRenewLicenseQuickResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalLicenseApprover_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalLicenseApprover" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetPersonalLicenseApprover_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalLicenseApproverResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseRequestOicApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseRequestOicApprove" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseRequestOicApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseRequestOicApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetMoveCompanyIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoveCompanyIn" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetMoveCompanyIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoveCompanyInResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetMoveCompanyOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoveCompanyOut" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetMoveCompanyOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoveCompanyOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseStatisticsReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseStatisticsReport" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseStatisticsReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseStatisticsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSumLicenseStatisticsReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSumLicenseStatisticsReport" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetSumLicenseStatisticsReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSumLicenseStatisticsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTopCompanyMoveOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopCompanyMoveOut" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetTopCompanyMoveOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopCompanyMoveOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexSubPaymentH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexSubPaymentH" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexSubPaymentH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexSubPaymentHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexSubPaymentD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexSubPaymentD" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexSubPaymentD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexSubPaymentDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexLicenseD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexLicenseD" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetIndexLicenseD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexLicenseDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetReplacementReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReplacementReport" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetReplacementReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReplacementReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLincse0304_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLincse0304" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLincse0304_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLincse0304Response" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_AddLincse0304_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLincse0304" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_AddLincse0304_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLincse0304Response" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseConfigByPetition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseConfigByPetition" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseConfigByPetition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseConfigByPetitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAgentCheckTrain_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentCheckTrain" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetAgentCheckTrain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentCheckTrainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetObtainLicenseByIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainLicenseByIdCard" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetObtainLicenseByIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObtainLicenseByIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseDetailByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDetailByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GetLicenseDetailByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDetailByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenZipFileLicenseByIdCardNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenZipFileLicenseByIdCardNo" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_GenZipFileLicenseByIdCardNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenZipFileLicenseByIdCardNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ChkLicenseAboutActive_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChkLicenseAboutActive" />
+  </wsdl:message>
+  <wsdl:message name="ILicenseService_ChkLicenseAboutActive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChkLicenseAboutActiveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILicenseService">
+    <wsdl:operation name="GetLicenseByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseByCriteria" message="tns:ILicenseService_GetLicenseByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseByCriteriaResponse" message="tns:ILicenseService_GetLicenseByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalHistoryByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalHistoryByIdCard" message="tns:ILicenseService_GetPersonalHistoryByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalHistoryByIdCardResponse" message="tns:ILicenseService_GetPersonalHistoryByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByIdCard" message="tns:ILicenseService_GetExamHistoryByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByIdCardResponse" message="tns:ILicenseService_GetExamHistoryByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryBy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryBy" message="tns:ILicenseService_GetTrainingHistoryBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryByResponse" message="tns:ILicenseService_GetTrainingHistoryBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrain_1_To_4_ByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTrain_1_To_4_ByIdCard" message="tns:ILicenseService_GetTrain_1_To_4_ByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTrain_1_To_4_ByIdCardResponse" message="tns:ILicenseService_GetTrain_1_To_4_ByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByIdCard" message="tns:ILicenseService_GetUnitLinkByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByIdCardResponse" message="tns:ILicenseService_GetUnitLinkByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRequestLicenseByIdCard" message="tns:ILicenseService_GetRequestLicenseByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRequestLicenseByIdCardResponse" message="tns:ILicenseService_GetRequestLicenseByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiveLicenseByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetReceiveLicenseByCriteria" message="tns:ILicenseService_GetReceiveLicenseByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetReceiveLicenseByCriteriaResponse" message="tns:ILicenseService_GetReceiveLicenseByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckReceiveLicenseGroupUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/InsertAndCheckReceiveLicenseGroupUpload" message="tns:ILicenseService_InsertAndCheckReceiveLicenseGroupUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/InsertAndCheckReceiveLicenseGroupUploadResponse" message="tns:ILicenseService_InsertAndCheckReceiveLicenseGroupUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerify" message="tns:ILicenseService_GetLicenseVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyResponse" message="tns:ILicenseService_GetLicenseVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyByRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyByRequest" message="tns:ILicenseService_GetLicenseVerifyByRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyByRequestResponse" message="tns:ILicenseService_GetLicenseVerifyByRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyDetail" message="tns:ILicenseService_GetLicenseVerifyDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyDetailResponse" message="tns:ILicenseService_GetLicenseVerifyDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyImgDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyImgDetail" message="tns:ILicenseService_GetLicenseVerifyImgDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyImgDetailResponse" message="tns:ILicenseService_GetLicenseVerifyImgDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLicenseVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/ApproveLicenseVerify" message="tns:ILicenseService_ApproveLicenseVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/ApproveLicenseVerifyResponse" message="tns:ILicenseService_ApproveLicenseVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSingleReceiveLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/InsertSingleReceiveLicense" message="tns:ILicenseService_InsertSingleReceiveLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/InsertSingleReceiveLicenseResponse" message="tns:ILicenseService_InsertSingleReceiveLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSingleOrGroupReceiveLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/SubmitSingleOrGroupReceiveLicense" message="tns:ILicenseService_SubmitSingleOrGroupReceiveLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/SubmitSingleOrGroupReceiveLicenseResponse" message="tns:ILicenseService_SubmitSingleOrGroupReceiveLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/UploadDataLicense" message="tns:ILicenseService_UploadDataLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/UploadDataLicenseResponse" message="tns:ILicenseService_UploadDataLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveExtachFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/MoveExtachFile" message="tns:ILicenseService_MoveExtachFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/MoveExtachFileResponse" message="tns:ILicenseService_MoveExtachFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByID" message="tns:ILicenseService_GetExamHistoryByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByIDResponse" message="tns:ILicenseService_GetExamHistoryByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByIDWithCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByIDWithCondition" message="tns:ILicenseService_GetExamHistoryByIDWithCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetExamHistoryByIDWithConditionResponse" message="tns:ILicenseService_GetExamHistoryByIDWithCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryByID" message="tns:ILicenseService_GetTrainingHistoryByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryByIDResponse" message="tns:ILicenseService_GetTrainingHistoryByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryByIDWithCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryByIDWithCondition" message="tns:ILicenseService_GetTrainingHistoryByIDWithCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTrainingHistoryByIDWithConditionResponse" message="tns:ILicenseService_GetTrainingHistoryByIDWithCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalTrainByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalTrainByCriteria" message="tns:ILicenseService_GetPersonalTrainByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalTrainByCriteriaResponse" message="tns:ILicenseService_GetPersonalTrainByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrain_3_To_7_ByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTrain_3_To_7_ByID" message="tns:ILicenseService_GetTrain_3_To_7_ByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTrain_3_To_7_ByIDResponse" message="tns:ILicenseService_GetTrain_3_To_7_ByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByID" message="tns:ILicenseService_GetUnitLinkByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByIDResponse" message="tns:ILicenseService_GetUnitLinkByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByIDWithCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByIDWithCondition" message="tns:ILicenseService_GetUnitLinkByIDWithCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetUnitLinkByIDWithConditionResponse" message="tns:ILicenseService_GetUnitLinkByIDWithCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileLicenseByPersonId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetAttatchFileLicenseByPersonId" message="tns:ILicenseService_GetAttatchFileLicenseByPersonId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetAttatchFileLicenseByPersonIdResponse" message="tns:ILicenseService_GetAttatchFileLicenseByPersonId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/InsertPersonLicense" message="tns:ILicenseService_InsertPersonLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/InsertPersonLicenseResponse" message="tns:ILicenseService_InsertPersonLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprocerByDocType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetApprocerByDocType" message="tns:ILicenseService_GetApprocerByDocType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetApprocerByDocTypeResponse" message="tns:ILicenseService_GetApprocerByDocType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenSEQLicenseDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GenSEQLicenseDetail" message="tns:ILicenseService_GenSEQLicenseDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GenSEQLicenseDetailResponse" message="tns:ILicenseService_GenSEQLicenseDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseTransaction" message="tns:ILicenseService_GetLicenseTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseTransactionResponse" message="tns:ILicenseService_GetLicenseTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SingleLicenseValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/SingleLicenseValidation" message="tns:ILicenseService_SingleLicenseValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/SingleLicenseValidationResponse" message="tns:ILicenseService_SingleLicenseValidation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentLicenseTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetPaymentLicenseTransaction" message="tns:ILicenseService_GetPaymentLicenseTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetPaymentLicenseTransactionResponse" message="tns:ILicenseService_GetPaymentLicenseTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequesPersontLicenseByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRequesPersontLicenseByIdCard" message="tns:ILicenseService_GetRequesPersontLicenseByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRequesPersontLicenseByIdCardResponse" message="tns:ILicenseService_GetRequesPersontLicenseByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLicneseByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLicneseByIdCard" message="tns:ILicenseService_GetRenewLicneseByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLicneseByIdCardResponse" message="tns:ILicenseService_GetRenewLicneseByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLiceneEntityByLicenseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLiceneEntityByLicenseNo" message="tns:ILicenseService_GetRenewLiceneEntityByLicenseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLiceneEntityByLicenseNoResponse" message="tns:ILicenseService_GetRenewLiceneEntityByLicenseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRenewLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/updateRenewLicense" message="tns:ILicenseService_updateRenewLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/updateRenewLicenseResponse" message="tns:ILicenseService_updateRenewLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLicenseDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/updateLicenseDetail" message="tns:ILicenseService_updateLicenseDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/updateLicenseDetailResponse" message="tns:ILicenseService_updateLicenseDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredLicneseByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetExpiredLicneseByIdCard" message="tns:ILicenseService_GetExpiredLicneseByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetExpiredLicneseByIdCardResponse" message="tns:ILicenseService_GetExpiredLicneseByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getViewPersonLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/getViewPersonLicense" message="tns:ILicenseService_getViewPersonLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/getViewPersonLicenseResponse" message="tns:ILicenseService_getViewPersonLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDetailByUploadGroupNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseDetailByUploadGroupNo" message="tns:ILicenseService_GetLicenseDetailByUploadGroupNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseDetailByUploadGroupNoResponse" message="tns:ILicenseService_GetLicenseDetailByUploadGroupNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLicenseByIDCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetAllLicenseByIDCard" message="tns:ILicenseService_GetAllLicenseByIDCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetAllLicenseByIDCardResponse" message="tns:ILicenseService_GetAllLicenseByIDCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseRenewDateByLicenseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseRenewDateByLicenseNo" message="tns:ILicenseService_GetLicenseRenewDateByLicenseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseRenewDateByLicenseNoResponse" message="tns:ILicenseService_GetLicenseRenewDateByLicenseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyHead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyHead" message="tns:ILicenseService_GetLicenseVerifyHead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyHeadResponse" message="tns:ILicenseService_GetLicenseVerifyHead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailVerify" message="tns:ILicenseService_GetListLicenseDetailVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailVerifyResponse" message="tns:ILicenseService_GetListLicenseDetailVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyHeadByUploadGroupNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetVerifyHeadByUploadGroupNo" message="tns:ILicenseService_GetVerifyHeadByUploadGroupNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetVerifyHeadByUploadGroupNoResponse" message="tns:ILicenseService_GetVerifyHeadByUploadGroupNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLicenseDetailVerifyHasNotApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/CheckLicenseDetailVerifyHasNotApprove" message="tns:ILicenseService_CheckLicenseDetailVerifyHasNotApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/CheckLicenseDetailVerifyHasNotApproveResponse" message="tns:ILicenseService_CheckLicenseDetailVerifyHasNotApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/ValidateDetail" message="tns:ILicenseService_ValidateDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/ValidateDetailResponse" message="tns:ILicenseService_ValidateDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetDetail" message="tns:ILicenseService_GetDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetDetailResponse" message="tns:ILicenseService_GetDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenZipFileLicenseRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GenZipFileLicenseRequest" message="tns:ILicenseService_GenZipFileLicenseRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GenZipFileLicenseRequestResponse" message="tns:ILicenseService_GenZipFileLicenseRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailByCriteria" message="tns:ILicenseService_GetListLicenseDetailByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailByCriteriaResponse" message="tns:ILicenseService_GetListLicenseDetailByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultLicenseVerifyHead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetResultLicenseVerifyHead" message="tns:ILicenseService_GetResultLicenseVerifyHead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetResultLicenseVerifyHeadResponse" message="tns:ILicenseService_GetResultLicenseVerifyHead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailByPersonal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailByPersonal" message="tns:ILicenseService_GetListLicenseDetailByPersonal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailByPersonalResponse" message="tns:ILicenseService_GetListLicenseDetailByPersonal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyHeadByOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyHeadByOIC" message="tns:ILicenseService_GetLicenseVerifyHeadByOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseVerifyHeadByOICResponse" message="tns:ILicenseService_GetLicenseVerifyHeadByOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailAdminByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailAdminByCriteria" message="tns:ILicenseService_GetListLicenseDetailAdminByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetListLicenseDetailAdminByCriteriaResponse" message="tns:ILicenseService_GetListLicenseDetailAdminByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GETGBHoliday">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GETGBHoliday" message="tns:ILicenseService_GETGBHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GETGBHolidayResponse" message="tns:ILicenseService_GETGBHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLicenseHead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetEditLicenseHead" message="tns:ILicenseService_GetEditLicenseHead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetEditLicenseHeadResponse" message="tns:ILicenseService_GetEditLicenseHead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropLiecense">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetPropLiecense" message="tns:ILicenseService_GetPropLiecense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetPropLiecenseResponse" message="tns:ILicenseService_GetPropLiecense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkSpecialExam">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/ChkSpecialExam" message="tns:ILicenseService_ChkSpecialExam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/ChkSpecialExamResponse" message="tns:ILicenseService_ChkSpecialExam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewTimebyLicenseNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRenewTimebyLicenseNo" message="tns:ILicenseService_GetRenewTimebyLicenseNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRenewTimebyLicenseNoResponse" message="tns:ILicenseService_GetRenewTimebyLicenseNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSpecial">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/CheckSpecial" message="tns:ILicenseService_CheckSpecial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/CheckSpecialResponse" message="tns:ILicenseService_CheckSpecial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialTempTrainById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetSpecialTempTrainById" message="tns:ILicenseService_GetSpecialTempTrainById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetSpecialTempTrainByIdResponse" message="tns:ILicenseService_GetSpecialTempTrainById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialTempExamById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetSpecialTempExamById" message="tns:ILicenseService_GetSpecialTempExamById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetSpecialTempExamByIdResponse" message="tns:ILicenseService_GetSpecialTempExamById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateProp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/ValidateProp" message="tns:ILicenseService_ValidateProp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/ValidatePropResponse" message="tns:ILicenseService_ValidateProp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LicenseRevokedValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/LicenseRevokedValidation" message="tns:ILicenseService_LicenseRevokedValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/LicenseRevokedValidationResponse" message="tns:ILicenseService_LicenseRevokedValidation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLicenseQuick">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLicenseQuick" message="tns:ILicenseService_GetRenewLicenseQuick_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetRenewLicenseQuickResponse" message="tns:ILicenseService_GetRenewLicenseQuick_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalLicenseApprover">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalLicenseApprover" message="tns:ILicenseService_GetPersonalLicenseApprover_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetPersonalLicenseApproverResponse" message="tns:ILicenseService_GetPersonalLicenseApprover_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseRequestOicApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseRequestOicApprove" message="tns:ILicenseService_GetLicenseRequestOicApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseRequestOicApproveResponse" message="tns:ILicenseService_GetLicenseRequestOicApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveCompanyIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetMoveCompanyIn" message="tns:ILicenseService_GetMoveCompanyIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetMoveCompanyInResponse" message="tns:ILicenseService_GetMoveCompanyIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveCompanyOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetMoveCompanyOut" message="tns:ILicenseService_GetMoveCompanyOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetMoveCompanyOutResponse" message="tns:ILicenseService_GetMoveCompanyOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseStatisticsReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseStatisticsReport" message="tns:ILicenseService_GetLicenseStatisticsReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseStatisticsReportResponse" message="tns:ILicenseService_GetLicenseStatisticsReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSumLicenseStatisticsReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetSumLicenseStatisticsReport" message="tns:ILicenseService_GetSumLicenseStatisticsReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetSumLicenseStatisticsReportResponse" message="tns:ILicenseService_GetSumLicenseStatisticsReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopCompanyMoveOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetTopCompanyMoveOut" message="tns:ILicenseService_GetTopCompanyMoveOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetTopCompanyMoveOutResponse" message="tns:ILicenseService_GetTopCompanyMoveOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexSubPaymentH">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetIndexSubPaymentH" message="tns:ILicenseService_GetIndexSubPaymentH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetIndexSubPaymentHResponse" message="tns:ILicenseService_GetIndexSubPaymentH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexSubPaymentD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetIndexSubPaymentD" message="tns:ILicenseService_GetIndexSubPaymentD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetIndexSubPaymentDResponse" message="tns:ILicenseService_GetIndexSubPaymentD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexLicenseD">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetIndexLicenseD" message="tns:ILicenseService_GetIndexLicenseD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetIndexLicenseDResponse" message="tns:ILicenseService_GetIndexLicenseD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReplacementReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetReplacementReport" message="tns:ILicenseService_GetReplacementReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetReplacementReportResponse" message="tns:ILicenseService_GetReplacementReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLincse0304">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLincse0304" message="tns:ILicenseService_GetLincse0304_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLincse0304Response" message="tns:ILicenseService_GetLincse0304_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLincse0304">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/AddLincse0304" message="tns:ILicenseService_AddLincse0304_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/AddLincse0304Response" message="tns:ILicenseService_AddLincse0304_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseConfigByPetition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseConfigByPetition" message="tns:ILicenseService_GetLicenseConfigByPetition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseConfigByPetitionResponse" message="tns:ILicenseService_GetLicenseConfigByPetition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentCheckTrain">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetAgentCheckTrain" message="tns:ILicenseService_GetAgentCheckTrain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetAgentCheckTrainResponse" message="tns:ILicenseService_GetAgentCheckTrain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainLicenseByIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetObtainLicenseByIdCard" message="tns:ILicenseService_GetObtainLicenseByIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetObtainLicenseByIdCardResponse" message="tns:ILicenseService_GetObtainLicenseByIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDetailByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseDetailByCriteria" message="tns:ILicenseService_GetLicenseDetailByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GetLicenseDetailByCriteriaResponse" message="tns:ILicenseService_GetLicenseDetailByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenZipFileLicenseByIdCardNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/GenZipFileLicenseByIdCardNo" message="tns:ILicenseService_GenZipFileLicenseByIdCardNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/GenZipFileLicenseByIdCardNoResponse" message="tns:ILicenseService_GenZipFileLicenseByIdCardNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkLicenseAboutActive">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILicenseService/ChkLicenseAboutActive" message="tns:ILicenseService_ChkLicenseAboutActive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILicenseService/ChkLicenseAboutActiveResponse" message="tns:ILicenseService_ChkLicenseAboutActive_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILicenseService" type="tns:ILicenseService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLicenseByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalHistoryByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetPersonalHistoryByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetExamHistoryByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryBy">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTrainingHistoryBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrain_1_To_4_ByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTrain_1_To_4_ByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetUnitLinkByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRequestLicenseByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiveLicenseByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetReceiveLicenseByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckReceiveLicenseGroupUpload">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/InsertAndCheckReceiveLicenseGroupUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerify">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyByRequest">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerifyByRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerifyDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyImgDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerifyImgDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLicenseVerify">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/ApproveLicenseVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSingleReceiveLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/InsertSingleReceiveLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSingleOrGroupReceiveLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/SubmitSingleOrGroupReceiveLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDataLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/UploadDataLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveExtachFile">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/MoveExtachFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByID">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetExamHistoryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamHistoryByIDWithCondition">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetExamHistoryByIDWithCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryByID">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTrainingHistoryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainingHistoryByIDWithCondition">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTrainingHistoryByIDWithCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalTrainByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetPersonalTrainByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrain_3_To_7_ByID">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTrain_3_To_7_ByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByID">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetUnitLinkByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitLinkByIDWithCondition">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetUnitLinkByIDWithCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFileLicenseByPersonId">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetAttatchFileLicenseByPersonId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPersonLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/InsertPersonLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprocerByDocType">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetApprocerByDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenSEQLicenseDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GenSEQLicenseDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTransaction">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SingleLicenseValidation">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/SingleLicenseValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentLicenseTransaction">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetPaymentLicenseTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequesPersontLicenseByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRequesPersontLicenseByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLicneseByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRenewLicneseByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLiceneEntityByLicenseNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRenewLiceneEntityByLicenseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRenewLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/updateRenewLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLicenseDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/updateLicenseDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredLicneseByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetExpiredLicneseByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getViewPersonLicense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/getViewPersonLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDetailByUploadGroupNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseDetailByUploadGroupNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLicenseByIDCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetAllLicenseByIDCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseRenewDateByLicenseNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseRenewDateByLicenseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyHead">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerifyHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailVerify">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetListLicenseDetailVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyHeadByUploadGroupNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetVerifyHeadByUploadGroupNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLicenseDetailVerifyHasNotApprove">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/CheckLicenseDetailVerifyHasNotApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/ValidateDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetail">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenZipFileLicenseRequest">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GenZipFileLicenseRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetListLicenseDetailByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultLicenseVerifyHead">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetResultLicenseVerifyHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailByPersonal">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetListLicenseDetailByPersonal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseVerifyHeadByOIC">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseVerifyHeadByOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListLicenseDetailAdminByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetListLicenseDetailAdminByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GETGBHoliday">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GETGBHoliday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLicenseHead">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetEditLicenseHead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropLiecense">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetPropLiecense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkSpecialExam">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/ChkSpecialExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewTimebyLicenseNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRenewTimebyLicenseNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSpecial">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/CheckSpecial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialTempTrainById">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetSpecialTempTrainById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialTempExamById">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetSpecialTempExamById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateProp">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/ValidateProp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LicenseRevokedValidation">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/LicenseRevokedValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRenewLicenseQuick">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetRenewLicenseQuick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalLicenseApprover">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetPersonalLicenseApprover" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseRequestOicApprove">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseRequestOicApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveCompanyIn">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetMoveCompanyIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveCompanyOut">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetMoveCompanyOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseStatisticsReport">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseStatisticsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumLicenseStatisticsReport">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetSumLicenseStatisticsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopCompanyMoveOut">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetTopCompanyMoveOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexSubPaymentH">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetIndexSubPaymentH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexSubPaymentD">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetIndexSubPaymentD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexLicenseD">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetIndexLicenseD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplacementReport">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetReplacementReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLincse0304">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLincse0304" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLincse0304">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/AddLincse0304" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseConfigByPetition">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseConfigByPetition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentCheckTrain">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetAgentCheckTrain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObtainLicenseByIdCard">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetObtainLicenseByIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDetailByCriteria">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GetLicenseDetailByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenZipFileLicenseByIdCardNo">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/GenZipFileLicenseByIdCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkLicenseAboutActive">
+      <soap:operation soapAction="http://tempuri.org/ILicenseService/ChkLicenseAboutActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LicenseService">
+    <wsdl:port name="BasicHttpBinding_ILicenseService" binding="tns:BasicHttpBinding_ILicenseService">
+      <soap:address location="http://localhost:3333/License/LicenseService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

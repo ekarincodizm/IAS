@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="IAS.MasterPage.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Home</title>
+    <link href="../style/global.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        html
+        {
+            background-color: gray;
+        }
+        
+        .columnLeft
+        {
+            float: left;
+            height: 200px;
+            width: 20%;
+            border: solid 1px black;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: white;
+            min-height: 500px;
+        }
+        .columnCenter
+        {
+            float: left;
+            height: 200px;
+            width: 50%;
+            border: solid 1px black;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: white;
+            min-height: 500px;
+        }
+        .columnRight
+        {
+            float: left;
+            height: 200px;
+            width: 20%;
+            border: solid 1px black;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: white;
+            min-height: 500px;
+        }
+        .footer
+        {
+            float: left;
+            width: 98%;
+            border: solid 1px black;
+            padding: 5px;
+            background-color: white;
+            min-height: 500px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form">
+    <div>
+        <table class="style4">
+            <tr>
+                <td style="vertical-align: top; width: 20%; border: 1px solid black;">
+                    <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tr>
+                            <td style="text-align: center">
+                                <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/Images/Logo.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background: #194e84; text-align: center;">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 80%; vertical-align: top;">
+                    <asp:ContentPlaceHolder ID="head" runat="server">
+                        <p>
+                            <img alt="im" src="../Images/oic_header.jpg" width="713px" /></p>
+                    </asp:ContentPlaceHolder>
+                    <div class="columnLeft">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="columnCenter">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="columnRight">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="footer">
+                        <asp:ContentPlaceHolder ID="Footer" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

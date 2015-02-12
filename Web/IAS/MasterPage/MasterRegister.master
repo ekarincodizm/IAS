@@ -1,0 +1,267 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/Site1.Master" AutoEventWireup="true"
+    CodeBehind="MasterRegister.master.cs" Inherits="IAS.MasterPage.MasterRegister" %>
+
+<%@ Register Src="../UserControl/UCLoadingProgress.ascx" TagName="UCLoadingProgress"
+    TagPrefix="uc1" %>
+<%@ Register Src="../UserControl/UCModalError.ascx" TagName="UCModalError" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/UCModalSuccess.ascx" TagName="UCModalSuccess" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/ucAttachFileControl.ascx" TagName="ucAttachFileControl"
+    TagPrefix="uc4" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <style type="text/css">
+        .style1
+        {
+            width: 32%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Detail" runat="server">
+    <div>
+        <asp:Panel ID="pnlMain" runat="server" Visible="true" Width="100%">
+            <asp:UpdatePanel ID="UpdatePanelUpload" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="Detail" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <table style="width: 100%;" align="center">
+                        <tr>
+                            <td>
+                                <uc4:ucAttachFileControl ID="ucAttachFileControl1" runat="server" />
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 90%;" align="center">
+                        <tr>
+                            <td style="text-align: center;" colspan="4">
+                                <asp:Label ID="lblMsg" ClientIDMode="Static" runat="server" ForeColor="Red" CssClass="lbl"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;" colspan="4">
+                                <!--Disable By Nattapong @01/11/2556-->
+                                <%--<asp:ValidationSummary ID="regGuestValidationSummary" runat="server" CssClass="failureNotification"
+                                    ValidationGroup="regGuestValidationGroup" HeaderText="กรุณากรอกข้อมูลให้ครบ"
+                                    ShowSummary="False" ShowMessageBox="true" />--%>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="box_body_content">
+                        <div class="box_t_h">
+                        </div>
+                        <div class="box_textbox_bgadd">
+                            <div align="center">
+                                <asp:Panel ID="PnlResultReg" runat="server" Visible="true">
+                                <fieldset style="width:50%; text-align:left" >
+                                <legend>ผลการสมัคร</legend>
+                                    <table align="center" style="width: 500px;">
+                                        <tr>
+                                            <td colspan="2" valign="top">
+                                                <asp:Label ID="lblResultReg" runat="server" Text="ผลการสมัคร" CssClass="lbl" Visible="false"></asp:Label>
+                                                &nbsp;&nbsp;
+                                                <asp:TextBox ID="txtResultReg" runat="server" CssClass="txt" Height="100px" Width="500px" TextMode="MultiLine" Enabled="false"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                </asp:Panel>
+                            </div>
+                            <div class="box_texbox_add_box">
+                                <asp:Panel ID="PnlAddButton" runat="server" Visible="true">
+                                    <table align="center" style="width: 100%;">
+                                        <tr>
+                                            <td style="text-align: center;" colspan="2">
+                                                <asp:Button ID="btnOk" runat="server" Text="ตกลง" CssClass="btn" OnClick="btnOk_Click"
+                                                    ValidationGroup="regGuestValidationGroup" CausesValidation="false"/>
+                                                &nbsp;&nbsp;                        
+                                          <%--      <input type="button"  id="btnCancel" name="btnCancel" value="ยกเลิก" class="btn" onclick="<%= Ut %>" />--%>
+                                                <asp:Button ID="btnCancel" runat="server" Text="ยกเลิก" CssClass="btn" 
+                                                    CausesValidation="false" OnClick="btnCancel_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                            </div>
+                        </div>
+                    </div>
+                    <table style="width: 100%;" align="center">
+                        <tr>
+                            <td>
+                                <asp:Panel ID="PnlCodition" runat="server" Visible="false">
+                                    <div class="box_body_content">
+                                        <div class="box_t_h">
+                                            ::เงื่อนไขข้อตกลงและยืนยัน</div>
+                                        <div class="box_textbox_bgadd">
+                                            <div class="box_texbox_add_box">
+                                                <table align="center" style="border: 3px solid black; width: 85%; text-align: center;
+                                                    vertical-align: middle;">
+                                                    <%--<tr>
+                                                <td style="text-align: left;">
+                                                    <asp:Label ID="lblCondition1" runat="server" Text="1........................................."></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">
+                                                    <asp:Label ID="lblCodition2" runat="server" Text="2........................................."></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">
+                                                    <asp:Label ID="lblCodition3" runat="server" Text="3........................................."></asp:Label>
+                                                </td>
+                                            </tr>--%>
+                                                    <tr>
+                                                        <td style="text-align: left;"><br>
+                                                            &nbsp; &nbsp;1 . ผู้ที่สมัครสมาชิกจะต้องใช้คำที่เหมาะสม ไม่หยาบคายหรือส่อไปในทางลามกอนาจาร
+                                                            <br></br>
+                                                             &nbsp; &nbsp;2 . ผู้ที่สมัครสมาชิกต้องกรอกข้อมูลที่เป็นจริงให้ครบทุกข้อ 
+                                                            เพื่อสิทธิประโยชน์ของท่าน
+                                                            <br></br>
+                                                             &nbsp; &nbsp;3 . สมาชิกต้องปฎิบัติตามกฎระเบียบและข้อตกลงอย่างเคร่งครัด 
+                                                            เพื่อความสงบเรียบร้อยในกรณีที่ท่านละเมิดกฏ Admin 
+                                                            และผู้ดูแลมีสิทธิ์ยกเลิกการเป็นสมาชิกได้
+                                                            <br></br>
+                                                             &nbsp; &nbsp;4 . เพื่อความเป็นส่วนตัวและความปลอดภัยในข้อมูลของท่านเอง 
+                                                            ผู้ดูแลขอแจ้งให้ท่านทราบว่า เป็นหน้าที่ของท่านเองในการรักษาชื่อ Login และ 
+                                                            Password ของท่านให้ดี โดยไม่บอกให้ผู้อื่นทราบ
+                                                            <br></br>
+                                                             &nbsp; &nbsp;5 . ข้อมูลของสมาชิกจะถูกเก็บเป็นความลับอย่างสูงสุด 
+                                                            ผู้ดูแลจะไม่เปิดเผยข้อมูลของท่านเพื่อประโยชน์ทางการค้า 
+                                                            หรื่อเพื่อประโยชน์ในด้านอื่นๆทั้งสิ้น
+                                                            <br></br>
+                                                             &nbsp; &nbsp;6 . 
+                                                            ผู้ดูแลขอสงวนสิทธิ์ในการยกเลิกความเป็นสมาชิกหรือหยุดให้บริการระบบสมาชิกเมื่อใดก็ได้ 
+                                                            โดยไม่ต้องแจ้งให้สมาชิกทราบล่วงหน้า
+                                                            <br></br>
+                                                    </tr>
+                                                </table>
+                                               
+                                                
+                                                <table style="width: 100%;">
+                                                    <tr>
+                                                        <td style="width:20%"></td>
+                                                        <td></td>
+                                                        <td style="text-align: left;">
+                                                            <asp:CheckBox ID="chkAgreement" runat="server" CssClass="chk" Text="ข้าพเจ้าขอยอมรับเงื่อนไข"
+                                                                AutoPostBack="True" OnCheckedChanged="chkAgreement_CheckedChanged" />
+                                                        </td>
+                                                        <td style="width:20%"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td style="text-align: left; padding-left:15%;" colspan="3">
+                                                            <asp:Label ID="lblText" runat="server" Text="ชื่อผู้ใช้งานของท่านคือเลขบัตรประชาชน<br>กรุณาระบุรหัสผ่านของท่านเพื่อเป็นการยืนยันการสมัคร"
+                                                                CssClass="lbl"></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                        <td style="text-align: right; width: 20%;">
+                                                            <asp:Label runat="server" ID="lblConfirmUserName" Text="ชื่อผู้ใช้" CssClass="lbl"></asp:Label>
+                                                        </td>
+                                                        <td class="style1">
+                                                            <asp:TextBox runat="server" ID="txtConfirmUserName" Text="" CssClass="txt" Enabled="false"></asp:TextBox>
+                                                        </td>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                        <td style="text-align: right; width: 20%;">
+                                                            <asp:Label ID="lblPassword" runat="server" Text="รหัสผ่าน" CssClass="lbl"></asp:Label>
+                                                        </td>
+                                                        <td style="text-align: left; " class="style1">
+                                                            <asp:TextBox ID="txtPassword" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                                                            <asp:RequiredFieldValidator ID="reqPW1" runat="server" ControlToValidate="txtPassword" 
+                                                                ValidationGroup="regGuestValidationGroup" ErrorMessage="กรุณาระบุรหัสผ่าน" CssClass="failureNotification">*
+                                                            </asp:RequiredFieldValidator>
+                                                            <!--Password ValidationExpression allow 0-9,a-z,A-Z Nattapong@22/8/2556--> 
+                                                            <%--<asp:RegularExpressionValidator ID="reqRegPW1" Display="Dynamic"
+                                                                runat="server" ControlToValidate="txtPassword" ErrorMessage="กรุณากรอก Password เป็นภาษาอังกฤษและตัวเลขเท่านั้น<br>และความยาวอย่างน้อย 6 ตัวอักษร แต่ไม่เกิน 14 ตัวอักษร" CssClass="failureNotification"
+                                                                ValidationGroup="regGuestValidationGroup" ValidationExpression="^([a-z]|[A-Z]|[!@&#]|[0-9]){6,14}$" ><asp:Label ID="Label3" runat="server" visible="false">*</asp:Label>
+                                                            </asp:RegularExpressionValidator>--%>
+                                                            <!--Password ValidationExpression 1=LowCase 1=UpperCase 1=Digi 1=Symbol[!@#$%^&*_+~] Length7-14 Nattapong@01/04/2557-->
+                                                            <asp:RegularExpressionValidator ID="reqRegPW1" Display="Dynamic"
+                                                                runat="server" ControlToValidate="txtPassword" ErrorMessage="รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร แต่ไม่เกิน 14 ตัวอักษร<br/>รหัสผ่านต้องผสมระหว่างตัวเลข ตัวอักษรพิมพ์ใหญ่ ตัวอักษรพิมพ์เล็ก และอักขระพิเศษ อย่างละ 1 ตัวขึ้นไป<br/>อักขระที่อนุญาตให้กำหนดรหัสผ่านได้คือ 0-9 A-Z a-z @ # $ % ^ & _ ( ) { } + ? และ , เท่านั้น" CssClass="failureNotification"
+                                                                ValidationGroup="regGuestValidationGroup" ValidationExpression="^(?=^.{8,14}$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*(){}+?,_])(?!./s*)[a-zA-Z0-9@#$%^&*(){}+?,_]*$" ><asp:Label ID="Label3" runat="server" visible="false">*</asp:Label>
+                                                            </asp:RegularExpressionValidator>
+                                                        </td>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                        <td style="text-align: right; width: 20%;">
+                                                            <asp:Label ID="lblConfirmPassword" runat="server" Text="ยืนยันรหัสผ่าน" CssClass="lbl"></asp:Label>
+                                                        </td>
+                                                        <td style="text-align: left; " class="style1">
+                                                            <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                                                            <asp:RequiredFieldValidator ID="reqPW2" runat="server" ControlToValidate="txtConfirmPassword"
+                                                                ValidationGroup="regGuestValidationGroup" ErrorMessage="กรุณายืนยันรหัสผ่าน" CssClass="failureNotification">*
+                                                            </asp:RequiredFieldValidator>
+                                                            <!--Password ValidationExpression allow 0-9,a-z,A-Z Nattapong@22/8/2556-->
+                                                            <%--<asp:RegularExpressionValidator ID="reqRegPW2" Display="Dynamic"
+                                                                runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="<!--รหัสผ่านต้องมีความยาวอย่างน้อย 6 ตัวอักษร แต่ไม่เกิน 14 ตัวอักษร-->" CssClass="failureNotification"
+                                                                ValidationGroup="regGuestValidationGroup" ValidationExpression="^([a-z]|[A-Z]|[!@&#]|[0-9]){6,14}$"><asp:Label ID="Label1" runat="server" visible="false">*</asp:Label>
+                                                            </asp:RegularExpressionValidator>--%>
+                                                            <!--Password ValidationExpression 1=LowCase 1=UpperCase 1=Digi 1=Symbol[!@#$%^&*_+~] Length7-14 Nattapong@01/04/2557-->
+                                                            <asp:RegularExpressionValidator ID="reqRegPW2" Display="Dynamic"
+                                                                runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร แต่ไม่เกิน 14 ตัวอักษร<br/>รหัสผ่านต้องผสมระหว่างตัวเลข ตัวอักษรพิมพ์ใหญ่ ตัวอักษรพิมพ์เล็ก และอักขระพิเศษ อย่างละ 1 ตัวขึ้นไป<br/>อักขระที่อนุญาตให้กำหนดรหัสผ่านได้คือ 0-9 A-Z a-z @ # $ % ^ & _ ( ) { } + ? และ , เท่านั้น" CssClass="failureNotification"
+                                                                ValidationGroup="regGuestValidationGroup" ValidationExpression="^(?=^.{8,14}$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*(){}+?,_])(?!./s*)[a-zA-Z0-9@#$%^&*(){}+?,_]*$"><asp:Label ID="Label1" runat="server" visible="false">*</asp:Label>
+                                                            </asp:RegularExpressionValidator>
+                                                            <!--Password Compare-->
+                                                            <asp:CompareValidator ID="reqComparePW" runat="server" Display="Dynamic" ControlToValidate="txtPassword"
+                                                                ControlToCompare="txtConfirmPassword" ValidationGroup="regGuestValidationGroup"
+                                                                ErrorMessage="รหัสผ่านไม่ตรงกัน" CssClass="failureNotification"><asp:Label ID="Label2" runat="server" visible="false">*</asp:Label>
+                                                            </asp:CompareValidator>
+                                                        </td>
+                                                        <td>
+                                                            &nbsp;
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td colspan="2">
+                                                            <asp:Button ID="btnSubmit" runat="server" CssClass="btn" ClientIDMode="Static" Text="ตกลง" CausesValidation="true"
+                                                                OnClientClick="return confirmSave();" OnClick="btnSubmit_Click" Enabled="false"
+                                                                Visible="true" ValidationGroup="regGuestValidationGroup" />
+                                                            <asp:Button ID="btnCancelRegister" runat="server" Text="ยกเลิก" CssClass="btn" CausesValidation="false" 
+                                                                OnClientClick="javascript:window.location='../home.aspx'" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                    </table>
+                    <uc2:UCModalError ID="UCModalError" runat="server" />
+                    <uc3:UCModalSuccess ID="UCModalSuccess" runat="server" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </asp:Panel>
+    </div>
+    </div>
+    
+    <asp:HiddenField ID="HiddenField_ID" runat="server" />
+    <div style="clear: left;">
+    </div>
+</asp:Content>

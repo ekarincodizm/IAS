@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileTransferService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="basicHttpStream_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1234/FileTransferService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1234/FileTransferService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1234/FileTransferService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:1234/FileTransferService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DownloadFileRequest">
+    <wsdl:part name="parameters" element="tns:DownloadFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileRequest_Headers">
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileResponse">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileResponse_Headers">
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="ContentType" element="tns:ContentType" />
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="HashCode" element="tns:HashCode" />
+    <wsdl:part name="Length" element="tns:Length" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileRequest">
+    <wsdl:part name="parameters" element="tns:UploadFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileRequest_Headers">
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileResponse">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileResponse_Headers">
+    <wsdl:part name="Certificate" element="tns:Certificate" />
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+    <wsdl:part name="TargetFullName" element="tns:TargetFullName" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileRequest">
+    <wsdl:part name="parameters" element="tns:MoveFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileRequest_Headers">
+    <wsdl:part name="CurrentContainer" element="tns:CurrentContainer" />
+    <wsdl:part name="CurrentFileName" element="tns:CurrentFileName" />
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileResponse">
+    <wsdl:part name="parameters" element="tns:MoveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileResponse_Headers">
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+    <wsdl:part name="TargetFullName" element="tns:TargetFullName" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileRequest">
+    <wsdl:part name="parameters" element="tns:DeleteFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileRequest_Headers">
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileResponse">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileResponse_Headers">
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="AmendFileRequest">
+    <wsdl:part name="parameters" element="tns:AmendFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="AmendFileRequest_Headers">
+    <wsdl:part name="CurrentContainer" element="tns:CurrentContainer" />
+    <wsdl:part name="CurrentFileName" element="tns:CurrentFileName" />
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+    <wsdl:part name="TargetFileName" element="tns:TargetFileName" />
+  </wsdl:message>
+  <wsdl:message name="AmendFileResponse">
+    <wsdl:part name="parameters" element="tns:AmendFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="AmendFileResponse_Headers">
+    <wsdl:part name="Certificate" element="tns:Certificate" />
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="ContainDetailRequest">
+    <wsdl:part name="parameters" element="tns:ContainDetailRequest" />
+  </wsdl:message>
+  <wsdl:message name="ContainDetailRequest_Headers">
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+  </wsdl:message>
+  <wsdl:message name="ContainDetailResponse">
+    <wsdl:part name="parameters" element="tns:ContainDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContainDetailResponse_Headers">
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="DeleteContainerRequest">
+    <wsdl:part name="parameters" element="tns:DeleteContainerRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteContainerRequest_Headers">
+    <wsdl:part name="TargetContainer" element="tns:TargetContainer" />
+  </wsdl:message>
+  <wsdl:message name="DeleteContainerResponse">
+    <wsdl:part name="parameters" element="tns:DeleteContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteContainerResponse_Headers">
+    <wsdl:part name="Code" element="tns:Code" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:portType name="IFileTransferService">
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/DownloadFile" name="DownloadFileRequest" message="tns:DownloadFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/DownloadFileResponse" name="DownloadFileResponse" message="tns:DownloadFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/UploadFile" name="UploadFileRequest" message="tns:UploadFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/UploadFileResponse" name="UploadFileResponse" message="tns:UploadFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/MoveFile" name="MoveFileRequest" message="tns:MoveFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/MoveFileResponse" name="MoveFileResponse" message="tns:MoveFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/DeleteFile" name="DeleteFileRequest" message="tns:DeleteFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/DeleteFileResponse" name="DeleteFileResponse" message="tns:DeleteFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AmendFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/AmendFile" name="AmendFileRequest" message="tns:AmendFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/AmendFileResponse" name="AmendFileResponse" message="tns:AmendFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ContainDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/ContainDetail" name="ContainDetailRequest" message="tns:ContainDetailRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/ContainDetailResponse" name="ContainDetailResponse" message="tns:ContainDetailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileTransferService/DeleteContainer" name="DeleteContainerRequest" message="tns:DeleteContainerRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileTransferService/DeleteContainerResponse" name="DeleteContainerResponse" message="tns:DeleteContainerResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpStream" type="tns:IFileTransferService">
+    <wsp:PolicyReference URI="#basicHttpStream_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/DownloadFile" style="document" />
+      <wsdl:input name="DownloadFileRequest">
+        <soap12:header message="tns:DownloadFileRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:header message="tns:DownloadFileRequest_Headers" part="TargetFileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadFileResponse">
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="ContentType" use="literal" />
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="FileName" use="literal" />
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="HashCode" use="literal" />
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="Length" use="literal" />
+        <soap12:header message="tns:DownloadFileResponse_Headers" part="Message" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/UploadFile" style="document" />
+      <wsdl:input name="UploadFileRequest">
+        <soap12:header message="tns:UploadFileRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:header message="tns:UploadFileRequest_Headers" part="TargetFileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadFileResponse">
+        <soap12:header message="tns:UploadFileResponse_Headers" part="Certificate" use="literal" />
+        <soap12:header message="tns:UploadFileResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:UploadFileResponse_Headers" part="Message" use="literal" />
+        <soap12:header message="tns:UploadFileResponse_Headers" part="TargetContainer" use="literal" />
+        <soap12:header message="tns:UploadFileResponse_Headers" part="TargetFileName" use="literal" />
+        <soap12:header message="tns:UploadFileResponse_Headers" part="TargetFullName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/MoveFile" style="document" />
+      <wsdl:input name="MoveFileRequest">
+        <soap12:header message="tns:MoveFileRequest_Headers" part="CurrentContainer" use="literal" />
+        <soap12:header message="tns:MoveFileRequest_Headers" part="CurrentFileName" use="literal" />
+        <soap12:header message="tns:MoveFileRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:header message="tns:MoveFileRequest_Headers" part="TargetFileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MoveFileResponse">
+        <soap12:header message="tns:MoveFileResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:MoveFileResponse_Headers" part="Message" use="literal" />
+        <soap12:header message="tns:MoveFileResponse_Headers" part="TargetFullName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/DeleteFile" style="document" />
+      <wsdl:input name="DeleteFileRequest">
+        <soap12:header message="tns:DeleteFileRequest_Headers" part="TargetFileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteFileResponse">
+        <soap12:header message="tns:DeleteFileResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:DeleteFileResponse_Headers" part="Message" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/AmendFile" style="document" />
+      <wsdl:input name="AmendFileRequest">
+        <soap12:header message="tns:AmendFileRequest_Headers" part="CurrentContainer" use="literal" />
+        <soap12:header message="tns:AmendFileRequest_Headers" part="CurrentFileName" use="literal" />
+        <soap12:header message="tns:AmendFileRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:header message="tns:AmendFileRequest_Headers" part="TargetFileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AmendFileResponse">
+        <soap12:header message="tns:AmendFileResponse_Headers" part="Certificate" use="literal" />
+        <soap12:header message="tns:AmendFileResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:AmendFileResponse_Headers" part="Message" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContainDetail">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/ContainDetail" style="document" />
+      <wsdl:input name="ContainDetailRequest">
+        <soap12:header message="tns:ContainDetailRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ContainDetailResponse">
+        <soap12:header message="tns:ContainDetailResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:ContainDetailResponse_Headers" part="Message" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContainer">
+      <soap12:operation soapAction="http://tempuri.org/IFileTransferService/DeleteContainer" style="document" />
+      <wsdl:input name="DeleteContainerRequest">
+        <soap12:header message="tns:DeleteContainerRequest_Headers" part="TargetContainer" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteContainerResponse">
+        <soap12:header message="tns:DeleteContainerResponse_Headers" part="Code" use="literal" />
+        <soap12:header message="tns:DeleteContainerResponse_Headers" part="Message" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileTransferService">
+    <wsdl:port name="basicHttpStream" binding="tns:basicHttpStream">
+      <soap12:address location="http://localhost:1234/FileTransferService.svc/FileService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:1234/FileTransferService.svc/FileService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

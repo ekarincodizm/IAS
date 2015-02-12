@@ -1,0 +1,2378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DataCenterService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:3333/DataCenter/DataCenterService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataCenterService_DeleteAsscoiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAsscoiation" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_DeleteAsscoiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAsscoiationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetQualification_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualification" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetQualification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateCancelApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCancelApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateCancelApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCancelApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigPrint" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_SaveConfigPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfigPrint" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_SaveConfigPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfigPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicenseByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicenseByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicenseByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicenseByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceFromProvinceAndGroupCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceFromProvinceAndGroupCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceFromProvinceAndGroupCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceFromProvinceAndGroupCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceFromProvinceAndAssoCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceFromProvinceAndAssoCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceFromProvinceAndAssoCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceFromProvinceAndAssoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetSubjectGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroup" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetSubjectGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicenseByAssocCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicenseByAssocCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationLicenseByAssocCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationLicenseByAssocCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeAsCompanyT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeAsCompanyT" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeAsCompanyT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeAsCompanyTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDefaultcompanyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultcompanyName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDefaultcompanyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultcompanyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNewConfigApproveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewConfigApproveMember" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNewConfigApproveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewConfigApproveMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateNewConfigApproveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewConfigApproveMember" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateNewConfigApproveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewConfigApproveMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssByAssCodeAndAssName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssByAssCodeAndAssName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssByAssCodeAndAssName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssByAssCodeAndAssNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPerBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPerBill" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPerBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPerBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleNameFromSex_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleNameFromSex" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleNameFromSex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleNameFromSexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationByByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationByByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationByByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationByByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupR_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupR" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupRByIDName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupRByIDName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupRByIDName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupRByIDNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertExamPlaceGroupR_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamPlaceGroupR" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertExamPlaceGroupR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExamPlaceGroupRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupRByCheckID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupRByCheckID" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupRByCheckID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupRByCheckIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_UnderAssocicate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlace_UnderAssocicate" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_UnderAssocicate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlace_UnderAssocicateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetInsuranceAssociate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceAssociate" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetInsuranceAssociate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceAssociateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetInsuranceAssociateNameByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceAssociateNameByID" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetInsuranceAssociateNameByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuranceAssociateNameByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_AndProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlace_AndProvince" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_AndProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlace_AndProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecialDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecialDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecialDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecialDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTrainSpecialDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainSpecialDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTrainSpecialDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainSpecialDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationApprove" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicensefromTestingNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensefromTestingNo" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicensefromTestingNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicensefromTestingNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConficValueByTypeAndGroupCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConficValueByTypeAndGroupCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConficValueByTypeAndGroupCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConficValueByTypeAndGroupCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigCheckExamLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigCheckExamLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigCheckExamLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigCheckExamLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigCheckExamLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigCheckExamLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigCheckExamLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigCheckExamLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByAsso_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByAsso" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByAsso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByAssoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTrainSpecialbyIdCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainSpecialbyIdCard" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTrainSpecialbyIdCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrainSpecialbyIdCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetUserVerifyDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserVerifyDoc" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetUserVerifyDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserVerifyDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecial" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeRegister" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetProvince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvince" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetProvince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleNameById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTitleNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTitleNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAmpur_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmpur" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAmpur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmpurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTumbon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumbon" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTumbon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumbonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetEducation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducation" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetEducation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetEducationById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetEducationById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEducationByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeAll" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeIsImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeIsImage" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeIsImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeIsImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeNotOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeNotOIC" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeNotOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeNotOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeNotOIC_for_regSearchOfficerOIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeNotOIC_for_regSearchOfficerOIC" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberTypeNotOIC_for_regSearchOfficerOIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberTypeNotOIC_for_regSearchOfficerOICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetOICType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOICType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetOICType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOICTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNationality_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationality" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNationality_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNationalityById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetNationalityById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNationalityByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeByName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyCodeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyCodeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetApproveConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveConfig" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetApproveConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_SetApproveConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetApproveConfig" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_SetApproveConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetApproveConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetProvinceById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvinceById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetProvinceById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvinceByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAmpurById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmpurById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAmpurById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmpurByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTumbonById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumbonById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetTumbonById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTumbonByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlace" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamTime" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociate" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPaymentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPaymentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetRequestLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetRequestLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPettitionTypebyLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPettitionTypebyLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPettitionTypebyLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPettitionTypebyLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetRequestLicenseType_NOias_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseType_NOias" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetRequestLicenseType_NOias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestLicenseType_NOiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigApproveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigApproveMember" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigApproveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigApproveMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigGeneral_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigGeneral" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigGeneral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigGeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigApproveDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigApproveDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigApproveDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigApproveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveMember" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateCodeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateCodeByName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateCodeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateCodeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateNameById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPetitionFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPetitionFee" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPetitionFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPetitionFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertLogOpenMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogOpenMenu" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertLogOpenMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogOpenMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPlaceExamNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaceExamNameById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPlaceExamNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaceExamNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAcceptOffNameById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptOffNameById" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAcceptOffNameById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAcceptOffNameByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyNameByIdToText_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameByIdToText" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyNameByIdToText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyNameByIdToTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateToSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateToSetting" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociateToSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociateToSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigApproveMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigApproveMember" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigApproveMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigApproveMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigApproveMemberByApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigApproveMemberByApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigApproveMemberByApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigApproveMemberByApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_DeleteDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_DeleteDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertConfigDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConfigDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertConfigDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConfigDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigDocumentByDocumentCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigDocumentByDocumentCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigDocumentByDocumentCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigDocumentByDocumentCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_DeleteConfigDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConfigDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_DeleteConfigDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConfigDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigPetitionLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigPetitionLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigPetitionLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigPetitionLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigDocumentLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigDocumentLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetConfigDocumentLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigDocumentLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateConfigApproveLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConfigApproveLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByPetitionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByPetitionType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByPetitionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByPetitionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupByCompCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupByCompCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceGroupByCompCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceGroupByCompCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceByCompCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceByCompCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamPlaceByCompCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceByCompCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeDeleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeDeleted" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentTypeDeleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeDeletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByCompCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByCompCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByCompCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByCompCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetCompanyByLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfig" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPersonLicenseType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPersonLicenseType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetSpecialDocType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialDocType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetSpecialDocType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecialDocType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecialDocType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetExamSpecialDocType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamSpecialDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocRequire_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocRequire" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocRequire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocRequireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigList" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentConfigList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentConfigListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByCreateTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByCreateTest" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByCreateTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByCreateTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetMemberDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByPetitionTypeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByPetitionTypeName" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetDocumentLicenseConfigByPetitionTypeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentLicenseConfigByPetitionTypeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPicByDocumentCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPicByDocumentCode" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetPicByDocumentCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPicByDocumentCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAgentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAgentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByAgentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByAgentType" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetLicenseTypeByAgentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeByAgentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociation" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationJoinLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationJoinLicense" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_GetAssociationJoinLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssociationJoinLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertAssociation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAssociation" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_InsertAssociation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAssociationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateAsscoiation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAsscoiation" />
+  </wsdl:message>
+  <wsdl:message name="IDataCenterService_UpdateAsscoiation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAsscoiationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDataCenterService">
+    <wsdl:operation name="DeleteAsscoiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/DeleteAsscoiation" message="tns:IDataCenterService_DeleteAsscoiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/DeleteAsscoiationResponse" message="tns:IDataCenterService_DeleteAsscoiation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQualification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetQualification" message="tns:IDataCenterService_GetQualification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetQualificationResponse" message="tns:IDataCenterService_GetQualification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCancelApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateCancelApplicant" message="tns:IDataCenterService_UpdateCancelApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateCancelApplicantResponse" message="tns:IDataCenterService_UpdateCancelApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigPrint" message="tns:IDataCenterService_GetConfigPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigPrintResponse" message="tns:IDataCenterService_GetConfigPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/SaveConfigPrint" message="tns:IDataCenterService_SaveConfigPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/SaveConfigPrintResponse" message="tns:IDataCenterService_SaveConfigPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicense" message="tns:IDataCenterService_GetAssociationLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicenseResponse" message="tns:IDataCenterService_GetAssociationLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicenseByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicenseByCode" message="tns:IDataCenterService_GetAssociationLicenseByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicenseByCodeResponse" message="tns:IDataCenterService_GetAssociationLicenseByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceFromProvinceAndGroupCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndGroupCode" message="tns:IDataCenterService_GetExamPlaceFromProvinceAndGroupCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndGroupCodeResponse" message="tns:IDataCenterService_GetExamPlaceFromProvinceAndGroupCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceFromProvinceAndAssoCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndAssoCode" message="tns:IDataCenterService_GetExamPlaceFromProvinceAndAssoCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndAssoCodeResponse" message="tns:IDataCenterService_GetExamPlaceFromProvinceAndAssoCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetSubjectGroup" message="tns:IDataCenterService_GetSubjectGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetSubjectGroupResponse" message="tns:IDataCenterService_GetSubjectGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicenseByAssocCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicenseByAssocCode" message="tns:IDataCenterService_GetAssociationLicenseByAssocCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationLicenseByAssocCodeResponse" message="tns:IDataCenterService_GetAssociationLicenseByAssocCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeAsCompanyT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeAsCompanyT" message="tns:IDataCenterService_GetCompanyCodeAsCompanyT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeAsCompanyTResponse" message="tns:IDataCenterService_GetCompanyCodeAsCompanyT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultcompanyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDefaultcompanyName" message="tns:IDataCenterService_GetDefaultcompanyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDefaultcompanyNameResponse" message="tns:IDataCenterService_GetDefaultcompanyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConfigApproveMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetNewConfigApproveMember" message="tns:IDataCenterService_GetNewConfigApproveMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetNewConfigApproveMemberResponse" message="tns:IDataCenterService_GetNewConfigApproveMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewConfigApproveMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateNewConfigApproveMember" message="tns:IDataCenterService_UpdateNewConfigApproveMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateNewConfigApproveMemberResponse" message="tns:IDataCenterService_UpdateNewConfigApproveMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssByAssCodeAndAssName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssByAssCodeAndAssName" message="tns:IDataCenterService_GetAssByAssCodeAndAssName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssByAssCodeAndAssNameResponse" message="tns:IDataCenterService_GetAssByAssCodeAndAssName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPerBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPerBill" message="tns:IDataCenterService_GetExamPerBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPerBillResponse" message="tns:IDataCenterService_GetExamPerBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleNameFromSex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleNameFromSex" message="tns:IDataCenterService_GetTitleNameFromSex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleNameFromSexResponse" message="tns:IDataCenterService_GetTitleNameFromSex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationByByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationByByCriteria" message="tns:IDataCenterService_GetAssociationByByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationByByCriteriaResponse" message="tns:IDataCenterService_GetAssociationByByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupR" message="tns:IDataCenterService_GetExamPlaceGroupR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRResponse" message="tns:IDataCenterService_GetExamPlaceGroupR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupRByIDName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByIDName" message="tns:IDataCenterService_GetExamPlaceGroupRByIDName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByIDNameResponse" message="tns:IDataCenterService_GetExamPlaceGroupRByIDName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamPlaceGroupR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/InsertExamPlaceGroupR" message="tns:IDataCenterService_InsertExamPlaceGroupR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/InsertExamPlaceGroupRResponse" message="tns:IDataCenterService_InsertExamPlaceGroupR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupRByCheckID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByCheckID" message="tns:IDataCenterService_GetExamPlaceGroupRByCheckID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByCheckIDResponse" message="tns:IDataCenterService_GetExamPlaceGroupRByCheckID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace_UnderAssocicate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlace_UnderAssocicate" message="tns:IDataCenterService_GetExamPlace_UnderAssocicate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlace_UnderAssocicateResponse" message="tns:IDataCenterService_GetExamPlace_UnderAssocicate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceAssociate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetInsuranceAssociate" message="tns:IDataCenterService_GetInsuranceAssociate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetInsuranceAssociateResponse" message="tns:IDataCenterService_GetInsuranceAssociate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceAssociateNameByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetInsuranceAssociateNameByID" message="tns:IDataCenterService_GetInsuranceAssociateNameByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetInsuranceAssociateNameByIDResponse" message="tns:IDataCenterService_GetInsuranceAssociateNameByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace_AndProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlace_AndProvince" message="tns:IDataCenterService_GetExamPlace_AndProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlace_AndProvinceResponse" message="tns:IDataCenterService_GetExamPlace_AndProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecialDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecialDocument" message="tns:IDataCenterService_GetExamSpecialDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecialDocumentResponse" message="tns:IDataCenterService_GetExamSpecialDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainSpecialDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTrainSpecialDocument" message="tns:IDataCenterService_GetTrainSpecialDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTrainSpecialDocumentResponse" message="tns:IDataCenterService_GetTrainSpecialDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationApprove" message="tns:IDataCenterService_GetAssociationApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationApproveResponse" message="tns:IDataCenterService_GetAssociationApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicensefromTestingNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicensefromTestingNo" message="tns:IDataCenterService_GetLicensefromTestingNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicensefromTestingNoResponse" message="tns:IDataCenterService_GetLicensefromTestingNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConficValueByTypeAndGroupCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConficValueByTypeAndGroupCode" message="tns:IDataCenterService_GetConficValueByTypeAndGroupCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConficValueByTypeAndGroupCodeResponse" message="tns:IDataCenterService_GetConficValueByTypeAndGroupCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigCheckExamLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigCheckExamLicense" message="tns:IDataCenterService_GetConfigCheckExamLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigCheckExamLicenseResponse" message="tns:IDataCenterService_GetConfigCheckExamLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigCheckExamLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigCheckExamLicense" message="tns:IDataCenterService_UpdateConfigCheckExamLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigCheckExamLicenseResponse" message="tns:IDataCenterService_UpdateConfigCheckExamLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByAsso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByAsso" message="tns:IDataCenterService_GetLicenseTypeByAsso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByAssoResponse" message="tns:IDataCenterService_GetLicenseTypeByAsso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainSpecialbyIdCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTrainSpecialbyIdCard" message="tns:IDataCenterService_GetTrainSpecialbyIdCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTrainSpecialbyIdCardResponse" message="tns:IDataCenterService_GetTrainSpecialbyIdCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserVerifyDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetUserVerifyDoc" message="tns:IDataCenterService_GetUserVerifyDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetUserVerifyDocResponse" message="tns:IDataCenterService_GetUserVerifyDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecial" message="tns:IDataCenterService_GetExamSpecial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecialResponse" message="tns:IDataCenterService_GetExamSpecial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeRegister" message="tns:IDataCenterService_GetMemberTypeRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeRegisterResponse" message="tns:IDataCenterService_GetMemberTypeRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleName" message="tns:IDataCenterService_GetTitleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleNameResponse" message="tns:IDataCenterService_GetTitleName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeById" message="tns:IDataCenterService_GetMemberTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeByIdResponse" message="tns:IDataCenterService_GetMemberTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvince">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetProvince" message="tns:IDataCenterService_GetProvince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetProvinceResponse" message="tns:IDataCenterService_GetProvince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleNameById" message="tns:IDataCenterService_GetTitleNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTitleNameByIdResponse" message="tns:IDataCenterService_GetTitleNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmpur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAmpur" message="tns:IDataCenterService_GetAmpur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAmpurResponse" message="tns:IDataCenterService_GetAmpur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTumbon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTumbon" message="tns:IDataCenterService_GetTumbon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTumbonResponse" message="tns:IDataCenterService_GetTumbon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEducation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetEducation" message="tns:IDataCenterService_GetEducation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetEducationResponse" message="tns:IDataCenterService_GetEducation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetEducationById" message="tns:IDataCenterService_GetEducationById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetEducationByIdResponse" message="tns:IDataCenterService_GetEducationById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentType" message="tns:IDataCenterService_GetDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeResponse" message="tns:IDataCenterService_GetDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeAll" message="tns:IDataCenterService_GetDocumentTypeAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeAllResponse" message="tns:IDataCenterService_GetDocumentTypeAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeIsImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeIsImage" message="tns:IDataCenterService_GetDocumentTypeIsImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeIsImageResponse" message="tns:IDataCenterService_GetDocumentTypeIsImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetStatus" message="tns:IDataCenterService_GetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetStatusResponse" message="tns:IDataCenterService_GetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberType" message="tns:IDataCenterService_GetMemberType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeResponse" message="tns:IDataCenterService_GetMemberType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeNotOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeNotOIC" message="tns:IDataCenterService_GetMemberTypeNotOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeNotOICResponse" message="tns:IDataCenterService_GetMemberTypeNotOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeNotOIC_for_regSearchOfficerOIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeNotOIC_for_regSearchOfficerOIC" message="tns:IDataCenterService_GetMemberTypeNotOIC_for_regSearchOfficerOIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberTypeNotOIC_for_regSearchOfficerOICResponse" message="tns:IDataCenterService_GetMemberTypeNotOIC_for_regSearchOfficerOIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOICType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetOICType" message="tns:IDataCenterService_GetOICType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetOICTypeResponse" message="tns:IDataCenterService_GetOICType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNationality">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetNationality" message="tns:IDataCenterService_GetNationality_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetNationalityResponse" message="tns:IDataCenterService_GetNationality_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetNationalityById" message="tns:IDataCenterService_GetNationalityById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetNationalityByIdResponse" message="tns:IDataCenterService_GetNationalityById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCode" message="tns:IDataCenterService_GetCompanyCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeResponse" message="tns:IDataCenterService_GetCompanyCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByName" message="tns:IDataCenterService_GetCompanyByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByNameResponse" message="tns:IDataCenterService_GetCompanyByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeById" message="tns:IDataCenterService_GetCompanyCodeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeByIdResponse" message="tns:IDataCenterService_GetCompanyCodeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyNameById" message="tns:IDataCenterService_GetCompanyNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyNameByIdResponse" message="tns:IDataCenterService_GetCompanyNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeByName" message="tns:IDataCenterService_GetCompanyCodeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyCodeByNameResponse" message="tns:IDataCenterService_GetCompanyCodeByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetApproveConfig" message="tns:IDataCenterService_GetApproveConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetApproveConfigResponse" message="tns:IDataCenterService_GetApproveConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetApproveConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/SetApproveConfig" message="tns:IDataCenterService_SetApproveConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/SetApproveConfigResponse" message="tns:IDataCenterService_SetApproveConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvinceById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetProvinceById" message="tns:IDataCenterService_GetProvinceById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetProvinceByIdResponse" message="tns:IDataCenterService_GetProvinceById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmpurById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAmpurById" message="tns:IDataCenterService_GetAmpurById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAmpurByIdResponse" message="tns:IDataCenterService_GetAmpurById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTumbonById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetTumbonById" message="tns:IDataCenterService_GetTumbonById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetTumbonByIdResponse" message="tns:IDataCenterService_GetTumbonById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroup" message="tns:IDataCenterService_GetExamPlaceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupResponse" message="tns:IDataCenterService_GetExamPlaceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlace" message="tns:IDataCenterService_GetExamPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceResponse" message="tns:IDataCenterService_GetExamPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamTime" message="tns:IDataCenterService_GetExamTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamTimeResponse" message="tns:IDataCenterService_GetExamTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseType" message="tns:IDataCenterService_GetLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeResponse" message="tns:IDataCenterService_GetLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociate" message="tns:IDataCenterService_GetAssociate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateResponse" message="tns:IDataCenterService_GetAssociate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPaymentType" message="tns:IDataCenterService_GetPaymentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPaymentTypeResponse" message="tns:IDataCenterService_GetPaymentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetRequestLicenseType" message="tns:IDataCenterService_GetRequestLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetRequestLicenseTypeResponse" message="tns:IDataCenterService_GetRequestLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPettitionTypebyLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPettitionTypebyLicenseType" message="tns:IDataCenterService_GetPettitionTypebyLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPettitionTypebyLicenseTypeResponse" message="tns:IDataCenterService_GetPettitionTypebyLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseType_NOias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetRequestLicenseType_NOias" message="tns:IDataCenterService_GetRequestLicenseType_NOias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetRequestLicenseType_NOiasResponse" message="tns:IDataCenterService_GetRequestLicenseType_NOias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigApproveMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigApproveMember" message="tns:IDataCenterService_GetConfigApproveMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigApproveMemberResponse" message="tns:IDataCenterService_GetConfigApproveMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigGeneral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigGeneral" message="tns:IDataCenterService_GetConfigGeneral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigGeneralResponse" message="tns:IDataCenterService_GetConfigGeneral_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigApproveDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigApproveDocument" message="tns:IDataCenterService_GetConfigApproveDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigApproveDocumentResponse" message="tns:IDataCenterService_GetConfigApproveDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveMember" message="tns:IDataCenterService_UpdateConfigApproveMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveMemberResponse" message="tns:IDataCenterService_UpdateConfigApproveMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveDocument" message="tns:IDataCenterService_UpdateConfigApproveDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveDocumentResponse" message="tns:IDataCenterService_UpdateConfigApproveDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateCodeByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateCodeByName" message="tns:IDataCenterService_GetAssociateCodeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateCodeByNameResponse" message="tns:IDataCenterService_GetAssociateCodeByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateNameById" message="tns:IDataCenterService_GetAssociateNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateNameByIdResponse" message="tns:IDataCenterService_GetAssociateNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPetitionFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPetitionFee" message="tns:IDataCenterService_GetPetitionFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPetitionFeeResponse" message="tns:IDataCenterService_GetPetitionFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogOpenMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/InsertLogOpenMenu" message="tns:IDataCenterService_InsertLogOpenMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/InsertLogOpenMenuResponse" message="tns:IDataCenterService_InsertLogOpenMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceExamNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPlaceExamNameById" message="tns:IDataCenterService_GetPlaceExamNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPlaceExamNameByIdResponse" message="tns:IDataCenterService_GetPlaceExamNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptOffNameById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAcceptOffNameById" message="tns:IDataCenterService_GetAcceptOffNameById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAcceptOffNameByIdResponse" message="tns:IDataCenterService_GetAcceptOffNameById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameByIdToText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyNameByIdToText" message="tns:IDataCenterService_GetCompanyNameByIdToText_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyNameByIdToTextResponse" message="tns:IDataCenterService_GetCompanyNameByIdToText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByRequest" message="tns:IDataCenterService_GetCompanyByRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByRequestResponse" message="tns:IDataCenterService_GetCompanyByRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateToSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateToSetting" message="tns:IDataCenterService_GetAssociateToSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociateToSettingResponse" message="tns:IDataCenterService_GetAssociateToSetting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigApproveMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMember" message="tns:IDataCenterService_GetDocumentConfigApproveMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMemberResponse" message="tns:IDataCenterService_GetDocumentConfigApproveMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigApproveMemberByApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMemberByApplicant" message="tns:IDataCenterService_GetDocumentConfigApproveMemberByApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMemberByApplicantResponse" message="tns:IDataCenterService_GetDocumentConfigApproveMemberByApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/InsertDocumentType" message="tns:IDataCenterService_InsertDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/InsertDocumentTypeResponse" message="tns:IDataCenterService_InsertDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/DeleteDocumentType" message="tns:IDataCenterService_DeleteDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/DeleteDocumentTypeResponse" message="tns:IDataCenterService_DeleteDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertConfigDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/InsertConfigDocument" message="tns:IDataCenterService_InsertConfigDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/InsertConfigDocumentResponse" message="tns:IDataCenterService_InsertConfigDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigDocumentByDocumentCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigDocumentByDocumentCode" message="tns:IDataCenterService_GetConfigDocumentByDocumentCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigDocumentByDocumentCodeResponse" message="tns:IDataCenterService_GetConfigDocumentByDocumentCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/DeleteConfigDocument" message="tns:IDataCenterService_DeleteConfigDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/DeleteConfigDocumentResponse" message="tns:IDataCenterService_DeleteConfigDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPetitionLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigPetitionLicenseType" message="tns:IDataCenterService_GetConfigPetitionLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigPetitionLicenseTypeResponse" message="tns:IDataCenterService_GetConfigPetitionLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigLicenseType" message="tns:IDataCenterService_GetConfigLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigLicenseTypeResponse" message="tns:IDataCenterService_GetConfigLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigDocumentLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigDocumentLicense" message="tns:IDataCenterService_GetConfigDocumentLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetConfigDocumentLicenseResponse" message="tns:IDataCenterService_GetConfigDocumentLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByType" message="tns:IDataCenterService_GetDocumentLicenseConfigByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByTypeResponse" message="tns:IDataCenterService_GetDocumentLicenseConfigByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveLicense" message="tns:IDataCenterService_UpdateConfigApproveLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateConfigApproveLicenseResponse" message="tns:IDataCenterService_UpdateConfigApproveLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByPetitionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionType" message="tns:IDataCenterService_GetDocumentLicenseConfigByPetitionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionTypeResponse" message="tns:IDataCenterService_GetDocumentLicenseConfigByPetitionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupByCompCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupByCompCode" message="tns:IDataCenterService_GetExamPlaceGroupByCompCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceGroupByCompCodeResponse" message="tns:IDataCenterService_GetExamPlaceGroupByCompCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceByCompCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceByCompCode" message="tns:IDataCenterService_GetExamPlaceByCompCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamPlaceByCompCodeResponse" message="tns:IDataCenterService_GetExamPlaceByCompCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeDeleted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeDeleted" message="tns:IDataCenterService_GetDocumentTypeDeleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentTypeDeletedResponse" message="tns:IDataCenterService_GetDocumentTypeDeleted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByCompCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByCompCode" message="tns:IDataCenterService_GetLicenseTypeByCompCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByCompCodeResponse" message="tns:IDataCenterService_GetLicenseTypeByCompCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByLicenseType" message="tns:IDataCenterService_GetCompanyByLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetCompanyByLicenseTypeResponse" message="tns:IDataCenterService_GetCompanyByLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfig" message="tns:IDataCenterService_GetDocumentLicenseConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigResponse" message="tns:IDataCenterService_GetDocumentLicenseConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonLicenseType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPersonLicenseType" message="tns:IDataCenterService_GetPersonLicenseType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPersonLicenseTypeResponse" message="tns:IDataCenterService_GetPersonLicenseType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialDocType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetSpecialDocType" message="tns:IDataCenterService_GetSpecialDocType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetSpecialDocTypeResponse" message="tns:IDataCenterService_GetSpecialDocType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecialDocType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecialDocType" message="tns:IDataCenterService_GetExamSpecialDocType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetExamSpecialDocTypeResponse" message="tns:IDataCenterService_GetExamSpecialDocType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRequire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocRequire" message="tns:IDataCenterService_GetDocRequire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocRequireResponse" message="tns:IDataCenterService_GetDocRequire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigList" message="tns:IDataCenterService_GetDocumentConfigList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentConfigListResponse" message="tns:IDataCenterService_GetDocumentConfigList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByCreateTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByCreateTest" message="tns:IDataCenterService_GetLicenseTypeByCreateTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByCreateTestResponse" message="tns:IDataCenterService_GetLicenseTypeByCreateTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberDocumentType" message="tns:IDataCenterService_GetMemberDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetMemberDocumentTypeResponse" message="tns:IDataCenterService_GetMemberDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByPetitionTypeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionTypeName" message="tns:IDataCenterService_GetDocumentLicenseConfigByPetitionTypeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionTypeNameResponse" message="tns:IDataCenterService_GetDocumentLicenseConfigByPetitionTypeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPicByDocumentCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetPicByDocumentCode" message="tns:IDataCenterService_GetPicByDocumentCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetPicByDocumentCodeResponse" message="tns:IDataCenterService_GetPicByDocumentCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAgentType" message="tns:IDataCenterService_GetAgentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAgentTypeResponse" message="tns:IDataCenterService_GetAgentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByAgentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByAgentType" message="tns:IDataCenterService_GetLicenseTypeByAgentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetLicenseTypeByAgentTypeResponse" message="tns:IDataCenterService_GetLicenseTypeByAgentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociation" message="tns:IDataCenterService_GetAssociation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationResponse" message="tns:IDataCenterService_GetAssociation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationJoinLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationJoinLicense" message="tns:IDataCenterService_GetAssociationJoinLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/GetAssociationJoinLicenseResponse" message="tns:IDataCenterService_GetAssociationJoinLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAssociation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/InsertAssociation" message="tns:IDataCenterService_InsertAssociation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/InsertAssociationResponse" message="tns:IDataCenterService_InsertAssociation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAsscoiation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataCenterService/UpdateAsscoiation" message="tns:IDataCenterService_UpdateAsscoiation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataCenterService/UpdateAsscoiationResponse" message="tns:IDataCenterService_UpdateAsscoiation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDataCenterService" type="tns:IDataCenterService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteAsscoiation">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/DeleteAsscoiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQualification">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetQualification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCancelApplicant">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateCancelApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPrint">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfigPrint">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/SaveConfigPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicenseByCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationLicenseByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceFromProvinceAndGroupCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndGroupCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceFromProvinceAndAssoCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceFromProvinceAndAssoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectGroup">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetSubjectGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationLicenseByAssocCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationLicenseByAssocCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeAsCompanyT">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyCodeAsCompanyT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultcompanyName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDefaultcompanyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewConfigApproveMember">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetNewConfigApproveMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewConfigApproveMember">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateNewConfigApproveMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssByAssCodeAndAssName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssByAssCodeAndAssName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPerBill">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPerBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleNameFromSex">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTitleNameFromSex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationByByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationByByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupR">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceGroupR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupRByIDName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByIDName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExamPlaceGroupR">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/InsertExamPlaceGroupR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupRByCheckID">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceGroupRByCheckID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace_UnderAssocicate">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlace_UnderAssocicate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceAssociate">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetInsuranceAssociate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuranceAssociateNameByID">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetInsuranceAssociateNameByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace_AndProvince">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlace_AndProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecialDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamSpecialDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainSpecialDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTrainSpecialDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationApprove">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicensefromTestingNo">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicensefromTestingNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConficValueByTypeAndGroupCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConficValueByTypeAndGroupCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigCheckExamLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigCheckExamLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigCheckExamLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateConfigCheckExamLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByAsso">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicenseTypeByAsso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrainSpecialbyIdCard">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTrainSpecialbyIdCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserVerifyDoc">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetUserVerifyDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecial">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamSpecial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeRegister">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberTypeRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTitleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvince">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitleNameById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTitleNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmpur">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAmpur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTumbon">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTumbon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEducation">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEducationById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetEducationById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeAll">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentTypeAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeIsImage">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentTypeIsImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeNotOIC">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberTypeNotOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberTypeNotOIC_for_regSearchOfficerOIC">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberTypeNotOIC_for_regSearchOfficerOIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOICType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetOICType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNationality">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetNationality" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNationalityById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetNationalityById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyCodeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyCodeByName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyCodeByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveConfig">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetApproveConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApproveConfig">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/SetApproveConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvinceById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetProvinceById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmpurById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAmpurById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTumbonById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetTumbonById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroup">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlace">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamTime">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociate">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPaymentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetRequestLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPettitionTypebyLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPettitionTypebyLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestLicenseType_NOias">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetRequestLicenseType_NOias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigApproveMember">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigApproveMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigGeneral">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigGeneral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigApproveDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigApproveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveMember">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateConfigApproveMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateConfigApproveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateCodeByName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociateCodeByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateNameById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociateNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPetitionFee">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPetitionFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogOpenMenu">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/InsertLogOpenMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceExamNameById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPlaceExamNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcceptOffNameById">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAcceptOffNameById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyNameByIdToText">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyNameByIdToText" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByRequest">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyByRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociateToSetting">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociateToSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigApproveMember">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigApproveMemberByApplicant">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentConfigApproveMemberByApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/InsertDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/DeleteDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertConfigDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/InsertConfigDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigDocumentByDocumentCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigDocumentByDocumentCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConfigDocument">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/DeleteConfigDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPetitionLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigPetitionLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigDocumentLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetConfigDocumentLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConfigApproveLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateConfigApproveLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByPetitionType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceGroupByCompCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceGroupByCompCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceByCompCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamPlaceByCompCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeDeleted">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentTypeDeleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByCompCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicenseTypeByCompCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetCompanyByLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfig">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonLicenseType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPersonLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialDocType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetSpecialDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamSpecialDocType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetExamSpecialDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRequire">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocRequire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentConfigList">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentConfigList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByCreateTest">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicenseTypeByCreateTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberDocumentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetMemberDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentLicenseConfigByPetitionTypeName">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetDocumentLicenseConfigByPetitionTypeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPicByDocumentCode">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetPicByDocumentCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAgentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseTypeByAgentType">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetLicenseTypeByAgentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociation">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssociationJoinLicense">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/GetAssociationJoinLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAssociation">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/InsertAssociation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAsscoiation">
+      <soap:operation soapAction="http://tempuri.org/IDataCenterService/UpdateAsscoiation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataCenterService">
+    <wsdl:port name="BasicHttpBinding_IDataCenterService" binding="tns:BasicHttpBinding_IDataCenterService">
+      <soap:address location="http://localhost:3333/DataCenter/DataCenterService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

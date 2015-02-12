@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ApplicantService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9999/Applicant/ApplicantService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9999/Applicant/ApplicantService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9999/Applicant/ApplicantService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/IAS.DTO" />
+      <xsd:import schemaLocation="http://localhost:9999/Applicant/ApplicantService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:9999/Applicant/ApplicantService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IApplicantService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertAndCheckApplicantGroupUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckApplicantGroupUpload" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertAndCheckApplicantGroupUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAndCheckApplicantGroupUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_UpdateApplicantGroupUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantGroupUpload" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_UpdateApplicantGroupUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicantGroupUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ApplicantGroupUploadToSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicantGroupUploadToSubmit" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ApplicantGroupUploadToSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicantGroupUploadToSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantByCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantByCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantByCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantByCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantByCriteriaSendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantByCriteriaSendMail" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantByCriteriaSendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantByCriteriaSendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantById" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantUploadTempById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantUploadTempById" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantUploadTempById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantUploadTempByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantGroupUploadByGroupUploadNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantGroupUploadByGroupUploadNo" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantGroupUploadByGroupUploadNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantGroupUploadByGroupUploadNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertSingleApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSingleApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertSingleApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSingleApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantInfo" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetRequestEditApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestEditApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetRequestEditApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestEditApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantChangeMaxID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantChangeMaxID" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantChangeMaxID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantChangeMaxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertApplicantChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertApplicantChange" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertApplicantChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertApplicantChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetHistoryApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetHistoryApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoryApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantDetail" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApproveEditApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveEditApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApproveEditApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveEditApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantTLogMaxID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantTLogMaxID" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantTLogMaxID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantTLogMaxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantTtoLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantTtoLog" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantTtoLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantTtoLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertApplicantTLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertApplicantTLog" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertApplicantTLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertApplicantTLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertAttrachFileApplicantChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttrachFileApplicantChange" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_InsertAttrachFileApplicantChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAttrachFileApplicantChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetAttachFileAppChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachFileAppChange" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetAttachFileAppChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttachFileAppChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetAttatchFilesAppChangeByIDCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFilesAppChangeByIDCard" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetAttatchFilesAppChangeByIDCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttatchFilesAppChangeByIDCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApproveAppForStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveAppForStatus" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApproveAppForStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApproveAppForStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_SendMailAppChange_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailAppChange" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_SendMailAppChange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailAppChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetCheckIDAppT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckIDAppT" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetCheckIDAppT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckIDAppTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_getManageApplicantCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:getManageApplicantCourse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_getManageApplicantCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getManageApplicantCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetExamPlaceByLicenseAneOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceByLicenseAneOwner" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetExamPlaceByLicenseAneOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamPlaceByLicenseAneOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantFromTestingNoForManageApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantFromTestingNoForManageApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetApplicantFromTestingNoForManageApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicantFromTestingNoForManageApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetExamRoomByTestingNoforManage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByTestingNoforManage" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetExamRoomByTestingNoforManage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamRoomByTestingNoforManageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_SaveExamAppRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExamAppRoom" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_SaveExamAppRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveExamAppRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CancleExamApplicantManage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancleExamApplicantManage" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CancleExamApplicantManage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancleExamApplicantManageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_AddtoDBRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddtoDBRoom" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_AddtoDBRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddtoDBRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetQuantityBillPerPageByConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityBillPerPageByConfig" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_GetQuantityBillPerPageByConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityBillPerPageByConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CheckApplicantIsDuplicate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckApplicantIsDuplicate" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CheckApplicantIsDuplicate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckApplicantIsDuplicateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CheckApplicantExamDup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckApplicantExamDup" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_CheckApplicantExamDup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckApplicantExamDupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantSingleBeforeSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantSingleBeforeSubmit" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantSingleBeforeSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantSingleBeforeSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantTestCenter_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantTestCenter" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantTestCenter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantTestCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_IsPersonCanApplicant_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonCanApplicant" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_IsPersonCanApplicant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPersonCanApplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantBeforeSaveList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantBeforeSaveList" />
+  </wsdl:message>
+  <wsdl:message name="IApplicantService_ValidateApplicantBeforeSaveList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApplicantBeforeSaveListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IApplicantService">
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/Insert" message="tns:IApplicantService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertResponse" message="tns:IApplicantService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/Update" message="tns:IApplicantService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/UpdateResponse" message="tns:IApplicantService_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetById" message="tns:IApplicantService_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetByIdResponse" message="tns:IApplicantService_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/Delete" message="tns:IApplicantService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/DeleteResponse" message="tns:IApplicantService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckApplicantGroupUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/InsertAndCheckApplicantGroupUpload" message="tns:IApplicantService_InsertAndCheckApplicantGroupUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertAndCheckApplicantGroupUploadResponse" message="tns:IApplicantService_InsertAndCheckApplicantGroupUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantGroupUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/UpdateApplicantGroupUpload" message="tns:IApplicantService_UpdateApplicantGroupUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/UpdateApplicantGroupUploadResponse" message="tns:IApplicantService_UpdateApplicantGroupUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicantGroupUploadToSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/ApplicantGroupUploadToSubmit" message="tns:IApplicantService_ApplicantGroupUploadToSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/ApplicantGroupUploadToSubmitResponse" message="tns:IApplicantService_ApplicantGroupUploadToSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantByCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantByCriteria" message="tns:IApplicantService_GetApplicantByCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantByCriteriaResponse" message="tns:IApplicantService_GetApplicantByCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantByCriteriaSendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantByCriteriaSendMail" message="tns:IApplicantService_GetApplicantByCriteriaSendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantByCriteriaSendMailResponse" message="tns:IApplicantService_GetApplicantByCriteriaSendMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantById" message="tns:IApplicantService_GetApplicantById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantByIdResponse" message="tns:IApplicantService_GetApplicantById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantUploadTempById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantUploadTempById" message="tns:IApplicantService_GetApplicantUploadTempById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantUploadTempByIdResponse" message="tns:IApplicantService_GetApplicantUploadTempById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantGroupUploadByGroupUploadNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantGroupUploadByGroupUploadNo" message="tns:IApplicantService_GetApplicantGroupUploadByGroupUploadNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantGroupUploadByGroupUploadNoResponse" message="tns:IApplicantService_GetApplicantGroupUploadByGroupUploadNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSingleApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/InsertSingleApplicant" message="tns:IApplicantService_InsertSingleApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertSingleApplicantResponse" message="tns:IApplicantService_InsertSingleApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantInfo" message="tns:IApplicantService_GetApplicantInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantInfoResponse" message="tns:IApplicantService_GetApplicantInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestEditApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetRequestEditApplicant" message="tns:IApplicantService_GetRequestEditApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetRequestEditApplicantResponse" message="tns:IApplicantService_GetRequestEditApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantChangeMaxID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantChangeMaxID" message="tns:IApplicantService_GetApplicantChangeMaxID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantChangeMaxIDResponse" message="tns:IApplicantService_GetApplicantChangeMaxID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertApplicantChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/InsertApplicantChange" message="tns:IApplicantService_InsertApplicantChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertApplicantChangeResponse" message="tns:IApplicantService_InsertApplicantChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetHistoryApplicant" message="tns:IApplicantService_GetHistoryApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetHistoryApplicantResponse" message="tns:IApplicantService_GetHistoryApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantDetail" message="tns:IApplicantService_GetApplicantDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantDetailResponse" message="tns:IApplicantService_GetApplicantDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveEditApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApproveEditApplicant" message="tns:IApplicantService_GetApproveEditApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApproveEditApplicantResponse" message="tns:IApplicantService_GetApproveEditApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTLogMaxID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantTLogMaxID" message="tns:IApplicantService_GetApplicantTLogMaxID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantTLogMaxIDResponse" message="tns:IApplicantService_GetApplicantTLogMaxID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTtoLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantTtoLog" message="tns:IApplicantService_GetApplicantTtoLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantTtoLogResponse" message="tns:IApplicantService_GetApplicantTtoLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertApplicantTLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/InsertApplicantTLog" message="tns:IApplicantService_InsertApplicantTLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertApplicantTLogResponse" message="tns:IApplicantService_InsertApplicantTLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttrachFileApplicantChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/InsertAttrachFileApplicantChange" message="tns:IApplicantService_InsertAttrachFileApplicantChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/InsertAttrachFileApplicantChangeResponse" message="tns:IApplicantService_InsertAttrachFileApplicantChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachFileAppChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetAttachFileAppChange" message="tns:IApplicantService_GetAttachFileAppChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetAttachFileAppChangeResponse" message="tns:IApplicantService_GetAttachFileAppChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFilesAppChangeByIDCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetAttatchFilesAppChangeByIDCard" message="tns:IApplicantService_GetAttatchFilesAppChangeByIDCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetAttatchFilesAppChangeByIDCardResponse" message="tns:IApplicantService_GetAttatchFilesAppChangeByIDCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveAppForStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApproveAppForStatus" message="tns:IApplicantService_GetApproveAppForStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApproveAppForStatusResponse" message="tns:IApplicantService_GetApproveAppForStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailAppChange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/SendMailAppChange" message="tns:IApplicantService_SendMailAppChange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/SendMailAppChangeResponse" message="tns:IApplicantService_SendMailAppChange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckIDAppT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetCheckIDAppT" message="tns:IApplicantService_GetCheckIDAppT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetCheckIDAppTResponse" message="tns:IApplicantService_GetCheckIDAppT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getManageApplicantCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/getManageApplicantCourse" message="tns:IApplicantService_getManageApplicantCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/getManageApplicantCourseResponse" message="tns:IApplicantService_getManageApplicantCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceByLicenseAneOwner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetExamPlaceByLicenseAneOwner" message="tns:IApplicantService_GetExamPlaceByLicenseAneOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetExamPlaceByLicenseAneOwnerResponse" message="tns:IApplicantService_GetExamPlaceByLicenseAneOwner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantFromTestingNoForManageApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantFromTestingNoForManageApplicant" message="tns:IApplicantService_GetApplicantFromTestingNoForManageApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetApplicantFromTestingNoForManageApplicantResponse" message="tns:IApplicantService_GetApplicantFromTestingNoForManageApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByTestingNoforManage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetExamRoomByTestingNoforManage" message="tns:IApplicantService_GetExamRoomByTestingNoforManage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetExamRoomByTestingNoforManageResponse" message="tns:IApplicantService_GetExamRoomByTestingNoforManage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveExamAppRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/SaveExamAppRoom" message="tns:IApplicantService_SaveExamAppRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/SaveExamAppRoomResponse" message="tns:IApplicantService_SaveExamAppRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancleExamApplicantManage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/CancleExamApplicantManage" message="tns:IApplicantService_CancleExamApplicantManage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/CancleExamApplicantManageResponse" message="tns:IApplicantService_CancleExamApplicantManage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddtoDBRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/AddtoDBRoom" message="tns:IApplicantService_AddtoDBRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/AddtoDBRoomResponse" message="tns:IApplicantService_AddtoDBRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityBillPerPageByConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/GetQuantityBillPerPageByConfig" message="tns:IApplicantService_GetQuantityBillPerPageByConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/GetQuantityBillPerPageByConfigResponse" message="tns:IApplicantService_GetQuantityBillPerPageByConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckApplicantIsDuplicate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/CheckApplicantIsDuplicate" message="tns:IApplicantService_CheckApplicantIsDuplicate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/CheckApplicantIsDuplicateResponse" message="tns:IApplicantService_CheckApplicantIsDuplicate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckApplicantExamDup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/CheckApplicantExamDup" message="tns:IApplicantService_CheckApplicantExamDup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/CheckApplicantExamDupResponse" message="tns:IApplicantService_CheckApplicantExamDup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantSingleBeforeSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantSingleBeforeSubmit" message="tns:IApplicantService_ValidateApplicantSingleBeforeSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantSingleBeforeSubmitResponse" message="tns:IApplicantService_ValidateApplicantSingleBeforeSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantTestCenter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantTestCenter" message="tns:IApplicantService_ValidateApplicantTestCenter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantTestCenterResponse" message="tns:IApplicantService_ValidateApplicantTestCenter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPersonCanApplicant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/IsPersonCanApplicant" message="tns:IApplicantService_IsPersonCanApplicant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/IsPersonCanApplicantResponse" message="tns:IApplicantService_IsPersonCanApplicant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantBeforeSaveList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantBeforeSaveList" message="tns:IApplicantService_ValidateApplicantBeforeSaveList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplicantService/ValidateApplicantBeforeSaveListResponse" message="tns:IApplicantService_ValidateApplicantBeforeSaveList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IApplicantService" type="tns:IApplicantService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAndCheckApplicantGroupUpload">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/InsertAndCheckApplicantGroupUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantGroupUpload">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/UpdateApplicantGroupUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicantGroupUploadToSubmit">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/ApplicantGroupUploadToSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantByCriteria">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantByCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantByCriteriaSendMail">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantByCriteriaSendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantById">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantUploadTempById">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantUploadTempById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantGroupUploadByGroupUploadNo">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantGroupUploadByGroupUploadNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSingleApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/InsertSingleApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantInfo">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestEditApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetRequestEditApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantChangeMaxID">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantChangeMaxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertApplicantChange">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/InsertApplicantChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoryApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetHistoryApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantDetail">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveEditApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApproveEditApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTLogMaxID">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantTLogMaxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTtoLog">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantTtoLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertApplicantTLog">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/InsertApplicantTLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAttrachFileApplicantChange">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/InsertAttrachFileApplicantChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachFileAppChange">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetAttachFileAppChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttatchFilesAppChangeByIDCard">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetAttatchFilesAppChangeByIDCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApproveAppForStatus">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApproveAppForStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailAppChange">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/SendMailAppChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckIDAppT">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetCheckIDAppT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getManageApplicantCourse">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/getManageApplicantCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamPlaceByLicenseAneOwner">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetExamPlaceByLicenseAneOwner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantFromTestingNoForManageApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetApplicantFromTestingNoForManageApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamRoomByTestingNoforManage">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetExamRoomByTestingNoforManage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExamAppRoom">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/SaveExamAppRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancleExamApplicantManage">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/CancleExamApplicantManage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddtoDBRoom">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/AddtoDBRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityBillPerPageByConfig">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/GetQuantityBillPerPageByConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckApplicantIsDuplicate">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/CheckApplicantIsDuplicate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckApplicantExamDup">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/CheckApplicantExamDup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantSingleBeforeSubmit">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/ValidateApplicantSingleBeforeSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantTestCenter">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/ValidateApplicantTestCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPersonCanApplicant">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/IsPersonCanApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApplicantBeforeSaveList">
+      <soap:operation soapAction="http://tempuri.org/IApplicantService/ValidateApplicantBeforeSaveList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplicantService">
+    <wsdl:port name="BasicHttpBinding_IApplicantService" binding="tns:BasicHttpBinding_IApplicantService">
+      <soap:address location="http://localhost:9999/Applicant/ApplicantService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+D:\[-PRO-]\IAS.Common\bin\Debug\IAS.Common.dll
+D:\[-PRO-]\IAS.Common\bin\Debug\IAS.Common.pdb
+D:\[-PRO-]\IAS.Common\bin\Debug\log4net.dll
+D:\[-PRO-]\IAS.Common\bin\Debug\StructureMap.dll
+D:\[-PRO-]\IAS.Common\bin\Debug\log4net.xml
+D:\[-PRO-]\IAS.Common\bin\Debug\StructureMap.pdb
+D:\[-PRO-]\IAS.Common\bin\Debug\StructureMap.xml
+D:\[-PRO-]\IAS.Common\obj\Debug\IAS.Common.csprojResolveAssemblyReference.cache
+D:\[-PRO-]\IAS.Common\obj\Debug\IAS.Common.dll
+D:\[-PRO-]\IAS.Common\obj\Debug\IAS.Common.pdb

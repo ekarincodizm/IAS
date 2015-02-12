@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IAS.DataServices.License.LicenseService" CodeBehind="LicenseService.svc.cs" %>

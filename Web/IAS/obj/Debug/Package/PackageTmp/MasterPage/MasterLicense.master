@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/Site1.Master" AutoEventWireup="true" CodeBehind="MasterLicense.master.cs" Inherits="IAS.MasterPage.MasterLicense" %>
+<%@ Register Src="../UserControl/UCLoadingProgress.ascx" TagName="UCLoadingProgress" TagPrefix="ucLoading" %>
+<%@ Register Src="../UserControl/UCModalError.ascx" TagName="UCModalError" TagPrefix="ucLicenseModelError" %>
+<%@ Register Src="~/UserControl/UCModalSuccess.ascx" TagName="UCModalSuccess" TagPrefix="ucLicenseModelSuccess" %>
+<%@ Register Src="~/UserControl/ucAttachFileControl.ascx" TagName="ucAttachFileControl" tagprefix="ucAttachFileCtrl" %>
+<%--<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>--%>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Detail" runat="server">
+    <link rel="stylesheet" type="text/css"  href="../style/button.css"/>
+<div class="box_content">
+<div class="box_content_header">
+    <div class="box_content_header_text">
+    <asp:Label ID="lblHeadName" runat="server" Text=""></asp:Label>
+    </div>
+</div>
+<div>
+    <asp:Panel ID="pnlMaster" runat="server">
+        <asp:UpdatePanel ID="udpMaster" runat="server" UpdateMode="Conditional">
+            <Triggers>
+                <asp:PostBackTrigger ControlID="btnloop" />
+            </Triggers>
+            <ContentTemplate>
+                <asp:Panel ID="pnlMain" runat="server" HorizontalAlign="Center">
+                <div style="clear:both;"></div>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td align="right" >
+                            <asp:ImageButton ID="btnloop" runat="server" style="margin-right:12px;" 
+                                ImageUrl="~/Images/loopback.png" ToolTip="กลับไปยังรายการล่าสุด" 
+                                onclick="btnloop_Click" />
+                            <%--<asp:Button ID="btnBackLast" runat="server" Text="กลับไปยังรายการล่าสุด" style="margin-right:12px;"
+                                         Visible="true" onclick="btnBackLast_Click" />--%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" > 
+                            <table cellpadding="0" cellspacing="0" width="798px">
+                                <tr>
+                                    <td>
+                                        <asp:Image ID="imgStep1" runat="server" ToolTip="ขั้นตอน ข้อมูลใบอนุญาต" ImageUrl="~/Images/lincese/menu_step-Recovered_01.png" />
+                                    </td>
+                                    <td>
+                                        <asp:Image ID="imgStep2" runat="server" ToolTip="ขั้นตอน เอกสารแนบ" ImageUrl="~/Images/lincese/menu_step-Recovered_02.png" />
+                                    </td>
+                                    <td>
+                                        <asp:Image ID="imgStep3" runat="server" ToolTip="ขั้นตอน ยอมรับเงื่อนไข" ImageUrl="~/Images/lincese/menu_step-Recovered_03.png" />
+                                    </td>
+                                    <td>
+                                        <asp:Image ID="imgStep4" runat="server" ToolTip="ขั้นตอน ตรวจสอบคุณสมบัติ" ImageUrl="~/Images/lincese/menu_step-Recovered_04.png" />
+                                    </td>
+                                    <td>
+                                        <asp:Image ID="imgStep5" runat="server" ToolTip="ขั้นตอน ดำเนินการต่อ" ImageUrl="~/Images/lincese/menu_step-Recovered_05.png" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:ContentPlaceHolder ID="LicenseDetail" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%--<asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server"></asp:ScriptManagerProxy>--%>
+                            <%--<ucLoading:UCLoadingProgress ID="ucLoading" runat="server" />--%>
+                            <%--<ucLicenseModelError:UCModalError ID="ucLicModelError" runat="server" />
+                            <ucLicenseModelSuccess:UCModalSuccess ID="ucLicModelSuccess" runat="server" />--%>
+                        </td>
+                    </tr>
+                </table>
+                 </asp:Panel>
+            </ContentTemplate> 
+        </asp:UpdatePanel>
+    </asp:Panel>
+   <asp:UpdatePanel ID="udpLicense" runat="server" UpdateMode="Conditional"  >
+    <ContentTemplate>
+        <ucLoading:UCLoadingProgress ID="ucLoading" runat="server" />
+        <ucLicenseModelError:UCModalError ID="ucLicModelError" runat="server" />
+        <ucLicenseModelSuccess:UCModalSuccess ID="ucLicModelSuccess" runat="server" />
+    </ContentTemplate>
+   </asp:UpdatePanel>
+</div>
+</div>
+<div style="clear:left;"></div>
+</asp:Content>

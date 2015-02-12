@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/Site1.Master" AutoEventWireup="true" CodeBehind="MasterPerson.master.cs" Inherits="IAS.MasterPage.MasterPerson" %>
+<%@ Register Src="../UserControl/UCLoadingProgress.ascx" TagName="UCLoadingProgress"
+    TagPrefix="uc1" %>
+<%@ Register Src="../UserControl/UCModalError.ascx" TagName="UCModalError" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControl/UCModalSuccess.ascx" TagName="UCModalSuccess" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControl/ucAttachFileControl.ascx" TagName="ucAttachFileControl" tagprefix="uc4" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">       
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Detail" runat="server">
+        <asp:Panel ID="pnlMain" runat="server" Visible="true" Width="100%">
+            <asp:UpdatePanel ID="UpdatePanelUpload" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+          
+                        <asp:ContentPlaceHolder ID="Detail" runat="server">
+                        </asp:ContentPlaceHolder>
+                 
+                  
+                    <table style="width: 100%;" align="center">
+                        <tr>
+                            <td>          
+                                
+                                <uc4:ucAttachFileControl ID="ucAttachFileControl1" runat="server" />
+
+                            </td>
+                        </tr>
+                    </table>
+                        <table style="width: 90%;" align="center">
+
+                            <tr>
+                                <td style="text-align: center;" colspan="4">
+                                    <asp:Label ID="lblMsg" ClientIDMode="Static" runat="server" ForeColor="Red" CssClass="lbl"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;" colspan="4">
+                                    <%--<asp:ValidationSummary ID="regGuestValidationSummary" runat="server" CssClass="failureNotification"
+                                        ValidationGroup="regGuestValidationGroup" HeaderText="กรุณากรอกข้อมูลให้ครบ"
+                                        ShowSummary="False" ShowMessageBox="true" />--%>
+                                </td>
+                            </tr>
+                        </table>
+
+
+
+
+
+
+                <div class="box_body_content">
+                <%--<div class="box_t_h">::ผลการนำเข้า</div>--%>
+                <div class="box_textbox_bgadd">
+                <div class="box_texbox_add_box">
+
+                  
+                    <table align="center" style="width: 100%;">
+                        <tr>
+                            <td style="text-align: right; width: 25%;">
+                                <div align="center">
+                                <asp:Panel ID="PnlResultReg" runat="server" Visible="true">
+                                <fieldset style="width:50%; text-align:left" >
+                                <legend>ผลการสมัคร</legend>
+                                    <table align="center" style="width: 500px;">
+                                        <tr>
+                                            <td colspan="2" valign="top">
+                                                <asp:Label ID="lblResultReg" runat="server" Text="ผลการสมัคร" CssClass="lbl" Visible="false"></asp:Label>
+                                                &nbsp;&nbsp;
+                                                <asp:TextBox ID="txtResultReg" runat="server" CssClass="txt" Height="100px" Width="500px" TextMode="MultiLine" Enabled="false"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                </asp:Panel>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:Panel ID="PnlAddButton" runat="server" Visible="true">
+                        <table align="center" style="width: 100%;">
+                            <tr>
+                                <td style="text-align: center;" colspan="2">
+                                    <asp:Button ID="btnOk" runat="server" Text="ตกลง" CssClass="btn" OnClick="btnOk_Click"
+                                         ValidationGroup="regGuestValidationGroup" CausesValidation="false" />
+                                    &nbsp;&nbsp;
+                                    <asp:Button ID="btnCancel" runat="server" Text="ยกเลิก" CssClass="btn" OnClientClick="javascript:return confirm('ต้องการยกเลิกใช่หรือไม่?');"
+                                        OnClick="btnCancel_Click" />
+                                    <asp:Button ID="btnClose" runat="server" Text="ปิด" CssClass="btn" Visible = "false" OnClick="btnClose_Click"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                 
+                 </div>
+                 </div>
+                 </div>
+                 
+             
+                    <uc2:UCModalError ID="UCModalError" runat="server" />
+                    <uc3:UCModalSuccess ID="UCModalSuccess" runat="server" />
+                </ContentTemplate>
+ 
+            </asp:UpdatePanel>
+        </asp:Panel>
+ 
+    <asp:HiddenField ID="HiddenField_ID" runat="server" />
+
+    
+  
+  </div>
+  <div style="clear:left;"></div>
+
+    
+</asp:Content>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="281c5e6f-64c8-4a56-95a8-ab4a86edebf5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="IAS.DTO" />
+      <ReferencedAssembly AssemblyName="IAS.Utils" />
+      <ReferencedAssembly AssemblyName="System.Core" />
+      <ReferencedAssembly AssemblyName="System.Data" />
+      <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
+      <ReferencedAssembly AssemblyName="System.ServiceModel" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3333/Person/PersonService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PersonService5.xsd" MetadataType="Schema" ID="e188927a-1009-40bd-8094-24ae3e05f7df" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PersonService51.xsd" MetadataType="Schema" ID="cd82a0c5-7496-43a9-9d42-29747cb91f3c" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonService1.disco" MetadataType="Disco" ID="285a994e-07ed-403a-8a09-5ad33ede870c" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?disco" />
+    <MetadataFile FileName="PersonService52.xsd" MetadataType="Schema" ID="e45f55bf-1025-4008-96a0-14b5c4fb4f15" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PersonService1.wsdl" MetadataType="Wsdl" ID="39a7e659-f780-40cd-a76e-7741d39ae49e" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?wsdl" />
+    <MetadataFile FileName="PersonService53.xsd" MetadataType="Schema" ID="410fea79-70a1-4dd3-b864-2bc325a9acea" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PersonService54.xsd" MetadataType="Schema" ID="f928cd0a-8691-42da-90de-79a2127bdd57" SourceId="1" SourceUrl="http://localhost:3333/Person/PersonService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

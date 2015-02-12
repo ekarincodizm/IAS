@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\[--Service--]" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Ionic.Zip.dll" publishTime="02/09/2015 12:54:48" />
+    <file relUrl="bin/Reports/RptRecive.rpt" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="bin/Reports/RptReceipt.cs" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="bin/log4net.xml" publishTime="07/23/2014 16:58:05" />
+    <file relUrl="Registration/RegistrationService.svc" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="Global.asax" publishTime="02/09/2015 12:56:00" />
+    <file relUrl="bin/BarcodeLib.dll" publishTime="02/09/2015 12:54:47" />
+    <file relUrl="bin/IAS.DAL.dll" publishTime="02/09/2015 13:09:01" />
+    <file relUrl="bin/log4net.dll" publishTime="07/23/2014 16:58:05" />
+    <file relUrl="Logging/ServiceLogger.svc" publishTime="02/09/2015 12:56:02" />
+    <file relUrl="bin/IAS.Utils.pdb" publishTime="02/09/2015 13:08:57" />
+    <file relUrl="bin/MessagingToolkit.QRCode.dll" publishTime="02/09/2015 12:54:50" />
+    <file relUrl="bin/IAS.DataServices.dll" publishTime="02/09/2015 13:45:18" />
+    <file relUrl="bin/StructureMap.dll" publishTime="07/23/2014 16:57:49" />
+    <file relUrl="bin/IAS.Utils.dll" publishTime="02/09/2015 13:08:57" />
+    <file relUrl="bin/IAS.Common.dll" publishTime="02/09/2015 13:08:56" />
+    <file relUrl="bin/Ionic.Zip.xml" publishTime="02/09/2015 12:54:48" />
+    <file relUrl="bin/IAS.DTO.pdb" publishTime="02/09/2015 13:09:03" />
+    <file relUrl="bin/IAS.DTO.dll" publishTime="02/09/2015 13:09:03" />
+    <file relUrl="bin/Reports/RptRecive.cs" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="License/LicenseService.svc" publishTime="02/02/2015 09:09:48" />
+    <file relUrl="packages.config" publishTime="02/09/2015 12:56:00" />
+    <file relUrl="Email/EmailSmtpService.svc" publishTime="02/09/2015 12:56:01" />
+    <file relUrl="bin/SharpCompress.dll" publishTime="02/09/2015 12:55:28" />
+    <file relUrl="Payment/PaymentService.svc" publishTime="02/09/2015 12:56:02" />
+    <file relUrl="bin/StructureMap.xml" publishTime="07/23/2014 16:57:49" />
+    <file relUrl="bin/Reports/RptReceipt.rpt" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="bin/itextsharp.dll" publishTime="02/09/2015 12:54:49" />
+    <file relUrl="bin/EPPlus.dll" publishTime="02/09/2015 12:55:27" />
+    <file relUrl="Reports/RptReceipt.rpt" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="bin/IAS.DataServices.pdb" publishTime="02/09/2015 13:45:17" />
+    <file relUrl="Applicant/ApplicantService.svc" publishTime="02/09/2015 12:56:00" />
+    <file relUrl="bin/IAS.DAL.pdb" publishTime="02/09/2015 13:09:01" />
+    <file relUrl="Account/AccountService.svc" publishTime="02/09/2015 12:56:00" />
+    <file relUrl="Person/PersonService.svc" publishTime="02/09/2015 12:56:02" />
+    <file relUrl="bin/Ionic.Zip.pdb" publishTime="02/09/2015 12:54:48" />
+    <file relUrl="Web.config" publishTime="02/09/2015 13:45:18" />
+    <file relUrl="Reports/Web.config" publishTime="02/02/2015 09:09:48" />
+    <file relUrl="FileManagement/FileService.svc" publishTime="02/09/2015 12:56:01" />
+    <file relUrl="bin/Oracle.DataAccess.dll" publishTime="02/09/2015 12:55:29" />
+    <file relUrl="bin/StructureMap.pdb" publishTime="07/23/2014 16:57:49" />
+    <file relUrl="Reports/RptRecive.rpt" publishTime="02/09/2015 12:56:03" />
+    <file relUrl="DataCenter/DataCenterService.svc" publishTime="02/09/2015 12:56:01" />
+    <file relUrl="Exam/ExamService.svc" publishTime="02/09/2015 12:56:01" />
+    <file relUrl="bin/IAS.Common.pdb" publishTime="02/09/2015 13:08:56" />
+  </publishProfile>
+</publishData>
